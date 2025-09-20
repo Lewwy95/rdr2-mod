@@ -18,6 +18,6 @@ del /s /q "%~dp0..\NoBulletTrail.asi"
 del /s /q "%~dp0..\RDR2NoBlackBars.asi"
 del /s /q "%~dp0..\vfs.asi"
 
-timeout /t 2 /nobreak >nul
+timeout /t 1 /nobreak >nul
 
 exit
