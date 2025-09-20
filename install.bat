@@ -83,7 +83,7 @@ if not exist "%~dp0..\ScriptHookRDR2.dll" (
 
     :: Extract LML folder and move it to the game directory
     mkdir "%~dp0..\lml"
-    copy "%~dp0\bin\root\lml\*" "%~dp0..\lml\"
+    xcopy /s /y /i "%~dp0\bin\root\lml\*" "%~dp0..\lml\"
 )
 cls
 
@@ -97,6 +97,7 @@ cls
 :: Launch game
 :launch
 echo Launching game...
+timeout /t 5
 start "" "steam://rungameid/1174180"
 
 exit
