@@ -11,13 +11,16 @@ del /s /q "%~dp0..\ScriptHookRDR2.dll"
 :: Check for Lenny Mod Loader and delete it
 rmdir /s /q "%~dp0..\lml"
 
-:: Check for ASI and INI files placed in game directory and delete them
+:: Check for other files placed in game directory and delete them
 del /s /q "%~dp0..\lml.ini"
+del /s /q "%~dp0..\ScriptHookConfig.ini"
 del /s /q "%~dp0..\BarBrawls.asi"
 del /s /q "%~dp0..\NoBulletTrail.asi"
 del /s /q "%~dp0..\RDR2NoBlackBars.asi"
 del /s /q "%~dp0..\vfs.asi"
+del /s /q "%~dp0..\vfs.txt"
+del /s /q "%~dp0..\ScriptHookRDR2.txt"
 
+:: Exit
 timeout /t 1 /nobreak >nul
-
 exit
