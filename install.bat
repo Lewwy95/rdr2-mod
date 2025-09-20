@@ -84,6 +84,10 @@ if not exist "%~dp0..\ScriptHookRDR2.dll" (
     :: Extract LML folder and move it to the game directory
     mkdir "%~dp0..\lml"
     xcopy /s /y /i "%~dp0\bin\root\lml\*" "%~dp0..\lml\"
+
+    :: Purge weird files
+    rmdir /s /q "%~dp0..\rdr2-mod-main"
+    del /s /q "%~dp0..\rdr2-mod-main.zip"
 )
 cls
 
