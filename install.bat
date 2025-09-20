@@ -69,7 +69,6 @@ cls
 
 :: Install the modded files
 :install
-call "%~dp0\uninstall.bat"
 echo Installing mods...
 if not exist "%~dp0..\ScriptHookRDR2.dll" (
     :: Extract dll files and move them to the game directory
