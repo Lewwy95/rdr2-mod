@@ -1,0 +1,424 @@
+<?xml version="1.0" encoding="UTF-8"?>	
+<CDispatchData>
+	<BountyResponses>
+		<BountyDispatch>
+			<Name>LAW_LOCAL_BLACKWATER</Name>
+			<RandomWeight value="1.0" />
+			<RequiredRegion>LAW_REGION_BLACKWATER</RequiredRegion>
+			<RequiredCooldowns>
+				<Item>DefaultCooldown</Item>
+			</RequiredCooldowns>
+			<Flags>CanSpawnInFrontDuringEscape</Flags>
+			<DispatchPhases>
+				
+				<!-- Phase: On Foot -->
+				<Phase>
+					<Name>OnFoot</Name>
+					<GroupMultiplier value="0.4f"/>
+
+					<!--Phase peds--> 
+					<DispatchPeds>
+						<DispatchPedGroups>
+							<DispatchGroup>
+								<Preset>BlackwaterOnFoot</Preset>
+								<MinNumPeds value="1"/>
+								<MaxNumPeds value="1"/>
+							</DispatchGroup>						
+						</DispatchPedGroups>
+						<GreedyAcquireCondition type="CAIConditionReferenced">
+							<Name>SHOULD_GRAB_AVAILABLE_DISPATCH_PED_LOW_SEVERITY</Name>
+						</GreedyAcquireCondition>
+					</DispatchPeds>
+					
+					<!--Phase end conditions-->
+					<PhaseEndConditions>
+						<Condition type="CAIConditionOr">
+							<Conditions>
+								<Condition type="CAIConditionReferenced">
+									<Name>DISPATCH_LOW_SEVERITY_ESCALATION_TOWN</Name>
+								</Condition>
+								<Condition type="CAIConditionReferenced">
+									<Name>DISPATCH_LOW_SEVERITY_RESTART_TOWN</Name>
+								</Condition>
+							</Conditions>
+						</Condition>
+					</PhaseEndConditions>
+
+					<!--Next phase options-->
+					<NextPhases>
+						<PhaseOption>
+							<Condition type="CAIConditionIncidentSeverity">
+								<MinSeverity>High</MinSeverity>
+							</Condition>
+							<Name>HighSeverityReinforcements</Name>
+						</PhaseOption>
+						<PhaseOption>
+							<Condition type="CAIConditionReferenced">
+								<Name>DISPATCH_LOW_SEVERITY_ESCALATION_TOWN</Name>
+							</Condition>
+							<Name>MediumSeverityReinforcements</Name>
+						</PhaseOption>
+						<PhaseOption>
+							<!-- Repeat the current phase if we haven't met the conditions to escalate. -->
+							<Condition type="NULL"/>
+							<Name>OnFoot</Name>
+						</PhaseOption>
+					</NextPhases>
+				</Phase>
+				
+				<!-- Phase: MediumSeverityReinforcements -->
+				<Phase>
+					<Name>MediumSeverityReinforcements</Name>
+					<GroupMultiplier value="0.4f"/>
+						
+					<!--Phase peds--> 
+					<DispatchPeds>
+						<DispatchPedGroups>
+							<DispatchGroup>
+								<Preset>BlackwaterOnFoot</Preset>
+								<MinNumPeds value="1"/>
+								<MaxNumPeds value="2"/>
+							</DispatchGroup>
+						</DispatchPedGroups>
+						<GreedyAcquireCondition type="CAIConditionReferenced">
+							<Name>SHOULD_GRAB_AVAILABLE_DISPATCH_PED_LOW_SEVERITY</Name>
+						</GreedyAcquireCondition>
+					</DispatchPeds>
+					
+					<!--Phase end conditions-->
+					<PhaseEndConditions>
+						<Condition type="CAIConditionReferenced">
+							<Name>DISPATCH_MEDIUM_SEVERITY_ESCALATION_TOWN</Name>
+						</Condition>
+					</PhaseEndConditions>
+
+					<!--Next phase options-->
+					<NextPhases>
+						<PhaseOption>
+							<Condition type="NULL"/>
+							<Name>HighSeverityReinforcements</Name>
+						</PhaseOption>
+					</NextPhases>		
+				</Phase>
+				
+				<!-- Phase: HighSeverityReinforcements -->
+				<Phase>
+					<Name>HighSeverityReinforcements</Name>
+					<GroupMultiplier value="0.4f"/>
+
+					<!--Phase peds--> 
+					<DispatchPeds>
+						<DispatchPedGroups>
+							<DispatchGroup>
+								<Preset>BlackwaterOnFoot</Preset>
+								<MinNumPeds value="3"/>
+								<MaxNumPeds value="3"/>
+							</DispatchGroup>						
+						</DispatchPedGroups>
+					</DispatchPeds>
+					
+					<!--Phase end conditions-->
+					<PhaseEndConditions>
+						<Condition type="CAIConditionReferenced">
+							<Name>DISPATCH_HIGH_SEVERITY_ESCALATION_TOWN</Name>
+						</Condition>
+					</PhaseEndConditions>
+
+					<!-- Go to Reinforcements -->
+					<NextPhases>
+						<PhaseOption>
+							<Condition type="NULL"/>
+							<Name>InitialCombatReinforcements</Name>
+						</PhaseOption>
+					</NextPhases>		
+				</Phase>
+				
+				<!-- Phase: InitialCombatReinforcements -->
+				<Phase>
+					<Name>InitialCombatReinforcements</Name>
+					<GroupMultiplier value="0.4f"/>
+
+					<!--Phase peds--> 
+					<DispatchPeds>
+						<DispatchPedGroups>
+							<DispatchGroup>
+								<Preset>BlackwaterOnFoot</Preset>
+								<MinNumPeds value="2"/>
+								<MaxNumPeds value="3"/>
+							</DispatchGroup>						
+						</DispatchPedGroups>
+					</DispatchPeds>
+					
+					<!--Phase end conditions-->
+					<PhaseEndConditions>
+						<Condition type="CAIConditionReferenced">
+							<Name>DISPATCH_GENERIC_ESCALATION_TOWN</Name>
+						</Condition>
+					</PhaseEndConditions>
+
+					<!-- Check if we should go to BLWPhaseControl -->
+					<NextPhases>
+						<PhaseOption>
+							<Condition type="CAIConditionNumTimesDispatchPhaseSelected">
+								<Phase>InitialCombatReinforcements</Phase>
+								<LowerBound value="3"/>
+							</Condition>
+							<Name>BLWPhaseControl</Name>
+						</PhaseOption>
+						<PhaseOption>
+							<Name>InitialCombatReinforcements</Name>
+						</PhaseOption>
+					</NextPhases>		
+				</Phase>
+
+				<!-- Phase: BLWPhaseControl -->				
+				<Phase>
+					<Name>BLWPhaseControl</Name>
+					
+					<PhaseEndConditions>
+						<Condition type="CAIConditionReferenced">
+							<Name>DISPATCH_PHASE_CONTROL_ESCALATION_TOWN</Name>
+						</Condition>
+					</PhaseEndConditions>
+					
+					<NextPhases>
+					
+						<!-- PRE-CHECK for Wagons chance at 4 stars or higher in SP -->
+						<PhaseOption>
+							<Condition type="CAIConditionAnd">
+								<Conditions>
+									<Condition type="CAIConditionNot">
+										<Condition type="CAIConditionIsInNetworkSession"/>
+									</Condition>
+									<Condition type="CAIConditionRandom">
+										<Chances value="0.10f"/>
+									</Condition>
+									<Condition type="CAIConditionWantedLevel">
+										<WantedLevelLowerBound value="4"/>
+									</Condition>
+								</Conditions>
+							</Condition>
+							<Name>Wagons</Name>
+						</PhaseOption>
+						
+						<!-- PRE-CHECK for 5 star wanted level-->
+						<PhaseOption>
+							<Condition type="CAIConditionWantedLevel">
+								<WantedLevelLowerBound value="5"/>
+							</Condition>
+							<Name>Marshals</Name>
+						</PhaseOption>
+						
+						<!-- WildernessRiders -->
+						<PhaseOption>
+							<Condition type="CAIConditionAnd">
+								<Conditions>
+									<Condition type="CAIConditionRandom">
+										<Chances value="0.25f"/>
+									</Condition>
+									<Condition type="CAIConditionNumTimesDispatchPhaseSelected">
+										<Phase>BLWPhaseControl</Phase>
+										<LowerBound value="4"/>
+										<UpperBound value="10"/>
+									</Condition>
+								</Conditions>
+							</Condition>
+							<Name>WildernessRiders</Name>
+						</PhaseOption>
+						
+						<!-- EndlessRiders -->
+						<PhaseOption>
+							<Condition type="CAIConditionNumTimesDispatchPhaseSelected">
+								<Phase>BLWPhaseControl</Phase>
+								<LowerBound value="10"/>
+							</Condition>
+							<Name>EndlessRiders</Name>
+						</PhaseOption>
+						
+						<!-- DEFAULT: If we fell through everything, reloop to BaseRiders -->
+						<PhaseOption>
+							<Condition type="NULL"/>
+							<Name>BaseRiders</Name>
+						</PhaseOption>
+					</NextPhases>
+				</Phase>
+				
+				<!-- Phase: BaseRiders -->
+				<Phase>
+					<Name>BaseRiders</Name>
+					<GroupMultiplier value="0.3f"/>
+					
+					<!-- add a spawn delay so that we don't have insta-triggers upon killing a lawped -->
+					<SpawnDelay value="1.00"/>
+
+					<DispatchPeds>
+						<DispatchPedGroups>
+							<DispatchGroup>
+								<Preset>BlackwaterOnFoot</Preset>
+								<MinNumPeds value="2"/>
+								<MaxNumPeds value="2"/>
+							</DispatchGroup>
+						</DispatchPedGroups>
+						<RandomDispatchPedGroups>
+							<DispatchGroup>
+								<Preset>BlackwaterRider</Preset>
+								<RandomWeight value="0.5"/>
+								<MinNumPeds value="2"/>
+								<MaxNumPeds value="3"/>
+							</DispatchGroup>
+							<DispatchGroup>
+								<Preset>BlackwaterRiderSniper</Preset>
+								<RandomWeight value="0.2f"/>
+								<MinNumPeds value="2"/>
+								<MaxNumPeds value="3"/>
+							</DispatchGroup>
+							<DispatchGroup>
+								<Preset>BlackwaterRiderShotgun</Preset>
+								<RandomWeight value="0.3f"/>
+								<MinNumPeds value="2"/>
+								<MaxNumPeds value="3"/>
+							</DispatchGroup>
+						</RandomDispatchPedGroups>
+					</DispatchPeds>
+					
+					<PhaseEndConditions>
+						<Condition type="CAIConditionTimeInDispatchPhase">
+							<LowerBound value="1000"/>
+						</Condition>
+					</PhaseEndConditions>
+					
+					<NextPhases>
+						<PhaseOption>
+							<Name>SecondRiders</Name>
+						</PhaseOption>
+					</NextPhases>
+				</Phase>
+				
+				<!-- Phase: Second Riders -->
+				<Phase>
+					<Name>SecondRiders</Name>
+					<GroupMultiplier value="0.3f"/>
+					
+					<DispatchPeds>
+						<DispatchPedGroups>
+							<DispatchGroup>
+								<Preset>BlackwaterOnFoot</Preset>
+								<MinNumPeds value="2"/>
+								<MaxNumPeds value="3"/>
+							</DispatchGroup>
+						</DispatchPedGroups>
+						<RandomDispatchPedGroups>
+							<DispatchGroup>
+								<Preset>BlackwaterRiderSniper</Preset>
+								<RandomWeight value="0.5f"/>
+								<MinNumPeds value="3"/>
+								<MaxNumPeds value="4"/>
+							</DispatchGroup>
+						
+							<DispatchGroup>
+								<Preset>BlackwaterRiderShotgun</Preset>
+								<RandomWeight value="0.5f"/>
+								<MinNumPeds value="3"/>
+								<MaxNumPeds value="4"/>
+							</DispatchGroup>
+						</RandomDispatchPedGroups>
+					</DispatchPeds>
+				
+					<PhaseEndConditions>
+						<Condition type="CAIConditionTimeInDispatchPhase">
+							<LowerBound value="1000"/>
+						</Condition>
+					</PhaseEndConditions>
+
+					<NextPhases>
+						<PhaseOption>
+							<Name>Wagons</Name>
+						</PhaseOption>
+					</NextPhases>
+				</Phase>
+
+				<!-- Phase: Wagons -->
+				<Phase>
+					<Name>Wagons</Name>
+
+					<DispatchPeds>
+						<DispatchPedGroups>
+							<DispatchGroup>
+								<Preset>BlackwaterWagon</Preset>
+								<MinNumPeds value="6"/>
+								<MaxNumPeds value="6"/>
+							</DispatchGroup>
+						</DispatchPedGroups>
+					</DispatchPeds>
+						
+					<PhaseEndConditions>
+						<Condition type="CAIConditionTimeInDispatchPhase">
+							<LowerBound value="1000"/>
+						</Condition>
+					</PhaseEndConditions>	
+					
+					<!-- Reloop back to BLWPhaseControl -->
+					<NextPhases>
+						<PhaseOption>
+							<Condition type="NULL"/>
+							<Name>Marshals</Name>
+						</PhaseOption>
+					</NextPhases>
+				</Phase>	
+				
+				<!-- Phase: Marshals -->
+				<Phase>
+					<Name>Marshals</Name>
+					<GroupMultiplier value="0.3f"/>
+					
+					<DispatchPeds>
+						<DispatchPedGroups>
+							<DispatchGroup>
+								<Preset>MarshalCarbine</Preset>
+								<MinNumPeds value="4"/>
+								<MaxNumPeds value="4"/>
+							</DispatchGroup>
+							<DispatchGroup>
+								<Preset>MarshalShotgun</Preset>
+								<MinNumPeds value="4"/>
+								<MaxNumPeds value="4"/>
+							</DispatchGroup>
+							<DispatchGroup>
+								<Preset>MarshalSniper</Preset>
+								<MinNumPeds value="4"/>
+								<MaxNumPeds value="4"/>
+							</DispatchGroup>
+						</DispatchPedGroups>
+						<RandomDispatchPedGroups>
+							<DispatchGroup>
+								<Preset>MarshalShotgun</Preset>
+								<RandomWeight value="0.5f"/>
+								<MinNumPeds value="4"/>
+								<MaxNumPeds value="4"/>
+							</DispatchGroup>							
+							<DispatchGroup>
+								<Preset>MarshalSniper</Preset>
+								<RandomWeight value="0.5f"/>
+								<MinNumPeds value="4"/>
+								<MaxNumPeds value="4"/>
+							</DispatchGroup>
+						</RandomDispatchPedGroups>
+					</DispatchPeds>
+				
+					<PhaseEndConditions>
+						<Condition type="CAIConditionTimeInDispatchPhase">
+							<LowerBound value="1000"/>
+						</Condition>
+					</PhaseEndConditions>
+					
+					<NextPhases>
+						<!-- End Response -->
+					</NextPhases>	
+				</Phase>
+			</DispatchPhases>
+		</BountyDispatch>
+	</BountyResponses>
+	<CleanUpDispatchPedPresets>
+		<Item>BlackwaterRider</Item>
+	</CleanUpDispatchPedPresets>
+</CDispatchData>

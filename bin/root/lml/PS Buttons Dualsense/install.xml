@@ -1,0 +1,20 @@
+<EasyInstall>
+    <Name>PS Buttons Dualsense</Name>
+    <Author>vStar925</Author>
+    <Version>2.0</Version>
+    <Link></Link>
+    <Metadata>
+    </Metadata>
+    <Resources>
+        <Resource>
+            <FileReplacement>
+                <GamePath>update:/x64/data/cdimages/scaleform_platform_pc/gamepad_icons_pc.ytd</GamePath>
+                <FilePath>data/gamepad_icons_pc.ytd</FilePath>
+            </FileReplacement>
+            <FileReplacement>
+                <GamePath>update:/x64/textures/ui/ui_platform/pm_settings_controls.ytd</GamePath>
+                <FilePath>data/pm_settings_controls.ytd</FilePath>
+            </FileReplacement>
+    </Resource>
+    </Resources>
+</EasyInstall>

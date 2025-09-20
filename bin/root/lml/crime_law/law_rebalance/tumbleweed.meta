@@ -1,0 +1,411 @@
+<?xml version="1.0" encoding="UTF-8"?>	
+<CDispatchData>
+	<BountyResponses>
+		<BountyDispatch>
+			<Name>LAW_LOCAL_TUMBLEWEED</Name>
+			<RandomWeight value="1.0" />
+			<RequiredRegion>LAW_REGION_TUMBLEWEED</RequiredRegion>
+			<RequiredCooldowns>
+				<Item>DefaultCooldown</Item>
+			</RequiredCooldowns>
+			<DispatchPhases>
+				
+				<!-- Phase: On Foot -->
+				<Phase>
+					<Name>OnFoot</Name>
+					<GroupMultiplier value="0.4f"/>
+
+					<!--Phase peds--> 
+					<DispatchPeds>
+						<DispatchPedGroups>
+							<DispatchGroup>
+								<Preset>OnFootPlains</Preset>
+								<MinNumPeds value="1"/>
+								<MaxNumPeds value="1"/>
+							</DispatchGroup>						
+						</DispatchPedGroups>
+						<GreedyAcquireCondition type="CAIConditionReferenced">
+							<Name>SHOULD_GRAB_AVAILABLE_DISPATCH_PED_LOW_SEVERITY</Name>
+						</GreedyAcquireCondition>
+					</DispatchPeds>
+					
+					<!--Phase end conditions-->
+					<PhaseEndConditions>
+						<Condition type="CAIConditionOr">
+							<Conditions>
+								<Condition type="CAIConditionReferenced">
+									<Name>DISPATCH_LOW_SEVERITY_ESCALATION_TOWN</Name>
+								</Condition>
+								<Condition type="CAIConditionReferenced">
+									<Name>DISPATCH_LOW_SEVERITY_RESTART_TOWN</Name>
+								</Condition>
+							</Conditions>
+						</Condition>
+					</PhaseEndConditions>
+
+					<!--Next phase options-->
+					<NextPhases>
+						<PhaseOption>
+							<Condition type="CAIConditionIncidentSeverity">
+								<MinSeverity>High</MinSeverity>
+							</Condition>
+							<Name>HighSeverityReinforcements</Name>
+						</PhaseOption>
+						<PhaseOption>
+							<Condition type="CAIConditionReferenced">
+								<Name>DISPATCH_LOW_SEVERITY_ESCALATION_TOWN</Name>
+							</Condition>
+							<Name>MediumSeverityReinforcements</Name>
+						</PhaseOption>
+						<PhaseOption>
+							<!-- Repeat the current phase if we haven't met the conditions to escalate. -->
+							<Condition type="NULL"/>
+							<Name>OnFoot</Name>
+						</PhaseOption>
+					</NextPhases>
+				</Phase>
+				
+				<!-- Phase: MediumSeverityReinforcements -->
+				<Phase>
+					<Name>MediumSeverityReinforcements</Name>
+					<GroupMultiplier value="0.4f"/>
+						
+					<!--Phase peds--> 
+					<DispatchPeds>
+						<DispatchPedGroups>
+							<DispatchGroup>
+								<Preset>OnFootPlains</Preset>
+								<MinNumPeds value="1"/>
+								<MaxNumPeds value="1"/>
+							</DispatchGroup>
+						</DispatchPedGroups>
+						<GreedyAcquireCondition type="CAIConditionReferenced">
+							<Name>SHOULD_GRAB_AVAILABLE_DISPATCH_PED_LOW_SEVERITY</Name>
+						</GreedyAcquireCondition>
+					</DispatchPeds>
+					
+					<!--Phase end conditions-->
+					<PhaseEndConditions>
+						<Condition type="CAIConditionReferenced">
+							<Name>DISPATCH_MEDIUM_SEVERITY_ESCALATION_TOWN</Name>
+						</Condition>
+					</PhaseEndConditions>
+
+					<!--Next phase options-->
+					<NextPhases>
+						<PhaseOption>
+							<Condition type="NULL"/>
+							<Name>HighSeverityReinforcements</Name>
+						</PhaseOption>
+					</NextPhases>			
+				</Phase>
+				
+				<!-- Phase: High Severity Reinforcements -->
+				<Phase>
+					<Name>HighSeverityReinforcements</Name>
+					<GroupMultiplier value="0.4f"/>
+						
+					<!--Phase peds--> 
+					<DispatchPeds>
+						<DispatchPedGroups>
+							<DispatchGroup>
+								<Preset>OnFootPlains</Preset>
+								<MinNumPeds value="2"/>
+								<MaxNumPeds value="2"/>
+							</DispatchGroup>
+						</DispatchPedGroups>
+						<GreedyAcquireCondition type="CAIConditionReferenced">
+							<Name>SHOULD_GRAB_AVAILABLE_DISPATCH_PED</Name>
+						</GreedyAcquireCondition>
+					</DispatchPeds>
+					
+					<!--Phase end conditions-->
+					<PhaseEndConditions>
+						<Condition type="CAIConditionReferenced">
+							<Name>DISPATCH_HIGH_SEVERITY_ESCALATION_TOWN</Name>
+						</Condition>
+					</PhaseEndConditions>
+
+					<!--Next phase options-->
+					<NextPhases>
+						<PhaseOption>
+							<Condition type="NULL"/>
+							<Name>TUMPhaseControl</Name>
+						</PhaseOption>
+					</NextPhases>		
+				</Phase>
+
+				<!-- Phase: TUMPhaseControl -->				
+				<Phase>
+					<Name>TUMPhaseControl</Name>
+					
+					<!--Phase peds-->
+					<DispatchPeds>
+						<GreedyAcquireCondition type="CAIConditionReferenced">
+							<Name>SHOULD_GRAB_AVAILABLE_DISPATCH_PED</Name>
+						</GreedyAcquireCondition>
+					</DispatchPeds>
+					
+					<PhaseEndConditions>
+						<Condition type="CAIConditionOr">
+							<Conditions>
+								<Condition type="CAIConditionAnd">
+									<Conditions>
+										<Condition type="CAIConditionTimeInDispatchPhase">
+											<LowerBound value="5000"/>
+										</Condition>
+										<Condition type="CAIConditionPedsRemainingInCurrentIncident">
+											<UpperBound value="0"/>
+										</Condition>
+									</Conditions>
+								</Condition>
+								<Condition type="CAIConditionAnd">
+									<Conditions>
+										<Condition type="CAIConditionTimeInDispatchPhase">
+											<LowerBound value="20000"/>
+										</Condition>
+										<Condition type="CAIConditionPedsRemainingInCurrentIncident">
+											<UpperBound value="2"/>
+										</Condition>
+									</Conditions>
+								</Condition>
+								<Condition type="CAIConditionAnd">
+									<Conditions>
+										<Condition type="CAIConditionTimeInDispatchPhase">
+											<LowerBound value="60000"/>
+										</Condition>
+										<Condition type="CAIConditionPedsRemainingInCurrentIncident">
+											<UpperBound value="3"/>
+										</Condition>
+									</Conditions>
+								</Condition>
+							</Conditions>
+						</Condition>
+					</PhaseEndConditions>
+					
+					<NextPhases>
+						
+						<!-- PRE-CHECK for 5 star wanted level-->
+						<PhaseOption>
+							<Condition type="CAIConditionWantedLevel">
+								<WantedLevelLowerBound value="5"/>
+							</Condition>
+							<Name>Marshals</Name>
+						</PhaseOption>
+						
+						<!-- WildernessRiders -->
+						<PhaseOption>
+							<Condition type="CAIConditionAnd">
+								<Conditions>
+									<Condition type="CAIConditionRandom">
+										<Chances value="0.25f"/>
+									</Condition>
+									<Condition type="CAIConditionNumTimesDispatchPhaseSelected">
+										<Phase>TUMPhaseControl</Phase>
+										<LowerBound value="2"/>
+										<UpperBound value="4"/>
+									</Condition>
+								</Conditions>
+							</Condition>
+							<Name>WildernessRiders</Name>
+						</PhaseOption>
+						
+						<!-- EndlessRiders -->
+						<PhaseOption>
+							<Condition type="CAIConditionNumTimesDispatchPhaseSelected">
+								<Phase>TUMPhaseControl</Phase>
+								<LowerBound value="15"/>
+							</Condition>
+							<Name>EndlessRiders</Name>
+						</PhaseOption>
+						
+						<!-- DEFAULT: If we fell through everything, reloop to BaseRiders -->
+						<PhaseOption>
+							<Condition type="NULL"/>
+							<Name>BaseRiders</Name>
+						</PhaseOption>
+					</NextPhases>
+				</Phase>
+				
+				<!-- Phase: BaseRiders -->
+				<Phase>
+					<Name>BaseRiders</Name>
+					<GroupMultiplier value="0.3f"/>
+					
+					<!-- add a spawn delay so that we don't have insta-triggers upon killing a lawped -->
+					<SpawnDelay value="7.50"/>
+
+					<DispatchPeds>
+						<DispatchPedGroups>
+							<DispatchGroup>
+								<Preset>RiderPlains</Preset>
+								<MinNumPeds value="1"/>
+								<MaxNumPeds value="2"/>
+							</DispatchGroup>
+						</DispatchPedGroups>
+						<RandomDispatchPedGroups>
+							<DispatchGroup>
+								<Preset>RiderPlains</Preset>
+								<RandomWeight value="0.35"/>
+								<MinNumPeds value="1"/>
+								<MaxNumPeds value="1"/>
+							</DispatchGroup>
+							<DispatchGroup>
+								<Preset>RiderPlainsDefaultCarbine</Preset>
+								<RandomWeight value="0.30f"/>
+								<MinNumPeds value="1"/>
+								<MaxNumPeds value="1"/>
+							</DispatchGroup>
+							<DispatchGroup>
+								<Preset>RiderPlainsShotgun</Preset>
+								<RandomWeight value="0.35f"/>
+								<MinNumPeds value="1"/>
+								<MaxNumPeds value="1"/>
+							</DispatchGroup>
+						</RandomDispatchPedGroups>
+						<GreedyAcquireCondition type="CAIConditionReferenced">
+							<Name>SHOULD_GRAB_AVAILABLE_DISPATCH_PED</Name>
+						</GreedyAcquireCondition>
+					</DispatchPeds>
+					
+					<PhaseEndConditions>
+						<Condition type="CAIConditionTimeInDispatchPhase">
+							<LowerBound value="10000"/>
+						</Condition>
+					</PhaseEndConditions>
+					
+					<NextPhases>
+						<!-- End Response -->
+					</NextPhases>	
+				</Phase>
+
+				<!-- Phase: WildernessRiders -->
+				<Phase>
+					<Name>WildernessRiders</Name>
+					<GroupMultiplier value="0.3f"/>
+					<SpawnDelay value="5.00"/>
+
+					<DispatchPeds>
+						<DispatchPedGroups>
+							<DispatchGroup>
+								<Preset>RiderRuralPlains</Preset>
+								<MinNumPeds value="1"/>
+								<MaxNumPeds value="3"/>
+							</DispatchGroup>
+						</DispatchPedGroups>
+						<GreedyAcquireCondition type="CAIConditionReferenced">
+							<Name>SHOULD_GRAB_AVAILABLE_DISPATCH_PED</Name>
+						</GreedyAcquireCondition>
+					</DispatchPeds>
+					
+					<PhaseEndConditions>
+						<Condition type="CAIConditionTimeInDispatchPhase">
+							<LowerBound value="7500"/>
+						</Condition>
+					</PhaseEndConditions>
+					
+					<NextPhases>
+						<PhaseOption>
+							<Name>TUMPhaseControl</Name>
+						</PhaseOption>
+					</NextPhases>
+				</Phase>
+				
+				<!-- Phase: Endless Riders -->
+				<Phase>
+					<Name>EndlessRiders</Name>
+					<GroupMultiplier value="0.3f"/>
+					<SpawnDelay value="15.00"/>
+					
+					<DispatchPeds>
+						<DispatchPedGroups>
+							<DispatchGroup>
+								<Preset>RiderPlains</Preset>
+								<MinNumPeds value="1"/>
+								<MaxNumPeds value="2"/>
+							</DispatchGroup>
+						</DispatchPedGroups>
+						<RandomDispatchPedGroups>
+							<DispatchGroup>
+								<Preset>RiderPlainsSniper</Preset>
+								<RandomWeight value="0.5f"/>
+								<MinNumPeds value="1"/>
+								<MaxNumPeds value="1"/>
+							</DispatchGroup>
+							<DispatchGroup>
+								<Preset>RiderPlainsShotgun</Preset>
+								<RandomWeight value="0.5f"/>
+								<MinNumPeds value="1"/>
+								<MaxNumPeds value="1"/>
+							</DispatchGroup>
+						</RandomDispatchPedGroups>
+						<GreedyAcquireCondition type="CAIConditionReferenced">
+							<Name>SHOULD_GRAB_AVAILABLE_DISPATCH_PED</Name>
+						</GreedyAcquireCondition>
+					</DispatchPeds>
+				
+					<PhaseEndConditions>
+						<Condition type="CAIConditionTimeInDispatchPhase">
+							<LowerBound value="17500"/>
+						</Condition>
+					</PhaseEndConditions>
+
+					<NextPhases>
+						<PhaseOption>
+							<Name>TUMPhaseControl</Name>
+						</PhaseOption>
+					</NextPhases>
+				</Phase>
+				
+				<!-- Phase: Marshals -->
+				<Phase>
+					<Name>Marshals</Name>
+					<GroupMultiplier value="0.3f"/>
+					<SpawnDelay value="10.00"/>
+					
+					<DispatchPeds>
+						<DispatchPedGroups>
+							<DispatchGroup>
+								<Preset>MarshalCarbine</Preset>
+								<MinNumPeds value="3"/>
+								<MaxNumPeds value="3"/>
+							</DispatchGroup>
+						</DispatchPedGroups>
+						<RandomDispatchPedGroups>
+							<DispatchGroup>
+								<Preset>MarshalShotgun</Preset>
+								<RandomWeight value="0.5f"/>
+								<MinNumPeds value="1"/>
+								<MaxNumPeds value="2"/>
+							</DispatchGroup>							
+							<DispatchGroup>
+								<Preset>MarshalSniper</Preset>
+								<RandomWeight value="0.5f"/>
+								<MinNumPeds value="1"/>
+								<MaxNumPeds value="2"/>
+							</DispatchGroup>
+						</RandomDispatchPedGroups>
+						<GreedyAcquireCondition type="CAIConditionReferenced">
+							<Name>SHOULD_GRAB_AVAILABLE_DISPATCH_PED</Name>
+						</GreedyAcquireCondition>
+					</DispatchPeds>
+				
+					<PhaseEndConditions>
+						<Condition type="CAIConditionTimeInDispatchPhase">
+							<LowerBound value="12500"/>
+						</Condition>
+					</PhaseEndConditions>
+
+					<NextPhases>
+						<PhaseOption>
+							<Name>TUMPhaseControl</Name>
+						</PhaseOption>
+					</NextPhases>
+				</Phase>
+			</DispatchPhases>
+		</BountyDispatch>
+	</BountyResponses>
+	<CleanUpDispatchPedPresets>
+		<Item>RiderPlains</Item>
+	</CleanUpDispatchPedPresets>
+</CDispatchData>

@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8"?>	
+<CDispatchData>
+	
+	<BountyResponses>
+		<BountyDispatch>
+			<Name>LAW_WILDERNESS_CUMBERLAND_FOREST</Name>
+			<RandomWeight value="1.0" />
+			<RequiredRegion>LAW_REGION_CUMBERLAND_FOREST</RequiredRegion>
+			<RequiredCooldowns>
+				<Item>DefaultCooldown</Item>
+			</RequiredCooldowns>
+			<Flags>CantBeCleared</Flags>
+			<CombatInfoOverride>LAW_WILDERNESS</CombatInfoOverride>
+			<DispatchPhases>
+				
+				<!-- Phase: Riders -->
+				<Phase>
+					<Name>Riders</Name>
+					<GroupMultiplier value="0.3"/>
+					<SpawnDelay value="5.00"/>
+					
+					<DispatchPeds>
+						<DispatchPedGroups>
+							<DispatchGroup>
+								<Preset>ArmyRider</Preset>
+								<MinNumPeds value="3"/>
+								<MaxNumPeds value="3"/>
+							</DispatchGroup>
+						</DispatchPedGroups>
+					</DispatchPeds>
+				
+					<PhaseEndConditions>
+						<Condition type="CAIConditionReferenced">
+							<Name>DISPATCH_LOW_SEVERITY_ESCALATION_WILDERNESS</Name>
+						</Condition>
+					</PhaseEndConditions>
+					
+					<NextPhases>
+						<!--Switch to Reinforcements phase, always-->
+						<PhaseOption>
+							<Name>Reinforcements</Name>
+						</PhaseOption>
+					</NextPhases>	
+				</Phase>
+				
+				<!-- Phase: Reinforcements -->
+				<Phase>
+					<Name>Reinforcements</Name>
+					<GroupMultiplier value="0.3"/>
+					<SpawnDelay value="15.00"/>
+					
+					<DispatchPeds>
+						<DispatchPedGroups>
+							<DispatchGroup>
+								<Preset>ArmyLeader</Preset>
+								<MinNumPeds value="2"/>
+								<MaxNumPeds value="2"/>
+							</DispatchGroup>
+							<DispatchGroup>
+								<Preset>ArmyRider</Preset>
+								<MinNumPeds value="8"/>
+								<MaxNumPeds value="12"/>
+							</DispatchGroup>
+						</DispatchPedGroups>
+					</DispatchPeds>
+					
+					<NextPhases>
+						<!-- End Response -->
+					</NextPhases>	
+				</Phase>
+				
+			</DispatchPhases>
+		</BountyDispatch>
+	</BountyResponses>
+	<CleanUpDispatchPedPresets>
+		<Item>RiderRuralFoothills</Item>
+	</CleanUpDispatchPedPresets>
+</CDispatchData>

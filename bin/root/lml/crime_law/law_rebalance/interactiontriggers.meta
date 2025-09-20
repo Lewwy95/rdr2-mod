@@ -1,0 +1,4309 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CInteractionTriggers>
+	<Reactions>
+		
+		<!--							-->
+		<!-- Alphabetical order please	-->
+		<!--							-->
+		
+		<Item key="ApproachedFromFrontOutsideShop">
+			<Type>IT_Approached</Type>
+			<TimeBeforeInitialReaction>
+				<Min value="0.80" />
+				<Max value="1.00" />
+			</TimeBeforeInitialReaction>
+			<TimeAfterLastSuccessfulReaction>
+				<Min value="12.0" />
+				<Max value="24.0" />
+				</TimeAfterLastSuccessfulReaction>
+			<TimeAfterInitialReactionFailure>
+				<Min value="12.0" />
+				<Max value="24.0" />
+			</TimeAfterInitialReactionFailure>
+			<MinDotToTarget value="0.259" />
+			<MaxTargetSpeed value="2.75" />
+			<MinDistanceToExpire value="10.0" />
+			<MaxReactions value="1" />
+			<Flags>DisableWhenAgitated MustBeOnFoot RequireMinDistanceToExpire MustNotBeInOwnedVolume</Flags>
+			<Condition type="CAIConditionAnd">
+				<Conditions>
+					<Condition type="CAIConditionNot">
+						<Condition type="CAIConditionReferenced">
+							<Name>IS_PLAYER_PED_DRUNK_SECONDARY</Name>
+						</Condition>
+					</Condition>
+					<Condition type="CAIConditionNot">
+						<Condition type="CAIConditionArePedGameplayConfigFlagsSet">
+							<Ped>SecondaryEntity</Ped>
+							<ConfigFlags>CPED_GAMEPLAY_CONFIG_FLAG_IsRunningGrapple</ConfigFlags>
+						</Condition>
+					</Condition>
+					<Condition type="CAIConditionNot">
+						<Condition type="CAIConditionAreScenarioPointFlagsSet">
+							<ScenarioPointFlags>TerritorialScenario</ScenarioPointFlags>
+						</Condition>
+					</Condition>
+					<Condition type="CAIConditionNot">
+						<Condition type="CAIConditionIsInInteraction">
+							<Ped>SecondaryEntity</Ped>
+						</Condition>
+					</Condition>
+					<Condition type="CAIConditionOr">
+						<Conditions>
+							<Condition type="CAIConditionAnd">
+								<Conditions>
+									<Condition type="CAIConditionIsLawEnforcement"/>
+									<Condition type="CAIConditionNot">
+										<Condition type="CAIConditionHasAnyWeaponEquipped">
+											<Ped>SecondaryEntity</Ped>
+										</Condition>
+									</Condition>
+								</Conditions>
+							</Condition>
+							<Condition type="CAIConditionNot">
+								<Condition type="CAIConditionIsLawEnforcement"/>
+							</Condition>
+						</Conditions>
+					</Condition>
+					<Condition type="CAIConditionNot">
+						<Condition type="CAIConditionReferenced">
+							<Name>INTERACTION_HOGTIED</Name>
+						</Condition>
+					</Condition>
+					<Condition type="CAIConditionNot">
+						<Condition type="CAIConditionArePedScriptResetFlagsSet">
+							<ResetFlags>PRF_DisableAutoGreets</ResetFlags>
+						</Condition>
+					</Condition>
+					<Condition type="CAIConditionNot">
+						<Condition type="CAIConditionArePedResetFlagsSet">
+							<ResetFlags>CPED_RESET_FLAG_CannotSee</ResetFlags>
+						</Condition>
+					</Condition>
+					<Condition type="CAIConditionNot">
+					  <Condition type="CAIConditionIsEntityOnMyMind">
+						<TimeLimitInSeconds value="30.0"/>
+					  </Condition>
+					</Condition>
+					<Condition type="CAIConditionNot">
+						<Condition type="CAIConditionReferenced">
+							<Name>INTERACTION_PEDS_SPOKE_RECENTLY</Name>
+						</Condition>
+					</Condition>
+					<Condition type="CAIConditionNot">
+						<Condition type="CAIConditionIsInDispute">
+							<Ped>SecondaryEntity</Ped>
+						</Condition>
+					</Condition>
+					<Condition type="CAIConditionDirectionRelativeToTarget">
+						<FromEntity>PrimaryEntity</FromEntity>
+						<TargetEntity>SecondaryEntity</TargetEntity>
+						<Threshold value="0.134"/>
+						<FlattenZ value="true"/>
+						<LessThan value="true"/>
+					</Condition>
+				</Conditions>
+			</Condition>
+		</Item>
+		
+		<Item key="ApproachedGangCompanion">
+			<Type>IT_Approached</Type>
+			<TimeBeforeInitialReaction>
+				<Min value="0.1" />
+				<Max value="0.5" />
+			</TimeBeforeInitialReaction>
+			<TimeAfterLastSuccessfulReaction>
+				<Min value="9.0" />
+				<Max value="12.0" />
+			</TimeAfterLastSuccessfulReaction>
+			<TimeAfterInitialReactionFailure>
+				<Min value="9.0" />
+				<Max value="12.0" />
+			</TimeAfterInitialReactionFailure>
+			<MinDotToTarget value="0.0" />
+			<MaxTargetSpeed value="2.75" />
+			<MinDistanceToExpire value="8.0" />
+			<MaxReactions value="1" />
+			<Flags>DisableWhenAgitated MustBeOnFoot RequireMinDistanceToExpire MustNotBeInTargetGroup DisableDotWhenIsolated</Flags>
+			<Condition type="CAIConditionAnd">
+				<Conditions>
+					<Condition type="CAIConditionNot">
+						<Condition type="CAIConditionIsInInteraction">
+							<Ped>SecondaryEntity</Ped>
+						</Condition>
+					</Condition>
+					<Condition type="CAIConditionNot">
+						<Condition type="CAIConditionIsOnMount">
+							<Ped>SecondaryEntity</Ped>
+						</Condition>
+					</Condition>
+					<Condition type="CAIConditionNot">
+						<Condition type="CAIConditionArePedGameplayConfigFlagsSet">
+							<Ped>SecondaryEntity</Ped>
+							<ConfigFlags>CPED_GAMEPLAY_CONFIG_FLAG_IsRunningGrapple</ConfigFlags>
+						</Condition>
+					</Condition>
+					<!-- Peds may wake for the players actions but shouldn't greet-->
+					<Condition type="CAIConditionNot">
+						<Condition type="CAIConditionScenarioActivityTypeCheck">
+							<ActivityType>Sleeping</ActivityType>
+						</Condition>
+					</Condition>
+					<Condition type="CAIConditionNot">
+						<Condition type="CAIConditionArePedScriptResetFlagsSet">
+							<ResetFlags>PRF_DisableAutoGreets</ResetFlags>
+						</Condition>
+					</Condition>
+					<Condition type="CAIConditionNot">
+						<Condition type="CAIConditionArePedResetFlagsSet">
+							<ResetFlags>CPED_RESET_FLAG_CannotSee</ResetFlags>
+						</Condition>
+					</Condition>
+					<Condition type="CAIConditionNot">
+					  <Condition type="CAIConditionIsEntityOnMyMind">
+						<TimeLimitInSeconds value="30.0"/>
+					  </Condition>
+					</Condition>
+					<Condition type="CAIConditionNot">
+						<Condition type="CAIConditionIsInInteraction">
+							<Ped>SecondaryEntity</Ped>
+						</Condition>
+					</Condition>
+					<Condition type="CAIConditionNot">
+						<Condition type="CAIConditionIsInDispute">
+							<Ped>SecondaryEntity</Ped>
+						</Condition>
+					</Condition>
+					<Condition type="CAIConditionOr">
+						<Conditions>
+							<Condition type="CAIConditionNot">
+								<Condition type="CAIConditionArePedConfigFlagsSet">
+									<ConfigFlags>CPED_CONFIG_FLAG_UsingScenario</ConfigFlags>
+								</Condition>
+							</Condition>
+							<Condition type="CAIConditionNot">
+								<Condition type="CAIConditionAreScenarioInfoFlagsSet" >
+									<GetScenarioPointFromPed value="true" />
+									<InfoFlags>Performer</InfoFlags>
+								</Condition>
+							</Condition>
+						</Conditions>
+					</Condition>
+					<Condition type="CAIConditionArePedConfigFlagsSet">
+						<ConfigFlags>CPED_CONFIG_FLAG_VisibleOnScreen</ConfigFlags>
+					</Condition>
+					<Condition type="CAIConditionReferenced">
+						<Name>IS_ILO_TARGET</Name>
+					</Condition>
+				</Conditions>
+			</Condition>
+		</Item>
+		
+		<Item key="ApproachedGangCompanionOffScreen">
+			<Type>IT_Approached</Type>
+			<TimeBeforeInitialReaction>
+				<Min value="0.1" />
+				<Max value="0.5" />
+			</TimeBeforeInitialReaction>
+			<TimeAfterLastSuccessfulReaction>
+				<Min value="9.0" />
+				<Max value="12.0" />
+			</TimeAfterLastSuccessfulReaction>
+			<TimeAfterInitialReactionFailure>
+				<Min value="9.0" />
+				<Max value="12.0" />
+			</TimeAfterInitialReactionFailure>
+			<MinDotToTarget value="0.0" />
+			<MaxTargetSpeed value="2.75" />
+			<MinDistanceToExpire value="8.0" />
+			<MaxReactions value="1" />
+			<Flags>DisableWhenAgitated MustBeOnFoot RequireMinDistanceToExpire MustNotBeInTargetGroup DisableDotWhenIsolated</Flags>
+			<Condition type="CAIConditionAnd">
+				<Conditions>
+					<Condition type="CAIConditionNot">
+						<Condition type="CAIConditionIsInInteraction">
+							<Ped>SecondaryEntity</Ped>
+						</Condition>
+					</Condition>
+					<Condition type="CAIConditionNot">
+						<Condition type="CAIConditionIsOnMount">
+							<Ped>SecondaryEntity</Ped>
+						</Condition>
+					</Condition>
+					<Condition type="CAIConditionNot">
+						<Condition type="CAIConditionArePedGameplayConfigFlagsSet">
+							<Ped>SecondaryEntity</Ped>
+							<ConfigFlags>CPED_GAMEPLAY_CONFIG_FLAG_IsRunningGrapple</ConfigFlags>
+						</Condition>
+					</Condition>
+					<Condition type="CAIConditionNot">
+						<Condition type="CAIConditionArePedScriptResetFlagsSet">
+							<ResetFlags>PRF_DisableAutoGreets</ResetFlags>
+						</Condition>
+					</Condition>
+					<Condition type="CAIConditionNot">
+						<Condition type="CAIConditionArePedResetFlagsSet">
+							<ResetFlags>CPED_RESET_FLAG_CannotSee</ResetFlags>
+						</Condition>
+					</Condition>
+					<Condition type="CAIConditionNot">
+					  <Condition type="CAIConditionIsEntityOnMyMind">
+						<TimeLimitInSeconds value="30.0"/>
+					  </Condition>
+					</Condition>
+					<Condition type="CAIConditionNot">
+						<Condition type="CAIConditionIsInDispute">
+							<Ped>SecondaryEntity</Ped>
+						</Condition>
+					</Condition>
+					<Condition type="CAIConditionOr">
+						<Conditions>
+							<Condition type="CAIConditionNot">
+								<Condition type="CAIConditionArePedConfigFlagsSet">
+									<ConfigFlags>CPED_CONFIG_FLAG_UsingScenario</ConfigFlags>
+								</Condition>
+							</Condition>
+							<Condition type="CAIConditionNot">
+								<Condition type="CAIConditionAreScenarioInfoFlagsSet" >
+									<GetScenarioPointFromPed value="true" />
+									<InfoFlags>Performer</InfoFlags>
+								</Condition>
+							</Condition>
+						</Conditions>
+					</Condition>
+					<Condition type="CAIConditionNot">
+						<Condition type="CAIConditionArePedConfigFlagsSet">
+							<ConfigFlags>CPED_CONFIG_FLAG_VisibleOnScreen</ConfigFlags>
+						</Condition>
+					</Condition>
+					<Condition type="CAIConditionReferenced">
+						<Name>IS_ILO_TARGET</Name>
+					</Condition>
+				</Conditions>
+			</Condition>
+		</Item>
+		
+		<Item key="ApproachedGangCompanionMounted">
+			<Type>IT_Approached</Type>
+			<TimeBeforeInitialReaction>
+				<Min value="0.1" />
+				<Max value="0.25" />
+			</TimeBeforeInitialReaction>
+			<TimeAfterLastSuccessfulReaction>
+				<Min value="18.0" />
+				<Max value="24.0" />
+			</TimeAfterLastSuccessfulReaction>
+			<TimeAfterInitialReactionFailure>
+				<Min value="18.0" />
+				<Max value="24.0" />
+			</TimeAfterInitialReactionFailure>
+			<MinDotToTarget value="0.0" />
+			<MinTargetSpeed value="0.0" />
+			<MaxTargetSpeed value="10.0" />
+			<MinDistanceToExpire value="22.0" />
+			<MaxReactions value="2" />
+			<Flags>DisableWhenAgitated MustBeOnFoot RequireMinDistanceToExpire MustNotBeInTargetGroup TargetMustBeOnMount</Flags>
+			<Condition type="CAIConditionAnd">
+				<Conditions>
+					<Condition type="CAIConditionNot">
+						<Condition type="CAIConditionIsInInteraction">
+							<Ped>SecondaryEntity</Ped>
+						</Condition>
+					</Condition>
+					<Condition type="CAIConditionNot">
+						<Condition type="CAIConditionArePedGameplayConfigFlagsSet">
+							<Ped>SecondaryEntity</Ped>
+							<ConfigFlags>CPED_GAMEPLAY_CONFIG_FLAG_IsRunningGrapple</ConfigFlags>
+						</Condition>
+					</Condition>
+					<Condition type="CAIConditionNot">
+						<Condition type="CAIConditionArePedScriptResetFlagsSet">
+							<ResetFlags>PRF_DisableAutoGreets</ResetFlags>
+						</Condition>
+					</Condition>
+					<Condition type="CAIConditionNot">
+						<Condition type="CAIConditionArePedResetFlagsSet">
+							<ResetFlags>CPED_RESET_FLAG_CannotSee</ResetFlags>
+						</Condition>
+					</Condition>
+					<Condition type="CAIConditionNot">
+					  <Condition type="CAIConditionIsEntityOnMyMind">
+						<TimeLimitInSeconds value="30.0"/>
+					  </Condition>
+					</Condition>
+					<Condition type="CAIConditionNot">
+						<Condition type="CAIConditionReferenced">
+							<Name>INTERACTION_PEDS_SPOKE_RECENTLY</Name>
+						</Condition>
+					</Condition>
+					<Condition type="CAIConditionNot">
+						<Condition type="CAIConditionIsInDispute">
+							<Ped>SecondaryEntity</Ped>
+						</Condition>
+					</Condition>
+					<Condition type="CAIConditionDirectionRelativeToTarget">
+						<FromEntity>PrimaryEntity</FromEntity>
+						<TargetEntity>SecondaryEntity</TargetEntity>
+						<Threshold value="0.134"/>
+						<FlattenZ value="true"/>
+						<LessThan value="true"/>
+					</Condition>
+					<Condition type="CAIConditionArePedConfigFlagsSet">
+						<ConfigFlags>CPED_CONFIG_FLAG_VisibleOnScreen</ConfigFlags>
+					</Condition>
+					<Condition type="CAIConditionReferenced">
+						<Name>IS_ILO_TARGET</Name>
+					</Condition>
+				</Conditions>
+			</Condition>
+		</Item>
+		
+		<Item key="ApproachedOnFootMovingPed">
+			<Type>IT_Approached</Type>
+			<Condition type= "CAIConditionAnd">
+				<Conditions>
+					<Condition type="CAIConditionNot">
+						<Condition type="CAIConditionReferenced">
+							<Name>IS_PLAYER_PED_DRUNK_SECONDARY</Name>
+						</Condition>
+					</Condition>
+					<Condition type="CAIConditionNot">
+						<Condition type="CAIConditionPedHasRobberyMemory">
+							<MemoryType>RideJacked</MemoryType>
+							<SourcePed>SecondaryEntity</SourcePed>
+						</Condition>
+					</Condition>
+					<Condition type="CAIConditionNot">
+						<Condition type="CAIConditionPedHasRobberyMemory">
+							<MemoryType>GivenUpRide</MemoryType>
+							<SourcePed>SecondaryEntity</SourcePed>
+						</Condition>
+					</Condition>
+					<Condition type="CAIConditionNot">
+						<Condition type="CAIConditionIsInInteraction">
+							<Ped>SecondaryEntity</Ped>
+						</Condition>
+					</Condition>
+					<!-- if you rejected the player's greet, dont immediately run the approach triggers -->
+					<condition type="CAIConditionNot">
+						<Condition type="CAIConditionPedHasSimpleMemoryForPlayer">
+							<MemoryType>RejectedGreet</MemoryType>
+							<QueryTimeMS value="120000"/>
+						</Condition>
+					</condition>
+					<Condition type="CAIConditionOr">
+						<Conditions>
+							<Condition type="CAIConditionAnd">
+								<Conditions>
+									<Condition type="CAIConditionIsLawEnforcement"/>
+									<Condition type="CAIConditionNot">
+										<Condition type="CAIConditionHasAnyWeaponEquipped">
+											<Ped>SecondaryEntity</Ped>
+										</Condition>
+									</Condition>
+								</Conditions>
+							</Condition>
+							<Condition type="CAIConditionNot">
+								<Condition type="CAIConditionIsLawEnforcement"/>
+							</Condition>
+						</Conditions>
+					</Condition>
+					<Condition type="CAIConditionNot">
+						<Condition type="CAIConditionPedHasSimpleMemory">
+							<MemoryType>CleaningCrimeScene</MemoryType>
+							<QueryTimeMS value="120000"/> <!-- Two minutes -->
+						</Condition>
+					</Condition>
+					<Condition type="CAIConditionNot">
+						<Condition type="CAIConditionArePedGameplayConfigFlagsSet">
+							<Ped>SecondaryEntity</Ped>
+							<ConfigFlags>CPED_GAMEPLAY_CONFIG_FLAG_IsRunningGrapple</ConfigFlags>
+						</Condition>
+					</Condition>
+					<Condition type="CAIConditionNot">
+						<Condition type="CAIConditionCheckRelationship">
+							<Ped>PrimaryEntity</Ped>
+							<TargetPed>SecondaryEntity</TargetPed>
+							<RelationshipType>ACQUAINTANCE_TYPE_PED_DISLIKE</RelationshipType>
+						</Condition>
+					</Condition>
+					<Condition type="CAIConditionNot">
+						<Condition type="CAIConditionReferenced">
+							<Name>INTERACTION_HOGTIED</Name>
+						</Condition>
+					</Condition>
+					<Condition type="CAIConditionNot">
+						<Condition type="CAIConditionArePedScriptResetFlagsSet">
+							<ResetFlags>PRF_DisableAutoGreets</ResetFlags>
+						</Condition>
+					</Condition>
+					<Condition type="CAIConditionNot">
+						<Condition type="CAIConditionArePedResetFlagsSet">
+							<ResetFlags>CPED_RESET_FLAG_CannotSee</ResetFlags>
+						</Condition>
+					</Condition>
+					<Condition type="CAIConditionNot">
+					  <Condition type="CAIConditionIsEntityOnMyMind">
+						<TimeLimitInSeconds value="30.0"/>
+					  </Condition>
+					</Condition>
+					<Condition type="CAIConditionNot">
+						<Condition type="CAIConditionReferenced">
+							<Name>INTERACTION_PEDS_SPOKE_RECENTLY</Name>
+						</Condition>
+					</Condition>
+					<Condition type="CAIConditionNot">
+						<Condition type="CAIConditionArePedConfigFlagsSet">
+							<ConfigFlags>CPED_CONFIG_FLAG_UsingScenario</ConfigFlags>
+						</Condition>
+					</Condition>
+					<Condition type="CAIConditionVelocityWithinRange">
+					  <LowerBound value="0.2"/>
+					</Condition>
+					<Condition type="CAIConditionNot">
+						<Condition type="CAIConditionIsInDispute">
+							<Ped>SecondaryEntity</Ped>
+						</Condition>
+					</Condition>
+					<Condition type="CAIConditionNot">
+						<Condition type="CAIConditionPedHasSimpleMemory">
+							<Ped>SecondaryEntity</Ped>
+							<MemoryType>Greeted</MemoryType>
+							<QueryTimeMS value="10000"/>
+						</Condition>
+					</Condition>
+					<Condition type="CAIConditionDirectionRelativeToTarget">
+						<FromEntity>PrimaryEntity</FromEntity>
+						<TargetEntity>SecondaryEntity</TargetEntity>
+						<Threshold value="0.134"/>
+						<FlattenZ value="true"/>
+						<LessThan value="true"/>
+					</Condition>
+				</Conditions>
+			</Condition>
+			<TimeBeforeInitialReaction>
+				<Min value="0.80" />
+				<Max value="1.00" />
+			</TimeBeforeInitialReaction>
+			<TimeAfterLastSuccessfulReaction>
+				<Min value="12.0" />
+				<Max value="24.0" />
+				</TimeAfterLastSuccessfulReaction>
+			<TimeAfterInitialReactionFailure>
+				<Min value="12.0" />
+				<Max value="24.0" />
+			</TimeAfterInitialReactionFailure>
+			<MinDotToTarget value="0.259" />
+			<MaxTargetSpeed value="2.75" />
+			<MinDistanceToExpire value="10.0" />
+			<MaxReactions value="1" />
+			<Flags>DisableWhenAgitated MustBeOnFoot RequireMinDistanceToExpire</Flags>
+		</Item>
+		
+		<Item key="ApproachedOnFootStationaryPed">
+			<Type>IT_Approached</Type>
+			<Condition type= "CAIConditionAnd">
+				<Conditions>
+					<Condition type="CAIConditionNot">
+						<Condition type="CAIConditionReferenced">
+							<Name>IS_PLAYER_PED_DRUNK_SECONDARY</Name>
+						</Condition>
+					</Condition>
+					<Condition type="CAIConditionNot">
+						<Condition type="CAIConditionPedHasRobberyMemory">
+							<MemoryType>RideJacked</MemoryType>
+							<SourcePed>SecondaryEntity</SourcePed>
+						</Condition>
+					</Condition>
+					<Condition type="CAIConditionNot">
+						<Condition type="CAIConditionPedHasRobberyMemory">
+							<MemoryType>GivenUpRide</MemoryType>
+							<SourcePed>SecondaryEntity</SourcePed>
+						</Condition>
+					</Condition>
+					<Condition type="CAIConditionNot">
+						<Condition type="CAIConditionIsInInteraction">
+							<Ped>SecondaryEntity</Ped>
+						</Condition>
+					</Condition>
+					<!-- if you rejected the player's greet, dont immediately run the approach triggers -->
+					<condition type="CAIConditionNot">
+						<Condition type="CAIConditionPedHasSimpleMemoryForPlayer">
+							<MemoryType>RejectedGreet</MemoryType>
+							<QueryTimeMS value="120000"/>
+						</Condition>
+					</condition>
+					<Condition type="CAIConditionOr">
+						<Conditions>
+							<Condition type="CAIConditionAnd">
+								<Conditions>
+									<Condition type="CAIConditionIsLawEnforcement"/>
+									<Condition type="CAIConditionNot">
+										<Condition type="CAIConditionHasAnyWeaponEquipped">
+											<Ped>SecondaryEntity</Ped>
+										</Condition>
+									</Condition>
+								</Conditions>
+							</Condition>
+							<Condition type="CAIConditionNot">
+								<Condition type="CAIConditionIsLawEnforcement"/>
+							</Condition>
+						</Conditions>
+					</Condition>
+					<Condition type="CAIConditionNot">
+						<Condition type="CAIConditionPedHasSimpleMemory">
+							<MemoryType>CleaningCrimeScene</MemoryType>
+							<QueryTimeMS value="120000"/> <!-- Two minutes -->
+						</Condition>
+					</Condition>
+					<Condition type="CAIConditionNot">
+						<Condition type="CAIConditionArePedGameplayConfigFlagsSet">
+							<Ped>SecondaryEntity</Ped>
+							<ConfigFlags>CPED_GAMEPLAY_CONFIG_FLAG_IsRunningGrapple</ConfigFlags>
+						</Condition>
+					</Condition>
+					<Condition type="CAIConditionNot">
+						<Condition type="CAIConditionCheckRelationship">
+							<Ped>PrimaryEntity</Ped>
+							<TargetPed>SecondaryEntity</TargetPed>
+							<RelationshipType>ACQUAINTANCE_TYPE_PED_DISLIKE</RelationshipType>
+						</Condition>
+					</Condition>
+					<Condition type="CAIConditionNot">
+						<Condition type="CAIConditionReferenced">
+							<Name>INTERACTION_HOGTIED</Name>
+						</Condition>
+					</Condition>
+					<Condition type="CAIConditionNot">
+						<Condition type="CAIConditionArePedScriptResetFlagsSet">
+							<ResetFlags>PRF_DisableAutoGreets</ResetFlags>
+						</Condition>
+					</Condition>
+					<Condition type="CAIConditionNot">
+						<Condition type="CAIConditionArePedResetFlagsSet">
+							<ResetFlags>CPED_RESET_FLAG_CannotSee</ResetFlags>
+						</Condition>
+					</Condition>
+					<Condition type="CAIConditionNot">
+					  <Condition type="CAIConditionIsEntityOnMyMind">
+						<TimeLimitInSeconds value="30.0"/>
+					  </Condition>
+					</Condition>
+					<Condition type="CAIConditionNot">
+						<Condition type="CAIConditionIsInDispute">
+							<Ped>SecondaryEntity</Ped>
+						</Condition>
+					</Condition>
+					<Condition type="CAIConditionOr">
+						<Conditions>
+							<Condition type="CAIConditionNot">
+								<Condition type="CAIConditionArePedConfigFlagsSet">
+									<ConfigFlags>CPED_CONFIG_FLAG_UsingScenario</ConfigFlags>
+								</Condition>
+							</Condition>
+							<!-- Ped is in a scenario, make sure none of the scenario conditions obtain -->
+							<Condition type="CAIConditionAnd">
+								<Conditions>
+									<Condition type="CAIConditionNot">
+										<Condition type="CAIConditionAreScenarioPointFlagsSet">
+											<ScenarioPointFlags>TerritorialScenario</ScenarioPointFlags>
+										</Condition>
+									</Condition>
+									<Condition type="CAIConditionNot">
+										<Condition type="CAIConditionAreScenarioInfoFlagsSet" >
+											<GetScenarioPointFromPed value="true" />
+											<InfoFlags>Performer</InfoFlags>
+										</Condition>
+									</Condition>
+								</Conditions>
+							</Condition>
+						</Conditions>
+					</Condition>
+					<Condition type="CAIConditionDirectionRelativeToTarget">
+						<FromEntity>PrimaryEntity</FromEntity>
+						<TargetEntity>SecondaryEntity</TargetEntity>
+						<Threshold value="0.134"/>
+						<FlattenZ value="true"/>
+						<LessThan value="true"/>
+					</Condition>
+					<Condition type="CAIConditionReferenced">
+						<Name>IS_ILO_TARGET</Name>
+					</Condition>
+				</Conditions>
+			</Condition>
+			<TimeBeforeInitialReaction>
+				<Min value="0.80" />
+				<Max value="1.00" />
+			</TimeBeforeInitialReaction>
+			<TimeAfterLastSuccessfulReaction>
+				<Min value="12.0" />
+				<Max value="24.0" />
+				</TimeAfterLastSuccessfulReaction>
+			<TimeAfterInitialReactionFailure>
+				<Min value="12.0" />
+				<Max value="24.0" />
+			</TimeAfterInitialReactionFailure>
+			<MinDotToTarget value="0.259" />
+			<MaxTargetSpeed value="2.75" />
+			<MinDistanceToExpire value="10.0" />
+			<MaxReactions value="1" />
+			<Flags>DisableWhenAgitated MustBeOnFoot MustBeStationary RequireMinDistanceToExpire</Flags>
+		</Item>
+		
+		<Item key="ApproachedBehindOnFootStationaryPed">
+			<Type>IT_Approached</Type>
+			<Condition type= "CAIConditionAnd">
+				<Conditions>
+					<Condition type="CAIConditionNot">
+						<Condition type="CAIConditionReferenced">
+							<Name>IS_PLAYER_PED_DRUNK_SECONDARY</Name>
+						</Condition>
+					</Condition>
+					<Condition type="CAIConditionNot">
+						<Condition type="CAIConditionPedHasRobberyMemory">
+							<MemoryType>RideJacked</MemoryType>
+							<SourcePed>SecondaryEntity</SourcePed>
+						</Condition>
+					</Condition>
+					<Condition type="CAIConditionNot">
+						<Condition type="CAIConditionPedHasRobberyMemory">
+							<MemoryType>GivenUpRide</MemoryType>
+							<SourcePed>SecondaryEntity</SourcePed>
+						</Condition>
+					</Condition>
+					<Condition type="CAIConditionNot">
+						<Condition type="CAIConditionIsInInteraction">
+							<Ped>SecondaryEntity</Ped>
+						</Condition>
+					</Condition>
+					<!-- if you rejected the player's greet, dont immediately run the approach triggers -->
+					<condition type="CAIConditionNot">
+						<Condition type="CAIConditionPedHasSimpleMemoryForPlayer">
+							<MemoryType>RejectedGreet</MemoryType>
+							<QueryTimeMS value="120000"/>
+						</Condition>
+					</condition>
+					<Condition type="CAIConditionOr">
+						<Conditions>
+							<Condition type="CAIConditionAnd">
+								<Conditions>
+									<Condition type="CAIConditionIsLawEnforcement"/>
+									<Condition type="CAIConditionNot">
+										<Condition type="CAIConditionHasAnyWeaponEquipped">
+											<Ped>SecondaryEntity</Ped>
+										</Condition>
+									</Condition>
+								</Conditions>
+							</Condition>
+							<Condition type="CAIConditionNot">
+								<Condition type="CAIConditionIsLawEnforcement"/>
+							</Condition>
+						</Conditions>
+					</Condition>
+					<Condition type="CAIConditionNot">
+						<Condition type="CAIConditionPedHasSimpleMemory">
+							<MemoryType>CleaningCrimeScene</MemoryType>
+							<QueryTimeMS value="120000"/> <!-- Two minutes -->
+						</Condition>
+					</Condition>
+					<Condition type="CAIConditionNot">
+						<Condition type="CAIConditionArePedGameplayConfigFlagsSet">
+							<Ped>SecondaryEntity</Ped>
+							<ConfigFlags>CPED_GAMEPLAY_CONFIG_FLAG_IsRunningGrapple</ConfigFlags>
+						</Condition>
+					</Condition>
+					<Condition type="CAIConditionNot">
+						<Condition type="CAIConditionCheckRelationship">
+							<Ped>PrimaryEntity</Ped>
+							<TargetPed>SecondaryEntity</TargetPed>
+							<RelationshipType>ACQUAINTANCE_TYPE_PED_DISLIKE</RelationshipType>
+						</Condition>
+					</Condition>
+					<Condition type="CAIConditionNot">
+						<Condition type="CAIConditionReferenced">
+							<Name>INTERACTION_HOGTIED</Name>
+						</Condition>
+					</Condition>
+					<Condition type="CAIConditionNot">
+						<Condition type="CAIConditionArePedScriptResetFlagsSet">
+							<ResetFlags>PRF_DisableAutoGreets</ResetFlags>
+						</Condition>
+					</Condition>
+					<Condition type="CAIConditionNot">
+						<Condition type="CAIConditionArePedResetFlagsSet">
+							<ResetFlags>CPED_RESET_FLAG_CannotSee</ResetFlags>
+						</Condition>
+					</Condition>
+					<Condition type="CAIConditionNot">
+					  <Condition type="CAIConditionIsEntityOnMyMind">
+						<TimeLimitInSeconds value="30.0"/>
+					  </Condition>
+					</Condition>
+					<Condition type="CAIConditionNot">
+						<Condition type="CAIConditionReferenced">
+							<Name>INTERACTION_PEDS_SPOKE_RECENTLY</Name>
+						</Condition>
+					</Condition>
+					<Condition type="CAIConditionNot">
+						<Condition type="CAIConditionIsInDispute">
+							<Ped>SecondaryEntity</Ped>
+						</Condition>
+					</Condition>
+					<Condition type="CAIConditionNot">
+						<Condition type="CAIConditionOr">
+							<Conditions>
+								<Condition type="CAIConditionIsOnTrain"/>
+								<Condition type="CAIConditionIsInDraftVehicle"/>
+							</Conditions>
+						</Condition>
+					</Condition>
+					<Condition type="CAIConditionOr">
+						<Conditions>
+							<Condition type="CAIConditionAnd">
+								<Conditions>
+									<Condition type="CAIConditionIsOnMount">
+										<Ped>SecondaryEntity</Ped>
+									</Condition>
+									<Condition type="CAIConditionNot">
+										<Condition type="CAIConditionIsMountFasterThan">
+											<DriverPed>SecondaryEntity</DriverPed>
+											<SpeedGait>Gait_Trot</SpeedGait>
+										</Condition>
+									</Condition>
+								</Conditions>
+							</Condition>
+							<Condition type="CAIConditionAnd">
+								<Conditions>
+									<Condition type="CAIConditionIsOnFoot">
+										<Ped>SecondaryEntity</Ped>
+									</Condition>
+									<Condition type="CAIConditionOr">
+										<Conditions>
+											<Condition type="CAIConditionSpeed">
+												<Ped>SecondaryEntity</Ped>
+												<Speed>Walk</Speed>
+											</Condition>
+											<Condition type="CAIConditionSpeed">
+												<Ped>SecondaryEntity</Ped>
+												<Speed>Stand</Speed>
+											</Condition>
+										</Conditions>
+									</Condition>
+								</Conditions>
+							</Condition>
+						</Conditions>
+					</Condition>
+					<Condition type="CAIConditionOr">
+						<Conditions>
+							<Condition type="CAIConditionNot">
+								<Condition type="CAIConditionArePedConfigFlagsSet">
+									<ConfigFlags>CPED_CONFIG_FLAG_UsingScenario</ConfigFlags>
+								</Condition>
+							</Condition>
+							<Condition type="CAIConditionAnd">
+								<Conditions>
+									<Condition type="CAIConditionNot">
+										<Condition type="CAIConditionAreScenarioInfoFlagsSet" >
+											<GetScenarioPointFromPed value="true" />
+											<InfoFlags>Performer</InfoFlags>
+										</Condition>
+									</Condition>
+									<Condition type="CAIConditionNot">
+										<Condition type="CAIConditionIsUsingBusyScenario"/>
+									</Condition>
+									<Condition type="CAIConditionNot">
+										<Condition type="CAIConditionAreScenarioPointFlagsSet">
+											<ScenarioPointFlags>TerritorialScenario</ScenarioPointFlags>
+										</Condition>
+									</Condition>
+								</Conditions>
+							</Condition>
+						</Conditions>
+					</Condition>
+				</Conditions>
+			</Condition>
+			<TimeBeforeInitialReaction>
+				<Min value="3.50" />
+				<Max value="5.00" />
+			</TimeBeforeInitialReaction>
+			<TimeAfterLastSuccessfulReaction>
+				<Min value="12.0" />
+				<Max value="24.0" />
+				</TimeAfterLastSuccessfulReaction>
+			<TimeAfterInitialReactionFailure>
+				<Min value="12.0" />
+				<Max value="24.0" />
+			</TimeAfterInitialReactionFailure>
+			<MaxDotToTarget value="0.0" />
+			<MinDistanceToExpire value="10.0" />
+			<MaxReactions value="1" />
+			<Flags>DisableWhenAgitated NoLineOfSightNeeded MustBeOnFoot MustBeStationary RequireMinDistanceToExpire</Flags>
+		</Item>
+		
+		<Item key="ApproachedTrafficPedPlayerSuspicious">
+			<Type>IT_WaryApproached</Type>
+			<Condition type="CAIConditionAnd">
+				<Conditions>
+					<Condition type="CAIConditionPedGroupLeader"/>
+					<!-- Player isn't riding along with someone -->
+					<Condition type="CAIConditionNot">
+						<Condition type="CAIConditionIsPassengerInVehicle">
+							<Ped>SecondaryEntity</Ped>
+						</Condition>
+					</Condition>
+					<!-- Shouldn't be a witness or about to be a witness -->
+					<Condition type="CAIConditionOr">
+						<Conditions>
+							<Condition type="CAIConditionCanWitnessCrime" />
+							<Condition type="CAIConditionNot">
+								<Condition type="CAIConditionReferenced">
+									<Name>IS_WITNESS</Name>
+								</Condition>
+							</Condition>
+						</Conditions>
+					</Condition>
+					<!-- Need to be aggressive -->
+					<Condition type="CAIConditionInteractionPersonality">
+						<InteractionPersonality>Aggressive</InteractionPersonality>
+					</Condition>
+					<!-- Need to be in the wilderness for this to be able to trigger -->
+					<Condition type="CAIConditionCurrentLawRegionWilderness"/>
+					<Condition type="CAIConditionIsTrafficPed"/>
+					<!-- Ped is on a mount or driver of the wagon -->
+					<Condition type="CAIConditionOr">
+						<Conditions>
+							<Condition type="CAIConditionIsOnMount"/>
+							<Condition type="CAIConditionIsDrivingVehicle"/>
+						</Conditions>
+					</Condition>
+					<Condition type="CAIConditionNot">
+						<Condition type="CAIConditionIsInDispute">
+							<Ped>SecondaryEntity</Ped>
+						</Condition>
+					</Condition>
+					<!--Suspicious things go here -->
+					<Condition type="CAIConditionOr">
+						<Conditions>
+							<Condition type="CAIConditionPedHasSimpleMemoryForPlayer">
+								<MemoryType>SawPlayerActingSuspicious</MemoryType>
+								<QueryTimeMS value="120000"/>
+							</Condition>
+							<Condition type="CAIConditionPedHasSimpleMemoryForPlayer">
+								<MemoryType>SawPlayerWearingDisguise</MemoryType>
+								<QueryTimeMS value="120000"/>
+							</Condition>
+							<Condition type="CAIConditionPedHasSimpleMemoryForPlayer">
+								<MemoryType>InsultedByPlayer</MemoryType>
+								<QueryTimeMS value="120000"/>
+							</Condition>
+						</Conditions>
+					</Condition>
+					<Condition type="CAIConditionDirectionRelativeToTarget">
+						<FromEntity>PrimaryEntity</FromEntity>
+						<TargetEntity>SecondaryEntity</TargetEntity>
+						<Threshold value="0.134"/>
+						<FlattenZ value="true"/>
+						<LessThan value="true"/>
+					</Condition>
+					<!-- Neither player nor ambient is moving too quickly -->
+					<Condition type="CAIConditionVelocityWithinRange">
+						<Ped>SecondaryEntity</Ped>
+						<UpperBound value="6.0f"/> 
+					</Condition>
+					<Condition type="CAIConditionVelocityWithinRange">
+						<UpperBound value="6.0f"/> 
+					</Condition>
+				</Conditions>
+			</Condition>
+			<TimeBeforeInitialReaction>
+				<Min value="0.1" />
+				<Max value="0.25" />
+			</TimeBeforeInitialReaction>
+			<TimeAfterLastSuccessfulReaction>
+				<Min value="4.0" />
+				<Max value="8.0" />
+				</TimeAfterLastSuccessfulReaction>
+			<TimeAfterInitialReactionFailure>
+				<Min value="4.0" />
+				<Max value="8.0" />
+			</TimeAfterInitialReactionFailure>
+			<MinDotToTarget value="-0.134" />
+			<MaxTargetSpeed value="10.0" />
+			<MinDistanceToExpire value="40.0" />
+			<MaxReactions value="1" />
+			<Flags>DisableWhenAgitated</Flags>
+		</Item>
+		
+		<Item key="ApproachedTrafficPedPlayerNearDeadAnimal">
+			<Type>IT_HunterApproached</Type>
+			<Condition type="CAIConditionAnd">
+				<Conditions>
+					<!-- Player is on foot -->
+					<Condition type="CAIConditionIsOnFoot">
+						<Ped>SecondaryEntity</Ped>
+					</Condition>
+					<!-- Need to be in the wilderness for this to be able to trigger -->
+					<Condition type="CAIConditionCurrentLawRegionWilderness"/>
+					<Condition type="CAIConditionIsTrafficPed"/>
+					<!-- Ped is on a mount or driver of the wagon -->
+					<Condition type="CAIConditionOr">
+						<Conditions>
+							<Condition type="CAIConditionIsOnMount"/>
+							<Condition type="CAIConditionIsDrivingVehicle"/>
+						</Conditions>
+					</Condition>
+					<!-- Speed checks -->
+					<Condition type="CAIConditionOr">
+						<Conditions>
+							<Condition type="CAIConditionAnd">
+								<Conditions>
+									<Condition type="CAIConditionIsOnMount"/>
+									<Condition type="CAIConditionNot">
+										<Condition type="CAIConditionIsMountFasterThan">
+											<SpeedGait>Gait_Trot</SpeedGait>
+										</Condition>
+									</Condition>
+								</Conditions>
+							</Condition>
+							<Condition type="CAIConditionAnd">
+								<Conditions>
+									<Condition type="CAIConditionIsInAVehicle"/>
+									<Condition type="CAIConditionVelocityWithinRange">
+										<UpperBound value="8.0"/>
+									</Condition>
+								</Conditions>
+							</Condition>
+						</Conditions>
+					</Condition>
+					<Condition type="CAIConditionNot">
+						<Condition type="CAIConditionIsInDispute">
+							<Ped>SecondaryEntity</Ped>
+						</Condition>
+					</Condition>
+					<!-- Dead animal nearby-->
+					<Condition type="CAIConditionFindNearbyPed">
+						<PedToSearchFrom>SecondaryEntity</PedToSearchFrom>
+						<Radius value="10.0f"/>
+						<MustBeDead value="true"/>
+						<MustBeAlive value="false"/>
+						<MustNotBeHuman value="true"/>
+					</Condition>
+					<Condition type="CAIConditionNot">
+						<Condition type="CAIConditionReferenced">
+							<Name>IS_PLAYER_PED_DRUNK_SECONDARY</Name>
+						</Condition>
+					</Condition>
+					<Condition type="CAIConditionNot">
+						<Condition type="CAIConditionPedHasRobberyMemory">
+							<MemoryType>RideJacked</MemoryType>
+							<SourcePed>SecondaryEntity</SourcePed>
+						</Condition>
+					</Condition>
+					<Condition type="CAIConditionNot">
+						<Condition type="CAIConditionPedHasRobberyMemory">
+							<MemoryType>GivenUpRide</MemoryType>
+							<SourcePed>SecondaryEntity</SourcePed>
+						</Condition>
+					</Condition>
+					<Condition type="CAIConditionNot">
+						<Condition type="CAIConditionIsInInteraction">
+							<Ped>SecondaryEntity</Ped>
+						</Condition>
+					</Condition>
+					<condition type="CAIConditionNot">
+						<Condition type="CAIConditionPedHasSimpleMemoryForPlayer">
+							<MemoryType>RejectedGreet</MemoryType>
+							<QueryTimeMS value="120000"/>
+						</Condition>
+					</condition>
+					<Condition type="CAIConditionNot">
+						<Condition type="CAIConditionCheckRelationship">
+							<Ped>PrimaryEntity</Ped>
+							<TargetPed>SecondaryEntity</TargetPed>
+							<RelationshipType>ACQUAINTANCE_TYPE_PED_DISLIKE</RelationshipType>
+						</Condition>
+					</Condition>
+					<Condition type="CAIConditionNot">
+						<Condition type="CAIConditionArePedResetFlagsSet">
+							<ResetFlags>CPED_RESET_FLAG_CannotSee</ResetFlags>
+						</Condition>
+					</Condition>
+					<Condition type="CAIConditionNot">
+					  <Condition type="CAIConditionIsEntityOnMyMind">
+						<TimeLimitInSeconds value="30.0"/>
+					  </Condition>
+					</Condition>
+					<Condition type="CAIConditionNot">
+						<Condition type="CAIConditionReferenced">
+							<Name>INTERACTION_PEDS_SPOKE_RECENTLY</Name>
+						</Condition>
+					</Condition>
+					<Condition type="CAIConditionNot">
+						<Condition type="CAIConditionIsInDispute">
+							<Ped>SecondaryEntity</Ped>
+						</Condition>
+					</Condition>
+					<Condition type="CAIConditionNot">
+						<Condition type="CAIConditionPedHasSimpleMemory">
+							<Ped>SecondaryEntity</Ped>
+							<MemoryType>Greeted</MemoryType>
+							<QueryTimeMS value="10000"/>
+						</Condition>
+					</Condition>
+				</Conditions>
+			</Condition>
+			<TimeBeforeInitialReaction>
+				<Min value="0.1" />
+				<Max value="0.25" />
+			</TimeBeforeInitialReaction>
+			<TimeAfterLastSuccessfulReaction>
+				<Min value="4.0" />
+				<Max value="8.0" />
+				</TimeAfterLastSuccessfulReaction>
+			<TimeAfterInitialReactionFailure>
+				<Min value="4.0" />
+				<Max value="8.0" />
+			</TimeAfterInitialReactionFailure>
+			<MinDotToTarget value="-0.134" />
+			<MaxTargetSpeed value="10.0" />
+			<MinDistanceToExpire value="40.0" />
+			<MaxReactions value="1" />
+			<Flags>DisableWhenAgitated</Flags>
+		</Item>
+		
+		<Item key="ApproachedTrafficPedPlayerDangerous">
+			<Type>IT_WaryApproached</Type>
+			<Condition type="CAIConditionAnd">
+				<Conditions>
+					<Condition type="CAIConditionPedGroupLeader"/>
+					<Condition type="CAIConditionNot">
+						<Condition type="CAIConditionIsTaskRunning">
+							<TaskHash>TASK_FLEE</TaskHash>
+							<MustBeActive value="true"/>
+						</Condition>
+					</Condition>
+					<!-- Player isn't riding along with someone -->
+					<Condition type="CAIConditionNot">
+						<Condition type="CAIConditionIsPassengerInVehicle">
+							<Ped>SecondaryEntity</Ped>
+						</Condition>
+					</Condition>
+					<!-- Shouldn't be a witness or about to be a witness -->
+					<Condition type="CAIConditionOr">
+						<Conditions>
+							<Condition type="CAIConditionCanWitnessCrime" />
+							<Condition type="CAIConditionNot">
+								<Condition type="CAIConditionReferenced">
+									<Name>IS_WITNESS</Name>
+								</Condition>
+							</Condition>
+						</Conditions>
+					</Condition>
+					<!-- Need to be in the wilderness for this to be able to trigger -->
+					<Condition type="CAIConditionCurrentLawRegionWilderness"/>
+					<!-- Ped is on a mount or driver of the wagon -->
+					<Condition type="CAIConditionOr">
+						<Conditions>
+							<Condition type="CAIConditionIsOnMount"/>
+							<Condition type="CAIConditionIsDrivingVehicle"/>
+						</Conditions>
+					</Condition>
+					<Condition type="CAIConditionNot">
+						<Condition type="CAIConditionIsInDispute">
+							<Ped>SecondaryEntity</Ped>
+						</Condition>
+					</Condition>
+					<!-- Maybe this should be in the interaction response to change what we do and as long as player has knife in hand then go to there?-->
+					<!--Players speed is one of these -->
+					<Condition type="CAIConditionOr">
+						<Conditions>
+							<Condition type="CAIConditionSpeed">
+								<Ped>SecondaryEntity</Ped>
+								<Speed>Run</Speed>
+							</Condition>
+							<Condition type="CAIConditionSpeed">
+								<Ped>SecondaryEntity</Ped>
+								<Speed>Sprint</Speed>
+							</Condition>
+						</Conditions>
+					</Condition>
+					<!-- Dangerous things go here -->
+					<Condition type="CAIConditionOr">
+						<Conditions>
+							<Condition type="CAIConditionPedHasSimpleMemoryForPlayer">
+								<MemoryType>NearlyShotByPlayer</MemoryType>
+								<QueryTimeMS value="120000"/>
+							</Condition>
+							<!-- Melee weapon in hand -->
+							<Condition type="CAIConditionEquippedWeaponType">
+								<Ped>SecondaryEntity</Ped>
+								<WeaponType>Melee</WeaponType>
+							</Condition>
+						</Conditions>
+					</Condition>
+					<Condition type="CAIConditionDirectionRelativeToTarget">
+						<FromEntity>PrimaryEntity</FromEntity>
+						<TargetEntity>SecondaryEntity</TargetEntity>
+						<Threshold value="0.134"/>
+						<FlattenZ value="true"/>
+						<LessThan value="true"/>
+					</Condition>
+					<!-- Neither player nor ambient is moving too quickly -->
+					<Condition type="CAIConditionVelocityWithinRange">
+						<Ped>SecondaryEntity</Ped>
+						<UpperBound value="6.0f"/> 
+					</Condition>
+					<Condition type="CAIConditionVelocityWithinRange">
+						<UpperBound value="6.0f"/> 
+					</Condition>
+				</Conditions>
+			</Condition>
+			<TimeBeforeInitialReaction>
+				<Min value="0.1" />
+				<Max value="0.25" />
+			</TimeBeforeInitialReaction>
+			<TimeAfterLastSuccessfulReaction>
+				<Min value="4.0" />
+				<Max value="8.0" />
+				</TimeAfterLastSuccessfulReaction>
+			<TimeAfterInitialReactionFailure>
+				<Min value="4.0" />
+				<Max value="8.0" />
+			</TimeAfterInitialReactionFailure>
+			<MinDistanceToExpire value="40.0" />
+			<MaxReactions value="1" />
+			<Flags></Flags>
+		</Item>
+		
+		<Item key="ApproachedTrafficPedPlayerMounted">
+			<Type>IT_Approached</Type>
+			<Condition type="CAIConditionAnd">
+				<Conditions>
+					<Condition type="CAIConditionNot">
+						<Condition type="CAIConditionReferenced">
+							<Name>IS_PLAYER_PED_DRUNK_SECONDARY</Name>
+						</Condition>
+					</Condition>
+					<Condition type="CAIConditionNot">
+						<Condition type="CAIConditionPedHasRobberyMemory">
+							<MemoryType>RideJacked</MemoryType>
+							<SourcePed>SecondaryEntity</SourcePed>
+						</Condition>
+					</Condition>
+					<Condition type="CAIConditionNot">
+						<Condition type="CAIConditionPedHasRobberyMemory">
+							<MemoryType>GivenUpRide</MemoryType>
+							<SourcePed>SecondaryEntity</SourcePed>
+						</Condition>
+					</Condition>
+					<Condition type="CAIConditionNot">
+						<Condition type="CAIConditionIsInInteraction">
+							<Ped>SecondaryEntity</Ped>
+						</Condition>
+					</Condition>
+					<!-- if you rejected the player's greet, dont immediately run the approach triggers -->
+					<condition type="CAIConditionNot">
+						<Condition type="CAIConditionPedHasSimpleMemoryForPlayer">
+							<MemoryType>RejectedGreet</MemoryType>
+							<QueryTimeMS value="120000"/>
+						</Condition>
+					</condition>
+					<Condition type="CAIConditionOr">
+						<Conditions>
+							<Condition type="CAIConditionAnd">
+								<Conditions>
+									<Condition type="CAIConditionIsLawEnforcement"/>
+									<Condition type="CAIConditionNot">
+										<Condition type="CAIConditionHasAnyWeaponEquipped">
+											<Ped>SecondaryEntity</Ped>
+										</Condition>
+									</Condition>
+								</Conditions>
+							</Condition>
+							<Condition type="CAIConditionNot">
+								<Condition type="CAIConditionIsLawEnforcement"/>
+							</Condition>
+						</Conditions>
+					</Condition>
+					<Condition type="CAIConditionNot">
+						<Condition type="CAIConditionPedHasSimpleMemory">
+							<MemoryType>CleaningCrimeScene</MemoryType>
+							<QueryTimeMS value="120000"/> <!-- Two minutes -->
+						</Condition>
+					</Condition>
+					<Condition type="CAIConditionNot">
+						<Condition type="CAIConditionCheckRelationship">
+							<Ped>PrimaryEntity</Ped>
+							<TargetPed>SecondaryEntity</TargetPed>
+							<RelationshipType>ACQUAINTANCE_TYPE_PED_DISLIKE</RelationshipType>
+						</Condition>
+					</Condition>
+					<Condition type="CAIConditionNot">
+						<Condition type="CAIConditionReferenced">
+							<Name>INTERACTION_HOGTIED</Name>
+						</Condition>
+					</Condition>
+					<Condition type="CAIConditionNot">
+						<Condition type="CAIConditionArePedResetFlagsSet">
+							<ResetFlags>CPED_RESET_FLAG_CannotSee</ResetFlags>
+						</Condition>
+					</Condition>
+					<Condition type="CAIConditionNot">
+					  <Condition type="CAIConditionIsEntityOnMyMind">
+						<TimeLimitInSeconds value="30.0"/>
+					  </Condition>
+					</Condition>
+					<Condition type="CAIConditionIsTrafficPed"/>
+					<Condition type="CAIConditionNot">
+						<Condition type="CAIConditionReferenced">
+							<Name>INTERACTION_PEDS_SPOKE_RECENTLY</Name>
+						</Condition>
+					</Condition>
+					<Condition type="CAIConditionNot">
+						<Condition type="CAIConditionIsInDispute">
+							<Ped>SecondaryEntity</Ped>
+						</Condition>
+					</Condition>
+					<Condition type="CAIConditionNot">
+						<Condition type="CAIConditionPedHasSimpleMemory">
+							<Ped>SecondaryEntity</Ped>
+							<MemoryType>Greeted</MemoryType>
+							<QueryTimeMS value="10000"/>
+						</Condition>
+					</Condition>
+					<Condition type="CAIConditionNot">
+						<Condition type="CAIConditionIsOnFoot">
+							<Ped>SecondaryEntity</Ped>
+						</Condition>
+					</Condition>
+					<Condition type="CAIConditionOr">
+						<Conditions>
+							<Condition type="CAIConditionAnd">
+								<Conditions>
+									<Condition type="CAIConditionIsOnMount"/>
+									<Condition type="CAIConditionNot">
+										<Condition type="CAIConditionIsMountFasterThan">
+											<SpeedGait>Gait_Trot</SpeedGait>
+										</Condition>
+									</Condition>
+								</Conditions>
+							</Condition>
+							<Condition type="CAIConditionAnd">
+								<Conditions>
+									<Condition type="CAIConditionIsInAVehicle"/>
+									<Condition type="CAIConditionVelocityWithinRange">
+										<UpperBound value="8.0"/>
+									</Condition>
+								</Conditions>
+							</Condition>
+						</Conditions>
+					</Condition>
+					<Condition type="CAIConditionDirectionRelativeToTarget">
+						<FromEntity>PrimaryEntity</FromEntity>
+						<TargetEntity>SecondaryEntity</TargetEntity>
+						<Threshold value="0.134"/>
+						<FlattenZ value="true"/>
+						<LessThan value="true"/>
+					</Condition>
+				</Conditions>
+			</Condition>
+			<TimeBeforeInitialReaction>
+				<Min value="0.1" />
+				<Max value="0.25" />
+			</TimeBeforeInitialReaction>
+			<TimeAfterLastSuccessfulReaction>
+				<Min value="4.0" />
+				<Max value="8.0" />
+				</TimeAfterLastSuccessfulReaction>
+			<TimeAfterInitialReactionFailure>
+				<Min value="4.0" />
+				<Max value="8.0" />
+			</TimeAfterInitialReactionFailure>
+			<MinDotToTarget value="-0.134" />
+			<MaxTargetSpeed value="10.0" />
+			<MinDistanceToExpire value="40.0" />
+			<MaxReactions value="1" />
+			<Flags>DisableWhenAgitated</Flags>
+		</Item>
+		
+		<Item key="ApproachedTrafficPedPlayerOnFoot">
+			<Type>IT_Approached</Type>
+			<Condition type="CAIConditionAnd">
+				<Conditions>
+					<Condition type="CAIConditionNot">
+						<Condition type="CAIConditionReferenced">
+							<Name>IS_PLAYER_PED_DRUNK_SECONDARY</Name>
+						</Condition>
+					</Condition>
+					<Condition type="CAIConditionNot">
+						<Condition type="CAIConditionPedHasRobberyMemory">
+							<MemoryType>RideJacked</MemoryType>
+							<SourcePed>SecondaryEntity</SourcePed>
+						</Condition>
+					</Condition>
+					<Condition type="CAIConditionNot">
+						<Condition type="CAIConditionPedHasRobberyMemory">
+							<MemoryType>GivenUpRide</MemoryType>
+							<SourcePed>SecondaryEntity</SourcePed>
+						</Condition>
+					</Condition>
+					<Condition type="CAIConditionNot">
+						<Condition type="CAIConditionIsInInteraction">
+							<Ped>SecondaryEntity</Ped>
+						</Condition>
+					</Condition>
+					<!-- if you rejected the player's greet, dont immediately run the approach triggers -->
+					<condition type="CAIConditionNot">
+						<Condition type="CAIConditionPedHasSimpleMemoryForPlayer">
+							<MemoryType>RejectedGreet</MemoryType>
+							<QueryTimeMS value="120000"/>
+						</Condition>
+					</condition>
+					<Condition type="CAIConditionOr">
+						<Conditions>
+							<Condition type="CAIConditionAnd">
+								<Conditions>
+									<Condition type="CAIConditionIsLawEnforcement"/>
+									<Condition type="CAIConditionNot">
+										<Condition type="CAIConditionHasAnyWeaponEquipped">
+											<Ped>SecondaryEntity</Ped>
+										</Condition>
+									</Condition>
+								</Conditions>
+							</Condition>
+							<Condition type="CAIConditionNot">
+								<Condition type="CAIConditionIsLawEnforcement"/>
+							</Condition>
+						</Conditions>
+					</Condition>
+					<Condition type="CAIConditionNot">
+						<Condition type="CAIConditionPedHasSimpleMemory">
+							<MemoryType>CleaningCrimeScene</MemoryType>
+							<QueryTimeMS value="120000"/> <!-- Two minutes -->
+						</Condition>
+					</Condition>
+					<Condition type="CAIConditionNot">
+						<Condition type="CAIConditionArePedGameplayConfigFlagsSet">
+							<Ped>SecondaryEntity</Ped>
+							<ConfigFlags>CPED_GAMEPLAY_CONFIG_FLAG_IsRunningGrapple</ConfigFlags>
+						</Condition>
+					</Condition>
+					<Condition type="CAIConditionNot">
+						<Condition type="CAIConditionCheckRelationship">
+							<Ped>PrimaryEntity</Ped>
+							<TargetPed>SecondaryEntity</TargetPed>
+							<RelationshipType>ACQUAINTANCE_TYPE_PED_DISLIKE</RelationshipType>
+						</Condition>
+					</Condition>
+					<Condition type="CAIConditionNot">
+						<Condition type="CAIConditionReferenced">
+							<Name>INTERACTION_HOGTIED</Name>
+						</Condition>
+					</Condition>
+					<Condition type="CAIConditionNot">
+						<Condition type="CAIConditionArePedResetFlagsSet">
+							<ResetFlags>CPED_RESET_FLAG_CannotSee</ResetFlags>
+						</Condition>
+					</Condition>
+					<Condition type="CAIConditionNot">
+					  <Condition type="CAIConditionIsEntityOnMyMind">
+						<TimeLimitInSeconds value="30.0"/>
+					  </Condition>
+					</Condition>
+					<Condition type="CAIConditionIsTrafficPed"/>
+					<Condition type="CAIConditionNot">
+						<Condition type="CAIConditionReferenced">
+							<Name>INTERACTION_PEDS_SPOKE_RECENTLY</Name>
+						</Condition>
+					</Condition>
+					<Condition type="CAIConditionNot">
+						<Condition type="CAIConditionIsInDispute">
+							<Ped>SecondaryEntity</Ped>
+						</Condition>
+					</Condition>
+					<Condition type="CAIConditionNot">
+						<Condition type="CAIConditionPedHasSimpleMemory">
+							<Ped>SecondaryEntity</Ped>
+							<MemoryType>Greeted</MemoryType>
+							<QueryTimeMS value="10000"/>
+						</Condition>
+					</Condition>					
+					<Condition type="CAIConditionOr">
+						<Conditions>
+							<Condition type="CAIConditionAnd">
+								<Conditions>
+									<Condition type="CAIConditionIsOnMount"/>
+									<Condition type="CAIConditionNot">
+										<Condition type="CAIConditionIsMountFasterThan">
+											<SpeedGait>Gait_Trot</SpeedGait>
+										</Condition>
+									</Condition>
+								</Conditions>
+							</Condition>
+							<Condition type="CAIConditionAnd">
+								<Conditions>
+									<Condition type="CAIConditionIsInAVehicle"/>
+									<Condition type="CAIConditionVelocityWithinRange">
+										<UpperBound value="8.0"/>
+									</Condition>
+								</Conditions>
+							</Condition>
+						</Conditions>
+					</Condition>
+					<Condition type="CAIConditionDirectionRelativeToTarget">
+						<FromEntity>PrimaryEntity</FromEntity>
+						<TargetEntity>SecondaryEntity</TargetEntity>
+						<Threshold value="0.134"/>
+						<FlattenZ value="true"/>
+						<LessThan value="true"/>
+					</Condition>
+				</Conditions>
+			</Condition>
+			<TimeBeforeInitialReaction>
+				<Min value="0.1" />
+				<Max value="0.5" />
+			</TimeBeforeInitialReaction>
+			<TimeAfterLastSuccessfulReaction>
+				<Min value="4.0" />
+				<Max value="8.0" />
+				</TimeAfterLastSuccessfulReaction>
+			<TimeAfterInitialReactionFailure>
+				<Min value="4.0" />
+				<Max value="8.0" />
+			</TimeAfterInitialReactionFailure>
+			<MinDotToTarget value="0.259" />
+			<MaxTargetSpeed value="2.75" />
+			<MinDistanceToExpire value="15.0" />
+			<MaxReactions value="2" />
+			<Flags>DisableWhenAgitated</Flags>
+		</Item>
+		
+		<Item key="Following">
+			<Type>IT_Following</Type>
+			<TimeBeforeInitialReaction>
+				<Min value="8.0" />
+				<Max value="10.0" />
+			</TimeBeforeInitialReaction>
+			<TimeBetweenEscalatingReactions>
+				<Min value="3.0" />
+				<Max value="5.0" />
+			</TimeBetweenEscalatingReactions>
+			<MaxDotToTarget value="0.707" />
+			<MaxReactions value="1" />
+			<Flags>MustBeWanderingBeforeInitialReaction NoLineOfSightNeeded DisableWhenStill</Flags>
+			<ActivationCondition type="CAIConditionAnd">
+				<Conditions>
+					<!-- Make sure player is on foot -->
+					<Condition type="CAIConditionIsOnFoot">
+						<Ped>SecondaryEntity</Ped>
+					</Condition>
+					<Condition type="CAIConditionNot">
+						<Condition type="CAIConditionIsOnPavementGraph">
+							<Ped>PrimaryEntity</Ped>
+							<NotInWilderness value="true"/>
+						</Condition>
+					</Condition>
+					<!-- Must at least be behind the ped to start this trigger-->
+					<Condition type="CAIConditionDirectionRelativeToTarget">
+						<FromEntity>SecondaryEntity</FromEntity>
+						<TargetEntity>PrimaryEntity</TargetEntity>
+						<Threshold value="0.0"/>
+						<FlattenZ value="true"/>
+						<LessThan value="false"/>
+					</Condition>
+					<Condition type="CAIConditionNot">
+						<Condition type="CAIConditionArePedResetFlagsSet">
+							<ResetFlags>CPED_RESET_FLAG_CannotSee</ResetFlags>
+						</Condition>
+					</Condition>
+					<Condition type="CAIConditionNot">
+						<Condition type="CAIConditionHasPersonalityFlags">
+							<Flags>PROSTITUTE</Flags>
+						</Condition>
+					</Condition>
+					<Condition type="CAIConditionNot">
+						<Condition type="CAIConditionIsIgnoringAgitator"/>
+					</Condition>
+					<Condition type="CAIConditionNot">
+						<Condition type="CAIConditionIsPassengerInVehicle">
+							<Ped>SecondaryEntity</Ped>
+						</Condition>
+					</Condition>
+					<Condition type="CAIConditionNot">
+						<Condition type="CAIConditionIsPassengerOnMount">
+							<Ped>SecondaryEntity</Ped>
+						</Condition>
+					</Condition>
+					<Condition type="CAIConditionIsPedMovingToward">
+						<MinMBR value="0.5"/>
+					</Condition>
+				</Conditions>
+			</ActivationCondition>
+			<Condition type="CAIConditionAnd">
+				<Conditions>
+					<!-- Player isn't riding along with someone -->
+					<Condition type="CAIConditionNot">
+						<Condition type="CAIConditionIsPassengerInVehicle">
+							<Ped>SecondaryEntity</Ped>
+						</Condition>
+					</Condition>
+					<Condition type="CAIConditionNot">
+						<Condition type="CAIConditionIsSpeaking">
+							<Ped>SecondaryEntity</Ped>
+						</Condition>
+					</Condition>
+					<Condition type="CAIConditionNot">
+						<Condition type="CAIConditionIsSpeaking"/>
+					</Condition>
+					<Condition type="CAIConditionNot">
+						<Condition type="CAIConditionInSameGroup"/>
+					</Condition>
+					<Condition type="CAIConditionNot">
+						<Condition type="CInteractionConditionIsInAmbientTaxi">
+							<PlayerPed>SecondaryEntity</PlayerPed>
+						</Condition>
+					</Condition>
+					<Condition type="CAIConditionNot">
+						<Condition type="CAIConditionIsPedOnMyVehicleRoof">
+							<Ped>SecondaryEntity</Ped>
+							<DriverPed>PrimaryEntity</DriverPed>
+						</Condition>
+					</Condition>
+				</Conditions>
+			</Condition>
+		</Item>
+
+		<Item key="FollowingPavement">
+			<Type>IT_Following</Type>
+			<TimeBeforeInitialReaction>
+				<Min value="8.5" />
+				<Max value="10.5" />
+			</TimeBeforeInitialReaction>
+			<TimeBetweenEscalatingReactions>
+				<Min value="3.5" />
+				<Max value="5.5" />
+			</TimeBetweenEscalatingReactions>
+			<MaxDotToTarget value="0.707" />
+			<MaxReactions value="1" />
+			<Flags>MustBeWanderingBeforeInitialReaction NoLineOfSightNeeded DisableWhenStill</Flags>
+			<ActivationCondition type="CAIConditionAnd">
+				<Conditions>
+					<!-- Make sure player is on foot -->
+					<Condition type="CAIConditionIsOnFoot">
+						<Ped>SecondaryEntity</Ped>
+					</Condition>
+					<Condition type="CAIConditionIsOnPavementGraph">
+						<Ped>PrimaryEntity</Ped>
+						<NotInWilderness value="true"/>
+					</Condition>
+					<!-- Must at least be behind the ped to start this trigger-->
+					<Condition type="CAIConditionDirectionRelativeToTarget">
+						<FromEntity>SecondaryEntity</FromEntity>
+						<TargetEntity>PrimaryEntity</TargetEntity>
+						<Threshold value="0.0"/>
+						<FlattenZ value="true"/>
+						<LessThan value="false"/>
+					</Condition>
+					<Condition type="CAIConditionNot">
+						<Condition type="CAIConditionArePedResetFlagsSet">
+							<ResetFlags>CPED_RESET_FLAG_CannotSee</ResetFlags>
+						</Condition>
+					</Condition>
+					<Condition type="CAIConditionNot">
+						<Condition type="CAIConditionHasPersonalityFlags">
+							<Flags>PROSTITUTE</Flags>
+						</Condition>
+					</Condition>
+					<Condition type="CAIConditionNot">
+						<Condition type="CAIConditionIsIgnoringAgitator"/>
+					</Condition>
+					<Condition type="CAIConditionNot">
+						<Condition type="CAIConditionIsPassengerInVehicle">
+							<Ped>SecondaryEntity</Ped>
+						</Condition>
+					</Condition>
+					<Condition type="CAIConditionNot">
+						<Condition type="CAIConditionIsPassengerOnMount">
+							<Ped>SecondaryEntity</Ped>
+						</Condition>
+					</Condition>
+					<Condition type="CAIConditionIsPedMovingToward">
+						<MinMBR value="0.5"/>
+					</Condition>
+				</Conditions>
+			</ActivationCondition>
+			<Condition type="CAIConditionAnd">
+				<Conditions>
+					<!-- Player isn't riding along with someone -->
+					<Condition type="CAIConditionNot">
+						<Condition type="CAIConditionIsPassengerInVehicle">
+							<Ped>SecondaryEntity</Ped>
+						</Condition>
+					</Condition>
+					<Condition type="CAIConditionNot">
+						<Condition type="CAIConditionIsSpeaking">
+							<Ped>SecondaryEntity</Ped>
+						</Condition>
+					</Condition>
+					<Condition type="CAIConditionNot">
+						<Condition type="CAIConditionIsSpeaking"/>
+					</Condition>
+					<Condition type="CAIConditionNot">
+						<Condition type="CAIConditionInSameGroup"/>
+					</Condition>
+					<Condition type="CAIConditionNot">
+						<Condition type="CInteractionConditionIsInAmbientTaxi">
+							<PlayerPed>SecondaryEntity</PlayerPed>
+						</Condition>
+					</Condition>
+					<Condition type="CAIConditionNot">
+						<Condition type="CAIConditionIsPedOnMyVehicleRoof">
+							<Ped>SecondaryEntity</Ped>
+							<DriverPed>PrimaryEntity</DriverPed>
+						</Condition>
+					</Condition>
+				</Conditions>
+			</Condition>
+		</Item>
+		
+		<Item key="FollowingGangCampPed">
+			<Type>IT_Following</Type>
+			<TimeBeforeInitialReaction>
+				<Min value="12.0" />
+				<Max value="15.0" />
+			</TimeBeforeInitialReaction>
+			<TimeBetweenEscalatingReactions>
+				<Min value="5.0" />
+				<Max value="8.0" />
+			</TimeBetweenEscalatingReactions>
+			<MaxDotToTarget value="0.5" />
+			<MaxReactions value="1" />
+			<Flags>MustBeWanderingBeforeInitialReaction NoLineOfSightNeeded DisableWhenStill</Flags>
+			<ActivationCondition type="CAIConditionAnd">
+				<Conditions>
+					<!-- Player must be in camp -->
+					<Condition type="CAIConditionIsInAnEscalatedFriendlyReactionArea">
+						<PlayerPed>SecondaryEntity</PlayerPed>
+					</Condition>
+					<!-- Must at least be behind the ped to start this trigger-->
+					<Condition type="CAIConditionDirectionRelativeToTarget">
+						<FromEntity>SecondaryEntity</FromEntity>
+						<TargetEntity>PrimaryEntity</TargetEntity>
+						<Threshold value="0.0"/>
+						<FlattenZ value="true"/>
+						<LessThan value="false"/>
+					</Condition>
+					<Condition type="CAIConditionNot">
+						<Condition type="CAIConditionArePedResetFlagsSet">
+							<ResetFlags>CPED_RESET_FLAG_CannotSee</ResetFlags>
+						</Condition>
+					</Condition>
+					<Condition type="CAIConditionNot">
+						<Condition type="CAIConditionHasPersonalityFlags">
+							<Flags>PROSTITUTE</Flags>
+						</Condition>
+					</Condition>
+					<Condition type="CAIConditionNot">
+						<Condition type="CAIConditionIsIgnoringAgitator"/>
+					</Condition>
+					<Condition type="CAIConditionNot">
+						<Condition type="CAIConditionIsPassengerInVehicle">
+							<Ped>SecondaryEntity</Ped>
+						</Condition>
+					</Condition>
+					<Condition type="CAIConditionNot">
+						<Condition type="CAIConditionIsPassengerOnMount">
+							<Ped>SecondaryEntity</Ped>
+						</Condition>
+					</Condition>
+					<Condition type="CAIConditionIsPedMovingToward">
+						<MinMBR value="0.5"/>
+					</Condition>
+				</Conditions>
+			</ActivationCondition>
+			<Condition type="CAIConditionAnd">
+				<Conditions>
+					<!-- Player isn't riding along with someone -->
+					<Condition type="CAIConditionNot">
+						<Condition type="CAIConditionIsPassengerInVehicle">
+							<Ped>SecondaryEntity</Ped>
+						</Condition>
+					</Condition>
+					<Condition type="CAIConditionNot">
+						<Condition type="CAIConditionIsSpeaking">
+							<Ped>SecondaryEntity</Ped>
+						</Condition>
+					</Condition>
+					<Condition type="CAIConditionNot">
+						<Condition type="CAIConditionIsSpeaking"/>
+					</Condition>
+					<Condition type="CAIConditionNot">
+						<Condition type="CAIConditionInSameGroup"/>
+					</Condition>
+					<Condition type="CAIConditionNot">
+						<Condition type="CInteractionConditionIsInAmbientTaxi">
+							<PlayerPed>SecondaryEntity</PlayerPed>
+						</Condition>
+					</Condition>
+					<Condition type="CAIConditionNot">
+						<Condition type="CAIConditionIsPedOnMyVehicleRoof">
+							<Ped>SecondaryEntity</Ped>
+							<DriverPed>PrimaryEntity</DriverPed>
+						</Condition>
+					</Condition>
+				</Conditions>
+			</Condition>
+		</Item>
+		
+		<Item key="IntrudingOnVehicleRoof">
+			<Type>IT_TerritoryIntruded</Type>
+			<TimeBeforeInitialReaction>
+				<Min value="1.0" />
+				<Max value="1.5" />
+			</TimeBeforeInitialReaction>
+			<TimeBetweenEscalatingReactions>
+				<Min value="1.0" />
+				<Max value="2.0" />
+			</TimeBetweenEscalatingReactions>
+			<MaxReactions value="1" />
+			<Flags>NoLineOfSightNeeded</Flags>
+			<Condition type="CAIConditionAnd">
+				<Conditions>
+					<Condition type="CAIConditionNot">
+						<Condition type="CAIConditionIsPassengerInVehicle">
+							<Ped>SecondaryEntity</Ped>
+						</Condition>
+					</Condition>
+					<Condition type="CAIConditionNot">
+						<Condition type="CAIConditionIsPassengerOnMount">
+							<Ped>SecondaryEntity</Ped>
+						</Condition>
+					</Condition>
+					<Condition type="CAIConditionNot">
+						<Condition type="CAIConditionInSameGroup"/>
+					</Condition>
+					<Condition type="CAIConditionNot">
+						<Condition type="CInteractionConditionIsInAmbientTaxi">
+							<PlayerPed>SecondaryEntity</PlayerPed>
+						</Condition>
+					</Condition>
+					<Condition type="CAIConditionIsPedOnMyVehicleRoof">
+						<Ped>SecondaryEntity</Ped>
+						<DriverPed>PrimaryEntity</DriverPed>
+					</Condition>
+					<Condition type="CAIConditionIsDrivingVehicle"/>
+				</Conditions>
+			</Condition>
+		</Item>
+
+		<!-- Ped is hanging on the outside of a coach - but not entering or moving to jack the driver -->
+		<Item key="IntrudingOnVehicleSide">
+			<Type>IT_TerritoryIntruded</Type>
+			<TimeBeforeInitialReaction>
+				<Min value="3.0" />
+				<Max value="3.5" />
+			</TimeBeforeInitialReaction>
+			<TimeBetweenEscalatingReactions>
+				<Min value="1.0" />
+				<Max value="2.0" />
+			</TimeBetweenEscalatingReactions>
+			<MaxReactions value="1" />
+			<Flags>NoLineOfSightNeeded</Flags>
+			<Condition type="CAIConditionAnd">
+				<Conditions>
+					<Condition type="CAIConditionIsDrivingVehicle"/>
+					<Condition type="CAIConditionNot">
+						<Condition type="CAIConditionIsBeingJacked"/>
+					</Condition>
+					<Condition type="CAIConditionNot">
+						<Condition type="CAIConditionPedHasSimpleMemory">
+							<Ped>SecondaryEntity</Ped>
+							<MemoryType>SetJackingInfo</MemoryType>
+							<QueryTimeMS value="1000" />
+						</Condition>
+					</Condition>
+					<Condition type="CAIConditionNot">
+						<Condition type="CAIConditionIsPassengerOnMount">
+							<Ped>SecondaryEntity</Ped>
+						</Condition>
+					</Condition>
+					<Condition type="CAIConditionNot">
+						<Condition type="CAIConditionInSameGroup" />
+					</Condition>
+					<Condition type="CAIConditionNot">
+						<Condition type="CInteractionConditionIsInAmbientTaxi">
+							<PlayerPed>SecondaryEntity</PlayerPed>
+						</Condition>
+					</Condition>
+					<Condition type="CAIConditionInSameVehicleOrMount">
+						<ConsiderAttachments value="true" />
+					</Condition>
+					<Condition type="CAIConditionNot">
+						<Condition type="CAIConditionArePedResetFlagsSet">
+							<Ped>SecondaryEntity</Ped>
+							<ResetFlags>CPED_RESET_FLAG_PerformingVehicleTransition</ResetFlags>
+						</Condition>
+					</Condition>
+				</Conditions>
+			</Condition>
+		</Item>
+		
+		<!-- These two will be the default traffic triggers-->
+		<Item key="FollowingOnMount">
+			<Type>IT_Following</Type>
+			<TimeBeforeInitialReaction>
+				<Min value="8.0" />
+				<Max value="10.0" />
+			</TimeBeforeInitialReaction>
+			<TimeBetweenEscalatingReactions>
+				<Min value="4.0" />
+				<Max value="6.0" />
+			</TimeBetweenEscalatingReactions>
+			<MaxDotToTarget value="0.0" /><!-- behind the ped -->
+			<MaxReactions value="1" />
+			<Flags>MustBeWanderingBeforeInitialReaction NoLineOfSightNeeded DisableWhenStill</Flags>
+			<ActivationCondition type="CAIConditionAnd">
+				<Conditions>
+					<Condition type="CAIConditionRoadNodeDensityWithBounds">
+						<MinDensity value="0"/>
+						<MaxDensity value="5"/>
+					</Condition>
+					<Condition type="CAIConditionReferenced">
+						<Name>INTERACTION_MOUNT_FOLLOWING_ACTIVATION</Name>
+					</Condition>
+				</Conditions>
+			</ActivationCondition>
+			<Condition type="CAIConditionReferenced">
+				<Name>INTERACTION_MOUNT_FOLLOWING_CONDITIONS</Name>
+			</Condition>
+		</Item>
+
+		<Item key="LoiteringOnMount">
+			<Type>IT_LoiteringClose</Type>
+			<TimeBeforeInitialReaction>
+				<Min value="8.0" />
+				<Max value="10.0" />
+			</TimeBeforeInitialReaction>
+			<TimeBetweenEscalatingReactions>
+				<Min value="4.0" />
+				<Max value="6.0" />
+			</TimeBetweenEscalatingReactions>
+			<MaxReactions value="1" />
+			<Flags>MustBeWanderingBeforeInitialReaction NoLineOfSightNeeded</Flags>
+			<ActivationCondition type="CAIConditionAnd">
+				<Conditions>
+					<Condition type="CAIConditionRoadNodeDensityWithBounds">
+						<MinDensity value="0"/>
+						<MaxDensity value="5"/>
+					</Condition>
+					<Condition type="CAIConditionReferenced">
+						<Name>INTERACTION_MOUNT_LOITERING_ACTIVATION</Name>
+					</Condition>
+				</Conditions>
+			</ActivationCondition>
+			<Condition type="CAIConditionReferenced">
+				<Name>INTERACTION_MOUNT_LOITERING_CONDITIONS</Name>
+			</Condition>
+		</Item>
+		
+		<Item key="FollowingOnMountMedDensity">
+			<Type>IT_Following</Type>
+			<TimeBeforeInitialReaction>
+				<Min value="10.0" />
+				<Max value="12.0" />
+			</TimeBeforeInitialReaction>
+			<TimeBetweenEscalatingReactions>
+				<Min value="6.0" />
+				<Max value="7.5" />
+			</TimeBetweenEscalatingReactions>
+			<MaxDotToTarget value="0.0" /><!-- behind the ped -->
+			<MaxReactions value="1" />
+			<Flags>MustBeWanderingBeforeInitialReaction NoLineOfSightNeeded DisableWhenStill</Flags>
+			<ActivationCondition type="CAIConditionAnd">
+				<Conditions>
+					<Condition type="CAIConditionRoadNodeDensityWithBounds">
+						<MinDensity value="6"/>
+						<MaxDensity value="9"/>
+					</Condition>
+					<Condition type="CAIConditionReferenced">
+						<Name>INTERACTION_MOUNT_FOLLOWING_ACTIVATION</Name>
+					</Condition>
+				</Conditions>
+			</ActivationCondition>
+			<Condition type="CAIConditionReferenced">
+				<Name>INTERACTION_MOUNT_FOLLOWING_CONDITIONS</Name>
+			</Condition>
+		</Item>
+
+		<Item key="LoiteringOnMountMedDensity">
+			<Type>IT_LoiteringClose</Type>
+			<TimeBeforeInitialReaction>
+				<Min value="10.0" />
+				<Max value="12.0" />
+			</TimeBeforeInitialReaction>
+			<TimeBetweenEscalatingReactions>
+				<Min value="6.0" />
+				<Max value="8.0" />
+			</TimeBetweenEscalatingReactions>
+			<MaxReactions value="1" />
+			<Flags>MustBeWanderingBeforeInitialReaction NoLineOfSightNeeded</Flags>
+			<ActivationCondition type="CAIConditionAnd">
+				<Conditions>
+					<Condition type="CAIConditionRoadNodeDensityWithBounds">
+						<MinDensity value="6"/>
+						<MaxDensity value="9"/>
+					</Condition>
+					<Condition type="CAIConditionReferenced">
+						<Name>INTERACTION_MOUNT_LOITERING_ACTIVATION</Name>
+					</Condition>
+				</Conditions>
+			</ActivationCondition>
+			<Condition type="CAIConditionReferenced">
+				<Name>INTERACTION_MOUNT_LOITERING_CONDITIONS</Name>
+			</Condition>
+		</Item>
+		
+		<!-- These two will be the default traffic triggers-->
+		<Item key="FollowingOnMountHighDensity">
+			<Type>IT_Following</Type>
+			<TimeBeforeInitialReaction>
+				<Min value="16.0" />
+				<Max value="18.0" />
+			</TimeBeforeInitialReaction>
+			<TimeBetweenEscalatingReactions>
+				<Min value="6.0" />
+				<Max value="8.0" />
+			</TimeBetweenEscalatingReactions>
+			<MaxDotToTarget value="0.0" /><!-- behind the ped -->
+			<MaxReactions value="1" />
+			<Flags>MustBeWanderingBeforeInitialReaction NoLineOfSightNeeded DisableWhenStill</Flags>
+			<ActivationCondition type="CAIConditionAnd">
+				<Conditions>
+					<Condition type="CAIConditionRoadNodeDensityWithBounds">
+						<MinDensity value="10"/>
+						<MaxDensity value="12"/>
+					</Condition>
+					<Condition type="CAIConditionReferenced">
+						<Name>INTERACTION_MOUNT_FOLLOWING_ACTIVATION</Name>
+					</Condition>
+				</Conditions>
+			</ActivationCondition>
+			<Condition type="CAIConditionReferenced">
+				<Name>INTERACTION_MOUNT_FOLLOWING_CONDITIONS</Name>
+			</Condition>
+		</Item>
+
+		<Item key="LoiteringOnMountHighDensity">
+			<Type>IT_LoiteringClose</Type>
+			<TimeBeforeInitialReaction>
+				<Min value="16.0" />
+				<Max value="18.0" />
+			</TimeBeforeInitialReaction>
+			<TimeBetweenEscalatingReactions>
+				<Min value="6.0" />
+				<Max value="8.0" />
+			</TimeBetweenEscalatingReactions>
+			<MaxReactions value="1" />
+			<Flags>MustBeWanderingBeforeInitialReaction NoLineOfSightNeeded</Flags>
+			<ActivationCondition type="CAIConditionAnd">
+				<Conditions>
+					<Condition type="CAIConditionRoadNodeDensityWithBounds">
+						<MinDensity value="10"/>
+						<MaxDensity value="12"/>
+					</Condition>
+					<Condition type="CAIConditionReferenced">
+						<Name>INTERACTION_MOUNT_LOITERING_ACTIVATION</Name>
+					</Condition>
+				</Conditions>
+			</ActivationCondition>
+			<Condition type="CAIConditionReferenced">
+				<Name>INTERACTION_MOUNT_LOITERING_CONDITIONS</Name>
+			</Condition>
+		</Item>
+		
+		<!-- These two will be the default traffic triggers-->
+		<Item key="FollowingOnMountMaxDensity">
+			<Type>IT_Following</Type>
+			<TimeBeforeInitialReaction>
+				<Min value="20.0" />
+				<Max value="24.0" />
+			</TimeBeforeInitialReaction>
+			<TimeBetweenEscalatingReactions>
+				<Min value="6.0" />
+				<Max value="8.0" />
+			</TimeBetweenEscalatingReactions>
+			<MaxDotToTarget value="0.0" /><!-- behind the ped -->
+			<MaxReactions value="1" />
+			<Flags>MustBeWanderingBeforeInitialReaction NoLineOfSightNeeded DisableWhenStill</Flags>
+			<ActivationCondition type="CAIConditionAnd">
+				<Conditions>
+					<Condition type="CAIConditionRoadNodeDensityWithBounds">
+						<MinDensity value="13"/>
+						<MaxDensity value="15"/>
+					</Condition>
+					<Condition type="CAIConditionReferenced">
+						<Name>INTERACTION_MOUNT_FOLLOWING_ACTIVATION</Name>
+					</Condition>
+				</Conditions>
+			</ActivationCondition>
+			<Condition type="CAIConditionReferenced">
+				<Name>INTERACTION_MOUNT_FOLLOWING_CONDITIONS</Name>
+			</Condition>
+		</Item>
+
+		<Item key="LoiteringOnMountMaxDensity">
+			<Type>IT_LoiteringClose</Type>
+			<TimeBeforeInitialReaction>
+				<Min value="20.0" />
+				<Max value="24.0" />
+			</TimeBeforeInitialReaction>
+			<TimeBetweenEscalatingReactions>
+				<Min value="6.0" />
+				<Max value="8.0" />
+			</TimeBetweenEscalatingReactions>
+			<MaxReactions value="1" />
+			<Flags>MustBeWanderingBeforeInitialReaction NoLineOfSightNeeded</Flags>
+			<ActivationCondition type="CAIConditionAnd">
+				<Conditions>
+					<Condition type="CAIConditionRoadNodeDensityWithBounds">
+						<MinDensity value="13"/>
+						<MaxDensity value="15"/>
+					</Condition>
+					<Condition type="CAIConditionReferenced">
+						<Name>INTERACTION_MOUNT_LOITERING_ACTIVATION</Name>
+					</Condition>
+				</Conditions>
+			</ActivationCondition>
+			<Condition type="CAIConditionReferenced">
+				<Name>INTERACTION_MOUNT_LOITERING_CONDITIONS</Name>
+			</Condition>
+		</Item>
+		
+		<Item key="FollowingProstitute">
+			<Type>IT_Following</Type>
+			<TimeBeforeInitialReaction>
+				<Min value="8.0" />
+				<Max value="10.0" />
+			</TimeBeforeInitialReaction>
+			<TimeBetweenEscalatingReactions>
+				<Min value="10.0" />
+				<Max value="15.0" />
+			</TimeBetweenEscalatingReactions>
+			<MaxDotToTarget value="0.707" />
+			<MaxReactions value="1" />
+			<Flags>MustBeWanderingBeforeInitialReaction NoLineOfSightNeeded DisableWhenStill</Flags>
+			<ActivationCondition type="CAIConditionAnd">
+				<Conditions>
+					<Condition type="CAIConditionNot">
+						<Condition type="CAIConditionArePedResetFlagsSet">
+							<ResetFlags>CPED_RESET_FLAG_CannotSee</ResetFlags>
+						</Condition>
+					</Condition>
+					<Condition type="CAIConditionHasPersonalityFlags">
+						<Flags>PROSTITUTE</Flags>
+					</Condition>
+					<Condition type="CAIConditionIsPedMovingToward">
+						<MinMBR value="0.5"/>
+					</Condition>
+				</Conditions>
+			</ActivationCondition>
+			<Condition type="CAIConditionAnd">
+				<Conditions>
+					<Condition type="CAIConditionNot">
+						<Condition type="CAIConditionIsSpeaking">
+							<Ped>SecondaryEntity</Ped>
+						</Condition>
+					</Condition>
+					<Condition type="CAIConditionNot">
+						<Condition type="CAIConditionIsSpeaking"/>
+					</Condition>
+					<Condition type="CAIConditionNot">
+						<Condition type="CAIConditionInSameGroup"/>
+					</Condition>
+					<Condition type="CAIConditionNot">
+						<Condition type="CInteractionConditionIsInAmbientTaxi">
+							<PlayerPed>SecondaryEntity</PlayerPed>
+						</Condition>
+					</Condition>
+				</Conditions>
+			</Condition>
+		</Item>
+		
+		<!-- Duplicate of the following trigger with increased timers-->
+		<Item key="FollowingGalaPed">
+			<Type>IT_Following</Type>
+			<TimeBeforeInitialReaction>
+				<Min value="10.0" />
+				<Max value="12.0" />
+			</TimeBeforeInitialReaction>
+			<TimeBetweenEscalatingReactions>
+				<Min value="10.0" />
+				<Max value="12.0" />
+			</TimeBetweenEscalatingReactions>
+			<MaxDotToTarget value="0.707" />
+			<MaxReactions value="1" />
+			<Flags>MustBeWanderingBeforeInitialReaction NoLineOfSightNeeded DisableWhenStill</Flags>
+			<ActivationCondition type="CAIConditionAnd">
+				<Conditions>
+					<!-- Must at least be behind the ped to start this trigger-->
+					<Condition type="CAIConditionDirectionRelativeToTarget">
+						<FromEntity>SecondaryEntity</FromEntity>
+						<TargetEntity>PrimaryEntity</TargetEntity>
+						<Threshold value="0.0"/>
+						<FlattenZ value="true"/>
+						<LessThan value="false"/>
+					</Condition>
+					<Condition type="CAIConditionNot">
+						<Condition type="CAIConditionArePedResetFlagsSet">
+							<ResetFlags>CPED_RESET_FLAG_CannotSee</ResetFlags>
+						</Condition>
+					</Condition>
+					<Condition type="CAIConditionNot">
+						<Condition type="CAIConditionIsIgnoringAgitator"/>
+					</Condition>
+					<Condition type="CAIConditionIsPedMovingToward"/>
+				</Conditions>
+			</ActivationCondition>
+			<Condition type="CAIConditionAnd">
+				<Conditions>
+					<Condition type="CAIConditionNot">
+						<Condition type="CAIConditionInSameGroup"/>
+					</Condition>
+					<Condition type="CAIConditionNot">
+						<Condition type="CInteractionConditionIsInAmbientTaxi">
+							<PlayerPed>SecondaryEntity</PlayerPed>
+						</Condition>
+					</Condition>
+				</Conditions>
+			</Condition>
+		</Item>
+		
+		<Item key="LoiteringInShop">
+			<Type>IT_Loitering</Type>
+			<TimeBeforeInitialReaction>
+				<Min value="15.0" />
+				<Max value="20.0" />
+			</TimeBeforeInitialReaction>
+			<TimeAfterLastSuccessfulReaction>
+				<Min value="10.0" />
+				<Max value="20.0" />
+			</TimeAfterLastSuccessfulReaction>
+			<TimeAfterInitialReactionFailure>
+				<Min value="10.0" />
+				<Max value="20.0" />
+			</TimeAfterInitialReactionFailure>
+			<MinDotToTarget value="0.0" />
+			<MaxTargetSpeed value="2.0" />
+			<MaxReactions value="1" />
+			<Flags>MustBeOnFoot MustBeInOwnedVolume TargetMustBeInOwnedVolume</Flags>
+			<Condition type="CAIConditionNot">
+				<Condition type="CAIConditionArePedResetFlagsSet">
+					<ResetFlags>CPED_RESET_FLAG_CannotSee</ResetFlags>
+				</Condition>
+			</Condition>
+		</Item>
+		
+		<Item key="LoiteringOnFootGangCompanion">
+			<Type>IT_Loitering</Type>
+			<TimeBeforeInitialReaction>
+				<Min value="15.0" />
+				<Max value="25.0" />
+			</TimeBeforeInitialReaction>
+			<TimeAfterLastSuccessfulReaction>
+				<Min value="30.0" />
+				<Max value="40.0" />
+			</TimeAfterLastSuccessfulReaction>
+			<TimeAfterInitialReactionFailure>
+				<Min value="30.0" />
+				<Max value="40.0" />
+			</TimeAfterInitialReactionFailure>
+			<MinDotToTarget value="0.0" />
+			<MaxTargetSpeed value="0.5" />
+			<MaxReactions value="1" />
+			<Flags>DisableWhenAgitated DisableWhenFriendlyIsAgitated MustBeOnFoot MustBeStationary MustNotBeInTargetGroup DisableWhenTargetInRangeOfPerformer</Flags>
+			<Condition type="CAIConditionAnd">
+				<Conditions>
+					<Condition type="CAIConditionNot">
+						<Condition type="CAIConditionIsFixed">
+							<Ped>SecondaryEntity</Ped>
+						</Condition>
+					</Condition>
+					<Condition type="CAIConditionNot">
+						<Condition type="CAIConditionArePedResetFlagsSet">
+							<ResetFlags>CPED_RESET_FLAG_CannotSee</ResetFlags>
+						</Condition>
+					</Condition>
+					<Condition type="CAIConditionOr">
+						<Conditions>
+							<Condition type="CAIConditionNot">
+								<Condition type="CAIConditionArePedConfigFlagsSet">
+									<ConfigFlags>CPED_CONFIG_FLAG_UsingScenario</ConfigFlags>
+								</Condition>
+							</Condition>
+							<Condition type="CAIConditionNot">
+								<Condition type="CAIConditionAreScenarioInfoFlagsSet" >
+									<GetScenarioPointFromPed value="true" />
+									<InfoFlags>Performer</InfoFlags>
+								</Condition>
+							</Condition>
+						</Conditions>
+					</Condition>
+					<Condition type="CAIConditionNot">
+						<Condition type="CAIConditionArePedConfigFlagsSet">
+							<Ped>SecondaryEntity</Ped>
+							<ConfigFlags>CPED_CONFIG_FLAG_UsingScenario</ConfigFlags>
+						</Condition>
+					</Condition>
+					<Condition type="CAIConditionNot">
+						<Condition type="CAIConditionIsInInteraction">
+							<Ped>SecondaryEntity</Ped>
+						</Condition>
+					</Condition>
+					<Condition type="CAIConditionNot">
+						<Condition type="CAIConditionPedHasSimpleMemoryForPlayer">
+							<Ped>PrimaryEntity</Ped>
+							<PlayerPed>SecondaryEntity</PlayerPed>
+							<MemoryType>ScriptedSpeechWithPlayer</MemoryType>
+							<QueryTimeMS value="10000"/>
+						</Condition>
+					</Condition>
+				</Conditions>
+			</Condition>
+		</Item>
+		
+		<Item key="Seated">
+			<Type>IT_EnteredScenario</Type>
+			<TimeBeforeInitialReaction>
+				<Min value="1.0" />
+				<Max value="2.0" />
+			</TimeBeforeInitialReaction>
+			<TimeAfterLastSuccessfulReaction>
+				<Min value="60.0" />
+				<Max value="60.0" />
+			</TimeAfterLastSuccessfulReaction>
+			<TimeAfterInitialReactionFailure>
+				<Min value="60.0" />
+				<Max value="60.0" />
+			</TimeAfterInitialReactionFailure>
+			<MaxTargetSpeed value="0.5" />
+			<MinDistanceToExpire value="12.0" />
+			<MaxReactions value="1" />
+			<Flags>MustBeUsingScenario MustNotBeInTargetGroup RequireMinDistanceToExpire</Flags>
+			<Condition type="CAIConditionAnd">
+				<Conditions>
+					<Condition type="CAIConditionNot">
+						<Condition type="CAIConditionArePedResetFlagsSet">
+							<ResetFlags>CPED_RESET_FLAG_CannotSee</ResetFlags>
+						</Condition>
+					</Condition>
+					<Condition type="CAIConditionNot">
+						<Condition type="CAIConditionIsInDispute">
+							<Ped>SecondaryEntity</Ped>
+						</Condition>
+					</Condition>
+					<!-- Check for seated scenarios only for now -->
+					<Condition type="CAIConditionHasTaskUsingScenario">
+						<Ped>SecondaryEntity</Ped>
+						<MustBeSeatedScenario value="true"/>
+					</Condition>
+					<!-- PrimaryEntity position must be within forward arc of the SecondaryEntity -->
+					<Condition type="CAIConditionDirectionRelativeToTarget">
+						<FromEntity>PrimaryEntity</FromEntity>
+						<TargetEntity>SecondaryEntity</TargetEntity>
+						<Threshold value="0.0"/>
+						<FlattenZ value="true"/>
+						<LessThan value="true"/>
+					</Condition>
+					<!-- SecondaryEntity position must be within forward arc of the PrimaryEntity -->
+					<Condition type="CAIConditionDirectionRelativeToTarget">
+						<FromEntity>SecondaryEntity</FromEntity>
+						<TargetEntity>PrimaryEntity</TargetEntity>
+						<Threshold value="0.0"/>
+						<FlattenZ value="true"/>
+						<LessThan value="true"/>
+					</Condition>
+					<!-- Don't greet while playing a musical instrument -->
+					<Condition type="CAIConditionNot">
+						<Condition type="CAIConditionAreScenarioInfoFlagsSet" >
+							<GetScenarioPointFromPed value="true" />
+							<InfoFlags>Performer</InfoFlags>
+						</Condition>
+					</Condition>
+					<Condition type="CAIConditionPlayerHasSimpleMemory">
+						<Ped>SecondaryEntity</Ped>
+						<MemoryType>EnteredScenario</MemoryType>
+						<QueryTimeMS value="10000" />
+					</Condition>
+				</Conditions>
+			</Condition>
+		</Item>
+		
+		<Item key="TerritoryIntruded">
+			<Type>IT_TerritoryIntruded</Type>
+			<TimeBeforeInitialReaction>
+				<Min value="0.5" />
+				<Max value="0.5" />
+			</TimeBeforeInitialReaction>
+			<TimeAfterLastSuccessfulReaction>
+				<Min value="4.0" />
+				<Max value="4.0" />
+			</TimeAfterLastSuccessfulReaction>
+			<TimeAfterInitialReactionFailure>
+				<Min value="4.0" />
+				<Max value="4.0" />
+			</TimeAfterInitialReactionFailure>
+			<MinDistanceToExpire value="1.0" />
+			<MaxReactions value="1" />
+			<Flags>DisableWhenFriendlyIsAgitated UseDistanceFromScenario MustBeUsingATerritorialScenario RequireMinDistanceToExpire</Flags>
+			<Condition type="CAIConditionAnd">
+				<Conditions>
+					<Condition type="CAIConditionNot">
+						<Condition type="CAIConditionArePedResetFlagsSet">
+							<ResetFlags>CPED_RESET_FLAG_CannotSee</ResetFlags>
+						</Condition>
+					</Condition>
+					<Condition type="CAIConditionOr">
+						<Conditions>
+							<Condition type="CAIConditionNot">
+								<Condition type="CAIConditionCrouched">
+									<Ped>SecondaryEntity</Ped>
+								</Condition>
+							</Condition>
+							<Condition type="CAIConditionAngleToTargetRelativeToCurrentHeading">
+								<FromPed>PrimaryEntity</FromPed>
+								<ToPed>SecondaryEntity</ToPed>
+								<m_LowerBound value="0.0f"/>
+								<m_UpperBound value="90.0f"/>
+							</Condition>
+							<Condition type="CAIConditionAnd">
+								<Conditions>
+									<Condition type="CAIConditionDistanceBetweenEntities">
+										<EntityA>PrimaryEntity</EntityA>
+										<EntityB>SecondaryEntity</EntityB>
+										<UppedBound value="4.0f"/>
+										<FlattenZ value="true"/>
+									</Condition>
+									<Condition type="CAIConditionAngleToTargetRelativeToCurrentHeading">
+										<FromPed>PrimaryEntity</FromPed>
+										<ToPed>SecondaryEntity</ToPed>
+										<m_LowerBound value="0.0f"/>
+										<m_UpperBound value="135.0f"/>
+									</Condition>
+								</Conditions>
+							</Condition>
+						</Conditions>
+					</Condition>
+				</Conditions>
+			</Condition>
+		</Item>
+		
+		<Item key="OutlawTerritoryIntruded">
+			<Type>IT_TerritoryIntruded</Type>
+			<TimeBeforeInitialReaction>
+				<Min value="5.0" />
+				<Max value="8.0" />
+			</TimeBeforeInitialReaction>
+			<TimeAfterLastSuccessfulReaction>
+				<Min value="4.0" />
+				<Max value="4.0" />
+			</TimeAfterLastSuccessfulReaction>
+			<TimeAfterInitialReactionFailure>
+				<Min value="4.0" />
+				<Max value="4.0" />
+			</TimeAfterInitialReactionFailure>
+			<MinDistanceToExpire value="1.0" />
+			<MaxReactions value="1" />
+			<Flags>DisableWhenFriendlyIsAgitated UseDistanceFromScenario MustBeUsingATerritorialScenario RequireMinDistanceToExpire</Flags>
+			<Condition type="CAIConditionNot">
+				<Condition type="CAIConditionArePedResetFlagsSet">
+					<ResetFlags>CPED_RESET_FLAG_CannotSee</ResetFlags>
+				</Condition>
+			</Condition>
+		</Item>
+		
+		<Item key="OutlawTerritoryVolumeIntruded">
+			<Type>IT_TerritoryIntruded</Type>
+			<TimeBeforeInitialReaction>
+				<Min value="0.5" />
+				<Max value="0.5" />
+			</TimeBeforeInitialReaction>
+			<TimeAfterLastSuccessfulReaction>
+				<Min value="4.0" />
+				<Max value="4.0" />
+			</TimeAfterLastSuccessfulReaction>
+			<TimeAfterInitialReactionFailure>
+				<Min value="4.0" />
+				<Max value="4.0" />
+			</TimeAfterInitialReactionFailure>
+			<MinDistanceToExpire value="1.0" />
+			<MaxReactions value="1" />
+			<Flags>DisableWhenFriendlyIsAgitated NoLineOfSightNeeded RequireMinDistanceToExpire</Flags><!-- Need to keep this range extremely small if we don't require LOS -->
+			<Condition type="CAIConditionAnd">
+				<Conditions>
+					<Condition type="CAIConditionNot">
+						<Condition type="CAIConditionIsInDispute">
+							<Ped>SecondaryEntity</Ped>
+						</Condition>
+					</Condition>
+					<Condition type="CAIConditionNot">
+						<Condition type="CAIConditionArePedResetFlagsSet">
+							<ResetFlags>CPED_RESET_FLAG_CannotSee</ResetFlags>
+						</Condition>
+					</Condition>
+					<Condition type="CAIConditionIsPedInOwnedVolume">
+						<QueryPed>SecondaryEntity</QueryPed>
+						<OwnershipFlags>VOLUME_OWNER_FLAG_RestrictedArea</OwnershipFlags>
+						<CheckForMainOwnerOnly value="false"/>
+					</Condition>
+				</Conditions>
+			</Condition>
+		</Item>
+		
+		<Item key="TerritoryVolumeIntruded">
+			<Type>IT_TerritoryIntruded</Type>
+			<TimeBeforeInitialReaction>
+				<Min value="0.5" />
+				<Max value="0.5" />
+			</TimeBeforeInitialReaction>
+			<TimeAfterLastSuccessfulReaction>
+				<Min value="4.0" />
+				<Max value="4.0" />
+			</TimeAfterLastSuccessfulReaction>
+			<TimeAfterInitialReactionFailure>
+				<Min value="4.0" />
+				<Max value="4.0" />
+			</TimeAfterInitialReactionFailure>
+			<MinDotToTarget value="0.0" />
+			<MinDistanceToExpire value="1.0" />
+			<MaxReactions value="1" />
+			<Flags>DisableWhenFriendlyIsAgitated RequireMinDistanceToExpire</Flags>
+			<Condition type="CAIConditionAnd">
+				<Conditions>
+					<Condition type="CAIConditionNot">
+						<Condition type="CAIConditionIsInDispute">
+							<Ped>SecondaryEntity</Ped>
+						</Condition>
+					</Condition>
+					<Condition type="CAIConditionNot">
+						<Condition type="CAIConditionArePedResetFlagsSet">
+							<ResetFlags>CPED_RESET_FLAG_CannotSee</ResetFlags>
+						</Condition>
+					</Condition>
+					<Condition type="CAIConditionIsPedInOwnedVolume">
+						<QueryPed>SecondaryEntity</QueryPed>
+						<OwnershipFlags>VOLUME_OWNER_FLAG_RestrictedArea</OwnershipFlags>
+						<CheckForMainOwnerOnly value="false"/>
+					</Condition>
+				</Conditions>
+			</Condition>
+		</Item>
+		
+		<Item key="ApproachedInWarningZone">
+			<Type>IT_Approached</Type>
+			<TimeBeforeInitialReaction>
+				<Min value="0.5" />
+				<Max value="0.75" />
+			</TimeBeforeInitialReaction>
+			<TimeAfterLastSuccessfulReaction>
+				<Min value="0.5" />
+				<Max value="0.75" />
+			</TimeAfterLastSuccessfulReaction>
+			<TimeAfterInitialReactionFailure>
+				<Min value="0.5" />
+				<Max value="0.75" />
+			</TimeAfterInitialReactionFailure>
+			<MinDotToTarget value="0.0" />
+			<MinDistanceToExpire value="1.0" />
+			<MaxReactions value="1" />
+			<Flags>DisableWhenFriendlyIsAgitated RequireMinDistanceToExpire</Flags>
+			<Condition type="CAIConditionAnd">
+				<Conditions>
+					<!-- Player isn't riding along with someone -->
+					<Condition type="CAIConditionNot">
+						<Condition type="CAIConditionIsPassengerInVehicle">
+							<Ped>SecondaryEntity</Ped>
+						</Condition>
+					</Condition>
+					<Condition type="CAIConditionNot">
+						<Condition type="CGuardConditionIsDisabled"/>
+					</Condition>
+					<Condition type="CAIConditionNot">
+						<Condition type="CAIConditionIsInDispute">
+							<Ped>SecondaryEntity</Ped>
+						</Condition>
+					</Condition>
+					<Condition type="CAIConditionOr">
+						<Conditions>
+							<Condition type="CGuardConditionCanConfrontWhenTargetOutsideThreatArea"/>
+							<Condition type="CAIConditionIsTargetInOurThreatArea"/>
+						</Conditions>
+					</Condition>
+					<Condition type="CAIConditionNot">
+						<Condition type="CAIConditionArePedResetFlagsSet">
+							<ResetFlags>CPED_RESET_FLAG_CannotSee</ResetFlags>
+						</Condition>
+					</Condition>
+					<Condition type="CAIConditionNot">
+						<Condition type="CAIConditionPedHasSimpleMemoryForPlayer">
+							<Ped>PrimaryEntity</Ped>
+							<PlayerPed>SecondaryEntity</PlayerPed>
+							<MemoryType>InformedPlayerAboutWarningZone</MemoryType>
+							<QueryTimeMS value="600000"/><!--Within last 10 minutes? -->
+						</Condition>
+					</Condition>
+					<Condition type="CAIConditionNot">
+						<Condition type="CAIConditionIsTargetInOurTerritory"/>
+					</Condition>
+					<Condition type="CAIConditionIsTargetNearOurTerritory"/>
+				</Conditions>
+			</Condition>
+		</Item>
+		
+		<Item key="ApproachedInWarningZoneAfterRancherWarning">
+			<Type>IT_TerritoryIntruded</Type>
+			<TimeBeforeInitialReaction>
+				<Min value="0.5" />
+				<Max value="0.75" />
+			</TimeBeforeInitialReaction>
+			<TimeAfterLastSuccessfulReaction>
+				<Min value="0.5" />
+				<Max value="0.75" />
+			</TimeAfterLastSuccessfulReaction>
+			<TimeAfterInitialReactionFailure>
+				<Min value="0.5" />
+				<Max value="0.75" />
+			</TimeAfterInitialReactionFailure>
+			<MinDotToTarget value="0.0" />
+			<MinDistanceToExpire value="1.0" />
+			<MaxReactions value="1" />
+			<Flags>RequireMinDistanceToExpire</Flags>
+			<Condition type="CAIConditionAnd">
+				<Conditions>
+					<Condition type="CAIConditionNot">
+						<Condition type="CGuardConditionIsDisabled"/>
+					</Condition>
+					<Condition type="CAIConditionNot">
+						<Condition type="CAIConditionIsInDispute">
+							<Ped>SecondaryEntity</Ped>
+						</Condition>
+					</Condition>
+					<Condition type="CAIConditionOr">
+						<Conditions>
+							<Condition type="CGuardConditionCanConfrontWhenTargetOutsideThreatArea"/>
+							<Condition type="CAIConditionIsTargetInOurThreatArea"/>
+						</Conditions>
+					</Condition>
+					<Condition type="CAIConditionNot">
+						<Condition type="CAIConditionArePedResetFlagsSet">
+							<ResetFlags>CPED_RESET_FLAG_CannotSee</ResetFlags>
+						</Condition>
+					</Condition>
+					<Condition type="CAIConditionPedHasSimpleMemoryForPlayer">
+						<Ped>PrimaryEntity</Ped>
+						<PlayerPed>SecondaryEntity</PlayerPed>
+						<MemoryType>InformedPlayerAboutWarningZone</MemoryType>
+						<MinTimeMS value="10000"/><!-- 10s -->
+						<QueryTimeMS value="600000"/><!--Within last 10 minutes? -->
+					</Condition>
+					<Condition type="CAIConditionIsTargetNearOurTerritory"/>
+				</Conditions>
+			</Condition>
+		</Item>
+		
+		<Item key="CamperAlertVolumeIntruded">
+			<Type>IT_LookAt</Type>
+			<TimeBeforeInitialReaction>
+				<Min value="0.5" />
+				<Max value="0.5" />
+			</TimeBeforeInitialReaction>
+			<TimeAfterLastSuccessfulReaction>
+				<Min value="16.0" />
+				<Max value="20.0" />
+			</TimeAfterLastSuccessfulReaction>
+			<TimeAfterInitialReactionFailure>
+				<Min value="4.0" />
+				<Max value="4.0" />
+			</TimeAfterInitialReactionFailure>
+			<MinDistanceToExpire value="1.0" />
+			<MaxReactions value="1" />
+			<Flags>DisableWhenFriendlyIsAgitated RequireMinDistanceToExpire</Flags>
+			<Condition type="CAIConditionAnd">
+				<Conditions>
+					<Condition type="CAIConditionNot">
+						<Condition type="CAIConditionIsInDispute">
+							<Ped>SecondaryEntity</Ped>
+						</Condition>
+					</Condition>
+					<Condition type="CAIConditionNot">
+						<Condition type="CAIConditionArePedResetFlagsSet">
+							<ResetFlags>CPED_RESET_FLAG_CannotSee</ResetFlags>
+						</Condition>
+					</Condition>
+					<Condition type="CAIConditionIsPedInOwnedVolume">
+						<QueryPed>SecondaryEntity</QueryPed>
+						<OwnershipFlags>VOLUME_OWNER_FLAG_RanchAlert</OwnershipFlags>
+						<CheckForMainOwnerOnly value="false"/>
+					</Condition>
+					<Condition type="CAIConditionOr">
+						<Conditions>
+							<Condition type="CAIConditionNot">
+								<Condition type="CAIConditionCrouched">
+									<Ped>SecondaryEntity</Ped>
+								</Condition>
+							</Condition>
+							<Condition type="CAIConditionAngleToTargetRelativeToCurrentHeading">
+								<FromPed>PrimaryEntity</FromPed>
+								<ToPed>SecondaryEntity</ToPed>
+								<m_LowerBound value="0.0f"/>
+								<m_UpperBound value="90.0f"/>
+							</Condition>
+							<Condition type="CAIConditionAnd">
+								<Conditions>
+									<Condition type="CAIConditionDistanceBetweenEntities">
+										<EntityA>PrimaryEntity</EntityA>
+										<EntityB>SecondaryEntity</EntityB>
+										<UppedBound value="4.0f"/>
+										<FlattenZ value="true"/>
+									</Condition>
+									<Condition type="CAIConditionAngleToTargetRelativeToCurrentHeading">
+										<FromPed>PrimaryEntity</FromPed>
+										<ToPed>SecondaryEntity</ToPed>
+										<m_LowerBound value="0.0f"/>
+										<m_UpperBound value="135.0f"/>
+									</Condition>
+								</Conditions>
+							</Condition>
+						</Conditions>
+					</Condition>
+				</Conditions>
+			</Condition>
+		</Item>
+		
+		<!-- Different from above as we sent an approach trigger here -->
+		<Item key="CamperWarningVolumeIntruded">
+			<Type>IT_Approached</Type>
+			<TimeBeforeInitialReaction>
+				<Min value="0.5" />
+				<Max value="0.5" />
+			</TimeBeforeInitialReaction>
+			<TimeAfterLastSuccessfulReaction>
+				<Min value="60.0" />
+				<Max value="60.0" />
+			</TimeAfterLastSuccessfulReaction>
+			<TimeAfterInitialReactionFailure>
+				<Min value="4.0" />
+				<Max value="4.0" />
+			</TimeAfterInitialReactionFailure>
+			<MinDistanceToExpire value="15.0" />
+			<MaxReactions value="1" />
+			<Flags>DisableWhenFriendlyIsAgitated RequireMinDistanceToExpire</Flags>
+			<Condition type="CAIConditionAnd">
+				<Conditions>
+					<Condition type="CAIConditionNot">
+						<Condition type="CAIConditionIsInDispute">
+							<Ped>SecondaryEntity</Ped>
+						</Condition>
+					</Condition>
+					<Condition type="CAIConditionNot">
+						<Condition type="CAIConditionArePedResetFlagsSet">
+							<ResetFlags>CPED_RESET_FLAG_CannotSee</ResetFlags>
+						</Condition>
+					</Condition>
+					<Condition type="CAIConditionIsPedInOwnedVolume">
+						<QueryPed>SecondaryEntity</QueryPed>
+						<OwnershipFlags>VOLUME_OWNER_FLAG_RanchWarn</OwnershipFlags>
+						<CheckForMainOwnerOnly value="false"/>
+					</Condition>
+					<Condition type="CAIConditionOr">
+						<Conditions>
+							<Condition type="CAIConditionPedTimeSpentStill">
+								<Ped>SecondaryEntity</Ped>
+								<Time value="2.0"/>
+							</Condition>
+							<Condition type="CAIConditionDirectionRelativeToTarget">
+								<FromEntity>PrimaryEntity</FromEntity>
+								<TargetEntity>SecondaryEntity</TargetEntity>
+								<Threshold value="-0.866"/> <!-- ~30 degrees -->
+								<FlattenZ value="true"/>
+								<LessThan value="true"/>
+							</Condition>
+						</Conditions>
+					</Condition>
+					<Condition type="CAIConditionOr">
+						<Conditions>
+							<Condition type="CAIConditionNot">
+								<Condition type="CAIConditionCrouched">
+									<Ped>SecondaryEntity</Ped>
+								</Condition>
+							</Condition>
+							<Condition type="CAIConditionAngleToTargetRelativeToCurrentHeading">
+								<FromPed>PrimaryEntity</FromPed>
+								<ToPed>SecondaryEntity</ToPed>
+								<m_LowerBound value="0.0f"/>
+								<m_UpperBound value="90.0f"/>
+							</Condition>
+							<Condition type="CAIConditionAnd">
+								<Conditions>
+									<Condition type="CAIConditionDistanceBetweenEntities">
+										<EntityA>PrimaryEntity</EntityA>
+										<EntityB>SecondaryEntity</EntityB>
+										<UppedBound value="4.0f"/>
+										<FlattenZ value="true"/>
+									</Condition>
+									<Condition type="CAIConditionAngleToTargetRelativeToCurrentHeading">
+										<FromPed>PrimaryEntity</FromPed>
+										<ToPed>SecondaryEntity</ToPed>
+										<m_LowerBound value="0.0f"/>
+										<m_UpperBound value="135.0f"/>
+									</Condition>
+								</Conditions>
+							</Condition>
+						</Conditions>
+					</Condition>
+				</Conditions>
+			</Condition>
+		</Item>
+		
+		<Item key="CamperRestrictedVolumeIntruded">
+			<Type>IT_TerritoryIntruded</Type>
+			<TimeBeforeInitialReaction>
+				<Min value="0.5" />
+				<Max value="0.5" />
+			</TimeBeforeInitialReaction>
+			<TimeAfterLastSuccessfulReaction>
+				<Min value="4.0" />
+				<Max value="4.0" />
+			</TimeAfterLastSuccessfulReaction>
+			<TimeAfterInitialReactionFailure>
+				<Min value="4.0" />
+				<Max value="4.0" />
+			</TimeAfterInitialReactionFailure>
+			<MinDistanceToExpire value="1.0" />
+			<MaxReactions value="1" />
+			<Flags>DisableWhenFriendlyIsAgitated RequireMinDistanceToExpire</Flags>
+			<Condition type="CAIConditionAnd">
+				<Conditions>
+					<Condition type="CAIConditionNot">
+						<Condition type="CAIConditionIsInDispute">
+							<Ped>SecondaryEntity</Ped>
+						</Condition>
+					</Condition>
+					<Condition type="CAIConditionNot">
+						<Condition type="CAIConditionArePedResetFlagsSet">
+							<ResetFlags>CPED_RESET_FLAG_CannotSee</ResetFlags>
+						</Condition>
+					</Condition>
+					<Condition type="CAIConditionIsPedInOwnedVolume">
+						<QueryPed>SecondaryEntity</QueryPed>
+						<OwnershipFlags>VOLUME_OWNER_FLAG_RestrictedArea</OwnershipFlags>
+						<CheckForMainOwnerOnly value="false"/>
+					</Condition>
+					<Condition type="CAIConditionOr">
+						<Conditions>
+							<Condition type="CAIConditionNot">
+								<Condition type="CAIConditionCrouched">
+									<Ped>SecondaryEntity</Ped>
+								</Condition>
+							</Condition>
+							<Condition type="CAIConditionAngleToTargetRelativeToCurrentHeading">
+								<FromPed>PrimaryEntity</FromPed>
+								<ToPed>SecondaryEntity</ToPed>
+								<m_LowerBound value="0.0f"/>
+								<m_UpperBound value="90.0f"/>
+							</Condition>
+							<Condition type="CAIConditionAnd">
+								<Conditions>
+									<Condition type="CAIConditionDistanceBetweenEntities">
+										<EntityA>PrimaryEntity</EntityA>
+										<EntityB>SecondaryEntity</EntityB>
+										<UppedBound value="4.0f"/>
+										<FlattenZ value="true"/>
+									</Condition>
+									<Condition type="CAIConditionAngleToTargetRelativeToCurrentHeading">
+										<FromPed>PrimaryEntity</FromPed>
+										<ToPed>SecondaryEntity</ToPed>
+										<m_LowerBound value="0.0f"/>
+										<m_UpperBound value="135.0f"/>
+									</Condition>
+								</Conditions>
+							</Condition>
+						</Conditions>
+					</Condition>
+				</Conditions>
+			</Condition>
+		</Item>
+		
+		<Item key="FriendlyDogScenarioLookRadiusTrigger">
+			<Type>IT_LookAt</Type>
+			<TimeBeforeInitialReaction>
+				<Min value="0.5" />
+				<Max value="0.5" />
+			</TimeBeforeInitialReaction>
+			<TimeAfterLastSuccessfulReaction>
+				<Min value="4.0" />
+				<Max value="4.0" />
+			</TimeAfterLastSuccessfulReaction>
+			<TimeAfterInitialReactionFailure>
+				<Min value="4.0" />
+				<Max value="4.0" />
+			</TimeAfterInitialReactionFailure>
+			<MinDistanceToExpire value="35.0" />
+			<MaxReactions value="1" />
+			<Flags>MustBeUsingATerritorialScenario RequireMinDistanceToExpire</Flags>
+			<Condition type="CAIConditionAnd">
+				<Conditions>
+					<Condition type="CAIConditionReferenced">
+						<Name>INTERACTION_LOOKAT_DISTANCE_TRIGGER</Name>
+					</Condition>
+					<Condition type="CAIConditionNot">
+						<Condition type="CAIConditionArePedConfigFlagsSet">
+							<ConfigFlags>CPED_CONFIG_FLAG_IsInteracting</ConfigFlags>
+						</Condition>
+					</Condition>
+					<Condition type="CAIConditionNot">
+						<Condition type="CAIConditionIsInDispute">
+							<Ped>SecondaryEntity</Ped>
+						</Condition>
+					</Condition>
+					<Condition type="CAIConditionNot">
+						<Condition type="CAIConditionIsInCombat">
+							<Ped>SecondaryEntity</Ped>
+						</Condition>
+					</Condition>
+				</Conditions>
+			</Condition>
+		</Item>
+		
+		<Item key="FriendlyDogScenarioReactionTrigger">
+			<Type>IT_Approached</Type>
+			<TimeBeforeInitialReaction>
+				<Min value="0.5" />
+				<Max value="0.5" />
+			</TimeBeforeInitialReaction>
+			<TimeAfterLastSuccessfulReaction>
+				<Min value="4.0" />
+				<Max value="4.0" />
+			</TimeAfterLastSuccessfulReaction>
+			<TimeAfterInitialReactionFailure>
+				<Min value="4.0" />
+				<Max value="4.0" />
+			</TimeAfterInitialReactionFailure>
+			<MinDistanceToExpire value="25.0" />
+			<MaxReactions value="1" />
+			<Flags>MustBeUsingATerritorialScenario RequireMinDistanceToExpire</Flags>
+			<Condition type="CAIConditionAnd">
+				<Conditions>
+					<Condition type="CAIConditionReferenced">
+						<Name>INTERACTION_EXITSCENARIO_DISTANCE_TRIGGER</Name>
+					</Condition>
+					<Condition type="CAIConditionNot">
+						<Condition type="CAIConditionArePedConfigFlagsSet">
+							<ConfigFlags>CPED_CONFIG_FLAG_IsInteracting</ConfigFlags>
+						</Condition>
+					</Condition>
+					<Condition type="CAIConditionNot">
+						<Condition type="CAIConditionIsInDispute">
+							<Ped>SecondaryEntity</Ped>
+						</Condition>
+					</Condition>
+					<Condition type="CAIConditionNot">
+						<Condition type="CAIConditionIsInCombat">
+							<Ped>SecondaryEntity</Ped>
+						</Condition>
+					</Condition>
+				</Conditions>
+			</Condition>
+		</Item>
+		
+		<Item key="FriendlyDogScenarioInteractionTrigger">
+			<Type>IT_TerritoryIntruded</Type>
+			<TimeBeforeInitialReaction>
+				<Min value="0.5" />
+				<Max value="0.5" />
+			</TimeBeforeInitialReaction>
+			<TimeAfterLastSuccessfulReaction>
+				<Min value="4.0" />
+				<Max value="4.0" />
+			</TimeAfterLastSuccessfulReaction>
+			<TimeAfterInitialReactionFailure>
+				<Min value="4.0" />
+				<Max value="4.0" />
+			</TimeAfterInitialReactionFailure>
+			<MinDistanceToExpire value="15.0" />
+			<MaxReactions value="1" />
+			<Flags>MustBeUsingATerritorialScenario RequireMinDistanceToExpire</Flags>
+			<Condition type="CAIConditionAnd">
+				<Conditions>
+					<Condition type="CAIConditionReferenced">
+						<Name>INTERACTION_FOLLOW_DISTANCE_TRIGGER_START</Name>
+					</Condition>
+					<Condition type="CAIConditionNot">
+						<Condition type="CAIConditionArePedConfigFlagsSet">
+							<ConfigFlags>CPED_CONFIG_FLAG_IsInteracting</ConfigFlags>
+						</Condition>
+					</Condition>
+					<Condition type="CAIConditionNot">
+						<Condition type="CAIConditionIsInDispute">
+							<Ped>SecondaryEntity</Ped>
+						</Condition>
+					</Condition>
+					<Condition type="CAIConditionNot">
+						<Condition type="CAIConditionIsInCombat">
+							<Ped>SecondaryEntity</Ped>
+						</Condition>
+					</Condition>
+				</Conditions>
+			</Condition>
+		</Item>
+		
+		<Item key="FriendlyDogOwnedVolumeTerritoryIntruded">
+			<Type>IT_Approached</Type>
+			<TimeBeforeInitialReaction>
+				<Min value="0.5" />
+				<Max value="0.5" />
+			</TimeBeforeInitialReaction>
+			<TimeAfterLastSuccessfulReaction>
+				<Min value="4.0" />
+				<Max value="4.0" />
+			</TimeAfterLastSuccessfulReaction>
+			<TimeAfterInitialReactionFailure>
+				<Min value="4.0" />
+				<Max value="4.0" />
+			</TimeAfterInitialReactionFailure>
+			<MinDistanceToExpire value="1.0" />
+			<MaxReactions value="1" />
+			<Flags>RequireMinDistanceToExpire TargetMustBeInOwnedVolume</Flags>
+			<Condition type="CAIConditionAnd">
+				<Conditions>
+					<Condition type="CAIConditionNot">
+						<Condition type="CAIConditionArePedConfigFlagsSet">
+							<ConfigFlags>CPED_CONFIG_FLAG_IsInteracting</ConfigFlags>
+						</Condition>
+					</Condition>
+					<Condition type="CAIConditionNot">
+						<Condition type="CAIConditionIsInDispute">
+							<Ped>SecondaryEntity</Ped>
+						</Condition>
+					</Condition>
+					<Condition type="CAIConditionNot">
+						<Condition type="CAIConditionIsInCombat">
+							<Ped>SecondaryEntity</Ped>
+						</Condition>
+					</Condition>
+					<Condition type="CAIConditionNot">
+						<Condition type="CAIConditionIsTaskRunning">
+							<TaskHash>TASK_FLEE</TaskHash>
+							<MustBeActive value="true"/>
+						</Condition>
+					</Condition>
+				</Conditions>
+			</Condition>
+		</Item>
+		
+		<Item key="DogScenarioTerritoryIntruded">
+			<Type>IT_TerritoryIntruded</Type>
+			<TimeBeforeInitialReaction>
+				<Min value="0.5" />
+				<Max value="0.5" />
+			</TimeBeforeInitialReaction>
+			<TimeAfterLastSuccessfulReaction>
+				<Min value="4.0" />
+				<Max value="4.0" />
+			</TimeAfterLastSuccessfulReaction>
+			<TimeAfterInitialReactionFailure>
+				<Min value="4.0" />
+				<Max value="4.0" />
+			</TimeAfterInitialReactionFailure>
+			<MinDistanceToExpire value="1.0" />
+			<MaxReactions value="1" />
+			<Flags>UseDistanceFromScenario MustBeUsingATerritorialScenario RequireMinDistanceToExpire</Flags>
+			<Condition type="CAIConditionAnd">
+				<Conditions>
+					<Condition type="CAIConditionNot">
+						<Condition type="CAIConditionArePedConfigFlagsSet">
+							<ConfigFlags>CPED_CONFIG_FLAG_IsInteracting</ConfigFlags>
+						</Condition>
+					</Condition>
+					<Condition type="CAIConditionNot">
+						<Condition type="CAIConditionIsInDispute">
+							<Ped>SecondaryEntity</Ped>
+						</Condition>
+					</Condition>
+				</Conditions>
+			</Condition>
+		</Item>
+		
+		<Item key="DogOwnedVolumeTerritoryIntruded">
+			<Type>IT_TerritoryIntruded</Type>
+			<TimeBeforeInitialReaction>
+				<Min value="0.5" />
+				<Max value="0.5" />
+			</TimeBeforeInitialReaction>
+			<TimeAfterLastSuccessfulReaction>
+				<Min value="4.0" />
+				<Max value="4.0" />
+			</TimeAfterLastSuccessfulReaction>
+			<TimeAfterInitialReactionFailure>
+				<Min value="4.0" />
+				<Max value="4.0" />
+			</TimeAfterInitialReactionFailure>
+			<MinDistanceToExpire value="1.0" />
+			<MaxReactions value="1" />
+			<Flags>RequireMinDistanceToExpire NoLineOfSightNeeded</Flags>
+			<Condition type="CAIConditionAnd">
+				<Conditions>
+					<Condition type="CAIConditionNot">
+						<Condition type="CAIConditionArePedConfigFlagsSet">
+							<ConfigFlags>CPED_CONFIG_FLAG_IsInteracting</ConfigFlags>
+						</Condition>
+					</Condition>
+					<Condition type="CAIConditionNot">
+						<Condition type="CAIConditionIsInDispute">
+							<Ped>SecondaryEntity</Ped>
+						</Condition>
+					</Condition>
+					<Condition type="CAIConditionNot">
+						<Condition type="CAIConditionIsTaskRunning">
+							<TaskHash>TASK_FLEE</TaskHash>
+							<MustBeActive value="true"/>
+						</Condition>
+					</Condition>
+					<Condition type="CAIConditionOr">
+						<Conditions>
+							<Condition type="CAIConditionIsPedInOwnedVolume">
+								<QueryPed>SecondaryEntity</QueryPed>
+								<OwnershipFlags>VOLUME_OWNER_FLAG_RanchWarn</OwnershipFlags>
+								<CheckForMainOwnerOnly value="false"/>
+							</Condition>
+							<Condition type="CAIConditionIsPedInOwnedVolume">
+								<QueryPed>SecondaryEntity</QueryPed>
+								<OwnershipFlags>VOLUME_OWNER_FLAG_RestrictedArea</OwnershipFlags>
+								<CheckForMainOwnerOnly value="false"/>
+							</Condition>
+						</Conditions>
+					</Condition>
+					
+				</Conditions>
+			</Condition>
+		</Item>
+	
+		<Item key="LingeringPostInterrogation">
+			<Type>IT_SuspectLingering</Type>
+			<TimeBeforeInitialReaction>
+				<Min value="1.5" />
+				<Max value="2.5" />
+			</TimeBeforeInitialReaction>
+			<TimeAfterLastSuccessfulReaction>
+				<Min value="3.0" />
+				<Max value="3.5" />
+			</TimeAfterLastSuccessfulReaction>
+			<MinDotToTarget value="0.0" />
+			<MaxReactions value="1" />
+			<Flags>DisableWhenAgitated AllowWhilePedHasOrder DisableWhenFriendlyIsAgitated MustNotBeInTargetGroup</Flags>
+			<Condition type="CAIConditionAnd">
+				<Conditions>
+					<Condition type="CWantedConditionInterrogationFinished"/>
+					<Condition type="CAIConditionNot">
+						<Condition type="CAIConditionPedHasSimpleMemory">
+							<MemoryType>FinishedAnInterrogation</MemoryType>
+							<QueryTimeMS value="3500"/><!-- 3.5s -->
+						</Condition>
+					</Condition>
+					<Condition type="CAIConditionNot">
+						<Condition type="CAIConditionIsPedMovingAway"/>
+					</Condition>
+					<Condition type="CAIConditionNot">
+						<Condition type="CAIConditionArePedResetFlagsSet">
+							<ResetFlags>CPED_RESET_FLAG_CannotSee</ResetFlags>
+						</Condition>
+					</Condition>
+				</Conditions>
+			</Condition>
+		</Item>
+		
+		<Item key="SpottedDuringCSICleanup">
+			<Type>IT_SuspectSpotted</Type>
+			<TimeBeforeInitialReaction>
+				<Min value="0.5" />
+				<Max value="1.0" />
+			</TimeBeforeInitialReaction>
+			<TimeAfterLastSuccessfulReaction>
+				<Min value="3.0" />
+				<Max value="3.5" />
+			</TimeAfterLastSuccessfulReaction>
+			<MinDotToTarget value="0.0" />
+			<MaxReactions value="1" />
+			<Flags>DisableWhenAgitated AllowWhilePedHasOrder DisableWhenFriendlyIsAgitated MustNotBeInTargetGroup</Flags>
+			<Condition type="CAIConditionAnd">
+				<Conditions>
+					<Condition type="CWantedConditionIsACleanUpIncident"/>
+					<Condition type="CAIConditionNot">
+						<Condition type="CAIConditionArePedResetFlagsSet">
+							<ResetFlags>CPED_RESET_FLAG_CannotSee</ResetFlags>
+						</Condition>
+					</Condition>
+					<Condition type="CAIConditionNot">
+						<Condition type="CWantedConditionInterrogationStarted">
+							<Ped>PrimaryEntity</Ped>
+						</Condition>
+					</Condition>
+					<Condition type="CAIConditionNot">
+						<Condition type="CWantedConditionHasCheckedOutPotentialSuspect">
+							<Ped>PrimaryEntity</Ped>
+						</Condition>
+					</Condition>
+					<Condition type="CAIConditionNot">
+						<Condition type="CAIConditionArePedGameplayConfigFlagsSet">
+							<Ped>PrimaryEntity</Ped>
+							<ConfigFlags>CPED_GAMEPLAY_CONFIG_FLAG_IsHogtied</ConfigFlags>
+						</Condition>
+					</Condition>
+					<Condition type="CAIConditionNot">
+						<Condition type="CAIConditionArePedGameplayResetFlagsSet">
+							<Ped>PrimaryEntity</Ped>
+							<ResetFlags>CPED_GAMEPLAY_RESET_FLAG_IsLassoed</ResetFlags>
+						</Condition>
+					</Condition>
+					<Condition type="CAIConditionNot">
+						<Condition type="CAIConditionIsInDispute">
+							<Ped>SecondaryEntity</Ped>
+						</Condition>
+					</Condition>
+				</Conditions>
+			</Condition>
+		</Item>
+		
+		<Item key="NearDeadBodyPostInterrogation">
+			<Type>IT_SuspectLingering</Type>
+			<TimeBeforeInitialReaction>
+				<Min value="2.5" />
+				<Max value="3.0" />
+			</TimeBeforeInitialReaction>
+			<TimeAfterLastSuccessfulReaction>
+				<Min value="3.0" />
+				<Max value="3.5" />
+			</TimeAfterLastSuccessfulReaction>
+			<MaxReactions value="1" />
+			<Flags>DisableWhenAgitated AllowWhilePedHasOrder DisableWhenFriendlyIsAgitated MustNotBeInTargetGroup</Flags>
+			<Condition type="CAIConditionAnd">
+				<Conditions>
+					<Condition type="CWantedConditionInterrogationFinished"/>
+					<Condition type="CAIConditionIsPedClosestToCrimeSceneBody">
+						<MaxDistance value="3.0"/>
+					</Condition>
+					<Condition type="CAIConditionNot">
+						<Condition type="CAIConditionPedHasSimpleMemory">
+							<MemoryType>FinishedAnInterrogation</MemoryType>
+							<QueryTimeMS value="2500"/><!-- 2.5s -->
+						</Condition>
+					</Condition>
+					<Condition type="CAIConditionNot">
+						<Condition type="CAIConditionArePedResetFlagsSet">
+							<ResetFlags>CPED_RESET_FLAG_CannotSee</ResetFlags>
+						</Condition>
+					</Condition>
+				</Conditions>
+			</Condition>
+		</Item>
+		
+		<Item key="LoiteringInLawOffice">
+			<Type>IT_LoiteringInLawOffice</Type>
+			<TimeBeforeInitialReaction>
+				<Min value="30.0" />
+				<Max value="30.0" />
+			</TimeBeforeInitialReaction>
+			<TimeAfterLastSuccessfulReaction>
+				<Min value="10.0" />
+				<Max value="20.0" />
+			</TimeAfterLastSuccessfulReaction>
+			<MaxTargetSpeed value="2.0" />
+			<MaxReactions value="1" />
+			<Flags>MustBeOnFoot</Flags>
+			<Condition type="CAIConditionAnd">
+				<Conditions>
+					<Condition type="CAIConditionIsLawEnforcement"/>
+					<Condition type="CAIConditionNot">
+						<Condition type="CAIConditionOr">
+							<Conditions>
+								<Condition type="CAIConditionIsInDispute"/>
+								<Condition type="CAIConditionIsInNetworkSession"/>
+								<Condition type="CAIConditionArePedResetFlagsSet">
+									<ResetFlags>CPED_RESET_FLAG_CannotSee</ResetFlags>
+								</Condition>
+								<Condition type="CAIConditionArePedScriptResetFlagsSet">
+									<Ped>PrimaryEntity</Ped>
+									<ResetFlags>PRF_DisableLoiteringInLawOfficeTrigger</ResetFlags>
+								</Condition>
+								<Condition type="CAIConditionArePedScriptResetFlagsSet">
+									<Ped>SecondaryEntity</Ped>
+									<ResetFlags>PRF_DisableLoiteringInLawOfficeTrigger</ResetFlags>
+								</Condition>
+							</Conditions>
+						</Condition>
+					</Condition>
+					<Condition type="CAIConditionPedIsInVolumeWithPropertyFlag">
+						<Ped>PrimaryEntity</Ped>
+						<PropertyFlag>VOLUME_PROPERTY_FLAG_LawEscalationDueToWeaponOut</PropertyFlag>
+					</Condition>
+					<Condition type="CAIConditionPedIsInVolumeWithPropertyFlag">
+						<Ped>SecondaryEntity</Ped>
+						<PropertyFlag>VOLUME_PROPERTY_FLAG_LawEscalationDueToWeaponOut</PropertyFlag>
+					</Condition>
+				</Conditions>
+			</Condition>
+		</Item>
+		
+	</Reactions>
+	
+	
+	<!-- TRIGGER SETS -->
+	<Sets>
+		<Item key="Default">
+			<Triggers>
+				<Item>
+					<PedTypes>
+						<Item>PLAYER_0</Item>
+						<Item>NETWORK_PLAYER</Item>
+					</PedTypes>
+					<Chances value="1.0" />
+					<Distance value="6.0" />
+					<Reaction>ApproachedOnFootMovingPed</Reaction>
+				</Item>
+				<Item>
+					<PedTypes>
+						<Item>PLAYER_0</Item>
+						<Item>NETWORK_PLAYER</Item>
+					</PedTypes>
+					<Chances value="1.0" />
+					<Distance value="6.0" />
+					<Reaction>ApproachedOnFootStationaryPed</Reaction>
+				</Item>
+				<Item>
+					<PedTypes>
+						<Item>PLAYER_0</Item>
+						<Item>NETWORK_PLAYER</Item>
+					</PedTypes>
+					<Chances value="1.0" />
+					<Distance value="8.0" />
+					<Reaction>ApproachedBehindOnFootStationaryPed</Reaction>
+				</Item>
+				<Item>
+					<PedTypes>
+						<Item>PLAYER_0</Item>
+						<Item>NETWORK_PLAYER</Item>
+					</PedTypes>
+					<Chances value="1.0" />
+					<Distance value="25.0" />
+					<Reaction>ApproachedTrafficPedPlayerSuspicious</Reaction>
+				</Item>
+				<Item>
+					<PedTypes>
+						<Item>PLAYER_0</Item>
+						<Item>NETWORK_PLAYER</Item>
+					</PedTypes>
+					<Chances value="1.0" />
+					<Distance value="20.0" />
+					<Reaction>ApproachedTrafficPedPlayerNearDeadAnimal</Reaction>
+				</Item>
+				<Item>
+					<PedTypes>
+						<Item>PLAYER_0</Item>
+						<Item>NETWORK_PLAYER</Item>
+					</PedTypes>
+					<Chances value="1.0" />
+					<Distance value="35.0" /><!-- Max distance this trigger will start conditioning -->
+					<Reaction>ApproachedTrafficPedPlayerDangerous</Reaction>
+				</Item>
+				<Item>
+					<PedTypes>
+						<Item>PLAYER_0</Item>
+						<Item>NETWORK_PLAYER</Item>
+					</PedTypes>
+					<Chances value="1.0" />
+					<Distance value="25.0" />
+					<Reaction>ApproachedTrafficPedPlayerMounted</Reaction>
+				</Item>
+				<Item>
+					<PedTypes>
+						<Item>PLAYER_0</Item>
+						<Item>NETWORK_PLAYER</Item>
+					</PedTypes>
+					<Chances value="1.0" />
+					<Distance value="10.0" />
+					<Reaction>ApproachedTrafficPedPlayerOnFoot</Reaction>
+				</Item>
+				<Item>
+					<PedTypes>
+						<Item>PLAYER_0</Item>
+						<Item>NETWORK_PLAYER</Item>
+					</PedTypes>
+					<Chances value="0.0" />
+					<Distance value="0.0" />
+					<Reaction>Following</Reaction>
+				</Item>
+				<Item>
+					<PedTypes>
+						<Item>PLAYER_0</Item>
+						<Item>NETWORK_PLAYER</Item>
+					</PedTypes>
+					<Chances value="0.0" />
+					<Distance value="0.0" />
+					<Reaction>FollowingPavement</Reaction>
+				</Item>
+				<Item>
+					<PedTypes>
+						<Item>PLAYER_0</Item>
+						<Item>NETWORK_PLAYER</Item>
+					</PedTypes>
+					<Chances value="1.0" />
+					<Distance value="5.0" />
+					<Reaction>IntrudingOnVehicleRoof</Reaction>
+				</Item>
+				<Item>
+					<PedTypes>
+						<Item>PLAYER_0</Item>
+						<Item>NETWORK_PLAYER</Item>
+					</PedTypes>
+					<Chances value="1.0" />
+					<Distance value="5.0" />
+					<Reaction>IntrudingOnVehicleSide</Reaction>
+				</Item>
+				<Item>
+					<PedTypes>
+						<Item>PLAYER_0</Item>
+						<Item>NETWORK_PLAYER</Item>
+					</PedTypes>
+					<Chances value="0.0" />
+					<Distance value="0.0" />
+					<Reaction>FollowingProstitute</Reaction>
+				</Item>
+				<Item>
+					<PedTypes>
+						<Item>PLAYER_0</Item>
+						<Item>NETWORK_PLAYER</Item>
+					</PedTypes>
+					<Chances value="0.0" />
+					<Distance value="0.0" />
+					<Reaction>FollowingOnMount</Reaction>
+				</Item>
+				<Item>
+					<PedTypes>
+						<Item>PLAYER_0</Item>
+						<Item>NETWORK_PLAYER</Item>
+					</PedTypes>
+					<Chances value="0.0" />
+					<Distance value="0.0" />
+					<Reaction>LoiteringOnMount</Reaction>
+				</Item>
+				<!-- Other density triggers -->
+				<Item>
+					<PedTypes>
+						<Item>PLAYER_0</Item>
+						<Item>NETWORK_PLAYER</Item>
+					</PedTypes>
+					<Chances value="0.0" />
+					<Distance value="0.0" />
+					<Reaction>FollowingOnMountMedDensity</Reaction>
+				</Item>
+				<Item>
+					<PedTypes>
+						<Item>PLAYER_0</Item>
+						<Item>NETWORK_PLAYER</Item>
+					</PedTypes>
+					<Chances value="0.0" />
+					<Distance value="0.0" />
+					<Reaction>FollowingOnMountHighDensity</Reaction>
+				</Item>
+				<Item>
+					<PedTypes>
+						<Item>PLAYER_0</Item>
+						<Item>NETWORK_PLAYER</Item>
+					</PedTypes>
+					<Chances value="0.0" />
+					<Distance value="0.0" />
+					<Reaction>FollowingOnMountMaxDensity</Reaction>
+				</Item>
+				<Item>
+					<PedTypes>
+						<Item>PLAYER_0</Item>
+						<Item>NETWORK_PLAYER</Item>
+					</PedTypes>
+					<Chances value="0.0" />
+					<Distance value="0.0" />
+					<Reaction>LoiteringOnMountMedDensity</Reaction>
+				</Item>
+				<Item>
+					<PedTypes>
+						<Item>PLAYER_0</Item>
+						<Item>NETWORK_PLAYER</Item>
+					</PedTypes>
+					<Chances value="0.0" />
+					<Distance value="0.0" />
+					<Reaction>LoiteringOnMountHighDensity</Reaction>
+				</Item>
+				<Item>
+					<PedTypes>
+						<Item>PLAYER_0</Item>
+						<Item>NETWORK_PLAYER</Item>
+					</PedTypes>
+					<Chances value="0.0" />
+					<Distance value="0.0" />
+					<Reaction>LoiteringOnMountMaxDensity</Reaction>
+				</Item>
+				<Item>
+					<PedTypes>
+						<Item>PLAYER_0</Item>
+						<Item>NETWORK_PLAYER</Item>
+					</PedTypes>
+					<Chances value="1.0" />
+					<Reaction>TerritoryIntruded</Reaction>
+				</Item>
+				<Item>
+					<PedTypes>
+						<Item>PLAYER_0</Item>
+						<Item>NETWORK_PLAYER</Item>
+					</PedTypes>
+					<Chances value="1.0" />
+					<!-- Need some distance here for now but we should be checking vision or something -->
+					<!-- Setting to just a bit above the dog distance so the ped will notice the player when it gets to the dog -->
+					<Distance value="18.0" />
+					<Reaction>TerritoryVolumeIntruded</Reaction>
+				</Item>
+				<Item>
+					<PedTypes>
+						<Item>PLAYER_0</Item>
+						<Item>NETWORK_PLAYER</Item>
+					</PedTypes>
+					<Chances value="1.0" />
+					<Distance value="6.0" />
+					<Reaction>LingeringPostInterrogation</Reaction>
+				</Item>
+				<Item>
+					<PedTypes>
+						<Item>PLAYER_0</Item>
+						<Item>NETWORK_PLAYER</Item>
+					</PedTypes>
+					<Chances value="1.0" />
+					<Distance value="15.0" />
+					<Reaction>NearDeadBodyPostInterrogation</Reaction>
+				</Item>
+				<Item>
+					<PedTypes>
+						<Item>PLAYER_0</Item>
+						<Item>NETWORK_PLAYER</Item>
+					</PedTypes>
+					<Chances value="1.0" />
+					<Distance value="20.0" />
+					<Reaction>SpottedDuringCSICleanup</Reaction>
+				</Item>
+				<Item>
+					<PedTypes>
+						<Item>PLAYER_0</Item>
+						<Item>NETWORK_PLAYER</Item>
+					</PedTypes>
+					<Chances value="1.0" />
+					<Distance value="10.0" />
+					<Reaction>LoiteringInLawOffice</Reaction>
+				</Item>
+			</Triggers>
+		</Item>
+		<Item key="AggressiveGuard">
+			<Triggers>
+				<Item>
+					<PedTypes>
+						<Item>PLAYER_0</Item>
+						<Item>NETWORK_PLAYER</Item>
+					</PedTypes>
+					<Chances value="1.0" />
+					<Distance value="15.0" />
+					<Reaction>ApproachedInWarningZone</Reaction>
+				</Item>
+				<Item>
+					<PedTypes>
+						<Item>PLAYER_0</Item>
+						<Item>NETWORK_PLAYER</Item>
+					</PedTypes>
+					<Chances value="1.0" />
+					<Distance value="15.0" />
+					<Reaction>ApproachedInWarningZoneAfterRancherWarning</Reaction>
+				</Item>
+				<Item>
+					<PedTypes>
+						<Item>PLAYER_0</Item>
+						<Item>NETWORK_PLAYER</Item>
+					</PedTypes>
+					<Chances value="0.0" />
+					<Distance value="0.0" />
+					<Reaction>Following</Reaction>
+				</Item>
+				<Item>
+					<PedTypes>
+						<Item>PLAYER_0</Item>
+						<Item>NETWORK_PLAYER</Item>
+					</PedTypes>
+					<Chances value="0.0" />
+					<Distance value="0.0" />
+					<Reaction>FollowingPavement</Reaction>
+				</Item>
+			</Triggers>
+		</Item>
+		<Item key="Camper">
+			<Triggers>
+				<Item>
+					<PedTypes>
+						<Item>PLAYER_0</Item>
+						<Item>NETWORK_PLAYER</Item>
+					</PedTypes>
+					<Chances value="1.0" />
+					<Distance value="6.0" />
+					<Reaction>ApproachedOnFootMovingPed</Reaction>
+				</Item>
+				<Item>
+					<PedTypes>
+						<Item>PLAYER_0</Item>
+						<Item>NETWORK_PLAYER</Item>
+					</PedTypes>
+					<Chances value="1.0" />
+					<Distance value="6.0" />
+					<Reaction>ApproachedOnFootStationaryPed</Reaction>
+				</Item>
+				<Item>
+					<PedTypes>
+						<Item>PLAYER_0</Item>
+						<Item>NETWORK_PLAYER</Item>
+					</PedTypes>
+					<Chances value="1.0" />
+					<Distance value="8.0" />
+					<Reaction>ApproachedBehindOnFootStationaryPed</Reaction>
+				</Item>
+				<Item>
+					<PedTypes>
+						<Item>PLAYER_0</Item>
+						<Item>NETWORK_PLAYER</Item>
+					</PedTypes>
+					<Chances value="1.0" />
+					<Distance value="25.0" />
+					<Reaction>ApproachedTrafficPedPlayerSuspicious</Reaction>
+				</Item>
+				<Item>
+					<PedTypes>
+						<Item>PLAYER_0</Item>
+						<Item>NETWORK_PLAYER</Item>
+					</PedTypes>
+					<Chances value="1.0" />
+					<Distance value="20.0" />
+					<Reaction>ApproachedTrafficPedPlayerNearDeadAnimal</Reaction>
+				</Item>
+				<Item>
+					<PedTypes>
+						<Item>PLAYER_0</Item>
+						<Item>NETWORK_PLAYER</Item>
+					</PedTypes>
+					<Chances value="1.0" />
+					<Distance value="35.0" /><!-- Max distance this trigger will start conditioning -->
+					<Reaction>ApproachedTrafficPedPlayerDangerous</Reaction>
+				</Item>
+				<Item>
+					<PedTypes>
+						<Item>PLAYER_0</Item>
+						<Item>NETWORK_PLAYER</Item>
+					</PedTypes>
+					<Chances value="1.0" />
+					<Distance value="25.0" />
+					<Reaction>ApproachedTrafficPedPlayerMounted</Reaction>
+				</Item>
+				<Item>
+					<PedTypes>
+						<Item>PLAYER_0</Item>
+						<Item>NETWORK_PLAYER</Item>
+					</PedTypes>
+					<Chances value="1.0" />
+					<Distance value="10.0" />
+					<Reaction>ApproachedTrafficPedPlayerOnFoot</Reaction>
+				</Item>
+				<Item>
+					<PedTypes>
+						<Item>PLAYER_0</Item>
+						<Item>NETWORK_PLAYER</Item>
+					</PedTypes>
+					<Chances value="1.0" />
+					<Distance value="40.0" />
+					<Reaction>CamperAlertVolumeIntruded</Reaction>
+				</Item>
+				<Item>
+					<PedTypes>
+						<Item>PLAYER_0</Item>
+						<Item>NETWORK_PLAYER</Item>
+					</PedTypes>
+					<Chances value="1.0" />
+					<Distance value="30.0" />
+					<Reaction>CamperWarningVolumeIntruded</Reaction>
+				</Item>
+				<Item>
+					<PedTypes>
+						<Item>PLAYER_0</Item>
+						<Item>NETWORK_PLAYER</Item>
+					</PedTypes>
+					<Chances value="1.0" />
+					<Distance value="20.0" />
+					<Reaction>CamperRestrictedVolumeIntruded</Reaction>
+				</Item>
+				<Item>
+					<PedTypes>
+						<Item>PLAYER_0</Item>
+						<Item>NETWORK_PLAYER</Item>
+					</PedTypes>
+					<Chances value="0.0" />
+					<Distance value="0.0" />
+					<Reaction>Following</Reaction>
+				</Item>
+				<Item>
+					<PedTypes>
+						<Item>PLAYER_0</Item>
+						<Item>NETWORK_PLAYER</Item>
+					</PedTypes>
+					<Chances value="0.0" />
+					<Distance value="0.0" />
+					<Reaction>FollowingPavement</Reaction>
+				</Item>
+				<Item>
+					<PedTypes>
+						<Item>PLAYER_0</Item>
+						<Item>NETWORK_PLAYER</Item>
+					</PedTypes>
+					<Chances value="1.0" />
+					<Distance value="5.0" />
+					<Reaction>IntrudingOnVehicleRoof</Reaction>
+				</Item>
+				<Item>
+					<PedTypes>
+						<Item>PLAYER_0</Item>
+						<Item>NETWORK_PLAYER</Item>
+					</PedTypes>
+					<Chances value="1.0" />
+					<Distance value="5.0" />
+					<Reaction>IntrudingOnVehicleSide</Reaction>
+				</Item>
+				<Item>
+					<PedTypes>
+						<Item>PLAYER_0</Item>
+						<Item>NETWORK_PLAYER</Item>
+					</PedTypes>
+					<Chances value="1.0" />
+					<Reaction>TerritoryIntruded</Reaction>
+				</Item>
+			</Triggers>
+		</Item>
+		<Item key="Outlaw">
+			<Triggers>
+				<Item>
+					<PedTypes>
+						<Item>PLAYER_0</Item>
+						<Item>NETWORK_PLAYER</Item>
+					</PedTypes>
+					<Chances value="1.0" />
+					<Distance value="6.0" />
+					<Reaction>ApproachedOnFootMovingPed</Reaction>
+				</Item>
+				<Item>
+					<PedTypes>
+						<Item>PLAYER_0</Item>
+						<Item>NETWORK_PLAYER</Item>
+					</PedTypes>
+					<Chances value="1.0" />
+					<Distance value="6.0" />
+					<Reaction>ApproachedOnFootStationaryPed</Reaction>
+				</Item>
+				<Item>
+					<PedTypes>
+						<Item>PLAYER_0</Item>
+						<Item>NETWORK_PLAYER</Item>
+					</PedTypes>
+					<Chances value="1.0" />
+					<Distance value="25.0" />
+					<Reaction>ApproachedTrafficPedPlayerSuspicious</Reaction>
+				</Item>
+				<Item>
+					<PedTypes>
+						<Item>PLAYER_0</Item>
+						<Item>NETWORK_PLAYER</Item>
+					</PedTypes>
+					<Chances value="1.0" />
+					<Distance value="20.0" />
+					<Reaction>ApproachedTrafficPedPlayerNearDeadAnimal</Reaction>
+				</Item>
+				<Item>
+					<PedTypes>
+						<Item>PLAYER_0</Item>
+						<Item>NETWORK_PLAYER</Item>
+					</PedTypes>
+					<Chances value="1.0" />
+					<Distance value="35.0" /><!-- Max distance this trigger will start conditioning -->
+					<Reaction>ApproachedTrafficPedPlayerDangerous</Reaction>
+				</Item>
+				<Item>
+					<PedTypes>
+						<Item>PLAYER_0</Item>
+						<Item>NETWORK_PLAYER</Item>
+					</PedTypes>
+					<Chances value="1.0" />
+					<Distance value="25.0" />
+					<Reaction>ApproachedTrafficPedPlayerMounted</Reaction>
+				</Item>
+				<Item>
+					<PedTypes>
+						<Item>PLAYER_0</Item>
+						<Item>NETWORK_PLAYER</Item>
+					</PedTypes>
+					<Chances value="1.0" />
+					<Distance value="10.0" />
+					<Reaction>ApproachedTrafficPedPlayerOnFoot</Reaction>
+				</Item>
+				<Item>
+					<PedTypes>
+						<Item>PLAYER_0</Item>
+						<Item>NETWORK_PLAYER</Item>
+					</PedTypes>
+					<Chances value="0.0" />
+					<Distance value="0.0" />
+					<Reaction>Following</Reaction>
+				</Item>
+				<Item>
+					<PedTypes>
+						<Item>PLAYER_0</Item>
+						<Item>NETWORK_PLAYER</Item>
+					</PedTypes>
+					<Chances value="0.0" />
+					<Distance value="0.0" />
+					<Reaction>FollowingPavement</Reaction>
+				</Item>
+				<Item>
+					<PedTypes>
+						<Item>PLAYER_0</Item>
+						<Item>NETWORK_PLAYER</Item>
+					</PedTypes>
+					<Chances value="1.0" />
+					<Distance value="5.0" />
+					<Reaction>IntrudingOnVehicleRoof</Reaction>
+				</Item>
+				<Item>
+					<PedTypes>
+						<Item>PLAYER_0</Item>
+						<Item>NETWORK_PLAYER</Item>
+					</PedTypes>
+					<Chances value="1.0" />
+					<Distance value="5.0" />
+					<Reaction>IntrudingOnVehicleSide</Reaction>
+				</Item>
+				<Item>
+					<PedTypes>
+						<Item>PLAYER_0</Item>
+						<Item>NETWORK_PLAYER</Item>
+					</PedTypes>
+					<Chances value="0.0" />
+					<Distance value="0.0" />
+					<Reaction>FollowingOnMount</Reaction>
+				</Item>
+				<Item>
+					<PedTypes>
+						<Item>PLAYER_0</Item>
+						<Item>NETWORK_PLAYER</Item>
+					</PedTypes>
+					<Chances value="0.0" />
+					<Distance value="0.0" />
+					<Reaction>LoiteringOnMount</Reaction>
+				</Item>
+				<Item>
+					<PedTypes>
+						<Item>PLAYER_0</Item>
+						<Item>NETWORK_PLAYER</Item>
+					</PedTypes>
+					<Chances value="0.0" />
+					<Distance value="0.0" />
+					<Reaction>FollowingOnMountMedDensity</Reaction>
+				</Item>
+				<Item>
+					<PedTypes>
+						<Item>PLAYER_0</Item>
+						<Item>NETWORK_PLAYER</Item>
+					</PedTypes>
+					<Chances value="0.0" />
+					<Distance value="0.0" />
+					<Reaction>FollowingOnMountHighDensity</Reaction>
+				</Item>
+				<Item>
+					<PedTypes>
+						<Item>PLAYER_0</Item>
+						<Item>NETWORK_PLAYER</Item>
+					</PedTypes>
+					<Chances value="0.0" />
+					<Distance value="0.0" />
+					<Reaction>FollowingOnMountMaxDensity</Reaction>
+				</Item>
+				<Item>
+					<PedTypes>
+						<Item>PLAYER_0</Item>
+						<Item>NETWORK_PLAYER</Item>
+					</PedTypes>
+					<Chances value="0.0" />
+					<Distance value="0.0" />
+					<Reaction>LoiteringOnMountMedDensity</Reaction>
+				</Item>
+				<Item>
+					<PedTypes>
+						<Item>PLAYER_0</Item>
+						<Item>NETWORK_PLAYER</Item>
+					</PedTypes>
+					<Chances value="0.0" />
+					<Distance value="0.0" />
+					<Reaction>LoiteringOnMountHighDensity</Reaction>
+				</Item>
+				<Item>
+					<PedTypes>
+						<Item>PLAYER_0</Item>
+						<Item>NETWORK_PLAYER</Item>
+					</PedTypes>
+					<Chances value="0.0" />
+					<Distance value="0.0" />
+					<Reaction>LoiteringOnMountMaxDensity</Reaction>
+				</Item>
+				<Item>
+					<PedTypes>
+						<Item>PLAYER_0</Item>
+						<Item>NETWORK_PLAYER</Item>
+					</PedTypes>
+					<Chances value="1.0" />
+					<Reaction>OutlawTerritoryIntruded</Reaction>
+				</Item>
+				<Item>
+					<PedTypes>
+						<Item>PLAYER_0</Item>
+						<Item>NETWORK_PLAYER</Item>
+					</PedTypes>
+					<Chances value="1.0" />
+					<!-- Need some distance here for now but we should be checking vision or something -->
+					<!-- Setting to just a bit above the dog distance so the ped will notice the player when it gets to the dog -->
+					<Distance value="18.0" />
+					<Reaction>OutlawTerritoryVolumeIntruded</Reaction>
+				</Item>
+			</Triggers>
+		</Item>
+		<Item key="Sheriff">
+			<Triggers>
+				<Item>
+					<PedTypes>
+						<Item>PLAYER_0</Item>
+						<Item>NETWORK_PLAYER</Item>
+					</PedTypes>
+					<Chances value="1.0" />
+					<Distance value="6.0" />
+					<Reaction>ApproachedOnFootMovingPed</Reaction>
+				</Item>
+				<Item>
+					<PedTypes>
+						<Item>PLAYER_0</Item>
+						<Item>NETWORK_PLAYER</Item>
+					</PedTypes>
+					<Chances value="1.0" />
+					<Distance value="6.0" />
+					<Reaction>ApproachedOnFootStationaryPed</Reaction>
+				</Item>
+				<Item>
+					<PedTypes>
+						<Item>PLAYER_0</Item>
+						<Item>NETWORK_PLAYER</Item>
+					</PedTypes>
+					<Chances value="1.0" />
+					<Distance value="8.0" />
+					<Reaction>ApproachedBehindOnFootStationaryPed</Reaction>
+				</Item>
+				<Item>
+					<PedTypes>
+						<Item>PLAYER_0</Item>
+						<Item>NETWORK_PLAYER</Item>
+					</PedTypes>
+					<Chances value="1.0" />
+					<Distance value="25.0" />
+					<Reaction>ApproachedTrafficPedPlayerSuspicious</Reaction>
+				</Item>
+				<Item>
+					<PedTypes>
+						<Item>PLAYER_0</Item>
+						<Item>NETWORK_PLAYER</Item>
+					</PedTypes>
+					<Chances value="1.0" />
+					<Distance value="35.0" /><!-- Max distance this trigger will start conditioning -->
+					<Reaction>ApproachedTrafficPedPlayerDangerous</Reaction>
+				</Item>
+				<Item>
+					<PedTypes>
+						<Item>PLAYER_0</Item>
+						<Item>NETWORK_PLAYER</Item>
+					</PedTypes>
+					<Chances value="1.0" />
+					<Distance value="25.0" />
+					<Reaction>ApproachedTrafficPedPlayerMounted</Reaction>
+				</Item>
+				<Item>
+					<PedTypes>
+						<Item>PLAYER_0</Item>
+						<Item>NETWORK_PLAYER</Item>
+					</PedTypes>
+					<Chances value="1.0" />
+					<Distance value="10.0" />
+					<Reaction>ApproachedTrafficPedPlayerOnFoot</Reaction>
+				</Item>
+				<Item>
+					<PedTypes>
+						<Item>PLAYER_0</Item>
+						<Item>NETWORK_PLAYER</Item>
+					</PedTypes>
+					<Chances value="0.0" />
+					<Distance value="0.0" />
+					<Reaction>Following</Reaction>
+				</Item>
+				<Item>
+					<PedTypes>
+						<Item>PLAYER_0</Item>
+						<Item>NETWORK_PLAYER</Item>
+					</PedTypes>
+					<Chances value="0.0" />
+					<Distance value="0.0" />
+					<Reaction>FollowingPavement</Reaction>
+				</Item>
+				<Item>
+					<PedTypes>
+						<Item>PLAYER_0</Item>
+						<Item>NETWORK_PLAYER</Item>
+					</PedTypes>
+					<Chances value="1.0" />
+					<Distance value="5.0" />
+					<Reaction>IntrudingOnVehicleRoof</Reaction>
+				</Item>
+				<Item>
+					<PedTypes>
+						<Item>PLAYER_0</Item>
+						<Item>NETWORK_PLAYER</Item>
+					</PedTypes>
+					<Chances value="1.0" />
+					<Distance value="5.0" />
+					<Reaction>IntrudingOnVehicleSide</Reaction>
+				</Item>
+				<Item>
+					<PedTypes>
+						<Item>PLAYER_0</Item>
+						<Item>NETWORK_PLAYER</Item>
+					</PedTypes>
+					<Chances value="0.0" />
+					<Distance value="0.0" />
+					<Reaction>FollowingOnMount</Reaction>
+				</Item>
+				<Item>
+					<PedTypes>
+						<Item>PLAYER_0</Item>
+						<Item>NETWORK_PLAYER</Item>
+					</PedTypes>
+					<Chances value="0.0" />
+					<Distance value="0.0" />
+					<Reaction>LoiteringOnMount</Reaction>
+				</Item>
+				<Item>
+					<PedTypes>
+						<Item>PLAYER_0</Item>
+						<Item>NETWORK_PLAYER</Item>
+					</PedTypes>
+					<Chances value="0.0" />
+					<Distance value="0.0" />
+					<Reaction>FollowingOnMountMedDensity</Reaction>
+				</Item>
+				<Item>
+					<PedTypes>
+						<Item>PLAYER_0</Item>
+						<Item>NETWORK_PLAYER</Item>
+					</PedTypes>
+					<Chances value="0.0" />
+					<Distance value="0.0" />
+					<Reaction>FollowingOnMountHighDensity</Reaction>
+				</Item>
+				<Item>
+					<PedTypes>
+						<Item>PLAYER_0</Item>
+						<Item>NETWORK_PLAYER</Item>
+					</PedTypes>
+					<Chances value="0.0" />
+					<Distance value="0.0" />
+					<Reaction>FollowingOnMountMaxDensity</Reaction>
+				</Item>
+				<Item>
+					<PedTypes>
+						<Item>PLAYER_0</Item>
+						<Item>NETWORK_PLAYER</Item>
+					</PedTypes>
+					<Chances value="0.0" />
+					<Distance value="0.0" />
+					<Reaction>LoiteringOnMountMedDensity</Reaction>
+				</Item>
+				<Item>
+					<PedTypes>
+						<Item>PLAYER_0</Item>
+						<Item>NETWORK_PLAYER</Item>
+					</PedTypes>
+					<Chances value="0.0" />
+					<Distance value="0.0" />
+					<Reaction>LoiteringOnMountHighDensity</Reaction>
+				</Item>
+				<Item>
+					<PedTypes>
+						<Item>PLAYER_0</Item>
+						<Item>NETWORK_PLAYER</Item>
+					</PedTypes>
+					<Chances value="0.0" />
+					<Distance value="0.0" />
+					<Reaction>LoiteringOnMountMaxDensity</Reaction>
+				</Item>
+				<Item>
+					<PedTypes>
+						<Item>PLAYER_0</Item>
+						<Item>NETWORK_PLAYER</Item>
+					</PedTypes>
+					<Chances value="1.0" />
+					<Reaction>TerritoryIntruded</Reaction>
+				</Item>
+				<Item>
+					<PedTypes>
+						<Item>PLAYER_0</Item>
+						<Item>NETWORK_PLAYER</Item>
+					</PedTypes>
+					<Chances value="1.0" />
+					<!-- Need some distance here for now but we should be checking vision or something -->
+					<!-- Setting to just a bit above the dog distance so the ped will notice the player when it gets to the dog -->
+					<Distance value="18.0" />
+					<Reaction>TerritoryVolumeIntruded</Reaction>
+				</Item>
+				<Item>
+					<PedTypes>
+						<Item>PLAYER_0</Item>
+						<Item>NETWORK_PLAYER</Item>
+					</PedTypes>
+					<Chances value="1.0" />
+					<Distance value="6.5" />
+					<Reaction>LingeringPostInterrogation</Reaction>
+				</Item>
+				<Item>
+					<PedTypes>
+						<Item>PLAYER_0</Item>
+						<Item>NETWORK_PLAYER</Item>
+					</PedTypes>
+					<Chances value="1.0" />
+					<Distance value="15.0" />
+					<Reaction>NearDeadBodyPostInterrogation</Reaction>
+				</Item>
+				<Item>
+					<PedTypes>
+						<Item>PLAYER_0</Item>
+						<Item>NETWORK_PLAYER</Item>
+					</PedTypes>
+					<Chances value="1.0" />
+					<Distance value="20.0" />
+					<Reaction>SpottedDuringCSICleanup</Reaction>
+				</Item>
+				<Item>
+					<PedTypes>
+						<Item>PLAYER_0</Item>
+						<Item>NETWORK_PLAYER</Item>
+					</PedTypes>
+					<Chances value="1.0" />
+					<Distance value="10.0" />
+					<Reaction>LoiteringInLawOffice</Reaction>
+				</Item>
+			</Triggers>
+		</Item>
+		<Item key="Shopkeeper">
+			<Triggers>
+				<Item>
+					<PedTypes>
+						<Item>PLAYER_0</Item>
+						<Item>NETWORK_PLAYER</Item>
+					</PedTypes>
+					<Chances value="1.0" />
+					<Distance value="6.0" />
+					<Reaction>ApproachedFromFrontOutsideShop</Reaction>
+				</Item>
+			</Triggers>
+		</Item>
+		<Item key="GangCompanion">
+			<StaringTriggerMinDuration value="10.0" />
+			<StaringTriggerMaxDuration value="12.0" />
+			<StaringTriggerMinDurationAtLoiterDistance value="10.0"/>
+			<StaringTriggerMaxDurationAtLoiterDistance value="12.0"/>
+			<Triggers>
+				<Item>
+					<PedTypes>
+						<Item>PLAYER_0</Item>
+						<Item>NETWORK_PLAYER</Item>
+					</PedTypes>
+					<Distance value="6.0" />
+					<Reaction>ApproachedGangCompanion</Reaction>
+				</Item>
+				<Item>
+					<PedTypes>
+						<Item>PLAYER_0</Item>
+						<Item>NETWORK_PLAYER</Item>
+					</PedTypes>
+					<Distance value="3.0" />
+					<Reaction>ApproachedGangCompanionOffScreen</Reaction>
+				</Item>
+				<Item>
+					<PedTypes>
+						<Item>PLAYER_0</Item>
+						<Item>NETWORK_PLAYER</Item>
+					</PedTypes>
+					<Distance value="12.0" />
+					<Reaction>ApproachedGangCompanionMounted</Reaction>
+				</Item>
+				<Item>
+					<PedTypes>
+						<Item>PLAYER_0</Item>
+						<Item>NETWORK_PLAYER</Item>
+					</PedTypes>
+					<Distance value="0.0" />
+					<Reaction>LoiteringOnFootGangCompanion</Reaction>
+				</Item>
+				<Item>
+					<PedTypes>
+						<Item>PLAYER_0</Item>
+						<Item>NETWORK_PLAYER</Item>
+					</PedTypes>
+					<Distance value="5.0" />
+					<Reaction>Seated</Reaction>
+				</Item>
+				<Item>
+					<PedTypes>
+						<Item>PLAYER_0</Item>
+						<Item>NETWORK_PLAYER</Item>
+					</PedTypes>
+					<Distance value="0.0" />
+					<Reaction>FollowingGangCampPed</Reaction>
+				</Item>
+				<Item>
+					<PedTypes>
+						<Item>PLAYER_0</Item>
+						<Item>NETWORK_PLAYER</Item>
+					</PedTypes>
+					<Chances value="1.0" />
+					<Reaction>TerritoryIntruded</Reaction>
+				</Item>
+			</Triggers>
+		</Item>
+		<Item key="scriptedgala">
+			<StaringTriggerMinDuration value="14.0" />
+			<StaringTriggerMaxDuration value="16.0" />
+			<StaringTriggerMinDurationAtLoiterDistance value="14.0"/>
+			<StaringTriggerMaxDurationAtLoiterDistance value="16.0"/>
+			<Triggers>
+				<Item>
+					<PedTypes>
+						<Item>PLAYER_0</Item>
+						<Item>NETWORK_PLAYER</Item>
+					</PedTypes>
+					<Chances value="1.0" />
+					<Distance value="6.0" />
+					<Reaction>ApproachedOnFootMovingPed</Reaction>
+				</Item>
+				<Item>
+					<PedTypes>
+						<Item>PLAYER_0</Item>
+						<Item>NETWORK_PLAYER</Item>
+					</PedTypes>
+					<Chances value="1.0" />
+					<Distance value="6.0" />
+					<Reaction>ApproachedOnFootStationaryPed</Reaction>
+				</Item>
+				<Item>
+					<PedTypes>
+						<Item>PLAYER_0</Item>
+						<Item>NETWORK_PLAYER</Item>
+					</PedTypes>
+					<Chances value="1.0" />
+					<Distance value="8.0" />
+					<Reaction>ApproachedBehindOnFootStationaryPed</Reaction>
+				</Item>
+				<Item>
+					<PedTypes>
+						<Item>PLAYER_0</Item>
+						<Item>NETWORK_PLAYER</Item>
+					</PedTypes>
+					<Chances value="1.0" />
+					<Distance value="5.0" />
+					<Reaction>FollowingGalaPed</Reaction><!-- We can leave this for now but may need a new one if we want the following timer longer-->
+				</Item>
+			</Triggers>
+		</Item>
+		<Item key="None">
+			<Triggers>
+				<!-- Nothing here -->
+			</Triggers>
+		</Item>
+		<Item key="Dog">
+			<Triggers>
+				<Item>
+					<PedTypes>
+						<Item>PLAYER_0</Item>
+						<Item>NETWORK_PLAYER</Item>
+					</PedTypes>
+					<Chances value="1.0" />
+					<Distance value="40.0"/><!-- Make sure this is a few meters above REF CONDITION INTERACTION_LOOKAT_DISTANCE_TRIGGER -->
+					<Reaction>FriendlyDogScenarioLookRadiusTrigger</Reaction>
+				</Item>
+				<Item>
+					<PedTypes>
+						<Item>PLAYER_0</Item>
+						<Item>NETWORK_PLAYER</Item>
+					</PedTypes>
+					<Chances value="1.0" />
+					<Distance value="25.0"/><!-- Make sure this is a few meters above REF CONDITION INTERACTION_EXITSCENARIO_DISTANCE_TRIGGER -->
+					<Reaction>FriendlyDogScenarioReactionTrigger</Reaction>
+				</Item>
+				<Item>
+					<PedTypes>
+						<Item>PLAYER_0</Item>
+						<Item>NETWORK_PLAYER</Item>
+					</PedTypes>
+					<Chances value="1.0" />
+					<Distance value="20.0"/><!-- Make sure this is a few meters above REF CONDITION INTERACTION_FOLLOW_DISTANCE_TRIGGER_START -->
+					<Reaction>FriendlyDogScenarioInteractionTrigger</Reaction>
+				</Item>
+				<Item>
+					<PedTypes>
+						<Item>PLAYER_0</Item>
+						<Item>NETWORK_PLAYER</Item>
+					</PedTypes>
+					<Chances value="1.0" />
+					<Distance value="15.0" />
+					<Reaction>FriendlyDogOwnedVolumeTerritoryIntruded</Reaction>
+				</Item>
+			</Triggers>
+		</Item>
+		<Item key="GuardDog">
+			<Triggers>
+				<Item>
+					<PedTypes>
+						<Item>PLAYER_0</Item>
+						<Item>NETWORK_PLAYER</Item>
+					</PedTypes>
+					<Chances value="1.0" />
+					<Reaction>DogScenarioTerritoryIntruded</Reaction>
+				</Item>
+				<Item>
+					<PedTypes>
+						<Item>PLAYER_0</Item>
+						<Item>NETWORK_PLAYER</Item>
+					</PedTypes>
+					<Chances value="1.0" />
+					<Distance value="25.0" />
+					<Reaction>DogOwnedVolumeTerritoryIntruded</Reaction>
+				</Item>
+			</Triggers>
+		</Item>
+	</Sets>
+</CInteractionTriggers>

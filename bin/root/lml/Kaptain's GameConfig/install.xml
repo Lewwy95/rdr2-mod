@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<EasyInstall>
+  <Name>Kaptain's GameConfig</Name>
+  <Author>KaptainCnucklz</Author>
+  <Version>1.0</Version>
+  <Link></Link>
+  <Metadata></Metadata>
+  <Resources>
+    <Resource>
+      <FileReplacement>
+          <GamePath>update:/common/data/gameconfig.xml</GamePath>
+          <FilePath>gameconfig.xml</FilePath>
+      </FileReplacement>
+    </Resource>
+  </Resources>
+</EasyInstall>

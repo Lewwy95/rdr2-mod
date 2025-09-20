@@ -1,0 +1,718 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<CPedPerceptionInfoManager>
+  <aPedPerceptionInfoData>
+    <Item>
+      <Name>DEFAULT_PERCEPTION</Name>
+      <SeeingRangeMin value="60.0f" />
+	  <SeeingRangeMax value="60.0f" />
+      <HearingRange value="45.0f" />
+      <SeeingRangePeripheralMin value="5.0f" />
+	  <SeeingRangePeripheralMax value="5.0f" />
+      <IdentificationRangeMin value="20.0"/>
+      <IdentificationRangeMax value="20.0"/>
+      <VisualFieldMinAzimuthAngle value="-90.0f" />
+      <VisualFieldMaxAzimuthAngle value="90.0f" />
+      <VisualFieldMinElevationAngle value="-75.0f" />
+      <VisualFieldMaxElevationAngle value="15.0f" />
+      <CentreFieldOfGazeMaxAngle value="60.0f" />
+      <MovementDetectionTime value="200" />
+      <VelocityThresholdClose value="2.0f" />
+      <VelocityThresholdCloseCrouched value="3.0f" />
+      <VelocityThresholdFar value="3.0f" />
+      <VelocityThresholdFarCrouched value="6.0f" />
+      <PerceptionRangeModifierHash>TOD_MOD_DEFAULT</PerceptionRangeModifierHash>
+    </Item>
+	<Item>
+      <Name>ANIMAL_PREDATOR_PERCEPTION</Name>
+      <SeeingRangeMin value="150.0f" />
+	  <SeeingRangeMax value="150.0f" />
+      <HearingRange value="60.0f" />
+	  <SmellingRangeWind value="50.0f" />
+	  <SmellingRangeNoWind value="15.0f" />
+      <SeeingRangePeripheralMin value="150.0f" />
+	  <SeeingRangePeripheralMax value="150.0f" />
+      <IdentificationRangeMin value="20.0"/>
+      <IdentificationRangeMax value="20.0"/>
+      <VisualFieldMinAzimuthAngle value="-90.0f" />
+      <VisualFieldMaxAzimuthAngle value="90.0f" />
+      <VisualFieldMinElevationAngle value="-75.0f" />
+      <VisualFieldMaxElevationAngle value="60.0f" />
+      <CentreFieldOfGazeMaxAngle value="60.0f" />
+      <MovementDetectionTime value="200" />
+      <VelocityThresholdClose value="2.0f" />
+      <VelocityThresholdCloseCrouched value="3.0f" />
+      <VelocityThresholdFar value="3.0f" />
+      <VelocityThresholdFarCrouched value="6.0f" />	  
+      <PerceptionRangeModifierHash>TOD_MOD_DEFAULT</PerceptionRangeModifierHash>	  
+    </Item>
+	<Item>
+      <Name>BEAR_PERCEPTION</Name>
+      <SeeingRangeMin value="100.0f" />
+	  <SeeingRangeMax value="100.0f" />
+      <HearingRange value="80.0f" />
+	  <SmellingRangeWind value="80.0f" />
+	  <SmellingRangeNoWind value="25.0f" />
+      <SeeingRangePeripheralMin value="100.0f" />
+	  <SeeingRangePeripheralMax value="100.0f" />
+      <IdentificationRangeMin value="20.0"/>
+      <IdentificationRangeMax value="20.0"/>
+      <VisualFieldMinAzimuthAngle value="-90.0f" />
+      <VisualFieldMaxAzimuthAngle value="90.0f" />
+      <VisualFieldMinElevationAngle value="-75.0f" />
+      <VisualFieldMaxElevationAngle value="60.0f" />
+      <CentreFieldOfGazeMaxAngle value="60.0f" />
+	  <MovementDetectionTime value="200" />
+	  <VelocityThresholdClose value="2.0f" />
+	  <VelocityThresholdCloseCrouched value="3.0f" />
+	  <VelocityThresholdFar value="3.0f" />
+	  <VelocityThresholdFarCrouched value="6.0f" />	  
+	  <PerceptionRangeModifierHash>TOD_MOD_DEFAULT</PerceptionRangeModifierHash>	  
+    </Item>    
+	<Item>
+	  <Name>ANIMAL_SMALL_SLOW_PERCEPTION</Name>
+      <SeeingRangeMin value="45.0f" />
+      <SeeingRangeMax value="45.0f" />
+      <HearingRange value="45.0f" />
+      <SmellingRangeWind value="30.0f" />
+	  <SmellingRangeNoWind value="10.0f" />
+      <SeeingRangePeripheralMin value="5.0f" />
+      <SeeingRangePeripheralMax value="5.0f" />
+      <IdentificationRangeMin value="20.0"/>
+      <IdentificationRangeMax value="20.0"/>
+      <VisualFieldMinAzimuthAngle value="-90.0f" />
+      <VisualFieldMaxAzimuthAngle value="90.0f" />
+      <VisualFieldMinElevationAngle value="-75.0f" />
+      <VisualFieldMaxElevationAngle value="60.0f" />
+      <CentreFieldOfGazeMaxAngle value="60.0f" />
+	  <MovementDetectionTime value="200" />
+	  <VelocityThresholdClose value="2.0f" />
+	  <VelocityThresholdCloseCrouched value="3.0f" />
+	  <VelocityThresholdFar value="3.0f" />
+	  <VelocityThresholdFarCrouched value="6.0f" />	
+	  <PerceptionRangeModifierHash>TOD_MOD_DEFAULT</PerceptionRangeModifierHash>	  
+    </Item>	    
+	<Item>
+	  <Name>ANIMAL_REPTILE_PERCEPTION</Name>
+      <SeeingRangeMin value="60.0f" />
+      <SeeingRangeMax value="60.0f" />
+      <HearingRange value="75.0f" />
+      <SmellingRangeWind value="60.0f" />
+	  <SmellingRangeNoWind value="10.0f" />
+      <SeeingRangePeripheralMin value="75.0f" />
+      <SeeingRangePeripheralMax value="75.0f" />
+      <IdentificationRangeMin value="20.0"/>
+      <IdentificationRangeMax value="20.0"/>
+      <VisualFieldMinAzimuthAngle value="-90.0f" />
+      <VisualFieldMaxAzimuthAngle value="90.0f" />
+      <VisualFieldMinElevationAngle value="-75.0f" />
+      <VisualFieldMaxElevationAngle value="60.0f" />
+      <CentreFieldOfGazeMaxAngle value="90.0f" />
+	  <MovementDetectionTime value="200" />
+	  <VelocityThresholdClose value="2.0f" />
+	  <VelocityThresholdCloseCrouched value="3.0f" />
+	  <VelocityThresholdFar value="3.0f" />
+	  <VelocityThresholdFarCrouched value="6.0f" />	
+	  <PerceptionRangeModifierHash>TOD_MOD_DEFAULT</PerceptionRangeModifierHash>	  
+    </Item>		    
+	<Item>
+	  <Name>ANIMAL_SMALL_PREY_PERCEPTION</Name>
+      <SeeingRangeMin value="75.0f" />
+      <SeeingRangeMax value="75.0f" />
+      <HearingRange value="75.0f" />
+      <SmellingRangeWind value="40.0f" />
+	  <SmellingRangeNoWind value="10.0f" />
+      <SeeingRangePeripheralMin value="75.0f" />
+      <SeeingRangePeripheralMax value="75.0f" />
+      <IdentificationRangeMin value="20.0"/>
+      <IdentificationRangeMax value="20.0"/>
+      <VisualFieldMinAzimuthAngle value="-90.0f" />
+      <VisualFieldMaxAzimuthAngle value="90.0f" />
+      <VisualFieldMinElevationAngle value="-75.0f" />
+      <VisualFieldMaxElevationAngle value="60.0f" />
+      <CentreFieldOfGazeMaxAngle value="90.0f" />
+	  <MovementDetectionTime value="200" />
+	  <VelocityThresholdClose value="2.0f" />
+	  <VelocityThresholdCloseCrouched value="3.0f" />
+	  <VelocityThresholdFar value="3.0f" />
+	  <VelocityThresholdFarCrouched value="6.0f" />	
+	  <PerceptionRangeModifierHash>TOD_MOD_DEFAULT</PerceptionRangeModifierHash>	  
+    </Item>	
+	<Item>
+	  <Name>ANIMAL_MEDIUM_PREY_PERCEPTION</Name>
+      <SeeingRangeMin value="150.0f" />
+      <SeeingRangeMax value="150.0f" />
+      <HearingRange value="150.0f" />
+      <SmellingRangeWind value="40.0f" />
+	  <SmellingRangeNoWind value="10.0f" />
+      <SeeingRangePeripheralMin value="150.0f" />
+      <SeeingRangePeripheralMax value="150.0f" />
+      <IdentificationRangeMin value="20.0"/>
+      <IdentificationRangeMax value="20.0"/>
+      <VisualFieldMinAzimuthAngle value="-130.0f" />
+      <VisualFieldMaxAzimuthAngle value="130.0f" />
+      <VisualFieldMinElevationAngle value="-75.0f" />
+      <VisualFieldMaxElevationAngle value="60.0f" />
+      <CentreFieldOfGazeMaxAngle value="90.0f" />
+	  <MovementDetectionTime value="200" />
+	  <VelocityThresholdClose value="2.0f" />
+	  <VelocityThresholdCloseCrouched value="3.0f" />
+	  <VelocityThresholdFar value="3.0f" />
+	  <VelocityThresholdFarCrouched value="6.0f" />	
+	  <PerceptionRangeModifierHash>TOD_MOD_DEFAULT</PerceptionRangeModifierHash>	  
+    </Item>	
+    <Item>
+      <Name>BARNYARD_PERCEPTION</Name>
+      <SeeingRangeMin value="70.0f" />
+	  <SeeingRangeMax value="70.0f" />
+      <HearingRange value="60.0f" />
+      <SeeingRangePeripheralMin value="10.0f" />
+	  <SeeingRangePeripheralMax value="10.0f" />
+      <IdentificationRangeMin value="20.0"/>
+      <IdentificationRangeMax value="20.0"/>
+      <VisualFieldMinAzimuthAngle value="-90.0f" />
+      <VisualFieldMaxAzimuthAngle value="90.0f" />
+      <VisualFieldMinElevationAngle value="-75.0f" />
+      <VisualFieldMaxElevationAngle value="60.0f" />
+      <CentreFieldOfGazeMaxAngle value="60.0f" />
+	  <MovementDetectionTime value="200" />
+	  <VelocityThresholdClose value="2.0f" />
+	  <VelocityThresholdCloseCrouched value="3.0f" />
+	  <VelocityThresholdFar value="3.0f" />
+	  <VelocityThresholdFarCrouched value="6.0f" />	  
+	  <PerceptionRangeModifierHash>TOD_MOD_DEFAULT</PerceptionRangeModifierHash>	  
+    </Item>
+	<Item>
+      <Name>PIG_PERCEPTION</Name>
+      <SeeingRangeMin value="70.0f" />
+	  <SeeingRangeMax value="70.0f" />
+      <HearingRange value="60.0f" />
+	  <SmellingRangeWind value="25.0f" />
+	  <SmellingRangeNoWind value="20.0f" />
+      <SeeingRangePeripheralMin value="10.0f" />
+	  <SeeingRangePeripheralMax value="10.0f" />
+      <IdentificationRangeMin value="20.0"/>
+      <IdentificationRangeMax value="20.0"/>
+      <VisualFieldMinAzimuthAngle value="-90.0f" />
+      <VisualFieldMaxAzimuthAngle value="90.0f" />
+      <VisualFieldMinElevationAngle value="-75.0f" />
+      <VisualFieldMaxElevationAngle value="60.0f" />
+      <CentreFieldOfGazeMaxAngle value="60.0f" />
+	  <MovementDetectionTime value="200" />
+	  <VelocityThresholdClose value="2.0f" />
+	  <VelocityThresholdCloseCrouched value="3.0f" />
+	  <VelocityThresholdFar value="3.0f" />
+	  <VelocityThresholdFarCrouched value="6.0f" />	  
+	  <PerceptionRangeModifierHash>TOD_MOD_DEFAULT</PerceptionRangeModifierHash>	  
+    </Item>
+    <Item>
+      <Name>BIRD_PERCEPTION</Name>
+      <SeeingRangeMin value="70.0f" />
+	  <SeeingRangeMax value="70.0f" />
+      <HearingRange value="60.0f" />
+      <SmellingRangeWind value="15.0f" />
+      <SmellingRangeNoWind value="10.0f" />
+      <SeeingRangePeripheralMin value="10.0f" />
+	  <SeeingRangePeripheralMax value="10.0f" />
+      <IdentificationRangeMin value="20.0"/>
+      <IdentificationRangeMax value="20.0"/>
+      <VisualFieldMinAzimuthAngle value="-90.0f" />
+      <VisualFieldMaxAzimuthAngle value="90.0f" />
+      <VisualFieldMinElevationAngle value="-75.0f" />
+      <VisualFieldMaxElevationAngle value="60.0f" />
+      <CentreFieldOfGazeMaxAngle value="60.0f" />
+	  <MovementDetectionTime value="200" />
+	  <VelocityThresholdClose value="2.0f" />
+	  <VelocityThresholdCloseCrouched value="3.0f" />
+	  <VelocityThresholdFar value="3.0f" />
+	  <VelocityThresholdFarCrouched value="6.0f" />	  
+	  <PerceptionRangeModifierHash>TOD_MOD_DEFAULT</PerceptionRangeModifierHash>	  
+    </Item>
+	<Item>
+      <Name>COUGAR_PERCEPTION</Name>
+      <SeeingRangeMin value="100.0f" />
+	  <SeeingRangeMax value="100.0f" />
+      <HearingRange value="60.0f" />
+	  <SmellingRangeWind value="50.0f" />
+	  <SmellingRangeNoWind value="15.0f" />
+      <SeeingRangePeripheralMin value="100.0f" />
+	  <SeeingRangePeripheralMax value="100.0f" />
+      <IdentificationRangeMin value="20.0"/>
+      <IdentificationRangeMax value="20.0"/>
+      <VisualFieldMinAzimuthAngle value="-90.0f" />
+      <VisualFieldMaxAzimuthAngle value="90.0f" />
+      <VisualFieldMinElevationAngle value="-75.0f" />
+      <VisualFieldMaxElevationAngle value="60.0f" />
+      <CentreFieldOfGazeMaxAngle value="60.0f" />
+	  <MovementDetectionTime value="200" />
+	  <VelocityThresholdClose value="2.0f" />
+	  <VelocityThresholdCloseCrouched value="3.0f" />
+	  <VelocityThresholdFar value="3.0f" />
+	  <VelocityThresholdFarCrouched value="6.0f" />	  
+	  <PerceptionRangeModifierHash>TOD_MOD_DEFAULT</PerceptionRangeModifierHash>	  
+    </Item> 
+	<Item>
+      <Name>DOG_PERCEPTION</Name>
+      <SeeingRangeMin value="60.0f" />
+      <SeeingRangeMax value="60.0f" />
+      <HearingRange value="60.0f" />
+      <SmellingRangeWind value="20.0f" />
+	  <SmellingRangeNoWind value="8.0f" />
+      <SeeingRangePeripheralMin value="5.0f" />
+      <SeeingRangePeripheralMax value="5.0f" />
+      <IdentificationRangeMin value="20.0"/>
+      <IdentificationRangeMax value="20.0"/>
+      <VisualFieldMinAzimuthAngle value="-90.0f" />
+      <VisualFieldMaxAzimuthAngle value="90.0f" />
+      <VisualFieldMinElevationAngle value="-75.0f" />
+      <VisualFieldMaxElevationAngle value="60.0f" />
+      <CentreFieldOfGazeMaxAngle value="60.0f" />
+      <MovementDetectionTime value="200" />
+      <VelocityThresholdClose value="2.0f" />
+      <VelocityThresholdCloseCrouched value="3.0f" />
+      <VelocityThresholdFar value="3.0f" />
+      <VelocityThresholdFarCrouched value="6.0f" />
+      <PerceptionRangeModifierHash>TOD_MOD_DEFAULT</PerceptionRangeModifierHash>
+    </Item>
+    <Item>
+      <Name>SHARK_PERCEPTION</Name>
+      <SeeingRangeMin value="70.0f" />
+	  <SeeingRangeMax value="70.0f" />
+      <HearingRange value="60.0f" />
+      <SeeingRangePeripheralMin value="10.0f" />
+	  <SeeingRangePeripheralMax value="10.0f" />
+      <IdentificationRangeMin value="20.0"/>
+      <IdentificationRangeMax value="20.0"/>
+      <VisualFieldMinAzimuthAngle value="-90.0f" />
+      <VisualFieldMaxAzimuthAngle value="90.0f" />
+      <VisualFieldMinElevationAngle value="-75.0f" />
+      <VisualFieldMaxElevationAngle value="60.0f" />
+      <CentreFieldOfGazeMaxAngle value="60.0f" />
+	  <MovementDetectionTime value="200" />
+	  <VelocityThresholdClose value="2.0f" />
+	  <VelocityThresholdCloseCrouched value="3.0f" />
+	  <VelocityThresholdFar value="3.0f" />
+	  <VelocityThresholdFarCrouched value="6.0f" />	  
+	  <PerceptionRangeModifierHash>TOD_MOD_DEFAULT</PerceptionRangeModifierHash>	  
+    </Item>
+    <Item>
+      <Name>FISH_PERCEPTION</Name>
+      <SeeingRangeMin value="60.0f" />
+	  <SeeingRangeMax value="60.0f" />
+      <HearingRange value="60.0f" />
+      <SeeingRangePeripheralMin value="5.0f" />
+	  <SeeingRangePeripheralMax value="5.0f" />
+      <IdentificationRangeMin value="20.0"/>
+      <IdentificationRangeMax value="20.0"/>
+      <VisualFieldMinAzimuthAngle value="-90.0f" />
+      <VisualFieldMaxAzimuthAngle value="90.0f" />
+      <VisualFieldMinElevationAngle value="-75.0f" />
+      <VisualFieldMaxElevationAngle value="60.0f" />
+      <CentreFieldOfGazeMaxAngle value="60.0f" />
+	  <MovementDetectionTime value="200" />
+	  <VelocityThresholdClose value="2.0f" />
+	  <VelocityThresholdCloseCrouched value="3.0f" />
+	  <VelocityThresholdFar value="3.0f" />
+	  <VelocityThresholdFarCrouched value="6.0f" />	  
+	  <PerceptionRangeModifierHash>TOD_MOD_DEFAULT</PerceptionRangeModifierHash>	  
+    </Item>
+    <Item>
+      <Name>DEFAULT_LAW_PERCEPTION</Name>
+      <SeeingRangeMin value="60.0f" />
+      <SeeingRangeMax value="60.0f" />
+      <HearingRange value="50.0f" />
+      <SeeingRangePeripheralMin value="5.0f" />
+      <SeeingRangePeripheralMax value="5.0f" />
+      <IdentificationRangeMin value="20.0"/>
+      <IdentificationRangeMax value="20.0"/>
+      <VisualFieldMinAzimuthAngle value="-90.0f" />
+      <VisualFieldMaxAzimuthAngle value="90.0f" />
+      <VisualFieldMinElevationAngle value="-75.0f" />
+      <VisualFieldMaxElevationAngle value="18.0f" />
+      <CentreFieldOfGazeMaxAngle value="60.0f" />
+      <MovementDetectionTime value="200" />
+      <VelocityThresholdClose value="2.0f" />
+      <VelocityThresholdCloseCrouched value="3.0f" />
+      <VelocityThresholdFar value="3.0f" />
+      <VelocityThresholdFarCrouched value="6.0f" />
+      <PerceptionRangeModifierHash>TOD_MOD_LAW</PerceptionRangeModifierHash>
+    </Item>
+    <Item>
+      <Name>PINKERTON_PERCEPTION</Name>
+      <SeeingRangeMin value="60.0f" />
+      <SeeingRangeMax value="60.0f" />
+      <HearingRange value="60.0f" />
+      <SeeingRangePeripheralMin value="5.0f" />
+      <SeeingRangePeripheralMax value="5.0f" />
+      <IdentificationRangeMin value="60.0f"/>
+      <IdentificationRangeMax value="60.0f"/>
+      <VisualFieldMinAzimuthAngle value="-90.0f" />
+      <VisualFieldMaxAzimuthAngle value="90.0f" />
+      <VisualFieldMinElevationAngle value="-75.0f" />
+      <VisualFieldMaxElevationAngle value="20.0f" />
+      <CentreFieldOfGazeMaxAngle value="60.0f" />
+      <MovementDetectionTime value="200" />
+      <VelocityThresholdClose value="2.0f" />
+      <VelocityThresholdCloseCrouched value="3.0f" />
+      <VelocityThresholdFar value="3.0f" />
+      <VelocityThresholdFarCrouched value="6.0f" />
+      <PerceptionRangeModifierHash>TOD_MOD_LAW</PerceptionRangeModifierHash>
+    </Item>
+    <Item>
+      <Name>HOUND_PERCEPTION</Name>
+      <SeeingRangeMin value="60.0f" />
+      <SeeingRangeMax value="60.0f" />
+      <HearingRange value="60.0f" />
+      <SmellingRangeWind value="25.0f" />
+	  <SmellingRangeNoWind value="10.0f" />
+      <SeeingRangePeripheralMin value="5.0f" />
+      <SeeingRangePeripheralMax value="5.0f" />
+      <IdentificationRangeMin value="20.0"/>
+      <IdentificationRangeMax value="20.0"/>
+      <VisualFieldMinAzimuthAngle value="-90.0f" />
+      <VisualFieldMaxAzimuthAngle value="90.0f" />
+      <VisualFieldMinElevationAngle value="-75.0f" />
+      <VisualFieldMaxElevationAngle value="60.0f" />
+      <CentreFieldOfGazeMaxAngle value="60.0f" />
+      <MovementDetectionTime value="200" />
+      <VelocityThresholdClose value="2.0f" />
+      <VelocityThresholdCloseCrouched value="3.0f" />
+      <VelocityThresholdFar value="3.0f" />
+      <VelocityThresholdFarCrouched value="6.0f" />
+      <PerceptionRangeModifierHash>TOD_MOD_DEFAULT</PerceptionRangeModifierHash>
+    </Item>
+    <Item>
+      <Name>HORSE_PERCEPTION</Name>
+      <SeeingRangeMin value="60.0f" />
+      <SeeingRangeMax value="60.0f" />
+      <HearingRange value="60.0f" />
+      <SmellingRangeWind value="40.0f" />
+      <SmellingRangeNoWind value="12.0f" />
+      <SeeingRangePeripheralMin value="30.0f" />
+      <SeeingRangePeripheralMax value="30.0f" />
+      <IdentificationRangeMin value="20.0"/>
+      <IdentificationRangeMax value="20.0"/>
+      <VisualFieldMinAzimuthAngle value="-120.0f" />
+      <VisualFieldMaxAzimuthAngle value="120.0f" />
+      <VisualFieldMinElevationAngle value="-75.0f" />
+      <VisualFieldMaxElevationAngle value="60.0f" />
+      <CentreFieldOfGazeMaxAngle value="80.0f" />
+      <MovementDetectionTime value="200" />
+      <VelocityThresholdClose value="2.0f" />
+      <VelocityThresholdCloseCrouched value="3.0f" />
+      <VelocityThresholdFar value="3.0f" />
+      <VelocityThresholdFarCrouched value="6.0f" />
+      <PerceptionRangeModifierHash>TOD_MOD_DEFAULT</PerceptionRangeModifierHash>
+    </Item>
+    <Item>
+      <Name>WOLF_PERCEPTION</Name>
+      <SeeingRangeMin value="100.0f" />
+	  <SeeingRangeMax value="100.0f" />
+      <HearingRange value="60.0f" />
+	  <SmellingRangeWind value="60.0f" />
+	  <SmellingRangeNoWind value="20.0f" />
+      <SeeingRangePeripheralMin value="100.0f" />
+	  <SeeingRangePeripheralMax value="100.0f" />
+      <IdentificationRangeMin value="20.0"/>
+      <IdentificationRangeMax value="20.0"/>
+      <VisualFieldMinAzimuthAngle value="-90.0f" />
+      <VisualFieldMaxAzimuthAngle value="90.0f" />
+      <VisualFieldMinElevationAngle value="-75.0f" />
+      <VisualFieldMaxElevationAngle value="60.0f" />
+      <CentreFieldOfGazeMaxAngle value="60.0f" />
+	  <MovementDetectionTime value="200" />
+	  <VelocityThresholdClose value="2.0f" />
+	  <VelocityThresholdCloseCrouched value="3.0f" />
+	  <VelocityThresholdFar value="3.0f" />
+	  <VelocityThresholdFarCrouched value="6.0f" />	  
+	  <PerceptionRangeModifierHash>TOD_MOD_DEFAULT</PerceptionRangeModifierHash>	  
+    </Item>  
+	</aPedPerceptionInfoData>
+  <aPedPerceptionModifierData>
+    <Item>
+      <Name>TOD_MOD_DEFAULT</Name>
+      <TimeOfDaySeeingRangeModifiers>
+          <HourlyModifiers>
+            <Item value="0.30f"/> <!--00:00-->
+            <Item value="0.30f"/> <!--01:00-->
+            <Item value="0.30f"/> <!--02:00-->
+            <Item value="0.30f"/> <!--03:00-->
+            <Item value="0.40f"/> <!--04:00-->
+            <Item value="0.60f"/> <!--05:00-->
+            <Item value="1.00f"/> <!--06:00-->
+            <Item value="1.00f"/> <!--07:00-->
+            <Item value="1.00f"/> <!--08:00-->
+            <Item value="1.00f"/> <!--09:00-->
+            <Item value="1.00f"/> <!--10:00-->
+            <Item value="1.00f"/> <!--11:00-->
+            <Item value="1.00f"/> <!--12:00-->
+            <Item value="1.00f"/> <!--13:00-->
+            <Item value="1.00f"/> <!--14:00-->
+            <Item value="1.00f"/> <!--15:00-->
+            <Item value="1.00f"/> <!--16:00-->
+            <Item value="1.00f"/> <!--17:00-->
+            <Item value="1.00f"/> <!--18:00-->
+            <Item value="1.00f"/> <!--19:00-->
+            <Item value="1.00f"/> <!--20:00-->
+            <Item value="1.00f"/> <!--21:00-->
+            <Item value="0.40f"/> <!--22:00-->
+            <Item value="0.30f"/> <!--23:00-->
+          </HourlyModifiers>
+        </TimeOfDaySeeingRangeModifiers>
+      <aWeatherPerceptionSeeingInfo>
+        <!-- eRain -->
+        <Item>
+          <MinWeatherRangeModifier value="-1.0f"/>
+          <MaxWeatherRangeModifier value="-1.0f"/>
+          <WeatherRangeModifier value="-1.0f"/>
+        </Item>
+        <!-- eFog -->
+        <Item>
+          <MinWeatherRangeModifier value="-6.0f"/>
+          <MaxWeatherRangeModifier value="-6.0f"/>
+          <WeatherRangeModifier value="-6.0f"/>
+        </Item>
+        <!-- eSnow -->
+        <Item>
+          <MinWeatherRangeModifier value="-5.0f"/>
+          <MaxWeatherRangeModifier value="-5.0f"/>
+          <WeatherRangeModifier value="-5.0f"/>
+        </Item>
+        <!-- eSandstorm -->
+        <Item>
+          <MinWeatherRangeModifier value="-6.0f"/>
+          <MaxWeatherRangeModifier value="-8.0f"/>
+          <WeatherRangeModifier value="-8.0f"/>
+        </Item>
+        <!-- eWind -->
+        <Item>
+          <MinWeatherRangeModifier value="-1.0f"/>
+          <MaxWeatherRangeModifier value="-1.0f"/>
+          <WeatherRangeModifier value="-1.0f"/>
+        </Item>
+      </aWeatherPerceptionSeeingInfo>
+      <aWeatherPerceptionHearingInfo>
+        <!-- eRain -->
+        <Item>
+          <MinWeatherRangeModifier value="-3.0f"/>
+          <MaxWeatherRangeModifier value="-3.0f"/>
+          <WeatherRangeModifier value="-3.0f"/>
+        </Item>
+        <!-- eFog -->
+        <Item>
+          <MinWeatherRangeModifier value="-1.0f"/>
+          <MaxWeatherRangeModifier value="-1.0f"/>
+          <WeatherRangeModifier value="-1.0f"/>
+        </Item>
+        <!-- eSnow -->
+        <Item>
+          <MinWeatherRangeModifier value="-1.0f"/>
+          <MaxWeatherRangeModifier value="-1.0f"/>
+          <WeatherRangeModifier value="-1.0f"/>
+        </Item>
+        <!-- eSandstorm -->
+        <Item>
+          <MinWeatherRangeModifier value="-8.0f"/>
+          <MaxWeatherRangeModifier value="-8.0f"/>
+          <WeatherRangeModifier value="-8.0f"/>
+        </Item>
+        <!-- eWind -->
+        <Item>
+          <MinWeatherRangeModifier value="-3.0f"/>
+          <MaxWeatherRangeModifier value="-3.0f"/>
+          <WeatherRangeModifier value="-3.0f"/>
+        </Item>
+      </aWeatherPerceptionHearingInfo>
+    </Item>
+    <Item>
+      <Name>TOD_MOD_PED</Name>
+      <TimeOfDaySeeingRangeModifiers>
+          <HourlyModifiers>
+            <Item value="0.30f"/> <!--00:00-->
+            <Item value="0.30f"/> <!--01:00-->
+            <Item value="0.30f"/> <!--02:00-->
+            <Item value="0.30f"/> <!--03:00-->
+            <Item value="0.40f"/> <!--04:00-->
+            <Item value="0.60f"/> <!--05:00-->
+            <Item value="1.00f"/> <!--06:00-->
+            <Item value="1.00f"/> <!--07:00-->
+            <Item value="1.00f"/> <!--08:00-->
+            <Item value="1.00f"/> <!--09:00-->
+            <Item value="1.00f"/> <!--10:00-->
+            <Item value="1.00f"/> <!--11:00-->
+            <Item value="1.00f"/> <!--12:00-->
+            <Item value="1.00f"/> <!--13:00-->
+            <Item value="1.00f"/> <!--14:00-->
+            <Item value="1.00f"/> <!--15:00-->
+            <Item value="1.00f"/> <!--16:00-->
+            <Item value="1.00f"/> <!--17:00-->
+            <Item value="1.00f"/> <!--18:00-->
+            <Item value="1.00f"/> <!--19:00-->
+            <Item value="1.00f"/> <!--20:00-->
+            <Item value="1.00f"/> <!--21:00-->
+            <Item value="0.40f"/> <!--22:00-->
+            <Item value="0.30f"/> <!--23:00-->
+          </HourlyModifiers>
+        </TimeOfDaySeeingRangeModifiers>
+      <aWeatherPerceptionSeeingInfo>
+        <!-- eRain -->
+        <Item>
+          <MinWeatherRangeModifier value="-1.0f"/>
+          <MaxWeatherRangeModifier value="-1.0f"/>
+          <WeatherRangeModifier value="-1.0f"/>
+        </Item>
+        <!-- eFog -->
+        <Item>
+          <MinWeatherRangeModifier value="-6.0f"/>
+          <MaxWeatherRangeModifier value="-6.0f"/>
+          <WeatherRangeModifier value="-6.0f"/>
+        </Item>
+        <!-- eSnow -->
+        <Item>
+          <MinWeatherRangeModifier value="-5.0f"/>
+          <MaxWeatherRangeModifier value="-5.0f"/>
+          <WeatherRangeModifier value="-5.0f"/>
+        </Item>
+        <!-- eSandstorm -->
+        <Item>
+          <MinWeatherRangeModifier value="-6.0f"/>
+          <MaxWeatherRangeModifier value="-8.0f"/>
+          <WeatherRangeModifier value="-8.0f"/>
+        </Item>
+        <!-- eWind -->
+        <Item>
+          <MinWeatherRangeModifier value="-1.0f"/>
+          <MaxWeatherRangeModifier value="-1.0f"/>
+          <WeatherRangeModifier value="-1.0f"/>
+        </Item>
+      </aWeatherPerceptionSeeingInfo>
+      <aWeatherPerceptionHearingInfo>
+        <!-- eRain -->
+        <Item>
+          <MinWeatherRangeModifier value="-3.0f"/>
+          <MaxWeatherRangeModifier value="-3.0f"/>
+          <WeatherRangeModifier value="-3.0f"/>
+        </Item>
+        <!-- eFog -->
+        <Item>
+          <MinWeatherRangeModifier value="-1.0f"/>
+          <MaxWeatherRangeModifier value="-1.0f"/>
+          <WeatherRangeModifier value="-1.0f"/>
+        </Item>
+        <!-- eSnow -->
+        <Item>
+          <MinWeatherRangeModifier value="-1.0f"/>
+          <MaxWeatherRangeModifier value="-1.0f"/>
+          <WeatherRangeModifier value="-1.0f"/>
+        </Item>
+        <!-- eSandstorm -->
+        <Item>
+          <MinWeatherRangeModifier value="-8.0f"/>
+          <MaxWeatherRangeModifier value="-8.0f"/>
+          <WeatherRangeModifier value="-8.0f"/>
+        </Item>
+        <!-- eWind -->
+        <Item>
+          <MinWeatherRangeModifier value="-3.0f"/>
+          <MaxWeatherRangeModifier value="-3.0f"/>
+          <WeatherRangeModifier value="-3.0f"/>
+        </Item>
+      </aWeatherPerceptionHearingInfo>
+    </Item>
+    <Item>
+      <Name>TOD_MOD_LAW</Name>
+      <TimeOfDaySeeingRangeModifiers>
+          <HourlyModifiers>
+            <Item value="0.40f"/> <!--00:00-->
+            <Item value="0.40f"/> <!--01:00-->
+            <Item value="0.40f"/> <!--02:00-->
+            <Item value="0.40f"/> <!--03:00-->
+            <Item value="0.50f"/> <!--04:00-->
+            <Item value="0.60f"/> <!--05:00-->
+            <Item value="1.00f"/> <!--06:00-->
+            <Item value="1.00f"/> <!--07:00-->
+            <Item value="1.00f"/> <!--08:00-->
+            <Item value="1.00f"/> <!--09:00-->
+            <Item value="1.00f"/> <!--10:00-->
+            <Item value="1.00f"/> <!--11:00-->
+            <Item value="1.00f"/> <!--12:00-->
+            <Item value="1.00f"/> <!--13:00-->
+            <Item value="1.00f"/> <!--14:00-->
+            <Item value="1.00f"/> <!--15:00-->
+            <Item value="1.00f"/> <!--16:00-->
+            <Item value="1.00f"/> <!--17:00-->
+            <Item value="1.00f"/> <!--18:00-->
+            <Item value="1.00f"/> <!--19:00-->
+            <Item value="1.00f"/> <!--20:00-->
+            <Item value="1.00f"/> <!--21:00-->
+            <Item value="0.60f"/> <!--22:00-->
+            <Item value="0.40f"/> <!--23:00-->
+          </HourlyModifiers>
+        </TimeOfDaySeeingRangeModifiers>
+      <aWeatherPerceptionSeeingInfo>
+        <!-- eRain -->
+        <Item>
+          <MinWeatherRangeModifier value="-1.0f"/>
+          <MaxWeatherRangeModifier value="-1.0f"/>
+          <WeatherRangeModifier value="-1.0f"/>
+        </Item>
+        <!-- eFog -->
+        <Item>
+          <MinWeatherRangeModifier value="-6.0f"/>
+          <MaxWeatherRangeModifier value="-6.0f"/>
+          <WeatherRangeModifier value="-6.0f"/>
+        </Item>
+        <!-- eSnow -->
+        <Item>
+          <MinWeatherRangeModifier value="-5.0f"/>
+          <MaxWeatherRangeModifier value="-5.0f"/>
+          <WeatherRangeModifier value="-5.0f"/>
+        </Item>
+        <!-- eSandstorm -->
+        <Item>
+          <MinWeatherRangeModifier value="-6.0f"/>
+          <MaxWeatherRangeModifier value="-6.0f"/>
+          <WeatherRangeModifier value="-6.0f"/>
+        </Item>
+        <!-- eWind -->
+        <Item>
+          <MinWeatherRangeModifier value="-1.0f"/>
+          <MaxWeatherRangeModifier value="-1.0f"/>
+          <WeatherRangeModifier value="-1.0f"/>
+        </Item>
+      </aWeatherPerceptionSeeingInfo>
+      <aWeatherPerceptionHearingInfo>
+        <!-- eRain -->
+        <Item>
+          <MinWeatherRangeModifier value="-3.0f"/>
+          <MaxWeatherRangeModifier value="-3.0f"/>
+          <WeatherRangeModifier value="-3.0f"/>
+        </Item>
+        <!-- eFog -->
+        <Item>
+          <MinWeatherRangeModifier value="-1.0f"/>
+          <MaxWeatherRangeModifier value="-1.0f"/>
+          <WeatherRangeModifier value="-1.0f"/>
+        </Item>
+        <!-- eSnow -->
+        <Item>
+          <MinWeatherRangeModifier value="-1.0f"/>
+          <MaxWeatherRangeModifier value="-1.0f"/>
+          <WeatherRangeModifier value="-1.0f"/>
+        </Item>
+        <!-- eSandstorm -->
+        <Item>
+          <MinWeatherRangeModifier value="-8.0f"/>
+          <MaxWeatherRangeModifier value="-8.0f"/>
+          <WeatherRangeModifier value="-8.0f"/>
+        </Item>
+        <!-- eWind -->
+        <Item>
+          <MinWeatherRangeModifier value="-3.0f"/>
+          <MaxWeatherRangeModifier value="-3.0f"/>
+          <WeatherRangeModifier value="-3.0f"/>
+        </Item>
+      </aWeatherPerceptionHearingInfo>
+    </Item>
+  </aPedPerceptionModifierData>
+</CPedPerceptionInfoManager>

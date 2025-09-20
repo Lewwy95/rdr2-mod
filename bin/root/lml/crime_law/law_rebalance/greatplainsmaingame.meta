@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="UTF-8"?>	
+<CDispatchData>
+	<BountyResponses>
+		<BountyDispatch>
+			<Name>LAW_WILDERNESS_GREAT_PLAINS_MAINGAME</Name>
+			<RandomWeight value="1.0" />
+			<RequiredRegion>LAW_REGION_GREAT_PLAINS_MAINGAME</RequiredRegion>
+			<RequiredCooldowns>
+				<Item>DefaultCooldown</Item>
+			</RequiredCooldowns>
+			<Flags>CantBeCleared</Flags>
+			<CombatInfoOverride>LAW_WILDERNESS</CombatInfoOverride>
+			<DispatchPhases>
+				
+				<!-- Phase: Riders -->
+				<Phase>
+					<Name>Riders</Name>
+					<GroupMultiplier value="0.5"/>
+					
+					<DispatchPeds>
+						<DispatchPedGroups>
+							<DispatchGroup>
+								<Preset>PinkertonSniper</Preset>
+								<MinNumPeds value="4"/>
+								<MaxNumPeds value="6"/>
+							</DispatchGroup>
+						</DispatchPedGroups>
+						<GreedyAcquireCondition type="CAIConditionReferenced">
+							<Name>SHOULD_GRAB_AVAILABLE_DISPATCH_PED</Name>
+						</GreedyAcquireCondition>
+					</DispatchPeds>
+				
+					<PhaseEndConditions>
+						<Condition type="CAIConditionReferenced">
+							<Name>DISPATCH_WEST_ELIZABETH_PINKERTONS</Name>
+						</Condition>
+					</PhaseEndConditions>
+					
+					<NextPhases>
+						<!--Switch to Reinforcements phase, always-->
+						<PhaseOption>
+							<Name>Reinforcements</Name>
+						</PhaseOption>
+					</NextPhases>	
+				</Phase>
+				
+				<!-- Phase: Reinforcements -->
+				<Phase>
+					<Name>Reinforcements</Name>
+					<GroupMultiplier value="0.5"/>
+					
+					<DispatchPeds>
+						<DispatchPedGroups>
+							<DispatchGroup>
+								<Preset>PinkertonSniper</Preset>
+								<MinNumPeds value="2"/>
+								<MaxNumPeds value="2"/>
+							</DispatchGroup>
+						</DispatchPedGroups>
+						
+						<RandomDispatchPedGroups>
+							<DispatchGroup>
+								<Preset>PinkertonSniper</Preset>
+								<RandomWeight value="0.5"/>
+								<MinNumPeds value="2"/>
+								<MaxNumPeds value="3"/>
+							</DispatchGroup>
+							<DispatchGroup>
+								<Preset>PinkertonShotgun</Preset>
+								<RandomWeight value="0.5f"/>
+								<MinNumPeds value="1"/>
+								<MaxNumPeds value="3"/>
+							</DispatchGroup>
+						</RandomDispatchPedGroups>
+						<GreedyAcquireCondition type="CAIConditionReferenced">
+							<Name>SHOULD_GRAB_AVAILABLE_DISPATCH_PED</Name>
+						</GreedyAcquireCondition>
+					</DispatchPeds>
+					
+					<PhaseEndConditions>
+						<Condition type="CAIConditionTimeInDispatchPhase">
+							<LowerBound value="1000"/>
+						</Condition>
+					</PhaseEndConditions>
+					
+					<!-- Reloop back to BLWPhaseControl -->
+					<NextPhases>
+						<!-- End Response -->
+					</NextPhases>	
+				</Phase>
+			</DispatchPhases>
+		</BountyDispatch>
+	</BountyResponses>
+	<CleanUpDispatchPedPresets>
+		<Item>PinkertonSniper</Item>
+	</CleanUpDispatchPedPresets>
+</CDispatchData>

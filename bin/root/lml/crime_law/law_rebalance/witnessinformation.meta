@@ -1,0 +1,966 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<CWitnessInformations>
+  <Personalities>
+    <Item key="Aggressive">
+      <Flags>CanObserveCrimes WillMoveToLawEnforcement</Flags>
+      <EmotionalPreset>PotentialCrimeInvestigate_Brave</EmotionalPreset>
+      <DataSet>
+        <OnFoot>
+          <Distances>
+            <Verification value="2.000000" />
+            <DistanceFromCriminalToChallenge value="8.000000" />
+            <DistanceFromCrimeToChallenge value="7.000000" />
+            <DistanceFromCriminalToCrimeToChallenge value="12.000000" />
+            <Spook value="10.000000" />
+            <Support value="8.000000" />
+            <Investigation value="45.000000" />
+            <ConfirmationRadius value="15.000000" />
+            <CrimeProximity value="10.000000" />
+            <CrimeSceneRadiusBuffer value="35.000000" />
+            <Flee value="80.000000" />
+            <TellLawPed value="5.000000" />
+            <TellLawPedTargetRadius value="4.000000" />
+            <TellLawPedRunningRadius value="13.500000" />
+            <TellLawPointTargetRadius value="3.000000" />
+          </Distances>
+          <Chances>
+            <CallOut value="0.400000" />
+            <CallOutKnown value="0.400000" />
+            <HostileCallOut value="0.250000" />
+            <HostileCallOutKnown value="0.250000" />
+          </Chances>
+        </OnFoot>
+        <OnMount>
+          <Distances>
+            <Verification value="3.000000" />
+            <DistanceFromCriminalToChallenge value="10.000000" />
+            <DistanceFromCrimeToChallenge value="8.000000" />
+            <DistanceFromCriminalToCrimeToChallenge value="12.000000" />
+            <Spook value="12.000000" />
+            <Support value="15.000000" />
+            <Investigation value="45.000000" />
+            <ConfirmationRadius value="15.000000" />
+            <CrimeProximity value="10.000000" />
+            <CrimeSceneRadiusBuffer value="35.000000" />
+            <Flee value="80.000000" />
+            <TellLawPed value="6.500000" />
+            <TellLawPedTargetRadius value="6.000000" />
+            <TellLawPedRunningRadius value="11.000000" />
+            <TellLawPointTargetRadius value="5.000000" />
+          </Distances>
+          <Chances>
+            <CallOut value="0.300000" />
+            <CallOutKnown value="0.300000" />
+            <HostileCallOut value="0.250000" />
+            <HostileCallOutKnown value="0.250000" />
+          </Chances>
+        </OnMount>
+        <InVehicle>
+          <Distances>
+            <Verification value="2.000000" />
+            <DistanceFromCriminalToChallenge value="12.000000" />
+            <DistanceFromCrimeToChallenge value="12.000000" />
+            <DistanceFromCriminalToCrimeToChallenge value="12.000000" />
+            <Spook value="15.000000" />
+            <Support value="25.000000" />
+            <Investigation value="45.000000" />
+            <ConfirmationRadius value="15.000000" />
+            <CrimeProximity value="10.000000" />
+            <CrimeSceneRadiusBuffer value="35.000000" />
+            <Flee value="80.000000" />
+            <TellLawPed value="20.000000" />
+            <TellLawPedTargetRadius value="15.000000" />
+            <TellLawPedRunningRadius value="20.000000" />
+            <TellLawPointTargetRadius value="5.000000" />
+          </Distances>
+          <Chances>
+            <CallOut value="0.300000" />
+            <CallOutKnown value="0.300000" />
+            <HostileCallOut value="0.250000" />
+            <HostileCallOutKnown value="0.250000" />
+          </Chances>
+        </InVehicle>
+        <Overrides />
+      </DataSet>
+    </Item>
+    <Item key="ANIMAL">
+      <Flags />
+      <EmotionalPreset>PotentialCrimeInvestigate_Nervous</EmotionalPreset>
+      <DataSet>
+        <OnFoot>
+          <Distances>
+            <Verification value="0.000000" />
+            <DistanceFromCriminalToChallenge value="0.000000" />
+            <DistanceFromCrimeToChallenge value="0.000000" />
+            <DistanceFromCriminalToCrimeToChallenge value="0.000000" />
+            <Spook value="0.000000" />
+            <Support value="0.000000" />
+            <Investigation value="0.000000" />
+            <ConfirmationRadius value="0.000000" />
+            <CrimeProximity value="0.000000" />
+            <CrimeSceneRadiusBuffer value="0.000000" />
+            <Flee value="0.000000" />
+            <TellLawPed value="0.000000" />
+            <TellLawPedTargetRadius value="1.000000" />
+            <TellLawPedRunningRadius value="1.000000" />
+            <TellLawPointTargetRadius value="1.000000" />
+          </Distances>
+          <Chances>
+            <CallOut value="1.000000" />
+            <CallOutKnown value="1.000000" />
+            <HostileCallOut value="1.000000" />
+            <HostileCallOutKnown value="1.000000" />
+          </Chances>
+        </OnFoot>
+        <OnMount>
+          <Distances>
+            <Verification value="0.000000" />
+            <DistanceFromCriminalToChallenge value="0.000000" />
+            <DistanceFromCrimeToChallenge value="0.000000" />
+            <DistanceFromCriminalToCrimeToChallenge value="0.000000" />
+            <Spook value="0.000000" />
+            <Support value="0.000000" />
+            <Investigation value="0.000000" />
+            <ConfirmationRadius value="0.000000" />
+            <CrimeProximity value="0.000000" />
+            <CrimeSceneRadiusBuffer value="0.000000" />
+            <Flee value="0.000000" />
+            <TellLawPed value="0.000000" />
+            <TellLawPedTargetRadius value="1.000000" />
+            <TellLawPedRunningRadius value="1.000000" />
+            <TellLawPointTargetRadius value="1.000000" />
+          </Distances>
+          <Chances>
+            <CallOut value="1.000000" />
+            <CallOutKnown value="1.000000" />
+            <HostileCallOut value="1.000000" />
+            <HostileCallOutKnown value="1.000000" />
+          </Chances>
+        </OnMount>
+        <InVehicle>
+          <Distances>
+            <Verification value="0.000000" />
+            <DistanceFromCriminalToChallenge value="0.000000" />
+            <DistanceFromCrimeToChallenge value="0.000000" />
+            <DistanceFromCriminalToCrimeToChallenge value="0.000000" />
+            <Spook value="0.000000" />
+            <Support value="0.000000" />
+            <Investigation value="0.000000" />
+            <ConfirmationRadius value="0.000000" />
+            <CrimeProximity value="0.000000" />
+            <CrimeSceneRadiusBuffer value="0.000000" />
+            <Flee value="0.000000" />
+            <TellLawPed value="0.000000" />
+            <TellLawPedTargetRadius value="1.000000" />
+            <TellLawPedRunningRadius value="1.000000" />
+            <TellLawPointTargetRadius value="1.000000" />
+          </Distances>
+          <Chances>
+            <CallOut value="1.000000" />
+            <CallOutKnown value="1.000000" />
+            <HostileCallOut value="1.000000" />
+            <HostileCallOutKnown value="1.000000" />
+          </Chances>
+        </InVehicle>
+        <Overrides />
+      </DataSet>
+    </Item>
+    <Item key="Default">
+      <Flags>CanObserveCrimes WillMoveToLawEnforcement</Flags>
+      <EmotionalPreset>PotentialCrimeInvestigate_Nervous</EmotionalPreset>
+      <DataSet>
+        <OnFoot>
+          <Distances>
+            <Verification value="2.000000" />
+            <DistanceFromCriminalToChallenge value="8.000000" />
+            <DistanceFromCrimeToChallenge value="7.000000" />
+            <DistanceFromCriminalToCrimeToChallenge value="12.000000" />
+            <Spook value="10.000000" />
+            <Support value="8.000000" />
+            <Investigation value="45.000000" />
+            <ConfirmationRadius value="15.000000" />
+            <CrimeProximity value="10.000000" />
+            <CrimeSceneRadiusBuffer value="35.000000" />
+            <Flee value="80.000000" />
+            <TellLawPed value="5.000000" />
+            <TellLawPedTargetRadius value="4.000000" />
+            <TellLawPedRunningRadius value="13.500000" />
+            <TellLawPointTargetRadius value="3.000000" />
+          </Distances>
+          <Chances>
+            <CallOut value="0.600000" />
+            <CallOutKnown value="0.600000" />
+            <HostileCallOut value="0.800000" />
+            <HostileCallOutKnown value="0.800000" />
+          </Chances>
+        </OnFoot>
+        <OnMount>
+          <Distances>
+            <Verification value="2.000000" />
+            <DistanceFromCriminalToChallenge value="10.000000" />
+            <DistanceFromCrimeToChallenge value="8.000000" />
+            <DistanceFromCriminalToCrimeToChallenge value="12.000000" />
+            <Spook value="12.000000" />
+            <Support value="15.000000" />
+            <Investigation value="45.000000" />
+            <ConfirmationRadius value="15.000000" />
+            <CrimeProximity value="10.000000" />
+            <CrimeSceneRadiusBuffer value="35.000000" />
+            <Flee value="80.000000" />
+            <TellLawPed value="6.500000" />
+            <TellLawPedTargetRadius value="6.000000" />
+            <TellLawPedRunningRadius value="11.000000" />
+            <TellLawPointTargetRadius value="5.000000" />
+          </Distances>
+          <Chances>
+            <CallOut value="0.500000" />
+            <CallOutKnown value="0.500000" />
+            <HostileCallOut value="0.700000" />
+            <HostileCallOutKnown value="0.700000" />
+          </Chances>
+        </OnMount>
+        <InVehicle>
+          <Distances>
+            <Verification value="2.000000" />
+            <DistanceFromCriminalToChallenge value="12.000000" />
+            <DistanceFromCrimeToChallenge value="12.000000" />
+            <DistanceFromCriminalToCrimeToChallenge value="12.000000" />
+            <Spook value="15.000000" />
+            <Support value="25.000000" />
+            <Investigation value="45.000000" />
+            <ConfirmationRadius value="15.000000" />
+            <CrimeProximity value="10.000000" />
+            <CrimeSceneRadiusBuffer value="35.000000" />
+            <Flee value="80.000000" />
+            <TellLawPed value="20.000000" />
+            <TellLawPedTargetRadius value="15.000000" />
+            <TellLawPedRunningRadius value="20.000000" />
+            <TellLawPointTargetRadius value="5.000000" />
+          </Distances>
+          <Chances>
+            <CallOut value="0.500000" />
+            <CallOutKnown value="0.500000" />
+            <HostileCallOut value="0.700000" />
+            <HostileCallOutKnown value="0.700000" />
+          </Chances>
+        </InVehicle>
+        <Overrides>
+          <Item key="CRIME_ASSAULT">
+            <OnFoot>
+              <Distances>
+                <Verification value="7.000000" />
+                <DistanceFromCriminalToChallenge value="6.000000" />
+                <DistanceFromCrimeToChallenge value="6.000000" />
+                <DistanceFromCriminalToCrimeToChallenge value="12.000000" />
+                <Spook value="10.000000" />
+                <Support value="8.000000" />
+                <Investigation value="60.000000" />
+                <ConfirmationRadius value="35.000000" />
+                <CrimeProximity value="10.000000" />
+                <CrimeSceneRadiusBuffer value="35.000000" />
+                <Flee value="80.000000" />
+                <TellLawPed value="5.000000" />
+                <TellLawPedTargetRadius value="4.000000" />
+                <TellLawPedRunningRadius value="13.500000" />
+                <TellLawPointTargetRadius value="3.000000" />
+              </Distances>
+              <Chances>
+                <CallOut value="0.600000" />
+                <CallOutKnown value="0.600000" />
+                <HostileCallOut value="0.800000" />
+                <HostileCallOutKnown value="0.800000" />
+              </Chances>
+            </OnFoot>
+            <OnMount>
+              <Distances>
+                <Verification value="9.000000" />
+                <DistanceFromCriminalToChallenge value="10.000000" />
+                <DistanceFromCrimeToChallenge value="8.000000" />
+                <DistanceFromCriminalToCrimeToChallenge value="12.000000" />
+                <Spook value="12.000000" />
+                <Support value="15.000000" />
+                <Investigation value="60.000000" />
+                <ConfirmationRadius value="35.000000" />
+                <CrimeProximity value="10.000000" />
+                <CrimeSceneRadiusBuffer value="35.000000" />
+                <Flee value="80.000000" />
+                <TellLawPed value="6.500000" />
+                <TellLawPedTargetRadius value="6.000000" />
+                <TellLawPedRunningRadius value="11.000000" />
+                <TellLawPointTargetRadius value="5.000000" />
+              </Distances>
+              <Chances>
+                <CallOut value="0.500000" />
+                <CallOutKnown value="0.500000" />
+                <HostileCallOut value="0.700000" />
+                <HostileCallOutKnown value="0.700000" />
+              </Chances>
+            </OnMount>
+            <InVehicle>
+              <Distances>
+                <Verification value="14.000000" />
+                <DistanceFromCriminalToChallenge value="12.000000" />
+                <DistanceFromCrimeToChallenge value="12.000000" />
+                <DistanceFromCriminalToCrimeToChallenge value="12.000000" />
+                <Spook value="15.000000" />
+                <Support value="25.000000" />
+                <Investigation value="60.000000" />
+                <ConfirmationRadius value="35.000000" />
+                <CrimeProximity value="10.000000" />
+                <CrimeSceneRadiusBuffer value="35.000000" />
+                <Flee value="80.000000" />
+                <TellLawPed value="20.000000" />
+                <TellLawPedTargetRadius value="15.000000" />
+                <TellLawPedRunningRadius value="20.000000" />
+                <TellLawPointTargetRadius value="5.000000" />
+              </Distances>
+              <Chances>
+                <CallOut value="0.500000" />
+                <CallOutKnown value="0.500000" />
+                <HostileCallOut value="0.700000" />
+                <HostileCallOutKnown value="0.700000" />
+              </Chances>
+            </InVehicle>
+          </Item>
+        </Overrides>
+      </DataSet>
+    </Item>
+    <Item key="Gang">
+      <Flags>CanObserveCrimes</Flags>
+      <EmotionalPreset>PotentialCrimeInvestigate_Brave</EmotionalPreset>
+      <DataSet>
+        <OnFoot>
+          <Distances>
+            <Verification value="7.000000" />
+            <DistanceFromCriminalToChallenge value="6.000000" />
+            <DistanceFromCrimeToChallenge value="6.000000" />
+            <DistanceFromCriminalToCrimeToChallenge value="12.000000" />
+            <Spook value="10.000000" />
+            <Support value="8.000000" />
+            <Investigation value="60.000000" />
+            <ConfirmationRadius value="35.000000" />
+            <CrimeProximity value="10.000000" />
+            <CrimeSceneRadiusBuffer value="35.000000" />
+            <Flee value="80.000000" />
+            <TellLawPed value="5.000000" />
+            <TellLawPedTargetRadius value="4.000000" />
+            <TellLawPedRunningRadius value="13.500000" />
+            <TellLawPointTargetRadius value="3.000000" />
+          </Distances>
+          <Chances>
+            <CallOut value="0.400000" />
+            <CallOutKnown value="0.400000" />
+            <HostileCallOut value="0.250000" />
+            <HostileCallOutKnown value="0.250000" />
+          </Chances>
+        </OnFoot>
+        <OnMount>
+          <Distances>
+            <Verification value="9.000000" />
+            <DistanceFromCriminalToChallenge value="10.000000" />
+            <DistanceFromCrimeToChallenge value="8.000000" />
+            <DistanceFromCriminalToCrimeToChallenge value="12.000000" />
+            <Spook value="12.000000" />
+            <Support value="15.000000" />
+            <Investigation value="60.000000" />
+            <ConfirmationRadius value="35.000000" />
+            <CrimeProximity value="10.000000" />
+            <CrimeSceneRadiusBuffer value="35.000000" />
+            <Flee value="80.000000" />
+            <TellLawPed value="6.500000" />
+            <TellLawPedTargetRadius value="6.000000" />
+            <TellLawPedRunningRadius value="11.000000" />
+            <TellLawPointTargetRadius value="5.000000" />
+          </Distances>
+          <Chances>
+            <CallOut value="0.300000" />
+            <CallOutKnown value="0.300000" />
+            <HostileCallOut value="0.250000" />
+            <HostileCallOutKnown value="0.250000" />
+          </Chances>
+        </OnMount>
+        <InVehicle>
+          <Distances>
+            <Verification value="14.000000" />
+            <DistanceFromCriminalToChallenge value="12.000000" />
+            <DistanceFromCrimeToChallenge value="12.000000" />
+            <DistanceFromCriminalToCrimeToChallenge value="12.000000" />
+            <Spook value="15.000000" />
+            <Support value="25.000000" />
+            <Investigation value="60.000000" />
+            <ConfirmationRadius value="35.000000" />
+            <CrimeProximity value="10.000000" />
+            <CrimeSceneRadiusBuffer value="35.000000" />
+            <Flee value="80.000000" />
+            <TellLawPed value="20.000000" />
+            <TellLawPedTargetRadius value="15.000000" />
+            <TellLawPedRunningRadius value="20.000000" />
+            <TellLawPointTargetRadius value="5.000000" />
+          </Distances>
+          <Chances>
+            <CallOut value="0.300000" />
+            <CallOutKnown value="0.300000" />
+            <HostileCallOut value="0.250000" />
+            <HostileCallOutKnown value="0.250000" />
+          </Chances>
+        </InVehicle>
+        <Overrides />
+      </DataSet>
+    </Item>
+    <Item key="GUARD">
+      <Flags>CanObserveCrimes</Flags>
+      <EmotionalPreset>PotentialCrimeInvestigate_Brave</EmotionalPreset>
+      <DataSet>
+        <OnFoot>
+          <Distances>
+            <Verification value="7.000000" />
+            <DistanceFromCriminalToChallenge value="6.000000" />
+            <DistanceFromCrimeToChallenge value="6.000000" />
+            <DistanceFromCriminalToCrimeToChallenge value="12.000000" />
+            <Spook value="10.000000" />
+            <Support value="8.000000" />
+            <Investigation value="60.000000" />
+            <ConfirmationRadius value="35.000000" />
+            <CrimeProximity value="10.000000" />
+            <CrimeSceneRadiusBuffer value="35.000000" />
+            <Flee value="80.000000" />
+            <TellLawPed value="5.000000" />
+            <TellLawPedTargetRadius value="4.000000" />
+            <TellLawPedRunningRadius value="13.500000" />
+            <TellLawPointTargetRadius value="3.000000" />
+          </Distances>
+          <Chances>
+            <CallOut value="0.400000" />
+            <CallOutKnown value="0.400000" />
+            <HostileCallOut value="0.250000" />
+            <HostileCallOutKnown value="0.250000" />
+          </Chances>
+        </OnFoot>
+        <OnMount>
+          <Distances>
+            <Verification value="9.000000" />
+            <DistanceFromCriminalToChallenge value="10.000000" />
+            <DistanceFromCrimeToChallenge value="8.000000" />
+            <DistanceFromCriminalToCrimeToChallenge value="12.000000" />
+            <Spook value="12.000000" />
+            <Support value="15.000000" />
+            <Investigation value="60.000000" />
+            <ConfirmationRadius value="35.000000" />
+            <CrimeProximity value="10.000000" />
+            <CrimeSceneRadiusBuffer value="35.000000" />
+            <Flee value="80.000000" />
+            <TellLawPed value="6.500000" />
+            <TellLawPedTargetRadius value="6.000000" />
+            <TellLawPedRunningRadius value="11.000000" />
+            <TellLawPointTargetRadius value="5.000000" />
+          </Distances>
+          <Chances>
+            <CallOut value="0.300000" />
+            <CallOutKnown value="0.300000" />
+            <HostileCallOut value="0.250000" />
+            <HostileCallOutKnown value="0.250000" />
+          </Chances>
+        </OnMount>
+        <InVehicle>
+          <Distances>
+            <Verification value="14.000000" />
+            <DistanceFromCriminalToChallenge value="12.000000" />
+            <DistanceFromCrimeToChallenge value="12.000000" />
+            <DistanceFromCriminalToCrimeToChallenge value="12.000000" />
+            <Spook value="15.000000" />
+            <Support value="25.000000" />
+            <Investigation value="60.000000" />
+            <ConfirmationRadius value="35.000000" />
+            <CrimeProximity value="10.000000" />
+            <CrimeSceneRadiusBuffer value="35.000000" />
+            <Flee value="80.000000" />
+            <TellLawPed value="20.000000" />
+            <TellLawPedTargetRadius value="15.000000" />
+            <TellLawPedRunningRadius value="20.000000" />
+            <TellLawPointTargetRadius value="5.000000" />
+          </Distances>
+          <Chances>
+            <CallOut value="0.300000" />
+            <CallOutKnown value="0.300000" />
+            <HostileCallOut value="0.250000" />
+            <HostileCallOutKnown value="0.250000" />
+          </Chances>
+        </InVehicle>
+        <Overrides />
+      </DataSet>
+    </Item>
+    <Item key="LAW">
+      <Flags>CanObserveCrimes</Flags>
+      <EmotionalPreset>PotentialCrimeInvestigate_Brave</EmotionalPreset>
+      <DataSet>
+        <OnFoot>
+          <Distances>
+            <Verification value="10.000000" />
+            <DistanceFromCriminalToChallenge value="6.000000" />
+            <DistanceFromCrimeToChallenge value="6.000000" />
+            <DistanceFromCriminalToCrimeToChallenge value="12.000000" />
+            <Spook value="10.000000" />
+            <Support value="8.000000" />
+            <Investigation value="150.000000" />
+            <ConfirmationRadius value="35.000000" />
+            <CrimeProximity value="10.000000" />
+            <CrimeSceneRadiusBuffer value="35.000000" />
+            <Flee value="80.000000" />
+            <TellLawPed value="5.000000" />
+            <TellLawPedTargetRadius value="4.000000" />
+            <TellLawPedRunningRadius value="15.000000" />
+            <TellLawPointTargetRadius value="3.000000" />
+          </Distances>
+          <Chances>
+            <CallOut value="1.000000" />
+            <CallOutKnown value="1.000000" />
+            <HostileCallOut value="1.000000" />
+            <HostileCallOutKnown value="1.000000" />
+          </Chances>
+        </OnFoot>
+        <OnMount>
+          <Distances>
+            <Verification value="12.000000" />
+            <DistanceFromCriminalToChallenge value="10.000000" />
+            <DistanceFromCrimeToChallenge value="8.000000" />
+            <DistanceFromCriminalToCrimeToChallenge value="12.000000" />
+            <Spook value="12.000000" />
+            <Support value="15.000000" />
+            <Investigation value="150.000000" />
+            <ConfirmationRadius value="35.000000" />
+            <CrimeProximity value="10.000000" />
+            <CrimeSceneRadiusBuffer value="35.000000" />
+            <Flee value="80.000000" />
+            <TellLawPed value="20.000000" />
+            <TellLawPedTargetRadius value="15.000000" />
+            <TellLawPedRunningRadius value="20.000000" />
+            <TellLawPointTargetRadius value="5.000000" />
+          </Distances>
+          <Chances>
+            <CallOut value="1.000000" />
+            <CallOutKnown value="1.000000" />
+            <HostileCallOut value="1.000000" />
+            <HostileCallOutKnown value="1.000000" />
+          </Chances>
+        </OnMount>
+        <InVehicle>
+          <Distances>
+            <Verification value="17.000000" />
+            <DistanceFromCriminalToChallenge value="12.000000" />
+            <DistanceFromCrimeToChallenge value="12.000000" />
+            <DistanceFromCriminalToCrimeToChallenge value="12.000000" />
+            <Spook value="15.000000" />
+            <Support value="25.000000" />
+            <Investigation value="150.000000" />
+            <ConfirmationRadius value="35.000000" />
+            <CrimeProximity value="10.000000" />
+            <CrimeSceneRadiusBuffer value="35.000000" />
+            <Flee value="80.000000" />
+            <TellLawPed value="20.000000" />
+            <TellLawPedTargetRadius value="15.000000" />
+            <TellLawPedRunningRadius value="20.000000" />
+            <TellLawPointTargetRadius value="5.000000" />
+          </Distances>
+          <Chances>
+            <CallOut value="1.000000" />
+            <CallOutKnown value="1.000000" />
+            <HostileCallOut value="1.000000" />
+            <HostileCallOutKnown value="1.000000" />
+          </Chances>
+        </InVehicle>
+        <Overrides>
+          <Item key="CRIME_ASSAULT_CORPSE">
+            <OnFoot>
+              <Distances>
+                <Verification value="20.000000" />
+                <DistanceFromCriminalToChallenge value="6.000000" />
+                <DistanceFromCrimeToChallenge value="6.000000" />
+                <DistanceFromCriminalToCrimeToChallenge value="12.000000" />
+                <Spook value="10.000000" />
+                <Support value="8.000000" />
+                <Investigation value="150.000000" />
+                <ConfirmationRadius value="35.000000" />
+                <CrimeProximity value="10.000000" />
+                <CrimeSceneRadiusBuffer value="35.000000" />
+                <Flee value="80.000000" />
+                <TellLawPed value="5.000000" />
+                <TellLawPedTargetRadius value="4.000000" />
+                <TellLawPedRunningRadius value="15.000000" />
+                <TellLawPointTargetRadius value="3.000000" />
+              </Distances>
+              <Chances>
+                <CallOut value="1.000000" />
+                <CallOutKnown value="1.000000" />
+                <HostileCallOut value="1.000000" />
+                <HostileCallOutKnown value="1.000000" />
+              </Chances>
+            </OnFoot>
+            <OnMount>
+              <Distances>
+                <Verification value="24.000000" />
+                <DistanceFromCriminalToChallenge value="10.000000" />
+                <DistanceFromCrimeToChallenge value="8.000000" />
+                <DistanceFromCriminalToCrimeToChallenge value="12.000000" />
+                <Spook value="12.000000" />
+                <Support value="15.000000" />
+                <Investigation value="150.000000" />
+                <ConfirmationRadius value="35.000000" />
+                <CrimeProximity value="10.000000" />
+                <CrimeSceneRadiusBuffer value="35.000000" />
+                <Flee value="80.000000" />
+                <TellLawPed value="20.000000" />
+                <TellLawPedTargetRadius value="15.000000" />
+                <TellLawPedRunningRadius value="20.000000" />
+                <TellLawPointTargetRadius value="5.000000" />
+              </Distances>
+              <Chances>
+                <CallOut value="1.000000" />
+                <CallOutKnown value="1.000000" />
+                <HostileCallOut value="1.000000" />
+                <HostileCallOutKnown value="1.000000" />
+              </Chances>
+            </OnMount>
+            <InVehicle>
+              <Distances>
+                <Verification value="24.000000" />
+                <DistanceFromCriminalToChallenge value="12.000000" />
+                <DistanceFromCrimeToChallenge value="12.000000" />
+                <DistanceFromCriminalToCrimeToChallenge value="12.000000" />
+                <Spook value="15.000000" />
+                <Support value="25.000000" />
+                <Investigation value="150.000000" />
+                <ConfirmationRadius value="35.000000" />
+                <CrimeProximity value="10.000000" />
+                <CrimeSceneRadiusBuffer value="35.000000" />
+                <Flee value="80.000000" />
+                <TellLawPed value="20.000000" />
+                <TellLawPedTargetRadius value="15.000000" />
+                <TellLawPedRunningRadius value="20.000000" />
+                <TellLawPointTargetRadius value="5.000000" />
+              </Distances>
+              <Chances>
+                <CallOut value="1.000000" />
+                <CallOutKnown value="1.000000" />
+                <HostileCallOut value="1.000000" />
+                <HostileCallOutKnown value="1.000000" />
+              </Chances>
+            </InVehicle>
+          </Item>
+        </Overrides>
+      </DataSet>
+    </Item>
+    <Item key="player">
+      <Flags />
+      <EmotionalPreset>PotentialCrimeInvestigate_Nervous</EmotionalPreset>
+      <DataSet>
+        <OnFoot>
+          <Distances>
+            <Verification value="0.000000" />
+            <DistanceFromCriminalToChallenge value="0.000000" />
+            <DistanceFromCrimeToChallenge value="0.000000" />
+            <DistanceFromCriminalToCrimeToChallenge value="0.000000" />
+            <Spook value="0.000000" />
+            <Support value="0.000000" />
+            <Investigation value="0.000000" />
+            <ConfirmationRadius value="0.000000" />
+            <CrimeProximity value="0.000000" />
+            <CrimeSceneRadiusBuffer value="0.000000" />
+            <Flee value="0.000000" />
+            <TellLawPed value="5.000000" />
+            <TellLawPedTargetRadius value="1.000000" />
+            <TellLawPedRunningRadius value="1.000000" />
+            <TellLawPointTargetRadius value="1.000000" />
+          </Distances>
+          <Chances>
+            <CallOut value="1.000000" />
+            <CallOutKnown value="1.000000" />
+            <HostileCallOut value="1.000000" />
+            <HostileCallOutKnown value="1.000000" />
+          </Chances>
+        </OnFoot>
+        <OnMount>
+          <Distances>
+            <Verification value="0.000000" />
+            <DistanceFromCriminalToChallenge value="0.000000" />
+            <DistanceFromCrimeToChallenge value="0.000000" />
+            <DistanceFromCriminalToCrimeToChallenge value="0.000000" />
+            <Spook value="0.000000" />
+            <Support value="0.000000" />
+            <Investigation value="0.000000" />
+            <ConfirmationRadius value="0.000000" />
+            <CrimeProximity value="0.000000" />
+            <CrimeSceneRadiusBuffer value="0.000000" />
+            <Flee value="0.000000" />
+            <TellLawPed value="8.000000" />
+            <TellLawPedTargetRadius value="1.000000" />
+            <TellLawPedRunningRadius value="1.000000" />
+            <TellLawPointTargetRadius value="1.000000" />
+          </Distances>
+          <Chances>
+            <CallOut value="1.000000" />
+            <CallOutKnown value="1.000000" />
+            <HostileCallOut value="1.000000" />
+            <HostileCallOutKnown value="1.000000" />
+          </Chances>
+        </OnMount>
+        <InVehicle>
+          <Distances>
+            <Verification value="0.000000" />
+            <DistanceFromCriminalToChallenge value="0.000000" />
+            <DistanceFromCrimeToChallenge value="0.000000" />
+            <DistanceFromCriminalToCrimeToChallenge value="0.000000" />
+            <Spook value="0.000000" />
+            <Support value="0.000000" />
+            <Investigation value="0.000000" />
+            <ConfirmationRadius value="0.000000" />
+            <CrimeProximity value="0.000000" />
+            <CrimeSceneRadiusBuffer value="0.000000" />
+            <Flee value="0.000000" />
+            <TellLawPed value="10.000000" />
+            <TellLawPedTargetRadius value="1.000000" />
+            <TellLawPedRunningRadius value="1.000000" />
+            <TellLawPointTargetRadius value="1.000000" />
+          </Distances>
+          <Chances>
+            <CallOut value="1.000000" />
+            <CallOutKnown value="1.000000" />
+            <HostileCallOut value="1.000000" />
+            <HostileCallOutKnown value="1.000000" />
+          </Chances>
+        </InVehicle>
+        <Overrides />
+      </DataSet>
+    </Item>
+    <Item key="Timid">
+      <Flags>CanObserveCrimes WillMoveToLawEnforcement</Flags>
+      <EmotionalPreset>PotentialCrimeInvestigate_Nervous</EmotionalPreset>
+      <DataSet>
+        <OnFoot>
+          <Distances>
+            <Verification value="1.000000" />
+            <DistanceFromCriminalToChallenge value="9.500000" />
+            <DistanceFromCrimeToChallenge value="7.000000" />
+            <DistanceFromCriminalToCrimeToChallenge value="12.000000" />
+            <Spook value="10.000000" />
+            <Support value="8.000000" />
+            <Investigation value="40.000000" />
+            <ConfirmationRadius value="30.000000" />
+            <CrimeProximity value="10.000000" />
+            <CrimeSceneRadiusBuffer value="35.000000" />
+            <Flee value="80.000000" />
+            <TellLawPed value="5.000000" />
+            <TellLawPedTargetRadius value="4.000000" />
+            <TellLawPedRunningRadius value="13.500000" />
+            <TellLawPointTargetRadius value="3.000000" />
+          </Distances>
+          <Chances>
+            <CallOut value="0.800000" />
+            <CallOutKnown value="0.800000" />
+            <HostileCallOut value="1.000000" />
+            <HostileCallOutKnown value="1.000000" />
+          </Chances>
+        </OnFoot>
+        <OnMount>
+          <Distances>
+            <Verification value="1.000000" />
+            <DistanceFromCriminalToChallenge value="10.000000" />
+            <DistanceFromCrimeToChallenge value="8.000000" />
+            <DistanceFromCriminalToCrimeToChallenge value="12.000000" />
+            <Spook value="12.000000" />
+            <Support value="15.000000" />
+            <Investigation value="40.000000" />
+            <ConfirmationRadius value="30.000000" />
+            <CrimeProximity value="10.000000" />
+            <CrimeSceneRadiusBuffer value="35.000000" />
+            <Flee value="80.000000" />
+            <TellLawPed value="6.500000" />
+            <TellLawPedTargetRadius value="6.000000" />
+            <TellLawPedRunningRadius value="11.000000" />
+            <TellLawPointTargetRadius value="5.000000" />
+          </Distances>
+          <Chances>
+            <CallOut value="0.700000" />
+            <CallOutKnown value="0.700000" />
+            <HostileCallOut value="0.900000" />
+            <HostileCallOutKnown value="0.900000" />
+          </Chances>
+        </OnMount>
+        <InVehicle>
+          <Distances>
+            <Verification value="1.000000" />
+            <DistanceFromCriminalToChallenge value="12.000000" />
+            <DistanceFromCrimeToChallenge value="12.000000" />
+            <DistanceFromCriminalToCrimeToChallenge value="12.000000" />
+            <Spook value="15.000000" />
+            <Support value="25.000000" />
+            <Investigation value="30.000000" />
+            <ConfirmationRadius value="30.000000" />
+            <CrimeProximity value="10.000000" />
+            <CrimeSceneRadiusBuffer value="35.000000" />
+            <Flee value="80.000000" />
+            <TellLawPed value="20.000000" />
+            <TellLawPedTargetRadius value="15.000000" />
+            <TellLawPedRunningRadius value="20.000000" />
+            <TellLawPointTargetRadius value="5.000000" />
+          </Distances>
+          <Chances>
+            <CallOut value="0.700000" />
+            <CallOutKnown value="0.700000" />
+            <HostileCallOut value="0.900000" />
+            <HostileCallOutKnown value="0.900000" />
+          </Chances>
+        </InVehicle>
+        <Overrides>
+          <Item key="CRIME_ASSAULT">
+            <OnFoot>
+              <Distances>
+                <Verification value="7.000000" />
+                <DistanceFromCriminalToChallenge value="6.000000" />
+                <DistanceFromCrimeToChallenge value="6.000000" />
+                <DistanceFromCriminalToCrimeToChallenge value="12.000000" />
+                <Spook value="10.000000" />
+                <Support value="8.000000" />
+                <Investigation value="60.000000" />
+                <ConfirmationRadius value="35.000000" />
+                <CrimeProximity value="10.000000" />
+                <CrimeSceneRadiusBuffer value="35.000000" />
+                <Flee value="80.000000" />
+                <TellLawPed value="5.000000" />
+                <TellLawPedTargetRadius value="4.000000" />
+                <TellLawPedRunningRadius value="13.500000" />
+                <TellLawPointTargetRadius value="3.000000" />
+              </Distances>
+              <Chances>
+                <CallOut value="1.000000" />
+                <CallOutKnown value="1.000000" />
+                <HostileCallOut value="1.000000" />
+                <HostileCallOutKnown value="1.000000" />
+              </Chances>
+            </OnFoot>
+            <OnMount>
+              <Distances>
+                <Verification value="9.000000" />
+                <DistanceFromCriminalToChallenge value="10.000000" />
+                <DistanceFromCrimeToChallenge value="8.000000" />
+                <DistanceFromCriminalToCrimeToChallenge value="12.000000" />
+                <Spook value="12.000000" />
+                <Support value="15.000000" />
+                <Investigation value="60.000000" />
+                <ConfirmationRadius value="35.000000" />
+                <CrimeProximity value="10.000000" />
+                <CrimeSceneRadiusBuffer value="35.000000" />
+                <Flee value="80.000000" />
+                <TellLawPed value="6.500000" />
+                <TellLawPedTargetRadius value="6.000000" />
+                <TellLawPedRunningRadius value="11.000000" />
+                <TellLawPointTargetRadius value="5.000000" />
+              </Distances>
+              <Chances>
+                <CallOut value="1.000000" />
+                <CallOutKnown value="1.000000" />
+                <HostileCallOut value="1.000000" />
+                <HostileCallOutKnown value="1.000000" />
+              </Chances>
+            </OnMount>
+            <InVehicle>
+              <Distances>
+                <Verification value="14.000000" />
+                <DistanceFromCriminalToChallenge value="12.000000" />
+                <DistanceFromCrimeToChallenge value="12.000000" />
+                <DistanceFromCriminalToCrimeToChallenge value="12.000000" />
+                <Spook value="15.000000" />
+                <Support value="25.000000" />
+                <Investigation value="60.000000" />
+                <ConfirmationRadius value="35.000000" />
+                <CrimeProximity value="10.000000" />
+                <CrimeSceneRadiusBuffer value="35.000000" />
+                <Flee value="80.000000" />
+                <TellLawPed value="20.000000" />
+                <TellLawPedTargetRadius value="15.000000" />
+                <TellLawPedRunningRadius value="20.000000" />
+                <TellLawPointTargetRadius value="5.000000" />
+              </Distances>
+              <Chances>
+                <CallOut value="1.000000" />
+                <CallOutKnown value="1.000000" />
+                <HostileCallOut value="1.000000" />
+                <HostileCallOutKnown value="1.000000" />
+              </Chances>
+            </InVehicle>
+          </Item>
+        </Overrides>
+      </DataSet>
+    </Item>
+  </Personalities>
+  <ScoringData>
+    <Item key="CRIME_ROBBERY">
+      <MultiplierForLawWitnessDistance>
+        <Disable value="false" />
+        <ClampOutOfBounds value="false" />
+        <Min value="0.000000" />
+        <Max value="150.000000" />
+        <MultiplierForMin value="1.000000" />
+        <MultiplierForMax value="0.000000" />
+        <MultiplierForOutOfBounds value="1.000000" />
+      </MultiplierForLawWitnessDistance>
+      <MultiplierForWitnessDistance>
+        <Disable value="false" />
+        <ClampOutOfBounds value="true" />
+        <Min value="15.000000" />
+        <Max value="60.000000" />
+        <MultiplierForMin value="1.000000" />
+        <MultiplierForMax value="0.000000" />
+        <MultiplierForOutOfBounds value="0.000000" />
+      </MultiplierForWitnessDistance>
+      <MultiplierForOnScreen value="2.000000" />
+      <MultiplierForScriptedPed value="5.000000" />
+      <MultiplierForOwners value="3.000000" />
+      <MultiplierForVictim value="3.000000" />
+      <MultiplierForMounted value="1.000000" />
+      <MultiplierForDriver value="1.000000" />
+      <MultiplierForPassenger value="0.200000" />
+      <MultiplierForKnownCriminal value="1.250000" />
+      <MultiplierForDifferentInteriors value="0.010000" />
+      <MultiplierForScenarioPed value="0.950000" />
+      <MultiplierForScenarioBlockedPed value="0.000000" />
+      <MultiplierForLawEnforcement value="1.500000" />
+      <MultiplierForOwnedVolumes value="1.2500000" />
+      <MultiplierForLeader value="2.500000" />
+    </Item>
+    <Item key="Default">
+      <MultiplierForLawWitnessDistance>
+        <Disable value="false" />
+        <ClampOutOfBounds value="false" />
+        <Min value="0.000000" />
+        <Max value="150.000000" />
+        <MultiplierForMin value="1.000000" />
+        <MultiplierForMax value="0.000000" />
+        <MultiplierForOutOfBounds value="1.000000" />
+      </MultiplierForLawWitnessDistance>
+      <MultiplierForWitnessDistance>
+        <Disable value="false" />
+        <ClampOutOfBounds value="false" />
+        <Min value="0.000000" />
+        <Max value="60.000000" />
+        <MultiplierForMin value="1.000000" />
+        <MultiplierForMax value="0.000000" />
+        <MultiplierForOutOfBounds value="1.000000" />
+      </MultiplierForWitnessDistance>
+      <MultiplierForOnScreen value="2.000000" />
+      <MultiplierForScriptedPed value="5.000000" />
+      <MultiplierForOwners value="3.000000" />
+      <MultiplierForVictim value="3.000000" />
+      <MultiplierForMounted value="1.000000" />
+      <MultiplierForDriver value="1.000000" />
+      <MultiplierForPassenger value="0.200000" />
+      <MultiplierForKnownCriminal value="1.250000" />
+      <MultiplierForDifferentInteriors value="0.010000" />
+      <MultiplierForScenarioPed value="0.950000" />
+      <MultiplierForScenarioBlockedPed value="0.000000" />
+      <MultiplierForLawEnforcement value="1.500000" />
+      <MultiplierForOwnedVolumes value="1.2500000" />
+      <MultiplierForLeader value="2.500000" />
+    </Item>
+  </ScoringData>
+</CWitnessInformations>

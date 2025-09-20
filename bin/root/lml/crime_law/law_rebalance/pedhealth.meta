@@ -1,0 +1,1781 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<CEnergyConfigInfos>
+  <HealthRechargeConfig>
+    <Item key="HORSE_HEALTH_RECHARGE">
+      <BaseRechargeRate value="3.000000" />
+      <RechargeInCoverMultiplier value="2.000000" />
+      <RechargeMovementMultiplier value="0.500000" />
+      <RechargeOnHorseOrInVehicleMovementMultiplier value="1.000000" />
+      <RechargeInMeleeMultiplier value="1.000000" />
+      <TimeToRechargeSinceLastDamage value="5.000000" />
+      <TimeToRechargeSinceLastDamageInCover value="5.000000" />
+      <TimeToRechargeSinceLastFullBodyHitReact value="7.000000" />
+      <TimeToRechargeSinceLastDamageInMelee value="10.000000" />
+      <MovementSpeedThreshold value="1.000000" />
+      <MovementOnHorseOrInVehicleSpeedThreshold value="0.000000" />
+      <MaxHealthToRechargeAsPercentage value="1.000000" />
+    </Item>
+    <Item key="PLAYER_HEALTH_RECHARGE_SP">
+      <BaseRechargeRate value="5.000000" />
+      <RechargeInCoverMultiplier value="2.000000" />
+      <RechargeMovementMultiplier value="0.500000" />
+      <RechargeOnHorseOrInVehicleMovementMultiplier value="1.000000" />
+      <RechargeInMeleeMultiplier value="0.500000" />
+      <TimeToRechargeSinceLastDamage value="5.000000" />
+      <TimeToRechargeSinceLastDamageInCover value="5.000000" />
+      <TimeToRechargeSinceLastFullBodyHitReact value="7.000000" />
+      <TimeToRechargeSinceLastDamageInMelee value="10.000000" />
+      <MovementSpeedThreshold value="1.000000" />
+      <MovementOnHorseOrInVehicleSpeedThreshold value="0.000000" />
+      <MaxHealthToRechargeAsPercentage value="1.000000" />
+    </Item>
+  </HealthRechargeConfig>
+  <HealthConfig>
+    <Item key="FLAMMABLE">
+      <DefaultEnergy value="10.000000" />
+      <EnergyReserveProperties>
+        <Reserves content="float_array" />
+        <UnlockGroup />
+        <UnlockedEnergyReserveSize value="0.000000" />
+        <UnlockedEnergyReserveCount value="1" />
+      </EnergyReserveProperties>
+      <DefaultArmour value="0.000000" />
+      <InjuredHealthThreshold value="7.000000" />
+      <CriticallyInjuredHealthThreshold value="4.000000" />
+      <Invincible value="false" />
+      <WritheFromBulletDamageTheshold value="200.000000" />
+      <FireVulnerability value="0.040000" />
+      <RechargeProperties ref="NULL" />
+      <MeleeProperties>
+        <FatiguedHealthThreshold value="3.000000" />
+        <KnockedOutHealthThreshold value="2.000000" />
+        <KnockedOutHealthToRecover value="30.000000" />
+        <KnockedOutCount value="0" />
+        <DogTakedownThreshold value="75.000000" />
+        <MeleeCardinalFatalAttackCheck value="true" />
+      </MeleeProperties>
+      <ScavengingProperties>
+        <TimeStartScavengedVfxDamage value="5.000000" />
+        <TimeToMaxScavengedVfxDamage value="60.000000" />
+      </ScavengingProperties>
+      <IncapacitatedProperties>
+        <IncapacitatedHealthThreshold value="51.000000" />
+        <ReviveFromIncapacitationHealth value="100.000000" />
+        <CanBeIncapacitated value="false" />
+      </IncapacitatedProperties>
+    </Item>
+    <Item key="HEALTH_ANIMAL_BEAR">
+      <DefaultEnergy value="261.000000" />
+      <EnergyReserveProperties>
+        <Reserves content="float_array" />
+        <UnlockGroup />
+        <UnlockedEnergyReserveSize value="0.000000" />
+        <UnlockedEnergyReserveCount value="1" />
+      </EnergyReserveProperties>
+      <DefaultArmour value="0.000000" />
+      <InjuredHealthThreshold value="130.000000" />
+      <CriticallyInjuredHealthThreshold value="30.000000" />
+      <Invincible value="false" />
+      <WritheFromBulletDamageTheshold value="200.000000" />
+      <FireVulnerability value="1.000000" />
+      <RechargeProperties ref="NULL" />
+      <MeleeProperties>
+        <FatiguedHealthThreshold value="30.000000" />
+        <KnockedOutHealthThreshold value="25.000000" />
+        <KnockedOutHealthToRecover value="30.000000" />
+        <KnockedOutCount value="0" />
+        <DogTakedownThreshold value="75.000000" />
+        <MeleeCardinalFatalAttackCheck value="true" />
+      </MeleeProperties>
+      <ScavengingProperties>
+        <TimeStartScavengedVfxDamage value="5.000000" />
+        <TimeToMaxScavengedVfxDamage value="60.000000" />
+      </ScavengingProperties>
+      <IncapacitatedProperties>
+        <IncapacitatedHealthThreshold value="51.000000" />
+        <ReviveFromIncapacitationHealth value="100.000000" />
+        <CanBeIncapacitated value="false" />
+      </IncapacitatedProperties>
+    </Item>
+    <Item key="HEALTH_ANIMAL_COUGAR">
+      <DefaultEnergy value="131.000000" />
+      <EnergyReserveProperties>
+        <Reserves content="float_array" />
+        <UnlockGroup />
+        <UnlockedEnergyReserveSize value="0.000000" />
+        <UnlockedEnergyReserveCount value="1" />
+      </EnergyReserveProperties>
+      <DefaultArmour value="0.000000" />
+      <InjuredHealthThreshold value="81.000000" />
+      <CriticallyInjuredHealthThreshold value="25.000000" />
+      <Invincible value="false" />
+      <WritheFromBulletDamageTheshold value="200.000000" />
+      <FireVulnerability value="1.000000" />
+      <RechargeProperties ref="NULL" />
+      <MeleeProperties>
+        <FatiguedHealthThreshold value="30.000000" />
+        <KnockedOutHealthThreshold value="25.000000" />
+        <KnockedOutHealthToRecover value="30.000000" />
+        <KnockedOutCount value="0" />
+        <DogTakedownThreshold value="75.000000" />
+        <MeleeCardinalFatalAttackCheck value="true" />
+      </MeleeProperties>
+      <ScavengingProperties>
+        <TimeStartScavengedVfxDamage value="5.000000" />
+        <TimeToMaxScavengedVfxDamage value="60.000000" />
+      </ScavengingProperties>
+      <IncapacitatedProperties>
+        <IncapacitatedHealthThreshold value="51.000000" />
+        <ReviveFromIncapacitationHealth value="100.000000" />
+        <CanBeIncapacitated value="false" />
+      </IncapacitatedProperties>
+    </Item>
+    <Item key="HEALTH_ANIMAL_DEER">
+      <DefaultEnergy value="101.000000" />
+      <EnergyReserveProperties>
+        <Reserves content="float_array" />
+        <UnlockGroup />
+        <UnlockedEnergyReserveSize value="0.000000" />
+        <UnlockedEnergyReserveCount value="1" />
+      </EnergyReserveProperties>
+      <DefaultArmour value="0.000000" />
+      <InjuredHealthThreshold value="50.000000" />
+      <CriticallyInjuredHealthThreshold value="25.000000" />
+      <Invincible value="false" />
+      <WritheFromBulletDamageTheshold value="200.000000" />
+      <FireVulnerability value="1.000000" />
+      <RechargeProperties ref="NULL" />
+      <MeleeProperties>
+        <FatiguedHealthThreshold value="0.000000" />
+        <KnockedOutHealthThreshold value="80.000000" />
+        <KnockedOutHealthToRecover value="30.000000" />
+        <KnockedOutCount value="0" />
+        <DogTakedownThreshold value="75.000000" />
+        <MeleeCardinalFatalAttackCheck value="true" />
+      </MeleeProperties>
+      <ScavengingProperties>
+        <TimeStartScavengedVfxDamage value="5.000000" />
+        <TimeToMaxScavengedVfxDamage value="60.000000" />
+      </ScavengingProperties>
+      <IncapacitatedProperties>
+        <IncapacitatedHealthThreshold value="51.000000" />
+        <ReviveFromIncapacitationHealth value="100.000000" />
+        <CanBeIncapacitated value="false" />
+      </IncapacitatedProperties>
+    </Item>
+    <Item key="HEALTH_ANIMAL_WOLF">
+      <DefaultEnergy value="121.000000" />
+      <EnergyReserveProperties>
+        <Reserves content="float_array" />
+        <UnlockGroup />
+        <UnlockedEnergyReserveSize value="0.000000" />
+        <UnlockedEnergyReserveCount value="1" />
+      </EnergyReserveProperties>
+      <DefaultArmour value="0.000000" />
+      <InjuredHealthThreshold value="61.000000" />
+      <CriticallyInjuredHealthThreshold value="25.000000" />
+      <Invincible value="false" />
+      <WritheFromBulletDamageTheshold value="200.000000" />
+      <FireVulnerability value="1.000000" />
+      <RechargeProperties ref="NULL" />
+      <MeleeProperties>
+        <FatiguedHealthThreshold value="30.000000" />
+        <KnockedOutHealthThreshold value="25.000000" />
+        <KnockedOutHealthToRecover value="30.000000" />
+        <KnockedOutCount value="0" />
+        <DogTakedownThreshold value="75.000000" />
+        <MeleeCardinalFatalAttackCheck value="true" />
+      </MeleeProperties>
+      <ScavengingProperties>
+        <TimeStartScavengedVfxDamage value="5.000000" />
+        <TimeToMaxScavengedVfxDamage value="60.000000" />
+      </ScavengingProperties>
+      <IncapacitatedProperties>
+        <IncapacitatedHealthThreshold value="51.000000" />
+        <ReviveFromIncapacitationHealth value="100.000000" />
+        <CanBeIncapacitated value="false" />
+      </IncapacitatedProperties>
+    </Item>
+    <Item key="HEALTH_DUELIST_EASY">
+      <DefaultEnergy value="70.000000" />
+      <EnergyReserveProperties>
+        <Reserves content="float_array" />
+        <UnlockGroup />
+        <UnlockedEnergyReserveSize value="0.000000" />
+        <UnlockedEnergyReserveCount value="1" />
+      </EnergyReserveProperties>
+      <DefaultArmour value="10.000000" />
+      <InjuredHealthThreshold value="49.000000" />
+      <CriticallyInjuredHealthThreshold value="5.000000" />
+      <Invincible value="false" />
+      <WritheFromBulletDamageTheshold value="200.000000" />
+      <FireVulnerability value="1.000000" />
+      <RechargeProperties ref="NULL" />
+      <MeleeProperties>
+        <FatiguedHealthThreshold value="25.000000" />
+        <KnockedOutHealthThreshold value="15.000000" />
+        <KnockedOutHealthToRecover value="30.000000" />
+        <KnockedOutCount value="0" />
+        <DogTakedownThreshold value="75.000000" />
+        <MeleeCardinalFatalAttackCheck value="true" />
+      </MeleeProperties>
+      <ScavengingProperties>
+        <TimeStartScavengedVfxDamage value="5.000000" />
+        <TimeToMaxScavengedVfxDamage value="60.000000" />
+      </ScavengingProperties>
+      <IncapacitatedProperties>
+        <IncapacitatedHealthThreshold value="51.000000" />
+        <ReviveFromIncapacitationHealth value="100.000000" />
+        <CanBeIncapacitated value="false" />
+      </IncapacitatedProperties>
+    </Item>
+    <Item key="HEALTH_DUELIST_MEDIUM">
+      <DefaultEnergy value="80.000000" />
+      <EnergyReserveProperties>
+        <Reserves content="float_array" />
+        <UnlockGroup />
+        <UnlockedEnergyReserveSize value="0.000000" />
+        <UnlockedEnergyReserveCount value="1" />
+      </EnergyReserveProperties>
+      <DefaultArmour value="20.000000" />
+      <InjuredHealthThreshold value="56.000000" />
+      <CriticallyInjuredHealthThreshold value="5.000000" />
+      <Invincible value="false" />
+      <WritheFromBulletDamageTheshold value="200.000000" />
+      <FireVulnerability value="1.000000" />
+      <RechargeProperties ref="NULL" />
+      <MeleeProperties>
+        <FatiguedHealthThreshold value="25.000000" />
+        <KnockedOutHealthThreshold value="15.000000" />
+        <KnockedOutHealthToRecover value="30.000000" />
+        <KnockedOutCount value="0" />
+        <DogTakedownThreshold value="75.000000" />
+        <MeleeCardinalFatalAttackCheck value="true" />
+      </MeleeProperties>
+      <ScavengingProperties>
+        <TimeStartScavengedVfxDamage value="5.000000" />
+        <TimeToMaxScavengedVfxDamage value="60.000000" />
+      </ScavengingProperties>
+      <IncapacitatedProperties>
+        <IncapacitatedHealthThreshold value="51.000000" />
+        <ReviveFromIncapacitationHealth value="100.000000" />
+        <CanBeIncapacitated value="false" />
+      </IncapacitatedProperties>
+    </Item>
+    <Item key="HEALTH_ENEMY_EASIEST">
+      <DefaultEnergy value="50.000000" />
+      <EnergyReserveProperties>
+        <Reserves content="float_array" />
+        <UnlockGroup />
+        <UnlockedEnergyReserveSize value="0.000000" />
+        <UnlockedEnergyReserveCount value="1" />
+      </EnergyReserveProperties>
+      <DefaultArmour value="0.000000" />
+      <InjuredHealthThreshold value="35.000000" />
+      <CriticallyInjuredHealthThreshold value="5.000000" />
+      <Invincible value="false" />
+      <WritheFromBulletDamageTheshold value="200.000000" />
+      <FireVulnerability value="1.000000" />
+      <RechargeProperties ref="NULL" />
+      <MeleeProperties>
+        <FatiguedHealthThreshold value="25.000000" />
+        <KnockedOutHealthThreshold value="10.000000" />
+        <KnockedOutHealthToRecover value="30.000000" />
+        <KnockedOutCount value="0" />
+        <DogTakedownThreshold value="75.000000" />
+        <MeleeCardinalFatalAttackCheck value="true" />
+      </MeleeProperties>
+      <ScavengingProperties>
+        <TimeStartScavengedVfxDamage value="5.000000" />
+        <TimeToMaxScavengedVfxDamage value="60.000000" />
+      </ScavengingProperties>
+      <IncapacitatedProperties>
+        <IncapacitatedHealthThreshold value="51.000000" />
+        <ReviveFromIncapacitationHealth value="100.000000" />
+        <CanBeIncapacitated value="false" />
+      </IncapacitatedProperties>
+    </Item>
+    <Item key="HEALTH_ENEMY_EASY">
+      <DefaultEnergy value="75.000000" />
+      <EnergyReserveProperties>
+        <Reserves content="float_array" />
+        <UnlockGroup />
+        <UnlockedEnergyReserveSize value="0.000000" />
+        <UnlockedEnergyReserveCount value="1" />
+      </EnergyReserveProperties>
+      <DefaultArmour value="0.000000" />
+      <InjuredHealthThreshold value="53.000000" />
+      <CriticallyInjuredHealthThreshold value="5.000000" />
+      <Invincible value="false" />
+      <WritheFromBulletDamageTheshold value="200.000000" />
+      <FireVulnerability value="1.000000" />
+      <RechargeProperties ref="NULL" />
+      <MeleeProperties>
+        <FatiguedHealthThreshold value="25.000000" />
+        <KnockedOutHealthThreshold value="10.000000" />
+        <KnockedOutHealthToRecover value="30.000000" />
+        <KnockedOutCount value="0" />
+        <DogTakedownThreshold value="75.000000" />
+        <MeleeCardinalFatalAttackCheck value="true" />
+      </MeleeProperties>
+      <ScavengingProperties>
+        <TimeStartScavengedVfxDamage value="5.000000" />
+        <TimeToMaxScavengedVfxDamage value="60.000000" />
+      </ScavengingProperties>
+      <IncapacitatedProperties>
+        <IncapacitatedHealthThreshold value="51.000000" />
+        <ReviveFromIncapacitationHealth value="100.000000" />
+        <CanBeIncapacitated value="false" />
+      </IncapacitatedProperties>
+    </Item>
+    <Item key="HEALTH_ENEMY_HARD">
+      <DefaultEnergy value="70.000000" />
+      <EnergyReserveProperties>
+        <Reserves content="float_array" />
+        <UnlockGroup />
+        <UnlockedEnergyReserveSize value="0.000000" />
+        <UnlockedEnergyReserveCount value="1" />
+      </EnergyReserveProperties>
+      <DefaultArmour value="0.000000" />
+      <InjuredHealthThreshold value="49.000000" />
+      <CriticallyInjuredHealthThreshold value="5.000000" />
+      <Invincible value="false" />
+      <WritheFromBulletDamageTheshold value="200.000000" />
+      <FireVulnerability value="1.000000" />
+      <RechargeProperties ref="NULL" />
+      <MeleeProperties>
+        <FatiguedHealthThreshold value="25.000000" />
+        <KnockedOutHealthThreshold value="10.000000" />
+        <KnockedOutHealthToRecover value="30.000000" />
+        <KnockedOutCount value="0" />
+        <DogTakedownThreshold value="75.000000" />
+        <MeleeCardinalFatalAttackCheck value="true" />
+      </MeleeProperties>
+      <ScavengingProperties>
+        <TimeStartScavengedVfxDamage value="5.000000" />
+        <TimeToMaxScavengedVfxDamage value="60.000000" />
+      </ScavengingProperties>
+      <IncapacitatedProperties>
+        <IncapacitatedHealthThreshold value="51.000000" />
+        <ReviveFromIncapacitationHealth value="100.000000" />
+        <CanBeIncapacitated value="false" />
+      </IncapacitatedProperties>
+    </Item>
+    <Item key="HEALTH_ENEMY_HARDER">
+      <DefaultEnergy value="70.000000" />
+      <EnergyReserveProperties>
+        <Reserves content="float_array" />
+        <UnlockGroup />
+        <UnlockedEnergyReserveSize value="0.000000" />
+        <UnlockedEnergyReserveCount value="1" />
+      </EnergyReserveProperties>
+      <DefaultArmour value="0.000000" />
+      <InjuredHealthThreshold value="49.000000" />
+      <CriticallyInjuredHealthThreshold value="5.000000" />
+      <Invincible value="false" />
+      <WritheFromBulletDamageTheshold value="200.000000" />
+      <FireVulnerability value="1.000000" />
+      <RechargeProperties ref="NULL" />
+      <MeleeProperties>
+        <FatiguedHealthThreshold value="25.000000" />
+        <KnockedOutHealthThreshold value="10.000000" />
+        <KnockedOutHealthToRecover value="30.000000" />
+        <KnockedOutCount value="0" />
+        <DogTakedownThreshold value="75.000000" />
+        <MeleeCardinalFatalAttackCheck value="true" />
+      </MeleeProperties>
+      <ScavengingProperties>
+        <TimeStartScavengedVfxDamage value="5.000000" />
+        <TimeToMaxScavengedVfxDamage value="60.000000" />
+      </ScavengingProperties>
+      <IncapacitatedProperties>
+        <IncapacitatedHealthThreshold value="51.000000" />
+        <ReviveFromIncapacitationHealth value="100.000000" />
+        <CanBeIncapacitated value="false" />
+      </IncapacitatedProperties>
+    </Item>
+    <Item key="HEALTH_ENEMY_HARDEST">
+      <DefaultEnergy value="70.000000" />
+      <EnergyReserveProperties>
+        <Reserves content="float_array" />
+        <UnlockGroup />
+        <UnlockedEnergyReserveSize value="0.000000" />
+        <UnlockedEnergyReserveCount value="1" />
+      </EnergyReserveProperties>
+      <DefaultArmour value="0.000000" />
+      <InjuredHealthThreshold value="49.000000" />
+      <CriticallyInjuredHealthThreshold value="5.000000" />
+      <Invincible value="false" />
+      <WritheFromBulletDamageTheshold value="200.000000" />
+      <FireVulnerability value="1.000000" />
+      <RechargeProperties ref="NULL" />
+      <MeleeProperties>
+        <FatiguedHealthThreshold value="25.000000" />
+        <KnockedOutHealthThreshold value="10.000000" />
+        <KnockedOutHealthToRecover value="30.000000" />
+        <KnockedOutCount value="0" />
+        <DogTakedownThreshold value="75.000000" />
+        <MeleeCardinalFatalAttackCheck value="true" />
+      </MeleeProperties>
+      <ScavengingProperties>
+        <TimeStartScavengedVfxDamage value="5.000000" />
+        <TimeToMaxScavengedVfxDamage value="60.000000" />
+      </ScavengingProperties>
+      <IncapacitatedProperties>
+        <IncapacitatedHealthThreshold value="51.000000" />
+        <ReviveFromIncapacitationHealth value="100.000000" />
+        <CanBeIncapacitated value="false" />
+      </IncapacitatedProperties>
+    </Item>
+    <Item key="HEALTH_ENEMY_MEDIUM">
+      <DefaultEnergy value="70.000000" />
+      <EnergyReserveProperties>
+        <Reserves content="float_array" />
+        <UnlockGroup />
+        <UnlockedEnergyReserveSize value="0.000000" />
+        <UnlockedEnergyReserveCount value="1" />
+      </EnergyReserveProperties>
+      <DefaultArmour value="0.000000" />
+      <InjuredHealthThreshold value="49.000000" />
+      <CriticallyInjuredHealthThreshold value="5.000000" />
+      <Invincible value="false" />
+      <WritheFromBulletDamageTheshold value="200.000000" />
+      <FireVulnerability value="1.000000" />
+      <RechargeProperties ref="NULL" />
+      <MeleeProperties>
+        <FatiguedHealthThreshold value="25.000000" />
+        <KnockedOutHealthThreshold value="10.000000" />
+        <KnockedOutHealthToRecover value="30.000000" />
+        <KnockedOutCount value="0" />
+        <DogTakedownThreshold value="75.000000" />
+        <MeleeCardinalFatalAttackCheck value="true" />
+      </MeleeProperties>
+      <ScavengingProperties>
+        <TimeStartScavengedVfxDamage value="5.000000" />
+        <TimeToMaxScavengedVfxDamage value="60.000000" />
+      </ScavengingProperties>
+      <IncapacitatedProperties>
+        <IncapacitatedHealthThreshold value="51.000000" />
+        <ReviveFromIncapacitationHealth value="100.000000" />
+        <CanBeIncapacitated value="false" />
+      </IncapacitatedProperties>
+    </Item>
+    <Item key="HEALTH_GANG_COMPANION">
+      <DefaultEnergy value="1200.000000" />
+      <EnergyReserveProperties>
+        <Reserves content="float_array" />
+        <UnlockGroup />
+        <UnlockedEnergyReserveSize value="0.000000" />
+        <UnlockedEnergyReserveCount value="1" />
+      </EnergyReserveProperties>
+      <DefaultArmour value="0.000000" />
+      <InjuredHealthThreshold value="120.000000" />
+      <CriticallyInjuredHealthThreshold value="25.000000" />
+      <Invincible value="false" />
+      <WritheFromBulletDamageTheshold value="200.000000" />
+      <FireVulnerability value="1.000000" />
+      <RechargeProperties ref="NULL" />
+      <MeleeProperties>
+        <FatiguedHealthThreshold value="25.000000" />
+        <KnockedOutHealthThreshold value="10.000000" />
+        <KnockedOutHealthToRecover value="30.000000" />
+        <KnockedOutCount value="0" />
+        <DogTakedownThreshold value="75.000000" />
+        <MeleeCardinalFatalAttackCheck value="true" />
+      </MeleeProperties>
+      <ScavengingProperties>
+        <TimeStartScavengedVfxDamage value="5.000000" />
+        <TimeToMaxScavengedVfxDamage value="60.000000" />
+      </ScavengingProperties>
+      <IncapacitatedProperties>
+        <IncapacitatedHealthThreshold value="51.000000" />
+        <ReviveFromIncapacitationHealth value="100.000000" />
+        <CanBeIncapacitated value="false" />
+      </IncapacitatedProperties>
+    </Item>
+    <Item key="HEALTH_HUGE_ANIMAL">
+      <DefaultEnergy value="201.000000" />
+      <EnergyReserveProperties>
+        <Reserves content="float_array" />
+        <UnlockGroup />
+        <UnlockedEnergyReserveSize value="0.000000" />
+        <UnlockedEnergyReserveCount value="1" />
+      </EnergyReserveProperties>
+      <DefaultArmour value="0.000000" />
+      <InjuredHealthThreshold value="130.000000" />
+      <CriticallyInjuredHealthThreshold value="30.000000" />
+      <Invincible value="false" />
+      <WritheFromBulletDamageTheshold value="200.000000" />
+      <FireVulnerability value="1.000000" />
+      <RechargeProperties ref="NULL" />
+      <MeleeProperties>
+        <FatiguedHealthThreshold value="30.000000" />
+        <KnockedOutHealthThreshold value="80.000000" />
+        <KnockedOutHealthToRecover value="30.000000" />
+        <KnockedOutCount value="0" />
+        <DogTakedownThreshold value="75.000000" />
+        <MeleeCardinalFatalAttackCheck value="false" />
+      </MeleeProperties>
+      <ScavengingProperties>
+        <TimeStartScavengedVfxDamage value="5.000000" />
+        <TimeToMaxScavengedVfxDamage value="60.000000" />
+      </ScavengingProperties>
+      <IncapacitatedProperties>
+        <IncapacitatedHealthThreshold value="51.000000" />
+        <ReviveFromIncapacitationHealth value="100.000000" />
+        <CanBeIncapacitated value="false" />
+      </IncapacitatedProperties>
+    </Item>
+    <Item key="HEALTH_HUGE_WATER_ANIMAL">
+      <DefaultEnergy value="221.000000" />
+      <EnergyReserveProperties>
+        <Reserves content="float_array" />
+        <UnlockGroup />
+        <UnlockedEnergyReserveSize value="0.000000" />
+        <UnlockedEnergyReserveCount value="1" />
+      </EnergyReserveProperties>
+      <DefaultArmour value="0.000000" />
+      <InjuredHealthThreshold value="155.000000" />
+      <CriticallyInjuredHealthThreshold value="40.000000" />
+      <Invincible value="false" />
+      <WritheFromBulletDamageTheshold value="200.000000" />
+      <FireVulnerability value="1.000000" />
+      <RechargeProperties ref="NULL" />
+      <MeleeProperties>
+        <FatiguedHealthThreshold value="30.000000" />
+        <KnockedOutHealthThreshold value="25.000000" />
+        <KnockedOutHealthToRecover value="30.000000" />
+        <KnockedOutCount value="0" />
+        <DogTakedownThreshold value="75.000000" />
+        <MeleeCardinalFatalAttackCheck value="true" />
+      </MeleeProperties>
+      <ScavengingProperties>
+        <TimeStartScavengedVfxDamage value="5.000000" />
+        <TimeToMaxScavengedVfxDamage value="60.000000" />
+      </ScavengingProperties>
+      <IncapacitatedProperties>
+        <IncapacitatedHealthThreshold value="51.000000" />
+        <ReviveFromIncapacitationHealth value="100.000000" />
+        <CanBeIncapacitated value="false" />
+      </IncapacitatedProperties>
+    </Item>
+    <Item key="HEALTH_JOHN">
+      <DefaultEnergy value="75.000000" />
+	  <CoreEnergy value="150.000000" />
+      <EnergyReserveProperties>
+        <Reserves content="float_array" />
+        <UnlockGroup>UPGRADE_HEALTH_TANK_1</UnlockGroup>
+        <UnlockedEnergyReserveSize value="0.000000" />
+        <UnlockedEnergyReserveCount value="1" />
+      </EnergyReserveProperties>
+      <DefaultArmour value="0.000000" />
+      <InjuredHealthThreshold value="53.000000" />
+      <CriticallyInjuredHealthThreshold value="25.000000" />
+      <Invincible value="false" />
+      <WritheFromBulletDamageTheshold value="200.000000" />
+      <FireVulnerability value="1.000000" />
+      <RechargeProperties ref="NULL" />
+      <MeleeProperties>
+        <FatiguedHealthThreshold value="25.000000" />
+        <KnockedOutHealthThreshold value="10.000000" />
+        <KnockedOutHealthToRecover value="30.000000" />
+        <KnockedOutCount value="1" />
+        <DogTakedownThreshold value="75.000000" />
+        <MeleeCardinalFatalAttackCheck value="true" />
+      </MeleeProperties>
+      <ScavengingProperties>
+        <TimeStartScavengedVfxDamage value="5.000000" />
+        <TimeToMaxScavengedVfxDamage value="60.000000" />
+      </ScavengingProperties>
+      <IncapacitatedProperties>
+        <IncapacitatedHealthThreshold value="51.000000" />
+        <ReviveFromIncapacitationHealth value="100.000000" />
+        <CanBeIncapacitated value="false" />
+      </IncapacitatedProperties>
+    </Item>
+    <Item key="HEALTH_LARGE_ANIMAL">
+      <DefaultEnergy value="151.000000" />
+      <EnergyReserveProperties>
+        <Reserves content="float_array" />
+        <UnlockGroup />
+        <UnlockedEnergyReserveSize value="0.000000" />
+        <UnlockedEnergyReserveCount value="1" />
+      </EnergyReserveProperties>
+      <DefaultArmour value="0.000000" />
+      <InjuredHealthThreshold value="101.000000" />
+      <CriticallyInjuredHealthThreshold value="30.000000" />
+      <Invincible value="false" />
+      <WritheFromBulletDamageTheshold value="200.000000" />
+      <FireVulnerability value="1.000000" />
+      <RechargeProperties ref="NULL" />
+      <MeleeProperties>
+        <FatiguedHealthThreshold value="0.000000" />
+        <KnockedOutHealthThreshold value="50.000000" />
+        <KnockedOutHealthToRecover value="80.000000" />
+        <KnockedOutCount value="0" />
+        <DogTakedownThreshold value="75.000000" />
+        <MeleeCardinalFatalAttackCheck value="true" />
+      </MeleeProperties>
+      <ScavengingProperties>
+        <TimeStartScavengedVfxDamage value="5.000000" />
+        <TimeToMaxScavengedVfxDamage value="60.000000" />
+      </ScavengingProperties>
+      <IncapacitatedProperties>
+        <IncapacitatedHealthThreshold value="51.000000" />
+        <ReviveFromIncapacitationHealth value="100.000000" />
+        <CanBeIncapacitated value="false" />
+      </IncapacitatedProperties>
+    </Item>
+	<Item key="HEALTH_DONKEY">
+      <DefaultEnergy value="151.000000" />
+	  <CoreEnergy value="100.000000" />
+      <EnergyReserveProperties>
+        <Reserves content="float_array" />
+        <UnlockGroup />
+        <UnlockedEnergyReserveSize value="0.000000" />
+        <UnlockedEnergyReserveCount value="1" />
+      </EnergyReserveProperties>
+      <DefaultArmour value="0.000000" />
+      <InjuredHealthThreshold value="101.000000" />
+      <CriticallyInjuredHealthThreshold value="30.000000" />
+      <Invincible value="false" />
+      <WritheFromBulletDamageTheshold value="200.000000" />
+      <FireVulnerability value="1.000000" />
+      <RechargeProperties ref="NULL" />
+      <MeleeProperties>
+        <FatiguedHealthThreshold value="0.000000" />
+        <KnockedOutHealthThreshold value="50.000000" />
+        <KnockedOutHealthToRecover value="80.000000" />
+        <KnockedOutCount value="0" />
+        <DogTakedownThreshold value="75.000000" />
+        <MeleeCardinalFatalAttackCheck value="true" />
+      </MeleeProperties>
+      <ScavengingProperties>
+        <TimeStartScavengedVfxDamage value="5.000000" />
+        <TimeToMaxScavengedVfxDamage value="60.000000" />
+      </ScavengingProperties>
+      <IncapacitatedProperties>
+        <IncapacitatedHealthThreshold value="51.000000" />
+        <ReviveFromIncapacitationHealth value="100.000000" />
+        <CanBeIncapacitated value="false" />
+      </IncapacitatedProperties>
+    </Item>
+    <Item key="HEALTH_LAW_EASY">
+      <DefaultEnergy value="90.000000" />
+      <EnergyReserveProperties>
+        <Reserves content="float_array" />
+        <UnlockGroup />
+        <UnlockedEnergyReserveSize value="0.000000" />
+        <UnlockedEnergyReserveCount value="1" />
+      </EnergyReserveProperties>
+      <DefaultArmour value="0.000000" />
+      <InjuredHealthThreshold value="53.000000" />
+      <CriticallyInjuredHealthThreshold value="5.000000" />
+      <Invincible value="false" />
+      <WritheFromBulletDamageTheshold value="200.000000" />
+      <FireVulnerability value="1.000000" />
+      <RechargeProperties ref="NULL" />
+      <MeleeProperties>
+        <FatiguedHealthThreshold value="25.000000" />
+        <KnockedOutHealthThreshold value="10.000000" />
+        <KnockedOutHealthToRecover value="30.000000" />
+        <KnockedOutCount value="0" />
+        <DogTakedownThreshold value="75.000000" />
+        <MeleeCardinalFatalAttackCheck value="true" />
+      </MeleeProperties>
+      <ScavengingProperties>
+        <TimeStartScavengedVfxDamage value="5.000000" />
+        <TimeToMaxScavengedVfxDamage value="60.000000" />
+      </ScavengingProperties>
+      <IncapacitatedProperties>
+        <IncapacitatedHealthThreshold value="51.000000" />
+        <ReviveFromIncapacitationHealth value="100.000000" />
+        <CanBeIncapacitated value="false" />
+      </IncapacitatedProperties>
+    </Item>
+    <Item key="HEALTH_LAW_HARD">
+      <DefaultEnergy value="150.000000" />
+      <EnergyReserveProperties>
+        <Reserves content="float_array" />
+        <UnlockGroup />
+        <UnlockedEnergyReserveSize value="0.000000" />
+        <UnlockedEnergyReserveCount value="1" />
+      </EnergyReserveProperties>
+      <DefaultArmour value="0.000000" />
+      <InjuredHealthThreshold value="84.000000" />
+      <CriticallyInjuredHealthThreshold value="5.000000" />
+      <Invincible value="false" />
+      <WritheFromBulletDamageTheshold value="200.000000" />
+      <FireVulnerability value="1.000000" />
+      <RechargeProperties ref="NULL" />
+      <MeleeProperties>
+        <FatiguedHealthThreshold value="25.000000" />
+        <KnockedOutHealthThreshold value="10.000000" />
+        <KnockedOutHealthToRecover value="30.000000" />
+        <KnockedOutCount value="0" />
+        <DogTakedownThreshold value="75.000000" />
+        <MeleeCardinalFatalAttackCheck value="true" />
+      </MeleeProperties>
+      <ScavengingProperties>
+        <TimeStartScavengedVfxDamage value="5.000000" />
+        <TimeToMaxScavengedVfxDamage value="60.000000" />
+      </ScavengingProperties>
+      <IncapacitatedProperties>
+        <IncapacitatedHealthThreshold value="51.000000" />
+        <ReviveFromIncapacitationHealth value="100.000000" />
+        <CanBeIncapacitated value="false" />
+      </IncapacitatedProperties>
+    </Item>
+    <Item key="HEALTH_LAW_MEDIUM">
+      <DefaultEnergy value="100.000000" />
+      <EnergyReserveProperties>
+        <Reserves content="float_array" />
+        <UnlockGroup />
+        <UnlockedEnergyReserveSize value="0.000000" />
+        <UnlockedEnergyReserveCount value="1" />
+      </EnergyReserveProperties>
+      <DefaultArmour value="0.000000" />
+      <InjuredHealthThreshold value="53.000000" />
+      <CriticallyInjuredHealthThreshold value="5.000000" />
+      <Invincible value="false" />
+      <WritheFromBulletDamageTheshold value="200.000000" />
+      <FireVulnerability value="1.000000" />
+      <RechargeProperties ref="NULL" />
+      <MeleeProperties>
+        <FatiguedHealthThreshold value="25.000000" />
+        <KnockedOutHealthThreshold value="10.000000" />
+        <KnockedOutHealthToRecover value="30.000000" />
+        <KnockedOutCount value="0" />
+        <DogTakedownThreshold value="75.000000" />
+        <MeleeCardinalFatalAttackCheck value="true" />
+      </MeleeProperties>
+      <ScavengingProperties>
+        <TimeStartScavengedVfxDamage value="5.000000" />
+        <TimeToMaxScavengedVfxDamage value="60.000000" />
+      </ScavengingProperties>
+      <IncapacitatedProperties>
+        <IncapacitatedHealthThreshold value="51.000000" />
+        <ReviveFromIncapacitationHealth value="100.000000" />
+        <CanBeIncapacitated value="false" />
+      </IncapacitatedProperties>
+    </Item>
+    <Item key="HEALTH_LAW_SHERIFF">
+      <DefaultEnergy value="145.000000" />
+      <EnergyReserveProperties>
+        <Reserves content="float_array" />
+        <UnlockGroup />
+        <UnlockedEnergyReserveSize value="0.000000" />
+        <UnlockedEnergyReserveCount value="1" />
+      </EnergyReserveProperties>
+      <DefaultArmour value="0.000000" />
+      <InjuredHealthThreshold value="98.000000" />
+      <CriticallyInjuredHealthThreshold value="5.000000" />
+      <Invincible value="false" />
+      <WritheFromBulletDamageTheshold value="200.000000" />
+      <FireVulnerability value="1.000000" />
+      <RechargeProperties ref="NULL" />
+      <MeleeProperties>
+        <FatiguedHealthThreshold value="25.000000" />
+        <KnockedOutHealthThreshold value="10.000000" />
+        <KnockedOutHealthToRecover value="30.000000" />
+        <KnockedOutCount value="0" />
+        <DogTakedownThreshold value="75.000000" />
+        <MeleeCardinalFatalAttackCheck value="true" />
+      </MeleeProperties>
+      <ScavengingProperties>
+        <TimeStartScavengedVfxDamage value="5.000000" />
+        <TimeToMaxScavengedVfxDamage value="60.000000" />
+      </ScavengingProperties>
+      <IncapacitatedProperties>
+        <IncapacitatedHealthThreshold value="51.000000" />
+        <ReviveFromIncapacitationHealth value="100.000000" />
+        <CanBeIncapacitated value="false" />
+      </IncapacitatedProperties>
+    </Item>
+    <Item key="HEALTH_LEGENDARY_ANIMAL">
+      <DefaultEnergy value="850.000000" />
+      <EnergyReserveProperties>
+        <Reserves content="float_array" />
+        <UnlockGroup />
+        <UnlockedEnergyReserveSize value="0.000000" />
+        <UnlockedEnergyReserveCount value="1" />
+      </EnergyReserveProperties>
+      <DefaultArmour value="0.000000" />
+      <InjuredHealthThreshold value="500.000000" />
+      <CriticallyInjuredHealthThreshold value="100.000000" />
+      <Invincible value="false" />
+      <WritheFromBulletDamageTheshold value="200.000000" />
+      <FireVulnerability value="1.000000" />
+      <RechargeProperties ref="NULL" />
+      <MeleeProperties>
+        <FatiguedHealthThreshold value="50.000000" />
+        <KnockedOutHealthThreshold value="50.000000" />
+        <KnockedOutHealthToRecover value="30.000000" />
+        <KnockedOutCount value="0" />
+        <DogTakedownThreshold value="75.000000" />
+        <MeleeCardinalFatalAttackCheck value="true" />
+      </MeleeProperties>
+      <ScavengingProperties>
+        <TimeStartScavengedVfxDamage value="5.000000" />
+        <TimeToMaxScavengedVfxDamage value="60.000000" />
+      </ScavengingProperties>
+      <IncapacitatedProperties>
+        <IncapacitatedHealthThreshold value="51.000000" />
+        <ReviveFromIncapacitationHealth value="100.000000" />
+        <CanBeIncapacitated value="false" />
+      </IncapacitatedProperties>
+    </Item>
+	<Item key="HEALTH_LEGENDARY_GATOR">
+      <DefaultEnergy value="350.000000" />
+      <EnergyReserveProperties>
+        <Reserves content="float_array" />
+        <UnlockGroup />
+        <UnlockedEnergyReserveSize value="0.000000" />
+        <UnlockedEnergyReserveCount value="1" />
+      </EnergyReserveProperties>
+      <DefaultArmour value="0.000000" />
+      <InjuredHealthThreshold value="125.000000" />
+      <CriticallyInjuredHealthThreshold value="50.000000" />
+      <Invincible value="false" />
+      <WritheFromBulletDamageTheshold value="200.000000" />
+      <FireVulnerability value="1.000000" />
+      <RechargeProperties ref="NULL" />
+      <MeleeProperties>
+        <FatiguedHealthThreshold value="50.000000" />
+        <KnockedOutHealthThreshold value="50.000000" />
+        <KnockedOutHealthToRecover value="30.000000" />
+        <KnockedOutCount value="0" />
+        <DogTakedownThreshold value="75.000000" />
+        <MeleeCardinalFatalAttackCheck value="true" />
+      </MeleeProperties>
+      <ScavengingProperties>
+        <TimeStartScavengedVfxDamage value="5.000000" />
+        <TimeToMaxScavengedVfxDamage value="60.000000" />
+      </ScavengingProperties>
+      <IncapacitatedProperties>
+        <IncapacitatedHealthThreshold value="51.000000" />
+        <ReviveFromIncapacitationHealth value="100.000000" />
+        <CanBeIncapacitated value="false" />
+      </IncapacitatedProperties>
+    </Item>
+    <Item key="HEALTH_MEDIUM_ANIMAL">
+      <DefaultEnergy value="80.000000" />
+      <EnergyReserveProperties>
+        <Reserves content="float_array" />
+        <UnlockGroup />
+        <UnlockedEnergyReserveSize value="0.000000" />
+        <UnlockedEnergyReserveCount value="1" />
+      </EnergyReserveProperties>
+      <DefaultArmour value="0.000000" />
+      <InjuredHealthThreshold value="35.000000" />
+      <CriticallyInjuredHealthThreshold value="15.000000" />
+      <Invincible value="false" />
+      <WritheFromBulletDamageTheshold value="200.000000" />
+      <FireVulnerability value="1.000000" />
+      <RechargeProperties ref="NULL" />
+      <MeleeProperties>
+        <FatiguedHealthThreshold value="0.000000" />
+        <KnockedOutHealthThreshold value="15.000000" />
+        <KnockedOutHealthToRecover value="30.000000" />
+        <KnockedOutCount value="1" />
+        <DogTakedownThreshold value="70.000000" />
+        <MeleeCardinalFatalAttackCheck value="true" />
+      </MeleeProperties>
+      <ScavengingProperties>
+        <TimeStartScavengedVfxDamage value="5.000000" />
+        <TimeToMaxScavengedVfxDamage value="60.000000" />
+      </ScavengingProperties>
+      <IncapacitatedProperties>
+        <IncapacitatedHealthThreshold value="51.000000" />
+        <ReviveFromIncapacitationHealth value="100.000000" />
+        <CanBeIncapacitated value="false" />
+      </IncapacitatedProperties>
+    </Item>
+    <Item key="HEALTH_MP_PLAYER">
+      <DefaultEnergy value="50.000000" />
+      <CoreEnergy value="100.000000" />
+	  <OverPowerEnergy value="100.000000" />
+	  <GoldCoreEnergy value="100.000000" />
+      <EnergyReserveProperties>
+        <Reserves />
+        <UnlockGroup>UPGRADE_HEALTH_TANK_1</UnlockGroup>
+        <UnlockedEnergyReserveSize value="50.000000" />
+        <UnlockedEnergyReserveCount value="9" />
+      </EnergyReserveProperties>
+      <DefaultArmour value="0.000000" />
+      <InjuredHealthThreshold value="25.000000" />
+      <CriticallyInjuredHealthThreshold value="10.000000" />
+      <Invincible value="false" />
+      <WritheFromBulletDamageTheshold value="200.000000" />
+      <FireVulnerability value="1.000000" />
+      <RechargeProperties ref="PLAYER_HEALTH_RECHARGE_SP" />
+      <MeleeProperties>
+        <FatiguedHealthThreshold value="0.000000" />
+        <KnockedOutHealthThreshold value="20.000000" />
+        <KnockedOutHealthToRecover value="30.000000" />
+        <KnockedOutCount value="0" />
+        <DogTakedownThreshold value="75.000000" />
+        <MeleeCardinalFatalAttackCheck value="true" />
+      </MeleeProperties>
+      <ScavengingProperties>
+        <TimeStartScavengedVfxDamage value="5.000000" />
+        <TimeToMaxScavengedVfxDamage value="60.000000" />
+      </ScavengingProperties>
+      <IncapacitatedProperties>
+        <IncapacitatedHealthThreshold value="1.000000" />
+        <ReviveFromIncapacitationHealth value="100.000000" />
+        <CanBeIncapacitated value="false" />
+      </IncapacitatedProperties>
+      <HitReactProperties>
+        <MinTimeBetweenHitReacts value="10.000000" />
+      </HitReactProperties>
+    </Item>
+    <Item key="HEALTH_SMALL_ANIMAL">
+      <DefaultEnergy value="55.000000" />
+      <EnergyReserveProperties>
+        <Reserves content="float_array" />
+        <UnlockGroup />
+        <UnlockedEnergyReserveSize value="0.000000" />
+        <UnlockedEnergyReserveCount value="1" />
+      </EnergyReserveProperties>
+      <DefaultArmour value="0.000000" />
+      <InjuredHealthThreshold value="35.000000" />
+      <CriticallyInjuredHealthThreshold value="10.000000" />
+      <Invincible value="false" />
+      <WritheFromBulletDamageTheshold value="200.000000" />
+      <FireVulnerability value="1.000000" />
+      <RechargeProperties ref="NULL" />
+      <MeleeProperties>
+        <FatiguedHealthThreshold value="0.000000" />
+        <KnockedOutHealthThreshold value="20.000000" />
+        <KnockedOutHealthToRecover value="30.000000" />
+        <KnockedOutCount value="1" />
+        <DogTakedownThreshold value="75.000000" />
+        <MeleeCardinalFatalAttackCheck value="true" />
+      </MeleeProperties>
+      <ScavengingProperties>
+        <TimeStartScavengedVfxDamage value="5.000000" />
+        <TimeToMaxScavengedVfxDamage value="60.000000" />
+      </ScavengingProperties>
+      <IncapacitatedProperties>
+        <IncapacitatedHealthThreshold value="51.000000" />
+        <ReviveFromIncapacitationHealth value="100.000000" />
+        <CanBeIncapacitated value="false" />
+      </IncapacitatedProperties>
+    </Item>
+    <Item key="HEALTH_SP_HORSE">
+      <DefaultEnergy value="20.000000" />
+	  <CoreEnergy value="40.000000" />
+	  <OverPowerEnergy value="13.000000" />
+	  <GoldCoreEnergy value="40.000000" />
+	  <TimeUnitForOverpowered value="240"/>
+      <EnergyReserveProperties>
+        <Reserves content="float_array">
+          20.000000	
+          20.000000	
+          20.000000	
+          20.000000	
+          20.000000	
+          20.000000	
+          20.000000	
+		  20.000000	
+          20.000000	
+        </Reserves>
+        <UnlockGroup />
+        <UnlockedEnergyReserveSize value="20.000000" />
+        <UnlockedEnergyReserveCount value="2" />
+      </EnergyReserveProperties>
+      <DefaultArmour value="0.000000" />
+      <InjuredHealthThreshold value="40.000000" />
+      <CriticallyInjuredHealthThreshold value="25.000000" />
+      <Invincible value="false" />
+      <WritheFromBulletDamageTheshold value="200.000000" />
+      <FireVulnerability value="1.000000" />
+      <RechargeProperties ref="HORSE_HEALTH_RECHARGE" />
+      <MeleeProperties>
+        <FatiguedHealthThreshold value="30.000000" />
+        <KnockedOutHealthThreshold value="25.000000" />
+        <KnockedOutHealthToRecover value="30.000000" />
+        <KnockedOutCount value="0" />
+        <DogTakedownThreshold value="75.000000" />
+        <MeleeCardinalFatalAttackCheck value="true" />
+      </MeleeProperties>
+      <ScavengingProperties>
+        <TimeStartScavengedVfxDamage value="5.000000" />
+        <TimeToMaxScavengedVfxDamage value="60.000000" />
+      </ScavengingProperties>
+      <IncapacitatedProperties>
+        <IncapacitatedHealthThreshold value="10.000000" />
+        <ReviveFromIncapacitationHealth value="20.000000" />
+        <CanBeIncapacitated value="false" />
+      </IncapacitatedProperties>
+    </Item>
+    <Item key="HEALTH_SP_PLAYER">
+      <DefaultEnergy value="50.000000" />
+	  <CoreEnergy value="100.000000" />
+	  <OverPowerEnergy value="100.000000" />
+	  <GoldCoreEnergy value="100.000000" />
+      <EnergyReserveProperties>
+        <Reserves content="float_array">
+          50.000000	
+          50.000000	
+          50.000000	
+          50.000000	
+          50.000000	
+          50.000000	
+          50.000000	
+        </Reserves>
+        <UnlockGroup>UPGRADE_HEALTH_TANK_1</UnlockGroup>
+        <UnlockedEnergyReserveSize value="50.000000" />
+        <UnlockedEnergyReserveCount value="2" />
+      </EnergyReserveProperties>
+      <DefaultArmour value="0.000000" />
+      <InjuredHealthThreshold value="25.000000" />
+      <CriticallyInjuredHealthThreshold value="10.000000" />
+      <Invincible value="false" />
+      <WritheFromBulletDamageTheshold value="200.000000" />
+      <FireVulnerability value="0.750000" />
+      <RechargeProperties ref="PLAYER_HEALTH_RECHARGE_SP" />
+      <MeleeProperties>
+        <FatiguedHealthThreshold value="0.000000" />
+        <KnockedOutHealthThreshold value="20.000000" />
+        <KnockedOutHealthToRecover value="30.000000" />
+        <KnockedOutCount value="0" />
+        <DogTakedownThreshold value="75.000000" />
+        <MeleeCardinalFatalAttackCheck value="true" />
+      </MeleeProperties>
+      <ScavengingProperties>
+        <TimeStartScavengedVfxDamage value="5.000000" />
+        <TimeToMaxScavengedVfxDamage value="60.000000" />
+      </ScavengingProperties>
+      <IncapacitatedProperties>
+        <IncapacitatedHealthThreshold value="51.000000" />
+        <ReviveFromIncapacitationHealth value="100.000000" />
+        <CanBeIncapacitated value="false" />
+      </IncapacitatedProperties>
+    </Item>
+    <Item key="HEALTH_STANDARD_BIRD">
+      <DefaultEnergy value="10.000000" />
+      <EnergyReserveProperties>
+        <Reserves content="float_array" />
+        <UnlockGroup />
+        <UnlockedEnergyReserveSize value="0.000000" />
+        <UnlockedEnergyReserveCount value="1" />
+      </EnergyReserveProperties>
+      <DefaultArmour value="0.000000" />
+      <InjuredHealthThreshold value="7.000000" />
+      <CriticallyInjuredHealthThreshold value="0.000000" />
+      <Invincible value="false" />
+      <WritheFromBulletDamageTheshold value="200.000000" />
+      <FireVulnerability value="1.000000" />
+      <RechargeProperties ref="NULL" />
+      <MeleeProperties>
+        <FatiguedHealthThreshold value="0.000000" />
+        <KnockedOutHealthThreshold value="0.000000" />
+        <KnockedOutHealthToRecover value="30.000000" />
+        <KnockedOutCount value="0" />
+        <DogTakedownThreshold value="75.000000" />
+        <MeleeCardinalFatalAttackCheck value="true" />
+      </MeleeProperties>
+      <ScavengingProperties>
+        <TimeStartScavengedVfxDamage value="5.000000" />
+        <TimeToMaxScavengedVfxDamage value="60.000000" />
+      </ScavengingProperties>
+      <IncapacitatedProperties>
+        <IncapacitatedHealthThreshold value="51.000000" />
+        <ReviveFromIncapacitationHealth value="100.000000" />
+        <CanBeIncapacitated value="false" />
+      </IncapacitatedProperties>
+    </Item>
+    <Item key="HEALTH_STANDARD_PED">
+      <DefaultEnergy value="75.000000" />
+      <EnergyReserveProperties>
+        <Reserves content="float_array" />
+        <UnlockGroup />
+        <UnlockedEnergyReserveSize value="0.000000" />
+        <UnlockedEnergyReserveCount value="1" />
+      </EnergyReserveProperties>
+      <DefaultArmour value="0.000000" />
+      <InjuredHealthThreshold value="53.000000" />
+      <CriticallyInjuredHealthThreshold value="5.000000" />
+      <Invincible value="false" />
+      <WritheFromBulletDamageTheshold value="200.000000" />
+      <FireVulnerability value="1.000000" />
+      <RechargeProperties ref="NULL" />
+      <MeleeProperties>
+        <FatiguedHealthThreshold value="25.000000" />
+        <KnockedOutHealthThreshold value="10.000000" />
+        <KnockedOutHealthToRecover value="30.000000" />
+        <KnockedOutCount value="1" />
+        <DogTakedownThreshold value="75.000000" />
+        <MeleeCardinalFatalAttackCheck value="true" />
+      </MeleeProperties>
+      <ScavengingProperties>
+        <TimeStartScavengedVfxDamage value="5.000000" />
+        <TimeToMaxScavengedVfxDamage value="60.000000" />
+      </ScavengingProperties>
+      <IncapacitatedProperties>
+        <IncapacitatedHealthThreshold value="51.000000" />
+        <ReviveFromIncapacitationHealth value="100.000000" />
+        <CanBeIncapacitated value="false" />
+      </IncapacitatedProperties>
+    </Item>
+    <Item key="HEALTH_VERY_SMALL_ANIMAL">
+      <DefaultEnergy value="20.000000" />
+      <EnergyReserveProperties>
+        <Reserves content="float_array" />
+        <UnlockGroup />
+        <UnlockedEnergyReserveSize value="0.000000" />
+        <UnlockedEnergyReserveCount value="1" />
+      </EnergyReserveProperties>
+      <DefaultArmour value="0.000000" />
+      <InjuredHealthThreshold value="12.000000" />
+      <CriticallyInjuredHealthThreshold value="10.000000" />
+      <Invincible value="false" />
+      <WritheFromBulletDamageTheshold value="200.000000" />
+      <FireVulnerability value="0.200000" />
+      <RechargeProperties ref="NULL" />
+      <MeleeProperties>
+        <FatiguedHealthThreshold value="10.000000" />
+        <KnockedOutHealthThreshold value="10.000000" />
+        <KnockedOutHealthToRecover value="30.000000" />
+        <KnockedOutCount value="0" />
+        <DogTakedownThreshold value="75.000000" />
+        <MeleeCardinalFatalAttackCheck value="true" />
+      </MeleeProperties>
+      <ScavengingProperties>
+        <TimeStartScavengedVfxDamage value="5.000000" />
+        <TimeToMaxScavengedVfxDamage value="60.000000" />
+      </ScavengingProperties>
+      <IncapacitatedProperties>
+        <IncapacitatedHealthThreshold value="51.000000" />
+        <ReviveFromIncapacitationHealth value="100.000000" />
+        <CanBeIncapacitated value="false" />
+      </IncapacitatedProperties>
+    </Item>
+	<Item key="HEALTH_STANDARD_SNAKE">
+      <DefaultEnergy value="15.000000" />
+      <EnergyReserveProperties>
+        <Reserves content="float_array" />
+        <UnlockGroup />
+        <UnlockedEnergyReserveSize value="0.000000" />
+        <UnlockedEnergyReserveCount value="1" />
+      </EnergyReserveProperties>
+      <DefaultArmour value="0.000000" />
+      <InjuredHealthThreshold value="7.000000" />
+      <CriticallyInjuredHealthThreshold value="0.000000" />
+      <Invincible value="false" />
+      <WritheFromBulletDamageTheshold value="200.000000" />
+      <FireVulnerability value="1.000000" />
+      <RechargeProperties ref="NULL" />
+      <MeleeProperties>
+        <FatiguedHealthThreshold value="0.000000" />
+        <KnockedOutHealthThreshold value="0.000000" />
+        <KnockedOutHealthToRecover value="30.000000" />
+        <KnockedOutCount value="0" />
+        <DogTakedownThreshold value="75.000000" />
+        <MeleeCardinalFatalAttackCheck value="true" />
+      </MeleeProperties>
+      <ScavengingProperties>
+        <TimeStartScavengedVfxDamage value="5.000000" />
+        <TimeToMaxScavengedVfxDamage value="60.000000" />
+      </ScavengingProperties>
+      <IncapacitatedProperties>
+        <IncapacitatedHealthThreshold value="51.000000" />
+        <ReviveFromIncapacitationHealth value="100.000000" />
+        <CanBeIncapacitated value="false" />
+      </IncapacitatedProperties>
+    </Item>
+    <Item key="HEALTH_WATER_ANIMAL">
+      <DefaultEnergy value="20.000000" />
+      <EnergyReserveProperties>
+        <Reserves content="float_array" />
+        <UnlockGroup />
+        <UnlockedEnergyReserveSize value="0.000000" />
+        <UnlockedEnergyReserveCount value="1" />
+      </EnergyReserveProperties>
+      <DefaultArmour value="0.000000" />
+      <InjuredHealthThreshold value="10.000000" />
+      <CriticallyInjuredHealthThreshold value="10.000000" />
+      <Invincible value="false" />
+      <WritheFromBulletDamageTheshold value="200.000000" />
+      <FireVulnerability value="1.000000" />
+      <RechargeProperties ref="NULL" />
+      <MeleeProperties>
+        <FatiguedHealthThreshold value="10.000000" />
+        <KnockedOutHealthThreshold value="10.000000" />
+        <KnockedOutHealthToRecover value="30.000000" />
+        <KnockedOutCount value="0" />
+        <DogTakedownThreshold value="75.000000" />
+        <MeleeCardinalFatalAttackCheck value="true" />
+      </MeleeProperties>
+      <ScavengingProperties>
+        <TimeStartScavengedVfxDamage value="5.000000" />
+        <TimeToMaxScavengedVfxDamage value="60.000000" />
+      </ScavengingProperties>
+      <IncapacitatedProperties>
+        <IncapacitatedHealthThreshold value="51.000000" />
+        <ReviveFromIncapacitationHealth value="100.000000" />
+        <CanBeIncapacitated value="false" />
+      </IncapacitatedProperties>
+    </Item>
+	<Item key="HEALTH_LARGE_WATER_ANIMAL">
+      <DefaultEnergy value="125.000000" />
+      <EnergyReserveProperties>
+        <Reserves content="float_array" />
+        <UnlockGroup />
+        <UnlockedEnergyReserveSize value="0.000000" />
+        <UnlockedEnergyReserveCount value="1" />
+      </EnergyReserveProperties>
+      <DefaultArmour value="0.000000" />
+      <InjuredHealthThreshold value="75.000000" />
+      <CriticallyInjuredHealthThreshold value="25.000000" />
+      <Invincible value="false" />
+      <WritheFromBulletDamageTheshold value="200.000000" />
+      <FireVulnerability value="1.000000" />
+      <RechargeProperties ref="NULL" />
+      <MeleeProperties>
+        <FatiguedHealthThreshold value="0.000000" />
+        <KnockedOutHealthThreshold value="75.000000" />
+        <KnockedOutHealthToRecover value="30.000000" />
+        <KnockedOutCount value="0" />
+        <DogTakedownThreshold value="70.000000" />
+        <MeleeCardinalFatalAttackCheck value="true" />
+      </MeleeProperties>
+      <ScavengingProperties>
+        <TimeStartScavengedVfxDamage value="5.000000" />
+        <TimeToMaxScavengedVfxDamage value="60.000000" />
+      </ScavengingProperties>
+      <IncapacitatedProperties>
+        <IncapacitatedHealthThreshold value="51.000000" />
+        <ReviveFromIncapacitationHealth value="100.000000" />
+        <CanBeIncapacitated value="false" />
+      </IncapacitatedProperties>
+    </Item>
+    <Item key="HEALTH_MOONSHINE_BARBRAWL">
+      <DefaultEnergy value="75.000000" />
+      <EnergyReserveProperties>
+        <Reserves content="float_array" />
+        <UnlockGroup />
+        <UnlockedEnergyReserveSize value="0.000000" />
+        <UnlockedEnergyReserveCount value="1" />
+      </EnergyReserveProperties>
+      <DefaultArmour value="0.000000" />
+      <InjuredHealthThreshold value="53.000000" />
+      <CriticallyInjuredHealthThreshold value="5.000000" />
+      <Invincible value="false" />
+      <WritheFromBulletDamageTheshold value="200.000000" />
+      <FireVulnerability value="1.000000" />
+      <RechargeProperties ref="NULL" />
+      <MeleeProperties>
+        <FatiguedHealthThreshold value="25.000000" />
+        <KnockedOutHealthThreshold value="10.000000" />
+        <KnockedOutHealthToRecover value="30.000000" />
+        <KnockedOutCount value="1" />
+        <DogTakedownThreshold value="75.000000" />
+        <MeleeCardinalFatalAttackCheck value="true" />
+        <ProneToFlourishHealthThreshold value="50.000000" />
+      </MeleeProperties>
+      <ScavengingProperties>
+        <TimeStartScavengedVfxDamage value="5.000000" />
+        <TimeToMaxScavengedVfxDamage value="60.000000" />
+      </ScavengingProperties>
+      <IncapacitatedProperties>
+        <IncapacitatedHealthThreshold value="51.000000" />
+        <ReviveFromIncapacitationHealth value="100.000000" />
+        <CanBeIncapacitated value="false" />
+      </IncapacitatedProperties>
+    </Item>
+  </HealthConfig>
+  <StaminaConfig>
+    <Item key="STAMINA_BIRD">
+      <DefaultEnergy value="100.000000" />
+      <EnergyReserveProperties>
+        <Reserves content="float_array" />
+        <UnlockGroup />
+        <UnlockedEnergyReserveSize value="0.000000" />
+        <UnlockedEnergyReserveCount value="1" />
+      </EnergyReserveProperties>
+      <DefaultTiredThreshold value="0.000000" />
+      <DefaultRecoveryThreshold value="0.000000" />
+      <MaxSwimEnergy value="100.000000" />
+      <TiredThresholdInSwim value="99.000000" />
+      <DrowningThresholdInSwim value="10.000000" />
+      <SwimEnergyDrainStill value="0.100000" />
+      <SwimEnergyDrainSprint value="5.000000" />
+      <SwimEnergyRecovery value="10.000000" />
+      <StaminaDrainOnSwimStill value="0.100000" />
+      <StaminaDrainOnSwimSprint value="0.500000" />
+      <ImmediateStaminaDecreaseInWater value="false" />
+      <UseHalfMaxStaminaIfRecoveryThresholdIsBeyondLimit value="false" />
+      <RechargeProperties>
+        <BaseRechargeRate value="2.4" />
+		<RechargeSprintingMultiplier value="0.595000" />
+        <RechargeRunningMultiplier value="0.75" />
+        <RechargeMeleeMultiplier value="1.150000" />
+      </RechargeProperties>
+    </Item>
+    <Item key="STAMINA_DEFAULT">
+      <DefaultEnergy value="100.000000" />
+      <CoreEnergy value="200.000000" />
+      <EnergyReserveProperties>
+        <Reserves content="float_array" />
+        <UnlockGroup />
+        <UnlockedEnergyReserveSize value="0.000000" />
+        <UnlockedEnergyReserveCount value="1" />
+      </EnergyReserveProperties>
+      <DefaultTiredThreshold value="2.500000" />
+      <DefaultRecoveryThreshold value="5.000000" />
+      <MaxSwimEnergy value="100.000000" />
+      <TiredThresholdInSwim value="99.000000" />
+      <DrowningThresholdInSwim value="20.000000" />
+      <SwimEnergyDrainStill value="3.000000" />
+      <SwimEnergyDrainSprint value="6.000000" />
+      <SwimEnergyRecovery value="10.000000" />
+      <StaminaDrainOnSwimStill value="2.00000" />
+      <StaminaDrainOnSwimSprint value="10.000000" />
+      <ImmediateStaminaDecreaseInWater value="false" />	  
+      <UseHalfMaxStaminaIfRecoveryThresholdIsBeyondLimit value="false" />
+      <RechargeProperties>
+        <BaseRechargeRate value="2.4" />
+        <RechargeSprintingMultiplier value="0.595000" />
+        <RechargeRunningMultiplier value="0.75" />
+        <RechargeMeleeMultiplier value="1.150000" />
+      </RechargeProperties>
+    </Item>
+    <Item key="STAMINA_WATER_ANIMAL">
+      <DefaultEnergy value="100.000000" />
+      <CoreEnergy value="200.000000" />
+      <EnergyReserveProperties>
+        <Reserves content="float_array" />
+        <UnlockGroup />
+        <UnlockedEnergyReserveSize value="0.000000" />
+        <UnlockedEnergyReserveCount value="1" />
+      </EnergyReserveProperties>
+      <DefaultTiredThreshold value="2.500000" />
+      <DefaultRecoveryThreshold value="5.000000" />
+      <MaxSwimEnergy value="100.000000" />
+      <TiredThresholdInSwim value="10.000000" />
+      <DrowningThresholdInSwim value="10.000000" />
+      <SwimEnergyDrainStill value="0.000000" />
+      <SwimEnergyDrainSprint value="0.000000" />
+      <SwimEnergyRecovery value="10.000000" />
+      <StaminaDrainOnSwimStill value="0.100000" />
+      <StaminaDrainOnSwimSprint value="0.500000" />
+      <ImmediateStaminaDecreaseInWater value="false" />	  
+      <UseHalfMaxStaminaIfRecoveryThresholdIsBeyondLimit value="false" />
+      <RechargeProperties>
+        <BaseRechargeRate value="2.4" />
+        <RechargeSprintingMultiplier value="0.595000" />
+        <RechargeRunningMultiplier value="0.75" />
+        <RechargeMeleeMultiplier value="1.150000" />
+      </RechargeProperties>
+    </Item>
+    <Item key="STAMINA_DEFAULT_HUMAN">
+      <DefaultEnergy value="300.000000" />
+      <EnergyReserveProperties>
+        <Reserves content="float_array" />
+        <UnlockGroup />
+        <UnlockedEnergyReserveSize value="0.000000" />
+        <UnlockedEnergyReserveCount value="1" />
+      </EnergyReserveProperties>
+      <DefaultTiredThreshold value="2.500000" />
+      <DefaultRecoveryThreshold value="5.000000" />
+      <MaxSwimEnergy value="100.000000" />
+      <TiredThresholdInSwim value="99.000000" />
+      <DrowningThresholdInSwim value="10.000000" />
+      <SwimEnergyDrainStill value="0.100000" />
+      <SwimEnergyDrainSprint value="5.000000" />
+      <SwimEnergyRecovery value="10.000000" />
+      <StaminaDrainOnSwimStill value="0.100000" />
+      <StaminaDrainOnSwimSprint value="0.500000" />
+      <ImmediateStaminaDecreaseInWater value="false" />
+      <UseHalfMaxStaminaIfRecoveryThresholdIsBeyondLimit value="false" />
+      <RechargeProperties>
+        <BaseRechargeRate value="2.4" />
+		<RechargeSprintingMultiplier value="0.595000" />
+        <RechargeRunningMultiplier value="0.75" />
+        <RechargeMeleeMultiplier value="1.150000" />
+      </RechargeProperties>
+    </Item>
+    <Item key="STAMINA_JOHN">
+      <DefaultEnergy value="11.200000" />
+	  <CoreEnergy value="22.400000" />
+	  <OverPowerEnergy value="11.200000" />
+	  <GoldCoreEnergy value="22.400000" />
+      <EnergyReserveProperties>
+        <Reserves content="float_array">
+          11.200000	
+          11.200000
+          11.200000
+          11.200000
+          11.200000	
+          11.200000
+          11.200000	
+        </Reserves>
+        <UnlockGroup>UPGRADE_STAMINA_TANK_1</UnlockGroup>
+        <UnlockedEnergyReserveSize value="8.000000" />
+        <UnlockedEnergyReserveCount value="2" />
+      </EnergyReserveProperties>
+      <DefaultTiredThreshold value="2.500000" />
+      <DefaultRecoveryThreshold value="5.000000" />
+      <MaxSwimEnergy value="50.000000" />
+      <TiredThresholdInSwim value="50.000000" />
+      <DrowningThresholdInSwim value="48.000000" />
+      <SwimEnergyDrainStill value="1.000000" />
+      <SwimEnergyDrainSprint value="10.000000" />
+      <SwimEnergyRecovery value="10.000000" />
+      <StaminaDrainOnSwimStill value="100.000000" />
+      <StaminaDrainOnSwimSprint value="100.000000" />
+      <ImmediateStaminaDecreaseInWater value="true" />
+      <UseHalfMaxStaminaIfRecoveryThresholdIsBeyondLimit value="false" />
+      <RechargeProperties>
+        <BaseRechargeRate value="2.4" />
+		<RechargeSprintingMultiplier value="0.595000" />
+        <RechargeRunningMultiplier value="0.75" />
+        <RechargeMeleeMultiplier value="1.150000" />
+      </RechargeProperties>
+    </Item>
+    <Item key="STAMINA_MP_PLAYER">
+      <DefaultEnergy value="11.200000" />
+	  <CoreEnergy value="22.400000" />
+	  <OverPowerEnergy value="11.200000" />
+	  <GoldCoreEnergy value="22.400000" />
+      <EnergyReserveProperties>
+        <Reserves/>
+        <UnlockGroup>UPGRADE_STAMINA_TANK_1</UnlockGroup>
+        <UnlockedEnergyReserveSize value="11.200000" />
+        <UnlockedEnergyReserveCount value="9" />
+      </EnergyReserveProperties>
+      <DefaultTiredThreshold value="-1.000000" />
+      <DefaultRecoveryThreshold value="-1.000000" />
+      <MaxSwimEnergy value="100.000000" />
+      <TiredThresholdInSwim value="99.000000" />
+      <DrowningThresholdInSwim value="10.000000" />
+      <SwimEnergyDrainStill value="0.300000" />
+      <SwimEnergyDrainSprint value="6.000000" />
+      <SwimEnergyRecovery value="10.000000" />
+      <StaminaDrainOnSwimStill value="0.500000" />
+      <StaminaDrainOnSwimSprint value="3.500000" />
+      <ImmediateStaminaDecreaseInWater value="false" />
+      <UseHalfMaxStaminaIfRecoveryThresholdIsBeyondLimit value="false" />
+      <RechargeProperties>
+        <BaseRechargeRate value="2.4" />
+		<RechargeSprintingMultiplier value="0.595000" />
+        <RechargeRunningMultiplier value="0.75" />
+        <RechargeMeleeMultiplier value="1.150000" />
+      </RechargeProperties>
+    </Item>
+    <Item key="STAMINA_SP_HORSE">
+      <DefaultEnergy value="20.000000" />
+	  <CoreEnergy value="40.000000" />
+	  <OverPowerEnergy value="21.000000" />
+	  <GoldCoreEnergy value="40.000000" />
+	  <TimeUnitForOverpowered value="240"/>
+      <EnergyReserveProperties>
+        <Reserves content="float_array">
+          20.000000	
+          20.000000	
+          20.000000	
+          20.000000	
+          20.000000	
+          20.000000	
+          20.000000	
+		  20.000000	
+          20.000000	
+        </Reserves>
+        <UnlockGroup />
+        <UnlockedEnergyReserveSize value="20.000000" />
+        <UnlockedEnergyReserveCount value="2" />
+      </EnergyReserveProperties>
+      <DefaultTiredThreshold value="1.500000" />
+      <DefaultRecoveryThreshold value="12.000000" />
+      <MaxSwimEnergy value="100.000000" />
+      <TiredThresholdInSwim value="99.000000" />
+      <DrowningThresholdInSwim value="50.000000" />
+      <SwimEnergyDrainStill value="3.000000" />
+      <SwimEnergyDrainSprint value="6.000000" />
+      <SwimEnergyRecovery value="10.000000" />
+      <StaminaDrainOnSwimStill value="0.500000" />
+      <StaminaDrainOnSwimSprint value="3.500000" />
+      <ImmediateStaminaDecreaseInWater value="false" />
+      <UseHalfMaxStaminaIfRecoveryThresholdIsBeyondLimit value="true" />
+      <RechargeProperties>
+        <BaseRechargeRate value="2.85" />
+		<RechargeSprintingMultiplier value="0.338" />
+        <RechargeRunningMultiplier value="0.8" />
+        <RechargeMeleeMultiplier value="1.200000" />
+      </RechargeProperties>
+    </Item>
+    <Item key="STAMINA_SP_PLAYER">
+      <DefaultEnergy value="11.200000" />
+	  <CoreEnergy value="22.400000" />
+	  <OverPowerEnergy value="11.200000" />
+	  <GoldCoreEnergy value="22.400000" />
+      <EnergyReserveProperties>
+        <Reserves content="float_array">
+          11.200000	
+          11.200000
+          11.200000
+          11.200000
+          11.200000	
+          11.200000
+          11.200000	
+        </Reserves>
+        <UnlockGroup>UPGRADE_STAMINA_TANK_1</UnlockGroup>
+        <UnlockedEnergyReserveSize value="11.200000" />
+        <UnlockedEnergyReserveCount value="2" />
+      </EnergyReserveProperties>
+      <DefaultTiredThreshold value="2.500000" />
+      <DefaultRecoveryThreshold value="5.000000" />
+      <MaxSwimEnergy value="100.000000" />
+      <TiredThresholdInSwim value="99.000000" />
+      <DrowningThresholdInSwim value="20.000000" />
+      <SwimEnergyDrainStill value="3.000000" />
+      <SwimEnergyDrainSprint value="6.000000" />
+      <SwimEnergyRecovery value="10.000000" />
+      <StaminaDrainOnSwimStill value="0.500000" />
+      <StaminaDrainOnSwimSprint value="3.500000" />
+      <ImmediateStaminaDecreaseInWater value="false" />
+      <UseHalfMaxStaminaIfRecoveryThresholdIsBeyondLimit value="false" />
+      <RechargeProperties>
+        <BaseRechargeRate value="2.4" />
+		<RechargeSprintingMultiplier value="0.595000" />
+        <RechargeRunningMultiplier value="0.75" />
+        <RechargeMeleeMultiplier value="1.150000" />
+      </RechargeProperties>
+    </Item>
+  </StaminaConfig>
+  <SpecialAbilityConfig>
+    <Item key="SPECIAL_ABILITY_SP_PLAYER">
+      <DefaultEnergy value="0.000000" />
+	  <CoreEnergy value="28.000000" />
+	  <OverPowerEnergy value="10.000000" />
+	  <GoldCoreEnergy value="28.000000" />
+      <EnergyReserveProperties>
+        <Reserves content="float_array">
+          14.000000	
+          14.000000	
+          14.000000	
+          14.000000	
+          14.000000	
+          14.000000	
+          14.000000	
+          14.000000	
+        </Reserves>
+        <UnlockGroup>UPGRADE_DEADEYE_TANK_1</UnlockGroup>
+        <UnlockedEnergyReserveSize value="14.000000" />
+        <UnlockedEnergyReserveCount value="2" />
+		<UseNonScaledTime value="true" />
+      </EnergyReserveProperties>
+    </Item>
+	<Item key="SPECIAL_ABILITY_MP_PLAYER">
+      <DefaultEnergy value="0.000000" />
+	  <CoreEnergy value="28.000000" />
+	  <OverPowerEnergy value="10.000000" />
+	  <GoldCoreEnergy value="28.000000" />
+      <EnergyReserveProperties>
+        <Reserves content="float_array">
+          14.000000	
+        </Reserves>
+        <UnlockGroup>UPGRADE_DEADEYE_TANK_1</UnlockGroup>
+        <UnlockedEnergyReserveSize value="14.000000" />
+        <UnlockedEnergyReserveCount value="9" />
+		<UseNonScaledTime value="true" />
+      </EnergyReserveProperties>
+    </Item>
+  </SpecialAbilityConfig>
+  <EnergyConfig>
+    <Item key="FLAMMABLE">
+      <Health ref="FLAMMABLE" />
+      <Stamina ref="STAMINA_DEFAULT" />
+      <SpecialAbility ref="NULL" />
+    </Item>
+    <Item key="HEALTH_ANIMAL_BEAR">
+      <Health ref="HEALTH_ANIMAL_BEAR" />
+      <Stamina ref="STAMINA_DEFAULT" />
+      <SpecialAbility ref="NULL" />
+    </Item>
+    <Item key="HEALTH_ANIMAL_COUGAR">
+      <Health ref="HEALTH_ANIMAL_COUGAR" />
+      <Stamina ref="STAMINA_DEFAULT" />
+      <SpecialAbility ref="NULL" />
+    </Item>
+    <Item key="HEALTH_ANIMAL_DEER">
+      <Health ref="HEALTH_ANIMAL_DEER" />
+      <Stamina ref="STAMINA_DEFAULT" />
+      <SpecialAbility ref="NULL" />
+    </Item>
+    <Item key="HEALTH_ANIMAL_WOLF">
+      <Health ref="HEALTH_ANIMAL_WOLF" />
+      <Stamina ref="STAMINA_DEFAULT" />
+      <SpecialAbility ref="NULL" />
+    </Item>
+    <Item key="HEALTH_DUELIST_EASY">
+      <Health ref="HEALTH_DUELIST_EASY" />
+      <Stamina ref="STAMINA_DEFAULT_HUMAN" />
+      <SpecialAbility ref="NULL" />
+    </Item>
+    <Item key="HEALTH_DUELIST_MEDIUM">
+      <Health ref="HEALTH_DUELIST_MEDIUM" />
+      <Stamina ref="STAMINA_DEFAULT_HUMAN" />
+      <SpecialAbility ref="NULL" />
+    </Item>
+    <Item key="HEALTH_ENEMY_EASIEST">
+      <Health ref="HEALTH_ENEMY_EASIEST" />
+      <Stamina ref="STAMINA_DEFAULT_HUMAN" />
+      <SpecialAbility ref="NULL" />
+    </Item>
+    <Item key="HEALTH_ENEMY_EASY">
+      <Health ref="HEALTH_ENEMY_EASY" />
+      <Stamina ref="STAMINA_DEFAULT_HUMAN" />
+      <SpecialAbility ref="NULL" />
+    </Item>
+    <Item key="HEALTH_ENEMY_HARD">
+      <Health ref="HEALTH_ENEMY_HARD" />
+      <Stamina ref="STAMINA_DEFAULT_HUMAN" />
+      <SpecialAbility ref="NULL" />
+    </Item>
+    <Item key="HEALTH_ENEMY_HARDER">
+      <Health ref="HEALTH_ENEMY_HARDER" />
+      <Stamina ref="STAMINA_DEFAULT_HUMAN" />
+      <SpecialAbility ref="NULL" />
+    </Item>
+    <Item key="HEALTH_ENEMY_HARDEST">
+      <Health ref="HEALTH_ENEMY_HARDEST" />
+      <Stamina ref="STAMINA_DEFAULT_HUMAN" />
+      <SpecialAbility ref="NULL" />
+    </Item>
+    <Item key="HEALTH_ENEMY_MEDIUM">
+      <Health ref="HEALTH_ENEMY_MEDIUM" />
+      <Stamina ref="STAMINA_DEFAULT_HUMAN" />
+      <SpecialAbility ref="NULL" />
+    </Item>
+    <Item key="HEALTH_GANG_COMPANION">
+      <Health ref="HEALTH_GANG_COMPANION" />
+      <Stamina ref="STAMINA_DEFAULT_HUMAN" />
+      <SpecialAbility ref="NULL" />
+    </Item>
+    <Item key="HEALTH_HUGE_ANIMAL">
+      <Health ref="HEALTH_HUGE_ANIMAL" />
+      <Stamina ref="STAMINA_DEFAULT" />
+      <SpecialAbility ref="NULL" />
+    </Item>
+    <Item key="HEALTH_HUGE_WATER_ANIMAL">
+      <Health ref="HEALTH_HUGE_WATER_ANIMAL" />
+      <Stamina ref="STAMINA_DEFAULT" />
+      <SpecialAbility ref="NULL" />
+    </Item>
+    <Item key="HEALTH_JOHN">
+      <Health ref="HEALTH_SP_PLAYER" />
+      <Stamina ref="STAMINA_JOHN" />
+      <SpecialAbility ref="SPECIAL_ABILITY_SP_PLAYER" />
+    </Item>
+    <Item key="HEALTH_LARGE_ANIMAL">
+      <Health ref="HEALTH_LARGE_ANIMAL" />
+      <Stamina ref="STAMINA_DEFAULT" />
+      <SpecialAbility ref="NULL" />
+    </Item>
+	<Item key="HEALTH_DONKEY">
+      <Health ref="HEALTH_DONKEY" />
+      <Stamina ref="STAMINA_DEFAULT" />
+      <SpecialAbility ref="NULL" />
+    </Item>
+    <Item key="HEALTH_LAW_EASY">
+      <Health ref="HEALTH_LAW_EASY" />
+      <Stamina ref="STAMINA_DEFAULT_HUMAN" />
+      <SpecialAbility ref="NULL" />
+    </Item>
+    <Item key="HEALTH_LAW_HARD">
+      <Health ref="HEALTH_LAW_HARD" />
+      <Stamina ref="STAMINA_DEFAULT_HUMAN" />
+      <SpecialAbility ref="NULL" />
+    </Item>
+    <Item key="HEALTH_LAW_MEDIUM">
+      <Health ref="HEALTH_LAW_MEDIUM" />
+      <Stamina ref="STAMINA_DEFAULT_HUMAN" />
+      <SpecialAbility ref="NULL" />
+    </Item>
+    <Item key="HEALTH_LAW_SHERIFF">
+      <Health ref="HEALTH_LAW_SHERIFF" />
+      <Stamina ref="STAMINA_DEFAULT_HUMAN" />
+      <SpecialAbility ref="NULL" />
+    </Item>
+    <Item key="HEALTH_LEGENDARY_ANIMAL">
+      <Health ref="HEALTH_LEGENDARY_ANIMAL" />
+      <Stamina ref="STAMINA_DEFAULT" />
+      <SpecialAbility ref="NULL" />
+    </Item>
+	<Item key="HEALTH_LEGENDARY_GATOR">
+      <Health ref="HEALTH_LEGENDARY_GATOR" />
+      <Stamina ref="STAMINA_DEFAULT" />
+      <SpecialAbility ref="NULL" />
+    </Item>
+    <Item key="HEALTH_MEDIUM_ANIMAL">
+      <Health ref="HEALTH_MEDIUM_ANIMAL" />
+      <Stamina ref="STAMINA_DEFAULT" />
+      <SpecialAbility ref="NULL" />
+    </Item>
+    <Item key="HEALTH_MP_PLAYER">
+      <Health ref="HEALTH_MP_PLAYER" />
+      <Stamina ref="STAMINA_MP_PLAYER" />
+      <SpecialAbility ref="SPECIAL_ABILITY_MP_PLAYER" />
+    </Item>
+    <Item key="HEALTH_MOONSHINE_BARBRAWL">
+      <Health ref="HEALTH_MOONSHINE_BARBRAWL" />
+      <Stamina ref="STAMINA_DEFAULT_HUMAN" />
+      <SpecialAbility ref="NULL" />
+    </Item>
+    <Item key="HEALTH_SMALL_ANIMAL">
+      <Health ref="HEALTH_SMALL_ANIMAL" />
+      <Stamina ref="STAMINA_DEFAULT" />
+      <SpecialAbility ref="NULL" />
+    </Item>
+    <Item key="HEALTH_SP_HORSE">
+      <Health ref="HEALTH_SP_HORSE" />
+      <Stamina ref="STAMINA_SP_HORSE" />
+      <SpecialAbility ref="NULL" />
+    </Item>
+    <Item key="HEALTH_SP_PLAYER">
+      <Health ref="HEALTH_SP_PLAYER" />
+      <Stamina ref="STAMINA_SP_PLAYER" />
+      <SpecialAbility ref="SPECIAL_ABILITY_SP_PLAYER" />
+    </Item>
+    <Item key="HEALTH_STANDARD_BIRD">
+      <Health ref="HEALTH_STANDARD_BIRD" />
+      <Stamina ref="STAMINA_BIRD" />
+      <SpecialAbility ref="NULL" />
+    </Item>
+    <Item key="HEALTH_STANDARD_PED">
+      <Health ref="HEALTH_STANDARD_PED" />
+      <Stamina ref="STAMINA_DEFAULT_HUMAN" />
+      <SpecialAbility ref="NULL" />
+    </Item>
+    <Item key="HEALTH_VERY_SMALL_ANIMAL">
+      <Health ref="HEALTH_VERY_SMALL_ANIMAL" />
+      <Stamina ref="STAMINA_DEFAULT" />
+      <SpecialAbility ref="NULL" />
+    </Item>
+	<Item key="HEALTH_STANDARD_SNAKE">
+      <Health ref="HEALTH_STANDARD_SNAKE" />
+      <Stamina ref="STAMINA_DEFAULT" />
+      <SpecialAbility ref="NULL" />
+    </Item>
+    <Item key="HEALTH_WATER_ANIMAL">
+      <Health ref="HEALTH_WATER_ANIMAL" />
+      <Stamina ref="STAMINA_WATER_ANIMAL" />
+      <SpecialAbility ref="NULL" />
+    </Item>
+	<Item key="HEALTH_LARGE_WATER_ANIMAL">
+      <Health ref="HEALTH_LARGE_WATER_ANIMAL" />
+      <Stamina ref="STAMINA_WATER_ANIMAL" />
+      <SpecialAbility ref="NULL" />
+    </Item>
+  </EnergyConfig>
+  <DefaultConfig ref="HEALTH_STANDARD_PED" />
+  <DefaultMissionPedHealth value="55.000000" />
+  <DefaultPlayerPedHealth value="150.000000" />
+  <PlayerOverrideSinglePlayer ref="NULL" />
+  <PlayerOverrideMultiPlayer ref="HEALTH_MP_PLAYER" />
+</CEnergyConfigInfos>

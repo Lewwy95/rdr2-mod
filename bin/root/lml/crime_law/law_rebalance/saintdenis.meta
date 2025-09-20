@@ -1,0 +1,743 @@
+<?xml version="1.0" encoding="UTF-8"?>	
+<CDispatchData>
+	<BountyResponses>
+		<BountyDispatch>
+			<Name>LAW_LOCAL_SAINT_DENIS</Name>
+			<RandomWeight value="1.0" />
+			<RequiredRegion>LAW_REGION_SAINT_DENIS</RequiredRegion>
+			<RequiredCooldowns>
+				<Item>DefaultCooldown</Item>
+			</RequiredCooldowns>
+			<DispatchPhases>
+
+				<!-- Phase: On Foot -->
+				<Phase>
+					<Name>OnFoot</Name>
+					<GroupMultiplier value="0.4f"/>
+						
+					<!--Phase peds-->
+					<!--Organized in DispatchPedGroups or RandomDispatchPedGroups-->
+					<DispatchPeds>
+						<DispatchPedGroups>
+							<DispatchGroup>
+								<Preset>SaintDenisOnFoot</Preset>
+								<MinNumPeds value="1"/>
+								<MaxNumPeds value="2"/>
+							</DispatchGroup>
+						</DispatchPedGroups>
+						<GreedyAcquireCondition type="CAIConditionReferenced">
+							<Name>SHOULD_GRAB_AVAILABLE_DISPATCH_PED_LOW_SEVERITY</Name>
+						</GreedyAcquireCondition>
+					</DispatchPeds>
+					
+					<!--Phase end conditions-->
+					<!--Determine when this phase can be stopped and transition to the next-->
+					<PhaseEndConditions>
+						<Condition type="CAIConditionOr">
+							<Conditions>
+								<Condition type="CAIConditionReferenced">
+									<Name>DISPATCH_LOW_SEVERITY_ESCALATION_TOWN</Name>
+								</Condition>
+								<Condition type="CAIConditionReferenced">
+									<Name>DISPATCH_LOW_SEVERITY_RESTART_TOWN</Name>
+								</Condition>
+							</Conditions>
+						</Condition>
+					</PhaseEndConditions>
+
+					<!--Next phase options-->
+					<!--Determine what next states are possible transitions-->
+					<NextPhases>
+						<PhaseOption>
+							<Condition type="CAIConditionReferenced">
+								<Name>DISPATCH_LOW_SEVERITY_ESCALATION_TOWN</Name>
+							</Condition>
+							<Name>MediumSeverityReinforcements</Name>
+						</PhaseOption>
+					</NextPhases>
+				</Phase>
+				
+				<!-- Phase: MediumSeverityReinforcements -->
+				<Phase>
+					<Name>MediumSeverityReinforcements</Name>
+					<GroupMultiplier value="0.4f"/>
+						
+					<!--Phase peds-->
+					<DispatchPeds>
+						<DispatchPedGroups>
+							<DispatchGroup>
+								<Preset>SaintDenisOnFoot</Preset>
+								<MinNumPeds value="2"/>
+								<MaxNumPeds value="3"/>
+							</DispatchGroup>
+						</DispatchPedGroups>
+						<GreedyAcquireCondition type="CAIConditionReferenced">
+							<Name>SHOULD_GRAB_AVAILABLE_DISPATCH_PED_LOW_SEVERITY</Name>
+						</GreedyAcquireCondition>
+					</DispatchPeds>
+					
+					<!--Phase end conditions-->
+					<!--Determine when this phase can be stopped and transition to the next-->
+					<PhaseEndConditions>
+						<Condition type="CAIConditionReferenced">
+							<Name>DISPATCH_MEDIUM_SEVERITY_ESCALATION_TOWN</Name>
+						</Condition>
+					</PhaseEndConditions>
+
+					<!--Next phase options-->
+					<!--Determine what next states are possible transitions-->
+					<NextPhases>
+						<PhaseOption>
+							<Condition type="NULL"/>
+							<Name>HighSeverityReinforcements</Name>
+						</PhaseOption>
+					</NextPhases>
+				</Phase>
+				
+				<!-- Phase: HighSeverityReinforcements -->
+				<Phase>
+					<Name>HighSeverityReinforcements</Name>
+					<GroupMultiplier value="0.4f"/>
+						
+					<!--Phase peds-->
+					<DispatchPeds>
+						<DispatchPedGroups>
+							<DispatchGroup>
+								<Preset>SaintDenisOnFoot</Preset>
+								<MinNumPeds value="4"/>
+								<MaxNumPeds value="4"/>
+							</DispatchGroup>
+							<DispatchGroup>
+								<SelectionConditions>
+									<Condition type="CAIConditionNot">
+										<Condition type="CAIConditionNumTimesDispatchPhaseSelected">
+											<Phase>HighSeverityReinforcements</Phase>
+											<LowerBound value="1"/>
+										</Condition>
+									</Condition>
+								</SelectionConditions>
+								<Preset>SaintDenisOnFootLeader</Preset>
+								<MinNumPeds value="1"/>
+								<MaxNumPeds value="1"/>
+							</DispatchGroup>
+							<DispatchGroup>
+								<SelectionConditions>
+									<Condition type="CAIConditionWantedLevel">
+										<WantedLevelLowerBound value="4"/>
+									</Condition>
+								</SelectionConditions>
+								<Preset>SaintDenisOnFoot</Preset>
+								<MinNumPeds value="2"/>
+								<MaxNumPeds value="2"/>
+							</DispatchGroup>
+						</DispatchPedGroups>
+						
+						<GreedyAcquireCondition type="CAIConditionReferenced">
+							<Name>SHOULD_GRAB_AVAILABLE_DISPATCH_PED_SAINT_DENIS</Name>
+						</GreedyAcquireCondition>
+					</DispatchPeds>
+					
+					<!--Phase end conditions-->
+					<!-- If the player is known and has been accused -->
+					<PhaseEndConditions>
+						<Condition type="CAIConditionReferenced">
+							<Name>DISPATCH_HIGH_SEVERITY_ESCALATION_TOWN</Name>
+						</Condition>
+					</PhaseEndConditions>
+
+					<!--Next phase options-->
+					<!--Determine what next states are possible transitions-->
+					<NextPhases>
+						<PhaseOption>
+							<Condition type="CDispatchConditionSuspectAccused"/>
+							<Name>SDNPhaseControl</Name>
+						</PhaseOption>
+						<PhaseOption>
+							<Condition type="NULL"/>
+							<Name>HighSeverityReinforcements</Name>
+						</PhaseOption>
+					</NextPhases>
+				</Phase>
+
+				<!-- Phase: SDNPhaseControl -->
+				<Phase>
+					<Name>SDNPhaseControl</Name>
+					
+					<DispatchPeds>
+						<GreedyAcquireCondition type="CAIConditionReferenced">
+							<Name>SHOULD_GRAB_AVAILABLE_DISPATCH_PED_SAINT_DENIS</Name>
+						</GreedyAcquireCondition>
+					</DispatchPeds>
+					
+					<PhaseEndConditions>
+						<Condition type="CAIConditionReferenced">
+							<Name>DISPATCH_PHASE_CONTROL_ESCALATION_CITY</Name>
+						</Condition>
+					</PhaseEndConditions>
+					
+					<NextPhases>
+					
+						<!-- MountedChasingReinforcements -->
+						<PhaseOption>
+							<Condition type="CAIConditionAnd">
+								<Conditions>
+									<Condition type="CDispatchConditionTargetEscaping"/>
+									<Condition type="CAIConditionNot">
+										<Condition type="CAIConditionIsOnFoot"/>
+									</Condition>
+								</Conditions>
+							</Condition>
+							<Name>MountedChasingReinforcements</Name>
+						</PhaseOption>
+					
+						<!-- OnFootChasingReinforcements -->
+						<PhaseOption>
+							<Condition type="CDispatchConditionTargetEscaping"/>
+							<Name>OnFootChasingReinforcements</Name>
+						</PhaseOption>
+						
+						<!-- Reinforcements -->
+						<PhaseOption>
+							<Condition type="CAIConditionNumTimesDispatchPhaseSelected">
+								<Phase>Reinforcements</Phase>
+								<UpperBound value="2"/>
+							</Condition>
+							<Name>Reinforcements</Name>
+						</PhaseOption>
+						
+						<!-- MixedReinforcements -->
+						<PhaseOption>
+							<Condition type="CAIConditionRandom">
+								<Chances value="0.25f"/>
+							</Condition>
+							<Name>MixedReinforcements</Name>
+						</PhaseOption>
+						
+						<!-- CarbineReinforcements -->
+						<PhaseOption>
+							<Condition type="NULL"/>
+							<Name>CarbineReinforcements</Name>
+						</PhaseOption>
+					</NextPhases>
+				</Phase>				
+
+				<!-- Phase: SDNLatePhaseControl -->
+				<Phase>
+					<Name>SDNLatePhaseControl</Name>
+					
+					<DispatchPeds>
+						<GreedyAcquireCondition type="CAIConditionReferenced">
+							<Name>SHOULD_GRAB_AVAILABLE_DISPATCH_PED_SAINT_DENIS</Name>
+						</GreedyAcquireCondition>
+					</DispatchPeds>
+					
+					<PhaseEndConditions>
+						<Condition type="CAIConditionReferenced">
+							<Name>DISPATCH_PHASE_CONTROL_ESCALATION_CITY_LATE</Name>
+						</Condition>
+					</PhaseEndConditions>
+					
+					<NextPhases>
+					
+						<!-- MountedChasingReinforcements -->
+						<PhaseOption>
+							<Condition type="CAIConditionAnd">
+								<Conditions>
+									<Condition type="CDispatchConditionTargetEscaping"/>
+									<Condition type="CAIConditionNot">
+										<Condition type="CAIConditionIsOnFoot"/>
+									</Condition>
+								</Conditions>
+							</Condition>
+							<Name>MountedChasingReinforcementsSkilled</Name>
+						</PhaseOption>
+					
+						<!-- OnFootChasingReinforcements -->
+						<PhaseOption>
+							<Condition type="CDispatchConditionTargetEscaping"/>
+							<Name>OnFootChasingReinforcementsSkilled</Name>
+						</PhaseOption>
+						
+						<!-- MixedReinforcements -->
+						<PhaseOption>
+							<Condition type="CAIConditionRandom">
+								<Chances value="0.25f"/>
+							</Condition>
+							<Name>MixedReinforcementsSkilled</Name>
+						</PhaseOption>
+						
+						<!-- CarbineReinforcements -->
+						<PhaseOption>
+							<Condition type="NULL"/>
+							<Name>CarbineReinforcementsSkilled</Name>
+						</PhaseOption>
+					</NextPhases>
+				</Phase>
+				
+				<!-- Phase: MountedChasingReinforcements -->
+				<Phase>
+					<Name>MountedChasingReinforcements</Name>
+					<GroupMultiplier value="0.3f"/>
+					
+					<DispatchPeds>
+						<RandomDispatchPedGroups>	
+							<DispatchGroup>
+								<Preset>SaintDenisRiderShotgunSkilled</Preset>
+								<RandomWeight value="0.35f"/>
+								<MinNumPeds value="4"/>
+								<MaxNumPeds value="4"/>
+							</DispatchGroup>
+							<DispatchGroup>
+								<Preset>SaintDenisRiderCarbineSkilled</Preset>
+								<RandomWeight value="0.65f"/>
+								<MinNumPeds value="4"/>
+								<MaxNumPeds value="4"/>
+							</DispatchGroup>
+						</RandomDispatchPedGroups>
+						
+						<GreedyAcquireCondition type="CAIConditionReferenced">
+							<Name>SHOULD_GRAB_AVAILABLE_DISPATCH_PED_SAINT_DENIS</Name>
+						</GreedyAcquireCondition>
+					</DispatchPeds>
+				
+					<PhaseEndConditions>
+						<Condition type="CAIConditionTimeInDispatchPhase">
+							<LowerBound value="2500"/>
+						</Condition>
+					</PhaseEndConditions>
+
+					<NextPhases>
+						<PhaseOption>
+							<Condition type="CAIConditionNumTimesDispatchPhaseSelected">
+								<Phase>SDNPhaseControl</Phase>
+								<LowerBound value="7"/>
+							</Condition>
+							<Name>SDNLatePhaseControl</Name>
+						</PhaseOption>
+						<PhaseOption>
+							<Condition type="NULL"/>
+							<Name>SDNPhaseControl</Name>
+						</PhaseOption>
+					</NextPhases>
+				</Phase>
+				
+				<!-- Phase: MountedChasingReinforcementsSkilled -->
+				<Phase>
+					<Name>MountedChasingReinforcementsSkilled</Name>
+					<GroupMultiplier value="0.3f"/>
+					
+					<DispatchPeds>
+						<RandomDispatchPedGroups>	
+							<DispatchGroup>
+								<Preset>SaintDenisRiderCarbineSkilled</Preset>
+								<RandomWeight value="0.35f"/>
+								<MinNumPeds value="4"/>
+								<MaxNumPeds value="4"/>
+							</DispatchGroup>
+							<DispatchGroup>
+								<Preset>SaintDenisRiderShotgunSkilled</Preset>
+								<RandomWeight value="0.65f"/>
+								<MinNumPeds value="4"/>
+								<MaxNumPeds value="4"/>
+							</DispatchGroup>
+						</RandomDispatchPedGroups>
+						
+						<GreedyAcquireCondition type="CAIConditionReferenced">
+							<Name>SHOULD_GRAB_AVAILABLE_DISPATCH_PED_SAINT_DENIS</Name>
+						</GreedyAcquireCondition>
+					</DispatchPeds>
+				
+					<PhaseEndConditions>
+						<Condition type="CAIConditionTimeInDispatchPhase">
+							<LowerBound value="2500"/>
+						</Condition>
+					</PhaseEndConditions>
+
+					<NextPhases>
+						<PhaseOption>
+							<Condition type="NULL"/>
+							<Name>SDNLatePhaseControl</Name>
+						</PhaseOption>
+					</NextPhases>
+				</Phase>
+				
+				<!-- Phase: OnFootChasingReinforcements -->
+				<Phase>
+					<Name>OnFootChasingReinforcements</Name>
+					<GroupMultiplier value="0.3f"/>
+					
+					<DispatchPeds>
+						<RandomDispatchPedGroups>
+							<DispatchGroup>
+								<Preset>SaintDenisRiderCarbine</Preset>
+								<RandomWeight value="0.9f"/>
+								<MinNumPeds value="5"/>
+								<MaxNumPeds value="5"/>
+							</DispatchGroup>						
+							<DispatchGroup>
+								<Preset>SaintDenisRiderShotgun</Preset>
+								<RandomWeight value="0.1f"/>
+								<MinNumPeds value="5"/>
+								<MaxNumPeds value="5"/>
+							</DispatchGroup>
+						</RandomDispatchPedGroups>
+						
+						<GreedyAcquireCondition type="CAIConditionReferenced">
+							<Name>SHOULD_GRAB_AVAILABLE_DISPATCH_PED_SAINT_DENIS</Name>
+						</GreedyAcquireCondition>
+					</DispatchPeds>
+				
+					<PhaseEndConditions>
+						<Condition type="CAIConditionTimeInDispatchPhase">
+							<LowerBound value="2500"/>
+						</Condition>
+					</PhaseEndConditions>
+
+					<NextPhases>
+						<PhaseOption>
+							<Condition type="CAIConditionNumTimesDispatchPhaseSelected">
+								<Phase>SDNPhaseControl</Phase>
+								<LowerBound value="7"/>
+							</Condition>
+							<Name>SDNLatePhaseControl</Name>
+						</PhaseOption>
+						<PhaseOption>
+							<Condition type="NULL"/>
+							<Name>SDNPhaseControl</Name>
+						</PhaseOption>
+					</NextPhases>
+				</Phase>
+				
+				<!-- Phase: OnFootChasingReinforcementsSkilled -->
+				<Phase>
+					<Name>OnFootChasingReinforcementsSkilled</Name>
+					<GroupMultiplier value="0.3f"/>
+					
+					<DispatchPeds>
+						<RandomDispatchPedGroups>
+							<DispatchGroup>
+								<Preset>SaintDenisRiderCarbineSkilled</Preset>
+								<RandomWeight value="0.9f"/>
+								<MinNumPeds value="5"/>
+								<MaxNumPeds value="5"/>
+							</DispatchGroup>						
+							<DispatchGroup>
+								<Preset>SaintDenisRiderShotgunSkilled</Preset>
+								<RandomWeight value="0.1f"/>
+								<MinNumPeds value="5"/>
+								<MaxNumPeds value="5"/>
+							</DispatchGroup>
+						</RandomDispatchPedGroups>
+						
+						<GreedyAcquireCondition type="CAIConditionReferenced">
+							<Name>SHOULD_GRAB_AVAILABLE_DISPATCH_PED_SAINT_DENIS</Name>
+						</GreedyAcquireCondition>
+					</DispatchPeds>
+				
+					<PhaseEndConditions>
+						<Condition type="CAIConditionTimeInDispatchPhase">
+							<LowerBound value="2500"/>
+						</Condition>
+					</PhaseEndConditions>
+
+					<NextPhases>
+						<PhaseOption>
+							<Condition type="NULL"/>
+							<Name>SDNLatePhaseControl</Name>
+						</PhaseOption>
+					</NextPhases>
+				</Phase>
+				
+				<!-- Phase: Reinforcements -->
+				<Phase>
+					<Name>Reinforcements</Name>
+					<GroupMultiplier value="0.3f"/>
+					
+					<DispatchPeds>
+						<DispatchPedGroups>
+							<DispatchGroup>
+								<Preset>SaintDenisOnFoot</Preset>
+								<MinNumPeds value="5"/>
+								<MaxNumPeds value="5"/>
+							</DispatchGroup>
+							<DispatchGroup>
+								<SelectionConditions>
+									<Condition type="CAIConditionWantedLevel">
+										<WantedLevelLowerBound value="3"/>
+									</Condition>
+								</SelectionConditions>
+								<Preset>SaintDenisOnFootDefaultCarbine</Preset>
+								<MinNumPeds value="1"/>
+								<MaxNumPeds value="2"/>
+							</DispatchGroup>
+						</DispatchPedGroups>
+						<RandomDispatchPedGroups>							
+							<DispatchGroup>
+								<Preset>SaintDenisRiderShotgunSkilled</Preset>
+								<RandomWeight value="0.5f"/>
+								<MinNumPeds value="1"/>
+								<MaxNumPeds value="1"/>
+							</DispatchGroup>
+							
+							<DispatchGroup>
+								<Preset>SaintDenisOnFootSniper</Preset>
+								<RandomWeight value="0.25f"/>
+								<MinNumPeds value="1"/>
+								<MaxNumPeds value="1"/>
+							</DispatchGroup>
+						
+							<DispatchGroup>
+								<Preset>SaintDenisRiderCarbine</Preset>
+								<RandomWeight value="0.25f"/>
+								<MinNumPeds value="1"/>
+								<MaxNumPeds value="1"/>
+							</DispatchGroup>
+
+						</RandomDispatchPedGroups>
+						<GreedyAcquireCondition type="CAIConditionReferenced">
+							<Name>SHOULD_GRAB_AVAILABLE_DISPATCH_PED_SAINT_DENIS</Name>
+						</GreedyAcquireCondition>
+					</DispatchPeds>
+				
+					<PhaseEndConditions>
+						<Condition type="CAIConditionTimeInDispatchPhase">
+							<LowerBound value="1000"/>
+						</Condition>
+					</PhaseEndConditions>
+
+					<NextPhases>
+						<PhaseOption>
+							<Condition type="CAIConditionNumTimesDispatchPhaseSelected">
+								<Phase>SDNPhaseControl</Phase>
+								<LowerBound value="7"/>
+							</Condition>
+							<Name>SDNLatePhaseControl</Name>
+						</PhaseOption>
+						<PhaseOption>
+							<Condition type="NULL"/>
+							<Name>SDNPhaseControl</Name>
+						</PhaseOption>
+					</NextPhases>
+				</Phase>
+				
+				<!-- Phase: CarbineReinforcements -->
+				<Phase>
+					<Name>CarbineReinforcements</Name>
+					<GroupMultiplier value="0.3f"/>
+
+					<DispatchPeds>
+						<DispatchPedGroups>
+							<DispatchGroup>
+								<Preset>SaintDenisOnFootCarbine</Preset>
+								<MinNumPeds value="1"/>
+								<MaxNumPeds value="2"/>
+							</DispatchGroup>
+							<DispatchGroup>
+								<SelectionConditions>
+									<Condition type="CAIConditionWantedLevel">
+										<WantedLevelLowerBound value="3"/>
+									</Condition>
+								</SelectionConditions>
+								<Preset>SaintDenisRiderCarbine</Preset>
+								<MinNumPeds value="1"/>
+								<MaxNumPeds value="2"/>
+							</DispatchGroup>				
+						</DispatchPedGroups>
+						<GreedyAcquireCondition type="CAIConditionReferenced">
+							<Name>SHOULD_GRAB_AVAILABLE_DISPATCH_PED_SAINT_DENIS</Name>
+						</GreedyAcquireCondition>
+					</DispatchPeds>
+				
+					<PhaseEndConditions>
+						<Condition type="CAIConditionTimeInDispatchPhase">
+							<LowerBound value="1000"/>
+						</Condition>
+					</PhaseEndConditions>
+
+					<NextPhases>
+						<PhaseOption>
+							<Condition type="CAIConditionNumTimesDispatchPhaseSelected">
+								<Phase>SDNPhaseControl</Phase>
+								<LowerBound value="7"/>
+							</Condition>
+							<Name>SDNLatePhaseControl</Name>
+						</PhaseOption>
+						<PhaseOption>
+							<Condition type="NULL"/>
+							<Name>SDNPhaseControl</Name>
+						</PhaseOption>
+					</NextPhases>
+				</Phase>
+				
+				<!-- Phase: CarbineReinforcementsSkilled -->
+				<Phase>
+					<Name>CarbineReinforcementsSkilled</Name>
+					<GroupMultiplier value="0.3f"/>
+
+					<DispatchPeds>
+						<DispatchPedGroups>
+							<DispatchGroup>
+								<Preset>SaintDenisWagon</Preset>
+								<MinNumPeds value="6"/>
+								<MaxNumPeds value="6"/>
+							</DispatchGroup>
+							<DispatchGroup>
+								<Preset>SaintDenisWagon</Preset>
+								<MinNumPeds value="6"/>
+								<MaxNumPeds value="6"/>
+							</DispatchGroup>
+						</DispatchPedGroups>
+						<GreedyAcquireCondition type="CAIConditionReferenced">
+							<Name>SHOULD_GRAB_AVAILABLE_DISPATCH_PED_SAINT_DENIS</Name>
+						</GreedyAcquireCondition>
+					</DispatchPeds>
+				
+					<PhaseEndConditions>
+						<Condition type="CAIConditionTimeInDispatchPhase">
+							<LowerBound value="1000"/>
+						</Condition>
+					</PhaseEndConditions>
+
+					<NextPhases>
+						<PhaseOption>
+							<Condition type="NULL"/>
+							<Name>SDNLatePhaseControl</Name>
+						</PhaseOption>
+					</NextPhases>
+				</Phase>
+				
+				<!-- Phase: Mixed Special Reinforcements -->
+				<Phase>
+					<Name>MixedReinforcements</Name>
+					<GroupMultiplier value="0.3f"/>
+					
+					<DispatchPeds>
+						<DispatchPedGroups>
+							<DispatchGroup>
+								<Preset>MarshalSniper</Preset>
+								<MinNumPeds value="3"/>
+								<MaxNumPeds value="3"/>
+							</DispatchGroup>
+							<DispatchGroup>
+								<Preset>MarshalShotgun</Preset>
+								<MinNumPeds value="3"/>
+								<MaxNumPeds value="3"/>
+							</DispatchGroup>
+							<DispatchGroup>
+								<SelectionConditions>
+									<Condition type="CAIConditionWantedLevel">
+										<WantedLevelLowerBound value="3"/>
+									</Condition>
+								</SelectionConditions>
+								<Preset>MarshalShotgun</Preset>
+								<MinNumPeds value="3"/>
+								<MaxNumPeds value="3"/>
+							</DispatchGroup>
+						</DispatchPedGroups>
+						<RandomDispatchPedGroups>
+							<DispatchGroup>
+								<Preset>MarshalSniper</Preset>
+								<RandomWeight value="0.5f"/>
+								<MinNumPeds value="3"/>
+								<MaxNumPeds value="3"/>
+							</DispatchGroup>
+						
+							<DispatchGroup>
+								<Preset>MarshalShotgun</Preset>
+								<RandomWeight value="0.5f"/>
+								<MinNumPeds value="3"/>
+								<MaxNumPeds value="3"/>
+							</DispatchGroup>
+						</RandomDispatchPedGroups>
+						<GreedyAcquireCondition type="CAIConditionReferenced">
+							<Name>SHOULD_GRAB_AVAILABLE_DISPATCH_PED_SAINT_DENIS</Name>
+						</GreedyAcquireCondition>
+					</DispatchPeds>
+				
+					<PhaseEndConditions>
+						<Condition type="CAIConditionTimeInDispatchPhase">
+							<LowerBound value="1000"/>
+						</Condition>
+					</PhaseEndConditions>
+
+					<NextPhases>
+						<PhaseOption>
+							<Condition type="CAIConditionNumTimesDispatchPhaseSelected">
+								<Phase>SDNPhaseControl</Phase>
+								<LowerBound value="7"/>
+							</Condition>
+							<Name>SDNLatePhaseControl</Name>
+						</PhaseOption>
+						<PhaseOption>
+							<Condition type="NULL"/>
+							<Name>SDNPhaseControl</Name>
+						</PhaseOption>
+					</NextPhases>
+				</Phase>				
+				
+				<!-- Phase: Mixed Special Reinforcements Skilled -->
+				<Phase>
+					<Name>MixedReinforcementsSkilled</Name>
+					<GroupMultiplier value="0.3f"/>
+					
+					<DispatchPeds>
+						<DispatchPedGroups>
+							<DispatchGroup>
+								<Preset>PinkertonSniper</Preset>
+								<MinNumPeds value="5"/>
+								<MaxNumPeds value="5"/>
+							</DispatchGroup>
+							<DispatchGroup>
+								<Preset>PinkertonShotgun</Preset>
+								<MinNumPeds value="5"/>
+								<MaxNumPeds value="5"/>
+							</DispatchGroup>
+							<DispatchGroup>
+								<SelectionConditions>
+									<Condition type="CAIConditionWantedLevel">
+										<WantedLevelLowerBound value="5"/>
+									</Condition>
+								</SelectionConditions>
+								<Preset>PinkertonShotgun</Preset>
+								<MinNumPeds value="5"/>
+								<MaxNumPeds value="5"/>
+							</DispatchGroup>
+						</DispatchPedGroups>
+						<RandomDispatchPedGroups>
+							<DispatchGroup>
+								<Preset>PinkertonSniper</Preset>
+								<RandomWeight value="0.65f"/>
+								<MinNumPeds value="5"/>
+								<MaxNumPeds value="5"/>
+							</DispatchGroup>
+						
+							<DispatchGroup>
+								<Preset>PinkertonShotgun</Preset>
+								<RandomWeight value="0.35f"/>
+								<MinNumPeds value="5"/>
+								<MaxNumPeds value="5"/>
+							</DispatchGroup>
+						</RandomDispatchPedGroups>
+						<GreedyAcquireCondition type="CAIConditionReferenced">
+							<Name>SHOULD_GRAB_AVAILABLE_DISPATCH_PED_SAINT_DENIS</Name>
+						</GreedyAcquireCondition>
+					</DispatchPeds>
+				
+					<PhaseEndConditions>
+						<Condition type="CAIConditionTimeInDispatchPhase">
+							<LowerBound value="1000"/>
+						</Condition>
+					</PhaseEndConditions>
+
+					<!-- Reloop back to BLWPhaseControl -->
+					<NextPhases>
+						<!-- End Response -->
+					</NextPhases>	
+				</Phase>
+			</DispatchPhases>
+		</BountyDispatch>
+	</BountyResponses>
+	<CleanUpDispatchPedPresets>
+		<Item>SaintDenisRiderShotgun</Item>
+	</CleanUpDispatchPedPresets>
+</CDispatchData>

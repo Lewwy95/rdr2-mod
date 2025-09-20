@@ -1,0 +1,1627 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CDamageDataManager>
+  <DamageModifiers>
+    <Item type="CDamageModifierMulti">
+      <Name>GenericAnimals_TranquilizerModifiers</Name>
+      <Condition type="CDamageConditionFromAmmoType">
+        <AmmoTypes>
+          <Item>AMMO_22_TRANQUILIZER</Item>
+        </AmmoTypes>
+      </Condition>
+      <Modifiers>
+        <Item type="CDamageModifierClamp">
+          <Low value="0.000000" />
+          <High value="2.000000" />
+          <Condition type="CDamageConditionVictimHasTranquilizerProfile"/>
+        </Item>
+        <Item type="CDamageModifierSuppressRagdoll" />
+        <Item type="CDamageModifierPreventBleedout" />
+        <Item type="CDamageModifierPreventCriticalResponse" />
+        <Item type="CDamageModifierNoCriticalOrFatalDamage" />
+        <Item type="CDamageModifierIncrementTranquilizerCounts" />
+      </Modifiers>
+    </Item>
+    <Item type="CDamageModifierMultiReference">
+      <Name>LegendaryAnimals_Modifiers</Name>
+      <Modifiers>
+        <Item>GenericAnimals_TranquilizerModifiers</Item>
+        <Item>LegendaryAnimals_GenericModifiers</Item>
+      </Modifiers>
+    </Item>
+    <Item type="CDamageModifierMulti">
+      <Name>LegendaryAnimals_GenericModifiers</Name>
+      <Modifiers>
+        <Item type="CDamageModifierSuppressRagdoll" />
+        <Item type="CDamageModifierPreventBleedout" />
+        <Item type="CDamageModifierNoCriticalOrFatalDamage" />
+        <Item type="CDamageModifierMultiply">
+          <Value value="0.15000"/>
+          <Condition type="CDamageConditionFromAmmoType">
+            <DamageTypes>
+              <Item>AMMO_MOLOTOV</Item>
+              <Item>AMMO_ARROW_FIRE</Item>
+              <Item>AMMO_ARROW_POISON</Item>
+              <Item>AMMO_POISONBOTTLE</Item>
+              <Item>AMMO_MOONSHINEJUG_MP</Item>
+              <Item>AMMO_MOLOTOV_VOLATILE</Item>
+              <Item>AMMO_DYNAMITE_VOLATILE</Item>
+              <Item>AMMO_SHOTGUN_SLUG_EXPLOSIVE</Item>
+              <Item>AMMO_THROWING_KNIVES_POISON</Item>
+              <Item>AMMO_RIFLE_EXPRESS_EXPLOSIVE</Item>
+              <Item>AMMO_PISTOL_EXPRESS_EXPLOSIVE</Item>
+              <Item>AMMO_REPEATER_EXPRESS_EXPLOSIVE</Item>
+              <Item>AMMO_REVOLVER_EXPRESS_EXPLOSIVE</Item>
+              <Item>AMMO_SHOTGUN_BUCKSHOT_INCENDIARY</Item>
+            </DamageTypes>
+          </Condition>
+        </Item>      
+      </Modifiers>
+      <NextModifierPolicy>AlwaysApply</NextModifierPolicy>
+      <NextModifier type="CDamageModifierInstantKill">
+        <Name>LegendaryAnimals_DynamiteModifiers</Name>
+        <Condition type="CDamageConditionFromAmmoType">
+          <AmmoTypes>
+            <Item>AMMO_DYNAMITE</Item>
+            <Item>AMMO_DYNAMITE_VOLATILE</Item>
+          </AmmoTypes>
+        </Condition>
+      </NextModifier>
+    </Item>
+    <Item type ="CDamageModifierMultiReference">
+      <Name>ExtraLargeAnimals_Modifiers</Name>
+      <Modifiers>
+        <Item>ExtraLargeAnimals_GenericModifiers</Item>
+        <Item>GenericAnimals_TranquilizerModifiers</Item>
+      </Modifiers>
+      <NextModifierPolicy>OnConditionFailure</NextModifierPolicy>
+    </Item>
+    <Item type="CDamageModifierMulti">
+      <Name>ExtraLargeAnimals_GenericModifiers</Name>
+      <Condition type="CDamageConditionFromAmmoType">
+        <AmmoTypes>
+          <Item>AMMO_ARROW</Item>
+          <Item>AMMO_ARROW_SMALL_GAME</Item>
+          <Item>AMMO_ARROW_TRACKING</Item>
+          <Item>AMMO_THROWING_KNIVES</Item>
+          <Item>AMMO_THROWING_KNIVES_IMPROVED</Item>
+          <Item>AMMO_THROWING_KNIVES_CONFUSE</Item>
+          <Item>AMMO_THROWING_KNIVES_JAVIER</Item>
+          <Item>AMMO_THROWING_KNIVES_DISORIENT</Item>
+          <Item>AMMO_THROWING_KNIVES_DRAIN</Item>
+          <Item>AMMO_THROWING_KNIVES_TRAIL</Item>
+          <Item>AMMO_THROWING_KNIVES_DISORIENT</Item>
+          <Item>AMMO_THROWING_KNIVES_WOUND</Item>
+          <Item>AMMO_22</Item>
+          <Item>AMMO_PISTOL</Item>
+          <Item>AMMO_PISTOL_SPLIT_POINT</Item>
+          <Item>AMMO_PISTOL_EXPRESS</Item>
+          <Item>AMMO_PISTOL_HIGH_VELOCITY</Item>
+          <Item>AMMO_REVOLVER</Item>
+          <Item>AMMO_REVOLVER_SPLIT_POINT</Item>
+          <Item>AMMO_REVOLVER_EXPRESS</Item>
+          <Item>AMMO_REVOLVER_HIGH_VELOCITY</Item>
+        </AmmoTypes>
+      </Condition>
+      <Modifiers>
+        <Item type="CDamageModifierPreventBleedout" />
+        <Item type="CDamageModifierNoCriticalOrFatalDamage" />
+      </Modifiers>
+      <NextModifierPolicy>OnConditionFailure</NextModifierPolicy>
+      <NextModifier type="CDamageModifierMulti">
+        <Name>ExtraLargeAnimals_Modifiers_Limited</Name>
+        <TrackUsage value="true" />
+        <Condition type="CDamageConditionAnd">
+          <Conditions>
+            <Item type="CDamageConditionFromAmmoType">
+              <AmmoTypes>
+                <Item>AMMO_REPEATER</Item>
+              </AmmoTypes>
+            </Item>
+            <Item type="CDamageConditionLimitedUse">
+              <Name>ExtraLargeAnimals_Modifiers_Limited</Name>
+              <Value value="2" />
+            </Item>
+          </Conditions>
+        </Condition>
+        <Modifiers>
+          <Item type="CDamageModifierPreventBleedout" />
+          <Item type="CDamageModifierNoCriticalOrFatalDamage" />
+        </Modifiers>
+      </NextModifier>
+    </Item>
+    <Item type="CDamageModifierMultiReference">
+      <Name>LargeAnimals_Modifiers</Name>
+      <Modifiers>
+        <Item>LargeAnimals_GenericModifiers</Item>
+        <Item>GenericAnimals_TranquilizerModifiers</Item>
+      </Modifiers>
+      <NextModifierPolicy>OnConditionFailure</NextModifierPolicy>
+    </Item>
+    <Item type="CDamageModifierMulti">
+      <Name>LargeAnimals_GenericModifiers</Name>
+      <TrackUsage value="true" />
+      <Condition type="CDamageConditionOr">
+        <Conditions>
+          <Item type="CDamageConditionAnd">
+            <Conditions>
+              <Item type="CDamageConditionFromAmmoType">
+                <AmmoTypes>
+                  <Item>AMMO_ARROW_SMALL_GAME</Item>
+                  <Item>AMMO_THROWING_KNIVES</Item>
+                  <Item>AMMO_THROWING_KNIVES_IMPROVED</Item>
+                  <Item>AMMO_THROWING_KNIVES_CONFUSE</Item>
+                  <Item>AMMO_THROWING_KNIVES_JAVIER</Item>
+                  <Item>AMMO_THROWING_KNIVES_DISORIENT</Item>
+                  <Item>AMMO_THROWING_KNIVES_DRAIN</Item>
+                  <Item>AMMO_THROWING_KNIVES_TRAIL</Item>
+                  <Item>AMMO_THROWING_KNIVES_DISORIENT</Item>
+                  <Item>AMMO_THROWING_KNIVES_WOUND</Item>
+                  <Item>AMMO_22</Item>
+                  <Item>AMMO_22_TRANQUILIZER</Item>
+                  <Item>AMMO_PISTOL</Item>
+                  <Item>AMMO_REVOLVER</Item>
+                </AmmoTypes>
+              </Item>
+              <Item type="CDamageConditionLimitedUse">
+                <Name>LargeAnimals_Modifiers</Name>
+                <Value value="1" />
+              </Item>
+            </Conditions>
+          </Item>
+          <Item type="CDamageConditionFromAmmoType">
+            <AmmoTypes>
+              <Item>AMMO_BOLAS</Item>
+              <Item>AMMO_ARROW_TRACKING</Item>
+            </AmmoTypes>
+          </Item>
+        </Conditions>
+      </Condition>
+      <Modifiers>
+        <Item type="CDamageModifierPreventBleedout" />
+        <Item type="CDamageModifierNoCriticalOrFatalDamage" />
+      </Modifiers>
+      <NextModifierPolicy>AlwaysApply</NextModifierPolicy>
+      <NextModifier type="CDamageModifierNonFatalDamage">
+        <Condition type="CDamageConditionFromAmmoType">
+          <AmmoTypes>
+            <Item>AMMO_BOLAS</Item>
+          </AmmoTypes>
+        </Condition>
+        <NextModifierPolicy>OnConditionSuccess</NextModifierPolicy>
+		    <NextModifier type="CDamageModifierForceRagdoll">
+			    <Name>LargeAnimals_BolasRagdollModifier</Name>
+			    <TrackUsage value="true" />
+			    <Condition type="CDamageConditionAnd">
+				    <Conditions>
+					    <Item type="CDamageConditionLimitedUse">
+						    <Name>LargeAnimals_BolasRagdollModifier</Name>
+						    <Value value="1" />
+					    </Item>
+					    <Item type="CDamageConditionNot">
+						    <Condition type="CDamageConditionVictimHealthState">
+							    <HealthState>Incapacitated</HealthState>
+						    </Condition>
+					    </Item>
+				    </Conditions>
+			    </Condition>
+		    </NextModifier>
+      </NextModifier>
+    </Item>
+    <Item type="CDamageModifierMultiReference">
+      <Name>MediumLargeAnimals_Modifiers</Name>
+      <Modifiers>
+        <Item>MediumLargeAnimals_GenericModifiers</Item>
+        <Item>GenericAnimals_TranquilizerModifiers</Item>
+      </Modifiers>
+      <NextModifierPolicy>OnConditionFailure</NextModifierPolicy>
+    </Item>
+	  <Item type="CDamageModifierMulti">
+      <Name>MediumLargeAnimals_GenericModifiers</Name>
+      <Condition type="CDamageConditionFromAmmoType">
+        <AmmoTypes>
+          <Item>AMMO_ARROW_SMALL_GAME</Item>
+          <Item>AMMO_ARROW_TRACKING</Item>
+          <Item>AMMO_22</Item>
+          <Item>AMMO_22_TRANQUILIZER</Item>
+          <Item>AMMO_BOLAS</Item>
+        </AmmoTypes>
+      </Condition>
+      <Modifiers>
+        <Item type="CDamageModifierPreventBleedout" />
+        <Item type="CDamageModifierNoCriticalOrFatalDamage" />
+      </Modifiers>
+      <NextModifierPolicy>AlwaysApply</NextModifierPolicy>
+      <NextModifier type="CDamageModifierForceRagdoll">
+        <Name>MediumLargeAnimals_BolasModifiers</Name>
+        <TrackUsage value="true" />
+        <Condition type="CDamageConditionAnd">
+          <Conditions>
+            <Item type="CDamageConditionFromAmmoType">
+              <AmmoTypes>
+                <Item>AMMO_BOLAS</Item>
+              </AmmoTypes>
+            </Item>
+            <Item type="CDamageConditionLimitedUse">
+              <Name>MediumLargeAnimals_BolasModifiers</Name>
+              <Value value="1" />
+            </Item>
+          </Conditions>
+        </Condition>
+        <NextModifierPolicy>AlwaysApply</NextModifierPolicy>
+        <NextModifier type="CDamageModifierMultiReference">
+          <Name>MediumLargeAnimals_Other</Name>
+          <Modifiers>
+            <Item>ForceTrackingArrowPoisonBleedout</Item>
+          </Modifiers>
+        </NextModifier>
+      </NextModifier>
+    </Item>
+    <Item type="CDamageModifierMultiReference">
+      <Name>MediumAnimals_Modifiers</Name>
+      <Modifiers>
+        <Item>GenericAnimals_TranquilizerModifiers</Item>
+        <Item>MediumAnimals_TranquilizerModifiers</Item>
+        <Item>MediumAnimals_SmallGameArrowModifiers</Item>
+        <Item>MediumAnimals_InstantKill</Item>
+      </Modifiers>
+      <NextModifierPolicy>OnConditionFailure</NextModifierPolicy>
+    </Item>
+    <Item type="CDamageModifierMultiReference">
+      <Name>BeaverAnimals_Modifiers</Name>
+      <Modifiers>
+        <Item>GenericAnimals_TranquilizerModifiers</Item>
+        <Item>MediumAnimals_TranquilizerModifiers</Item>
+        <Item>MediumAnimals_SmallGameArrowModifiers</Item>
+        <Item>ForceTrackingArrowPoisonBleedout</Item>
+      </Modifiers>
+      <NextModifierPolicy>OnConditionFailure</NextModifierPolicy>
+    </Item>
+    <Item type="CDamageModifierMultiReference">
+      <Name>SmallAnimals_Modifiers</Name>
+      <Modifiers>
+        <Item>GenericAnimals_TranquilizerModifiers</Item>
+        <Item>SmallAnimals_TranquilizerModifiers</Item>
+        <Item>MediumAnimals_InstantKill</Item>
+      </Modifiers>
+      <NextModifierPolicy>OnConditionFailure</NextModifierPolicy>
+    </Item>
+    <Item type="CDamageModifierMulti">
+      <Name>MediumAnimals_TranquilizerModifiers</Name>
+      <TrackUsage value="true" />
+      <Condition type="CDamageConditionFromAmmoType">
+        <AmmoTypes>
+          <Item>AMMO_22_TRANQUILIZER</Item>
+        </AmmoTypes>
+      </Condition>
+      <Modifiers>
+        <Item type="CDamageModifierClamp">
+          <Low value="0.000000" />
+          <High value="1.000000" />
+          <Condition type="CDamageConditionVictimHasTranquilizerProfile"/>
+        </Item>
+      </Modifiers>
+    </Item>
+    <Item type="CDamageModifierMulti">
+      <Name>SmallAnimals_TranquilizerModifiers</Name>
+      <TrackUsage value="true" />
+      <Condition type="CDamageConditionFromAmmoType">
+        <AmmoTypes>
+          <Item>AMMO_22_TRANQUILIZER</Item>
+        </AmmoTypes>
+      </Condition>
+      <Modifiers>
+        <Item type="CDamageModifierClamp">
+          <Low value="0.000000" />
+          <High value="1.000000" />
+          <Condition type="CDamageConditionVictimHasTranquilizerProfile"/>
+        </Item>
+      </Modifiers>
+    </Item>
+    <Item type="CDamageModifierMulti">
+      <Name>MediumAnimals_SmallGameArrowModifiers</Name>
+      <Condition type="CDamageConditionFromAmmoType">
+        <AmmoTypes>
+          <Item>AMMO_ARROW_SMALL_GAME</Item>
+          <Item>AMMO_ARROW_TRACKING</Item>
+        </AmmoTypes>
+      </Condition>
+      <Modifiers>
+        <Item type="CDamageModifierPreventBleedout" />
+        <Item type="CDamageModifierNoCriticalOrFatalDamage" />
+      </Modifiers>
+    </Item>
+    <Item type="CDamageModifierClamp">
+      <Name>Arrow_ClampToMaxDamage</Name>
+      <Low value="0.000000" />
+      <High value="55.000000" />
+      <Condition type="CDamageConditionAnd">
+        <Conditions>
+          <Item type="CDamageConditionFromAmmoType">
+            <AmmoTypes>
+              <Item>AMMO_ARROW</Item>
+            </AmmoTypes>
+          </Item>
+        </Conditions>
+      </Condition>
+    </Item>
+	  <Item type="CDamageModifierClamp">
+      <Name>Arrow_ClampToMaxDamageFire</Name>
+      <Low value="0.000000" />
+      <High value="100.000000" />
+      <Condition type="CDamageConditionAnd">
+        <Conditions>
+          <Item type="CDamageConditionFromAmmoType">
+            <AmmoTypes>
+              <Item>AMMO_ARROW_FIRE</Item>
+            </AmmoTypes>
+          </Item>
+        </Conditions>
+      </Condition>
+    </Item>
+    <Item type="CDamageModifierMulti">
+      <Name>Tranquilizer_PVPModifiers</Name>
+      <Condition type="CDamageConditionFromAmmoType">
+        <AmmoTypes>
+          <Item>AMMO_22_TRANQUILIZER</Item>
+        </AmmoTypes>
+      </Condition>
+      <Modifiers>
+        <Item type="CDamageModifierPreventBleedout" />
+        <Item type="CDamageModifierNoCriticalOrFatalDamage" />
+        <Item type="CDamageModifierIncrementTranquilizerCounts" />
+      </Modifiers>
+      <NextModifierPolicy>OnConditionSuccess</NextModifierPolicy>
+      <NextModifier type="CDamageModifierAddAbstract">
+        <ValueType>StaminaDamage</ValueType>
+        <Value type="CFloatProvider">
+          <Value value="-15.0"/>
+        </Value>
+        <NextModifierPolicy>OnConditionSuccess</NextModifierPolicy>
+        <NextModifier type="CDamageModifierAddAbstract">
+          <ValueType>StaminaDrainRate</ValueType>
+          <Value type="CFloatProvider">
+            <Value value="2.5"/>
+          </Value>
+          <NextModifierPolicy>AlwaysApply</NextModifierPolicy>
+          <NextModifier type="CDamageModifierAddAbstract">
+            <ValueType>StaminaDrainTime</ValueType>
+            <Value type="CFloatProvider">
+              <Value value="7.0"/>
+            </Value>
+          </NextModifier>
+        </NextModifier>
+      </NextModifier>
+    </Item>
+    <Item type="CDamageModifierMultiReference">
+      <Name>Horse_Modifiers</Name>
+      <Modifiers>
+        <Item>Tranquilizer_GenericModifiers</Item>
+        <Item>Shotgun_ShortRange_Ragdoll</Item>
+      </Modifiers>
+    </Item>
+    <Item type="CDamageModifierForceRagdoll">
+      <Name>Shotgun_ShortRange_Ragdoll</Name>
+      <Condition type="CDamageConditionAnd">
+        <Conditions>
+          <Item type="CDamageConditionFromWeaponAndAmmoGroup">
+            <WeaponGroups>
+              <Item>GROUP_SHOTGUN</Item>
+            </WeaponGroups>
+          </Item>
+          <Item type="CDamageConditionDistance">
+            <RHS value="10.0"/>
+            <CompareType>LESS_OR_EQUAL</CompareType>
+          </Item>
+        </Conditions>
+      </Condition>
+    </Item>
+    <Item type="CDamageModifierMulti">
+      <Name>Tranquilizer_GenericModifiers</Name>
+      <Condition type="CDamageConditionFromAmmoType">
+        <AmmoTypes>
+          <Item>AMMO_22_TRANQUILIZER</Item>
+        </AmmoTypes>
+      </Condition>
+      <Modifiers>
+        <Item type="CDamageModifierPreventBleedout" />
+        <Item type="CDamageModifierPreventCriticalResponse" />
+        <Item type="CDamageModifierNoCriticalOrFatalDamage" />
+      </Modifiers>
+    </Item>
+    <Item type="CDamageModifierForceRagdoll">
+      <Name>Weapon_ClampToMaxDamageRagDoll</Name>
+       <Condition type="CDamageConditionOr">
+          <Conditions>
+            <Item type="CDamageConditionFromWeaponType">
+              <WeaponTypes>
+				<Item>WEAPON_MELEE_HATCHET</Item>
+				<Item>WEAPON_MELEE_HATCHET_MELEEONLY</Item>
+				<Item>WEAPON_MELEE_HATCHET_VIKING</Item>
+				<Item>WEAPON_MELEE_HATCHET_HEWING</Item>
+				<Item>WEAPON_MELEE_HATCHET_DOUBLE_BIT</Item>
+				<Item>WEAPON_MELEE_HATCHET_DOUBLE_BIT_RUSTED</Item>
+				<Item>WEAPON_MELEE_HATCHET_HUNTER</Item>
+				<Item>WEAPON_MELEE_HATCHET_HUNTER_RUSTED</Item>
+                <Item>WEAPON_RIFLE_BOLTACTION</Item>
+                <Item>WEAPON_RIFLE_SPRINGFIELD</Item>
+                <Item>WEAPON_REPEATER_CARBINE</Item>
+                <Item>WEAPON_REPEATER_WINCHESTER</Item>
+                <Item>WEAPON_REPEATER_HENRY</Item>
+                <Item>WEAPON_SNIPERRIFLE_CARCANO</Item>
+                <Item>WEAPON_SNIPERRIFLE_ROLLINGBLOCK</Item>
+              </WeaponTypes>
+            </Item>
+			<Item type="CDamageConditionFromAmmoType">
+              <AmmoTypes>
+				<Item>AMMO_REVOLVER_SPLIT_POINT</Item>
+				<Item>AMMO_PISTOL_SPLIT_POINT</Item>
+				<Item>AMMO_REPEATER_SPLIT_POINT</Item>
+				<Item>AMMO_RIFLE_SPLIT_POINT</Item>
+				<Item>AMMO_REVOLVER_EXPRESS</Item>
+				<Item>AMMO_PISTOL_EXPRESS</Item>
+				<Item>AMMO_REPEATER_EXPRESS</Item>
+				<Item>AMMO_RIFLE_EXPRESS</Item>
+				<Item>AMMO_THROWING_KNIVES</Item>
+				<Item>AMMO_THROWING_KNIVES_IMPROVED</Item>
+				<Item>AMMO_THROWING_KNIVES_POISON</Item>
+				<Item>AMMO_THROWING_KNIVES_CONFUSE</Item>
+				<Item>AMMO_THROWING_KNIVES_DISORIENT</Item>
+				<Item>AMMO_THROWING_KNIVES_DRAIN</Item>
+				<Item>AMMO_THROWING_KNIVES_TRAIL</Item>
+				<Item>AMMO_THROWING_KNIVES_WOUND</Item>
+				<Item>AMMO_TOMAHAWK</Item>
+				<Item>AMMO_TOMAHAWK_HOMING</Item>	
+				<Item>AMMO_TOMAHAWK_IMPROVED</Item>
+				<Item>AMMO_ARROW</Item>
+				<Item>AMMO_ARROW_IMPROVED</Item>	
+				<Item>AMMO_ARROW_POISON</Item>
+				<Item>AMMO_ARROW_FIRE</Item>
+				<Item>AMMO_ARROW_DYNAMITE</Item>
+			  </AmmoTypes>
+            </Item>
+          </Conditions>
+       </Condition>
+    </Item>
+    <Item type="CDamageModifierInstantKill">
+      <Name>Arrow_InstantKill</Name>
+      <Condition type="CDamageConditionAnd">
+        <Conditions>
+          <Item type="CDamageConditionFromDamageType">
+            <DamageTypes>
+              <Item>ARROW</Item>
+            </DamageTypes>
+          </Item>
+          <Item type="CDamageConditionFromAmmoType">
+            <AmmoTypes>
+              <Item>AMMO_ARROW</Item>
+              <Item>AMMO_ARROW_FIRE</Item>
+              <Item>AMMO_ARROW_DYNAMITE</Item>
+              <Item>AMMO_ARROW_IMPROVED</Item>
+            </AmmoTypes>
+          </Item>
+        </Conditions>
+      </Condition>
+      <NextModifierPolicy>OnConditionFailure</NextModifierPolicy>
+    </Item>
+    <Item type="CDamageModifierInstantKill">
+      <Name>MediumAnimals_InstantKill</Name>
+      <Condition type="CDamageConditionFromAmmoType">
+        <AmmoTypes>
+          <Item>AMMO_BOLAS</Item>
+          <Item>AMMO_ARROW_TRACKING</Item>
+        </AmmoTypes>
+      </Condition>
+    </Item>
+    <Item type="CDamageModifierMultiply">
+      <Name>Arrow_HitMultiply</Name>
+      <Value value="1.250000"/>
+      <Condition type="CDamageConditionAnd">
+        <Conditions>
+          <Item type="CDamageConditionFromDamageType">
+            <DamageTypes>
+              <Item>ARROW</Item>
+            </DamageTypes>
+          </Item>
+          <Item type="CDamageConditionFromAmmoType">
+            <AmmoTypes>
+              <Item>AMMO_ARROW</Item>
+              <Item>AMMO_ARROW_IMPROVED</Item>
+            </AmmoTypes>
+          </Item>
+        </Conditions>
+      </Condition>
+      <NextModifierPolicy>OnConditionFailure</NextModifierPolicy>
+    </Item>
+    <Item type="CDamageModifierNoCriticalOrFatalDamage">
+      <Name>BluntArrowBolasPoisonBottleTranq_NoCriticalAndFatalShots</Name>
+      <Condition type="CDamageConditionOr">
+        <Conditions>
+          <Item type="CDamageConditionAnd">
+            <Conditions>
+              <Item type="CDamageConditionFromDamageType">
+                <DamageTypes>
+                  <Item>ARROW</Item>
+                </DamageTypes>
+              </Item>
+              <Item type="CDamageConditionFromAmmoType">
+                <AmmoTypes>
+                  <Item>AMMO_ARROW_SMALL_GAME</Item>
+                  <Item>AMMO_ARROW_TRACKING</Item>
+                </AmmoTypes>
+              </Item>
+            </Conditions>
+          </Item>
+          <Item type="CDamageConditionFromAmmoType">
+            <AmmoTypes>
+              <Item>AMMO_BOLAS</Item>
+              <Item>AMMO_POISONBOTTLE</Item>
+              <Item>AMMO_22_TRANQUILIZER</Item>
+            </AmmoTypes>
+          </Item>
+        </Conditions>
+      </Condition>
+      <NextModifierPolicy>OnConditionFailure</NextModifierPolicy>
+    </Item>
+    <Item type="CDamageModifierForceBleedout">
+      <Name>ForcePoisonBleedout</Name>
+      <VerifyAllowed value="true"/>
+      <BleedoutType>Poison</BleedoutType>
+      <Condition type="CDamageConditionAnd">
+        <Conditions>
+          <Item type="CDamageConditionFromAmmoType">
+            <AmmoTypes>
+              <Item>AMMO_ARROW_POISON</Item>
+              <Item>AMMO_THROWING_KNIVES_POISON</Item>
+            </AmmoTypes>
+          </Item>
+          <Item type="CDamageConditionVictimExists"/>
+          <Item type="CDamageConditionNot">
+            <Condition type="CDamageConditionVictimIsPlayer"/>
+          </Item>
+          <Item type="CDamageConditionShouldAllowBleedout"/>
+        </Conditions>
+      </Condition>
+      <NextModifierPolicy>OnConditionFailure</NextModifierPolicy>
+    </Item>
+    <Item type="CDamageModifierForceBleedout">
+      <Name>ForceTrackingArrowPoisonBleedout</Name>
+      <VerifyAllowed value="true"/>
+      <BleedoutType>Poison_TrackingArrow</BleedoutType>
+      <Condition type="CDamageConditionAnd">
+        <Conditions>
+          <Item type="CDamageConditionFromAmmoType">
+            <AmmoTypes>
+              <Item>AMMO_ARROW_TRACKING</Item>
+            </AmmoTypes>
+          </Item>
+          <Item type="CDamageConditionVictimExists"/>
+          <Item type="CDamageConditionVictimIsAnimal"/>
+          <Item type="CDamageConditionShouldAllowBleedout"/>
+        </Conditions>
+      </Condition>
+      <NextModifierPolicy>OnConditionFailure</NextModifierPolicy>
+    </Item>
+    <Item type="CDamageModifierApplyPoison">
+      <Name>ForcePoison</Name>
+      <Condition type="CDamageConditionFromAmmoType">
+        <AmmoTypes>
+          <Item>AMMO_ARROW_POISON</Item>
+          <Item>AMMO_THROWING_KNIVES_POISON</Item>
+        </AmmoTypes>
+      </Condition>
+      <NextModifierPolicy>OnConditionFailure</NextModifierPolicy>
+    </Item>
+    <Item type="CDamageModifierMultiReference">
+      <Name>PoisonWeapon</Name>
+      <Modifiers>
+        <Item>ForcePoisonBleedout</Item>
+        <Item>ForcePoison</Item>
+      </Modifiers>
+      <NextModifierPolicy>OnConditionFailure</NextModifierPolicy>
+    </Item>
+    <Item type="CDamageModifierForceInjury">
+      <Name>TrackingArrow_ForceHumanInjury</Name>
+      <Condition type="CDamageConditionFromAmmoType">
+        <AmmoTypes>
+          <Item>AMMO_ARROW_TRACKING</Item>
+        </AmmoTypes>
+      </Condition>
+      <NextModifierPolicy>OnConditionFailure</NextModifierPolicy>
+    </Item>
+    <Item type="CDamageModifierMultiply">
+      <Name>Melee_ReduceDamageFromSecondaryAttackers</Name>
+      <Value value="0.100000"/>
+      <Condition type="CDamageConditionNot">
+        <Condition type="CDamageConditionInflictorIsMyMeleeTarget" />
+      </Condition>
+      <NextModifierPolicy>OnConditionFailure</NextModifierPolicy>
+    </Item>
+    <Item type="CDamageModifierMultiReference">
+      <Name>Human_Generic</Name>
+      <Modifiers>
+        <Item>TrackingArrow_ForceHumanInjury</Item>
+      </Modifiers>
+      <NextModifierPolicy>OnConditionFailure</NextModifierPolicy>
+    </Item>
+    <Item type="CDamageModifierMultiReference">
+      <Name>Bruiser_Generic</Name>
+      <Modifiers>
+        <Item>TrackingArrow_ForceHumanInjury</Item>
+        <Item>Melee_ReduceDamageFromSecondaryAttackers</Item>
+      </Modifiers>
+      <NextModifierPolicy>OnConditionFailure</NextModifierPolicy>
+    </Item>
+    <Item type="CDamageModifierFirstSuccessfulReference">
+      <Name>std_ped_normal_region</Name>
+      <Modifiers>
+        <Item>Arrow_ClampToMaxDamage</Item>
+      </Modifiers>
+      <NextModifierPolicy>OnConditionFailure</NextModifierPolicy>
+    </Item>
+	
+	<!-- -----------------------------------------|
+	|--- THE "JUST FUCKING BLEED ALREADY" PARTS --|
+	|------------------------------------------ -->
+	
+	<Item type="CDamageModifierForceBleedout">
+      <Name>JustFuckingBleedAlready</Name>
+      <VerifyAllowed value="false"/>
+	  <Condition type="CDamageConditionNot">
+        <Condition type="CDamageConditionFromAmmoType">
+          <AmmoTypes>
+            <Item>AMMO_22_TRANQUILIZER</Item>
+            <Item>AMMO_ARROW_SMALL_GAME</Item>
+            <Item>AMMO_ARROW_TRACKING</Item>
+            <Item>AMMO_BOLAS</Item>
+            <Item>AMMO_POISONBOTTLE</Item>
+          </AmmoTypes>
+        </Condition>
+      </Condition>
+      <NextModifierPolicy>OnConditionFailure</NextModifierPolicy>
+    </Item>
+	
+    <Item type="CDamageModifierFirstSuccessfulReference">
+      <Name>std_human_ped_spine</Name>
+      <Modifiers>
+        <Item>BluntArrowBolasPoisonBottleTranq_NoCriticalAndFatalShots</Item>
+        <Item>Arrow_HitMultiply</Item>
+        <Item>Weapon_ClampToMaxDamageRagDoll</Item>
+        <Item>JustFuckingBleedAlready</Item>
+      </Modifiers>
+      <NextModifierPolicy>OnConditionFailure</NextModifierPolicy>
+    </Item>
+    <Item type="CDamageModifierFirstSuccessfulReference">
+      <Name>std_human_ped_lungs</Name>
+      <Modifiers>
+        <Item>BluntArrowBolasPoisonBottleTranq_NoCriticalAndFatalShots</Item>
+        <Item>Arrow_HitMultiply</Item>
+        <Item>JustFuckingBleedAlready</Item>
+      </Modifiers>
+      <NextModifierPolicy>OnConditionFailure</NextModifierPolicy>
+    </Item>
+    <Item type="CDamageModifierFirstSuccessfulReference">
+      <Name>std_human_ped_critical_and_fatal</Name>
+      <Modifiers>
+        <Item>BluntArrowBolasPoisonBottleTranq_NoCriticalAndFatalShots</Item>
+        <Item>JustFuckingBleedAlready</Item>
+      </Modifiers>
+      <NextModifierPolicy>OnConditionFailure</NextModifierPolicy>
+    </Item>
+	
+	<!-- ------------------------------------------|
+	|--- /THE "JUST FUCKING BLEED ALREADY" PARTS --|
+	|------------------------------------------- -->
+	
+	<Item type="CDamageModifierFirstSuccessfulReference">
+      <Name>std_human_ped_critical_and_fatal_with_headshot_modifier</Name>
+      <Modifiers>
+        <Item>BluntArrowBolasPoisonBottleTranq_NoCriticalAndFatalShots</Item>
+		<Item>MP_Player_HeadshotPVP</Item>
+      </Modifiers>
+      <NextModifierPolicy>OnConditionFailure</NextModifierPolicy>
+    </Item>
+    <Item type="CDamageModifierFirstSuccessfulReference">
+      <Name>std_animal_ped_critical_and_fatal</Name>
+      <Modifiers>
+        <Item>BluntArrowBolasPoisonBottleTranq_NoCriticalAndFatalShots</Item>
+      </Modifiers>
+      <NextModifierPolicy>OnConditionFailure</NextModifierPolicy>
+    </Item>
+    <Item type="CDamageModifierFirstSuccessfulReference">
+      <Name>std_animal_ped_critical_and_fatal_with_ragdoll</Name>
+      <Modifiers>
+        <Item>BluntArrowBolasPoisonBottleTranq_NoCriticalAndFatalShots</Item>
+        <Item>Weapon_ClampToMaxDamageRagDoll</Item>
+      </Modifiers>
+      <NextModifierPolicy>OnConditionFailure</NextModifierPolicy>
+    </Item>
+    <Item type="CDamageModifierFirstSuccessfulReference">
+      <Name>std_animal_ped_critical_and_fatal_with_arrowclamptomax</Name>
+      <Modifiers>
+        <Item>BluntArrowBolasPoisonBottleTranq_NoCriticalAndFatalShots</Item>
+        <Item>Arrow_ClampToMaxDamage</Item>
+      </Modifiers>
+      <NextModifierPolicy>OnConditionFailure</NextModifierPolicy>
+    </Item>
+
+    <Item type="CDamageModifierMultiReference">
+      <Name>MP_Player_Modifiers</Name>
+      <Modifiers>
+        <Item>MP_Player_CloseRangePVP</Item>
+        <Item>Arrow_ClampToMaxDamageFire</Item>
+        <Item>Tranquilizer_PVPModifiers</Item>
+      </Modifiers>
+    </Item>
+    <Item type="CDamageModifierFirstSuccessfulReference">
+      <Name>MP_Player_CloseRangePVP</Name>
+      <Condition type="CDamageConditionCloudTunableCheck" />
+      <Modifiers>
+        <Item>MP_Player_CloseRangePVP_CarbineRepeater</Item>
+        <Item>MP_Player_CloseRangePVP_LancasterRepeater</Item>
+        <Item>MP_Player_CloseRangePVP_LitchfieldRepeater</Item>
+        <Item>MP_Player_CloseRangePVP_EvansRepeater</Item>
+        <Item>MP_Player_CloseRangePVP_VarmintRifle</Item>
+      </Modifiers>
+    </Item>
+    <Item type="CDamageModifierMultiply">
+      <Name>MP_Player_CloseRangePVP_CarbineRepeater</Name>
+      <Value value="1.250000"/>
+      <Condition type="CDamageConditionAnd">
+        <Conditions>
+          <Item type="CDamageConditionFromWeaponType">
+            <WeaponTypes>
+		  	  <Item>WEAPON_REPEATER_CARBINE</Item>
+		    </WeaponTypes>				
+		  </Item>
+		  <Item type="CDamageConditionNot">
+			<Condition type="CDamageConditionFromAmmoType">
+			  <AmmoTypes>
+				<Item>AMMO_REPEATER_EXPRESS_EXPLOSIVE</Item>
+			  </AmmoTypes>
+			</Condition>
+		  </Item>
+          <Item type="CDamageConditionDistance">
+            <RHS value="15.0"/>
+            <CompareType>LESS_OR_EQUAL</CompareType>
+          </Item>
+        </Conditions>
+      </Condition>
+    </Item>	
+    <Item type="CDamageModifierMultiply">
+      <Name>MP_Player_CloseRangePVP_LancasterRepeater</Name>
+      <Value value="1.250000"/>
+      <Condition type="CDamageConditionAnd">
+        <Conditions>
+          <Item type="CDamageConditionFromWeaponType">
+            <WeaponTypes>
+		  	  <Item>WEAPON_REPEATER_WINCHESTER</Item>
+		    </WeaponTypes>				
+		  </Item>
+		  <Item type="CDamageConditionNot">
+			<Condition type="CDamageConditionFromAmmoType">
+			  <AmmoTypes>
+				<Item>AMMO_REPEATER_EXPRESS_EXPLOSIVE</Item>
+			  </AmmoTypes>
+			</Condition>
+		  </Item>
+          <Item type="CDamageConditionDistance">
+            <RHS value="15.0"/>
+            <CompareType>LESS_OR_EQUAL</CompareType>
+          </Item>
+        </Conditions>
+      </Condition>
+    </Item>
+    <Item type="CDamageModifierMultiply">
+      <Name>MP_Player_CloseRangePVP_LitchfieldRepeater</Name>
+      <Value value="1.100000"/>
+      <Condition type="CDamageConditionAnd">
+        <Conditions>
+          <Item type="CDamageConditionFromWeaponType">
+            <WeaponTypes>
+		  	  <Item>WEAPON_REPEATER_HENRY</Item>
+		    </WeaponTypes>				
+		  </Item>
+		  <Item type="CDamageConditionNot">
+			<Condition type="CDamageConditionFromAmmoType">
+			  <AmmoTypes>
+				<Item>AMMO_REPEATER_EXPRESS_EXPLOSIVE</Item>
+			  </AmmoTypes>
+			</Condition>
+		  </Item>
+          <Item type="CDamageConditionDistance">
+            <RHS value="15.0"/>
+            <CompareType>LESS_OR_EQUAL</CompareType>
+          </Item>
+        </Conditions>
+      </Condition>
+    </Item>
+    <Item type="CDamageModifierMultiply">
+      <Name>MP_Player_CloseRangePVP_EvansRepeater</Name>
+      <Value value="1.200000"/>
+      <Condition type="CDamageConditionAnd">
+        <Conditions>
+          <Item type="CDamageConditionFromWeaponType">
+            <WeaponTypes>
+		  	  <Item>WEAPON_REPEATER_EVANS</Item>
+		    </WeaponTypes>				
+		  </Item>
+		  <Item type="CDamageConditionNot">
+			<Condition type="CDamageConditionFromAmmoType">
+			  <AmmoTypes>
+				<Item>AMMO_REPEATER_EXPRESS_EXPLOSIVE</Item>
+			  </AmmoTypes>
+			</Condition>
+		  </Item>
+          <Item type="CDamageConditionDistance">
+            <RHS value="15.0"/>
+            <CompareType>LESS_OR_EQUAL</CompareType>
+          </Item>
+        </Conditions>
+      </Condition>
+    </Item>
+    <Item type="CDamageModifierMultiply">
+      <Name>MP_Player_CloseRangePVP_VarmintRifle</Name>
+      <Value value="1.100000"/>
+      <Condition type="CDamageConditionAnd">
+        <Conditions>
+          <Item type="CDamageConditionFromWeaponType">
+            <WeaponTypes>
+		  	  <Item>WEAPON_RIFLE_VARMINT</Item>
+		    </WeaponTypes>				
+		  </Item>
+          <Item type="CDamageConditionDistance">
+            <RHS value="10.0"/>
+            <CompareType>LESS_OR_EQUAL</CompareType>
+          </Item>
+        </Conditions>
+      </Condition>
+    </Item>
+	
+    <Item type="CDamageModifierMultiReference">
+      <Name>MP_Player_Headshot_Modifiers</Name>
+      <Modifiers>
+        <Item>MP_Player_HeadshotPVP</Item>
+      </Modifiers>
+    </Item>
+    <Item type="CDamageModifierFirstSuccessfulReference">
+      <Name>MP_Player_HeadshotPVP</Name>
+	  <Condition type="CDamageConditionAnd">
+        <Conditions>
+          <Item type="CDamageConditionNot">
+			<Condition type="CDamageConditionFromZoomScope" />
+		  </Item>
+		  <Item type="CDamageConditionNot">
+			<Condition type="CDamageConditionFromFreeAimPlayer" />
+		  </Item>
+        </Conditions>
+      </Condition>
+      <Modifiers>
+        <Item>MP_Player_HeadshotPVP_CattlemanRevolver</Item>
+        <Item>MP_Player_HeadshotPVP_DoubleActionRevolver</Item>
+        <Item>MP_Player_HeadshotPVP_SchofieldRevolver</Item>
+        <Item>MP_Player_HeadshotPVP_LematRevolver</Item>
+        <Item>MP_Player_HeadshotPVP_NavyRevolver</Item>
+        <Item>MP_Player_HeadshotPVP_VolcanicPistol</Item>
+        <Item>MP_Player_HeadshotPVP_MauserPistol</Item>
+        <Item>MP_Player_HeadshotPVP_SemiAutoPistol</Item>
+        <Item>MP_Player_HeadshotPVP_CarbineRepeater</Item>
+        <Item>MP_Player_HeadshotPVP_LancasterRepeater</Item>
+        <Item>MP_Player_HeadshotPVP_LitchfieldRepeater</Item>
+        <Item>MP_Player_HeadshotPVP_EvansRepeater</Item>
+        <Item>MP_Player_HeadshotPVP_SpringfieldRifle</Item>
+        <Item>MP_Player_HeadshotPVP_BoltActionRifle</Item>
+        <Item>MP_Player_HeadshotPVP_VarmintRifle</Item>
+        <Item>MP_Player_HeadshotPVP_CattlemanRevolver_HV</Item>
+        <Item>MP_Player_HeadshotPVP_DoubleActionRevolver_HV</Item>
+        <Item>MP_Player_HeadshotPVP_SchofieldRevolver_HV</Item>
+        <Item>MP_Player_HeadshotPVP_LematRevolver_HV</Item>
+        <Item>MP_Player_HeadshotPVP_NavyRevolver_HV</Item>
+        <Item>MP_Player_HeadshotPVP_VolcanicPistol_HV</Item>
+        <Item>MP_Player_HeadshotPVP_MauserPistol_HV</Item>
+        <Item>MP_Player_HeadshotPVP_SemiAutoPistol_HV</Item>
+        <Item>MP_Player_HeadshotPVP_CarbineRepeater_HV</Item>
+        <Item>MP_Player_HeadshotPVP_LancasterRepeater_HV</Item>
+        <Item>MP_Player_HeadshotPVP_LitchfieldRepeater_HV</Item>
+        <Item>MP_Player_HeadshotPVP_EvansRepeater_HV</Item>
+        <Item>MP_Player_HeadshotPVP_SpringfieldRifle_HV</Item>
+        <Item>MP_Player_HeadshotPVP_BoltActionRifle_HV</Item>
+      </Modifiers>
+    </Item>
+	
+	<!-- SHORTARMS -->	
+	<Item type="CDamageModifierModifyCriticalRegionData">
+      <Name>MP_Player_HeadshotPVP_CattlemanRevolver</Name>
+      <Condition type="CDamageConditionAnd">
+		<Conditions>
+		  <Item type="CDamageConditionFromWeaponType">
+			<WeaponTypes>
+			  <Item>WEAPON_REVOLVER_CATTLEMAN</Item>
+			</WeaponTypes>
+		  </Item>
+		  <Item type="CDamageConditionNot">
+			<Condition type="CDamageConditionFromAmmoType">
+			  <AmmoTypes>
+				<Item>AMMO_REVOLVER_HIGH_VELOCITY</Item>
+			  </AmmoTypes>
+			</Condition>
+		  </Item>
+		</Conditions>
+      </Condition>
+	  <CriticalChance value="-1.00000"/>
+	  <CriticalDamageModifierNear value="6.65000"/>
+	  <CriticalDamageModifierFar value="3.30000"/>
+	  <CriticalDamageDistanceNear value="35.00000"/>
+	  <CriticalDamageDistanceFar value="45.00000"/>
+	  <CriticalDamageApplyModifierBeforeNear value="false"/>
+    </Item>
+	<Item type="CDamageModifierModifyCriticalRegionData">
+      <Name>MP_Player_HeadshotPVP_CattlemanRevolver_HV</Name>
+      <Condition type="CDamageConditionAnd">
+		<Conditions>
+		  <Item type="CDamageConditionFromWeaponType">
+			<WeaponTypes>
+			  <Item>WEAPON_REVOLVER_CATTLEMAN</Item>
+			</WeaponTypes>
+		  </Item>
+		  <Item type="CDamageConditionFromAmmoType">
+			<AmmoTypes>
+			  <Item>AMMO_REVOLVER_HIGH_VELOCITY</Item>
+			</AmmoTypes>
+		  </Item>
+		</Conditions>
+      </Condition>
+	  <CriticalChance value="-1.00000"/>
+	  <CriticalDamageModifierNear value="5.17500"/>
+	  <CriticalDamageModifierFar value="2.32500"/>
+	  <CriticalDamageDistanceNear value="35.00000"/>
+	  <CriticalDamageDistanceFar value="45.00000"/>
+	  <CriticalDamageApplyModifierBeforeNear value="false"/>
+    </Item>
+	<Item type="CDamageModifierModifyCriticalRegionData">
+      <Name>MP_Player_HeadshotPVP_DoubleActionRevolver</Name>
+      <Condition type="CDamageConditionAnd">
+		<Conditions>
+		  <Item type="CDamageConditionFromWeaponType">
+			<WeaponTypes>
+			  <Item>WEAPON_REVOLVER_DOUBLEACTION</Item>
+			  <Item>WEAPON_REVOLVER_DOUBLEACTION_GAMBLER</Item>
+			</WeaponTypes>
+		  </Item>
+		  <Item type="CDamageConditionNot">
+			<Condition type="CDamageConditionFromAmmoType">
+			  <AmmoTypes>
+				<Item>AMMO_REVOLVER_HIGH_VELOCITY</Item>
+			  </AmmoTypes>
+			</Condition>
+		  </Item>
+		</Conditions>
+      </Condition>
+	  <CriticalChance value="-1.00000"/>
+	  <CriticalDamageModifierNear value="6.42500"/>
+	  <CriticalDamageModifierFar value="3.20000"/>
+	  <CriticalDamageDistanceNear value="35.00000"/>
+	  <CriticalDamageDistanceFar value="45.00000"/>
+	  <CriticalDamageApplyModifierBeforeNear value="false"/>
+    </Item>
+	<Item type="CDamageModifierModifyCriticalRegionData">
+      <Name>MP_Player_HeadshotPVP_DoubleActionRevolver_HV</Name>
+      <Condition type="CDamageConditionAnd">
+		<Conditions>
+		  <Item type="CDamageConditionFromWeaponType">
+			<WeaponTypes>
+			  <Item>WEAPON_REVOLVER_DOUBLEACTION</Item>
+			  <Item>WEAPON_REVOLVER_DOUBLEACTION_GAMBLER</Item>
+			</WeaponTypes>
+		  </Item>
+		  <Item type="CDamageConditionFromAmmoType">
+			<AmmoTypes>
+			  <Item>AMMO_REVOLVER_HIGH_VELOCITY</Item>
+			</AmmoTypes>
+		  </Item>
+		</Conditions>
+      </Condition>
+	  <CriticalChance value="-1.00000"/>
+	  <CriticalDamageModifierNear value="6.12500"/>
+	  <CriticalDamageModifierFar value="2.75000"/>
+	  <CriticalDamageDistanceNear value="35.00000"/>
+	  <CriticalDamageDistanceFar value="45.00000"/>
+	  <CriticalDamageApplyModifierBeforeNear value="false"/>
+    </Item>
+	<Item type="CDamageModifierModifyCriticalRegionData">
+      <Name>MP_Player_HeadshotPVP_SchofieldRevolver</Name>
+      <Condition type="CDamageConditionAnd">
+		<Conditions>
+		  <Item type="CDamageConditionFromWeaponType">
+			<WeaponTypes>
+			  <Item>WEAPON_REVOLVER_SCHOFIELD</Item>
+			</WeaponTypes>
+		  </Item>
+		  <Item type="CDamageConditionNot">
+			<Condition type="CDamageConditionFromAmmoType">
+			  <AmmoTypes>
+				<Item>AMMO_REVOLVER_HIGH_VELOCITY</Item>
+			  </AmmoTypes>
+			</Condition>
+		  </Item>
+		</Conditions>
+      </Condition>
+	  <CriticalChance value="-1.00000"/>
+	  <CriticalDamageModifierNear value="5.00000"/>
+	  <CriticalDamageModifierFar value="2.50000"/>
+	  <CriticalDamageDistanceNear value="35.00000"/>
+	  <CriticalDamageDistanceFar value="45.00000"/>
+	  <CriticalDamageApplyModifierBeforeNear value="false"/>
+    </Item>
+	<Item type="CDamageModifierModifyCriticalRegionData">
+      <Name>MP_Player_HeadshotPVP_SchofieldRevolver_HV</Name>
+      <Condition type="CDamageConditionAnd">
+		<Conditions>
+		  <Item type="CDamageConditionFromWeaponType">
+			<WeaponTypes>
+			  <Item>WEAPON_REVOLVER_SCHOFIELD</Item>
+			</WeaponTypes>
+		  </Item>
+		  <Item type="CDamageConditionFromAmmoType">
+			<AmmoTypes>
+			  <Item>AMMO_REVOLVER_HIGH_VELOCITY</Item>
+			</AmmoTypes>
+		  </Item>
+		</Conditions>
+      </Condition>
+	  <CriticalChance value="-1.00000"/>
+	  <CriticalDamageModifierNear value="4.55000"/>
+	  <CriticalDamageModifierFar value="2.05000"/>
+	  <CriticalDamageDistanceNear value="35.00000"/>
+	  <CriticalDamageDistanceFar value="45.00000"/>
+	  <CriticalDamageApplyModifierBeforeNear value="false"/>
+    </Item>
+	<Item type="CDamageModifierModifyCriticalRegionData">
+      <Name>MP_Player_HeadshotPVP_LematRevolver</Name>
+      <Condition type="CDamageConditionAnd">
+		<Conditions>
+		  <Item type="CDamageConditionFromWeaponType">
+			<WeaponTypes>
+			  <Item>WEAPON_REVOLVER_LEMAT</Item>
+			</WeaponTypes>
+		  </Item>
+		  <Item type="CDamageConditionNot">
+			<Condition type="CDamageConditionFromAmmoType">
+			  <AmmoTypes>
+				<Item>AMMO_REVOLVER_HIGH_VELOCITY</Item>
+				<Item>AMMO_SHOTGUN</Item>
+			  </AmmoTypes>
+			</Condition>
+		  </Item>
+		</Conditions>
+      </Condition>
+	  <CriticalChance value="-1.00000"/>
+	  <CriticalDamageModifierNear value="4.62500"/>
+	  <CriticalDamageModifierFar value="2.30000"/>
+	  <CriticalDamageDistanceNear value="35.00000"/>
+	  <CriticalDamageDistanceFar value="45.00000"/>
+	  <CriticalDamageApplyModifierBeforeNear value="false"/>
+    </Item>
+	<Item type="CDamageModifierModifyCriticalRegionData">
+      <Name>MP_Player_HeadshotPVP_LematRevolver_HV</Name>
+      <Condition type="CDamageConditionAnd">
+		<Conditions>
+		  <Item type="CDamageConditionFromWeaponType">
+			<WeaponTypes>
+			  <Item>WEAPON_REVOLVER_LEMAT</Item>
+			</WeaponTypes>
+		  </Item>
+		  <Item type="CDamageConditionFromAmmoType">
+			<AmmoTypes>
+			  <Item>AMMO_REVOLVER_HIGH_VELOCITY</Item>
+			</AmmoTypes>
+		  </Item>
+		</Conditions>
+      </Condition>
+	  <CriticalChance value="-1.00000"/>
+	  <CriticalDamageModifierNear value="4.27500"/>
+	  <CriticalDamageModifierFar value="1.92500"/>
+	  <CriticalDamageDistanceNear value="35.00000"/>
+	  <CriticalDamageDistanceFar value="45.00000"/>
+	  <CriticalDamageApplyModifierBeforeNear value="false"/>
+    </Item>
+	<Item type="CDamageModifierModifyCriticalRegionData">
+      <Name>MP_Player_HeadshotPVP_NavyRevolver</Name>
+      <Condition type="CDamageConditionAnd">
+		<Conditions>
+		  <Item type="CDamageConditionFromWeaponType">
+			<WeaponTypes>
+			  <Item>WEAPON_REVOLVER_NAVY</Item>
+			  <Item>WEAPON_REVOLVER_NAVY_CROSSOVER</Item>
+			</WeaponTypes>
+		  </Item>
+		  <Item type="CDamageConditionNot">
+			<Condition type="CDamageConditionFromAmmoType">
+			  <AmmoTypes>
+				<Item>AMMO_REVOLVER_HIGH_VELOCITY</Item>
+			  </AmmoTypes>
+			</Condition>
+		  </Item>
+		</Conditions>
+      </Condition>
+	  <CriticalChance value="-1.00000"/>
+	  <CriticalDamageModifierNear value="4.62500"/>
+	  <CriticalDamageModifierFar value="2.30000"/>
+	  <CriticalDamageDistanceNear value="35.00000"/>
+	  <CriticalDamageDistanceFar value="45.00000"/>
+	  <CriticalDamageApplyModifierBeforeNear value="false"/>
+    </Item>
+	<Item type="CDamageModifierModifyCriticalRegionData">
+      <Name>MP_Player_HeadshotPVP_NavyRevolver_HV</Name>
+      <Condition type="CDamageConditionAnd">
+		<Conditions>
+		  <Item type="CDamageConditionFromWeaponType">
+			<WeaponTypes>
+			  <Item>WEAPON_REVOLVER_NAVY</Item>
+			  <Item>WEAPON_REVOLVER_NAVY_CROSSOVER</Item>
+			</WeaponTypes>
+		  </Item>
+		  <Item type="CDamageConditionFromAmmoType">
+			<AmmoTypes>
+			  <Item>AMMO_REVOLVER_HIGH_VELOCITY</Item>
+			</AmmoTypes>
+		  </Item>
+		</Conditions>
+      </Condition>
+	  <CriticalChance value="-1.00000"/>
+	  <CriticalDamageModifierNear value="4.27500"/>
+	  <CriticalDamageModifierFar value="1.92500"/>
+	  <CriticalDamageDistanceNear value="35.00000"/>
+	  <CriticalDamageDistanceFar value="45.00000"/>
+	  <CriticalDamageApplyModifierBeforeNear value="false"/>
+    </Item>
+	<Item type="CDamageModifierModifyCriticalRegionData">
+      <Name>MP_Player_HeadshotPVP_VolcanicPistol</Name>
+      <Condition type="CDamageConditionAnd">
+		<Conditions>
+		  <Item type="CDamageConditionFromWeaponType">
+			<WeaponTypes>
+			  <Item>WEAPON_PISTOL_VOLCANIC</Item>
+			</WeaponTypes>
+		  </Item>
+		  <Item type="CDamageConditionNot">
+			<Condition type="CDamageConditionFromAmmoType">
+			  <AmmoTypes>
+				<Item>AMMO_PISTOL_HIGH_VELOCITY</Item>
+			  </AmmoTypes>
+			</Condition>
+		  </Item>
+		</Conditions>
+      </Condition>
+	  <CriticalChance value="-1.00000"/>
+	  <CriticalDamageModifierNear value="6.85000"/>
+	  <CriticalDamageModifierFar value="3.52500"/>
+	  <CriticalDamageDistanceNear value="35.00000"/>
+	  <CriticalDamageDistanceFar value="50.00000"/>
+	  <CriticalDamageApplyModifierBeforeNear value="false"/>
+    </Item>
+	<Item type="CDamageModifierModifyCriticalRegionData">
+      <Name>MP_Player_HeadshotPVP_VolcanicPistol_HV</Name>
+      <Condition type="CDamageConditionAnd">
+		<Conditions>
+		  <Item type="CDamageConditionFromWeaponType">
+			<WeaponTypes>
+			  <Item>WEAPON_PISTOL_VOLCANIC</Item>
+			</WeaponTypes>
+		  </Item>
+		  <Item type="CDamageConditionFromAmmoType">
+			<AmmoTypes>
+			  <Item>AMMO_PISTOL_HIGH_VELOCITY</Item>
+			</AmmoTypes>
+		  </Item>
+		</Conditions>
+      </Condition>
+	  <CriticalChance value="-1.00000"/>
+	  <CriticalDamageModifierNear value="3.15000"/>
+	  <CriticalDamageModifierFar value="1.47500"/>
+	  <CriticalDamageDistanceNear value="35.00000"/>
+	  <CriticalDamageDistanceFar value="50.00000"/>
+	  <CriticalDamageApplyModifierBeforeNear value="false"/>
+    </Item>
+	<Item type="CDamageModifierModifyCriticalRegionData">
+      <Name>MP_Player_HeadshotPVP_MauserPistol</Name>
+      <Condition type="CDamageConditionAnd">
+		<Conditions>
+		  <Item type="CDamageConditionFromWeaponType">
+			<WeaponTypes>
+			  <Item>WEAPON_PISTOL_MAUSER</Item>
+			</WeaponTypes>
+		  </Item>
+		  <Item type="CDamageConditionNot">
+			<Condition type="CDamageConditionFromAmmoType">
+			  <AmmoTypes>
+				<Item>AMMO_PISTOL_HIGH_VELOCITY</Item>
+			  </AmmoTypes>
+			</Condition>
+		  </Item>
+		</Conditions>
+      </Condition>
+	  <CriticalChance value="-1.00000"/>
+	  <CriticalDamageModifierNear value="5.20000"/>
+	  <CriticalDamageModifierFar value="2.60000"/>
+	  <CriticalDamageDistanceNear value="35.00000"/>
+	  <CriticalDamageDistanceFar value="45.00000"/>
+	  <CriticalDamageApplyModifierBeforeNear value="false"/>
+    </Item>
+	<Item type="CDamageModifierModifyCriticalRegionData">
+      <Name>MP_Player_HeadshotPVP_MauserPistol_HV</Name>
+      <Condition type="CDamageConditionAnd">
+		<Conditions>
+		  <Item type="CDamageConditionFromWeaponType">
+			<WeaponTypes>
+			  <Item>WEAPON_PISTOL_MAUSER</Item>
+			</WeaponTypes>
+		  </Item>
+		  <Item type="CDamageConditionFromAmmoType">
+			<AmmoTypes>
+			  <Item>AMMO_PISTOL_HIGH_VELOCITY</Item>
+			</AmmoTypes>
+		  </Item>
+		</Conditions>
+      </Condition>
+	  <CriticalChance value="-1.00000"/>
+	  <CriticalDamageModifierNear value="4.95000"/>
+	  <CriticalDamageModifierFar value="2.22500"/>
+	  <CriticalDamageDistanceNear value="35.00000"/>
+	  <CriticalDamageDistanceFar value="45.00000"/>
+	  <CriticalDamageApplyModifierBeforeNear value="false"/>
+    </Item>
+	<Item type="CDamageModifierModifyCriticalRegionData">
+      <Name>MP_Player_HeadshotPVP_SemiAutoPistol</Name>
+      <Condition type="CDamageConditionAnd">
+		<Conditions>
+		  <Item type="CDamageConditionFromWeaponType">
+			<WeaponTypes>
+			  <Item>WEAPON_PISTOL_SEMIAUTO</Item>
+			</WeaponTypes>
+		  </Item>
+		  <Item type="CDamageConditionNot">
+			<Condition type="CDamageConditionFromAmmoType">
+			  <AmmoTypes>
+				<Item>AMMO_PISTOL_HIGH_VELOCITY</Item>
+			  </AmmoTypes>
+			</Condition>
+		  </Item>
+		</Conditions>
+      </Condition>
+	  <CriticalChance value="-1.00000"/>
+	  <CriticalDamageModifierNear value="5.95000"/>
+	  <CriticalDamageModifierFar value="2.95000"/>
+	  <CriticalDamageDistanceNear value="35.00000"/>
+	  <CriticalDamageDistanceFar value="45.00000"/>
+	  <CriticalDamageApplyModifierBeforeNear value="false"/>
+    </Item>
+	<Item type="CDamageModifierModifyCriticalRegionData">
+      <Name>MP_Player_HeadshotPVP_SemiAutoPistol_HV</Name>
+      <Condition type="CDamageConditionAnd">
+		<Conditions>
+		  <Item type="CDamageConditionFromWeaponType">
+			<WeaponTypes>
+			  <Item>WEAPON_PISTOL_SEMIAUTO</Item>
+			</WeaponTypes>
+		  </Item>
+		  <Item type="CDamageConditionFromAmmoType">
+			<AmmoTypes>
+			  <Item>AMMO_PISTOL_HIGH_VELOCITY</Item>
+			</AmmoTypes>
+		  </Item>
+		</Conditions>
+      </Condition>
+	  <CriticalChance value="-1.00000"/>
+	  <CriticalDamageModifierNear value="5.27500"/>
+	  <CriticalDamageModifierFar value="2.37500"/>
+	  <CriticalDamageDistanceNear value="35.00000"/>
+	  <CriticalDamageDistanceFar value="45.00000"/>
+	  <CriticalDamageApplyModifierBeforeNear value="false"/>
+    </Item>
+	
+	<!-- LONGARMS -->
+	<Item type="CDamageModifierModifyCriticalRegionData">
+      <Name>MP_Player_HeadshotPVP_CarbineRepeater</Name>
+      <Condition type="CDamageConditionAnd">
+		<Conditions>
+		  <Item type="CDamageConditionFromWeaponType">
+			<WeaponTypes>
+			  <Item>WEAPON_REPEATER_CARBINE</Item>
+			</WeaponTypes>
+		  </Item>
+		  <Item type="CDamageConditionNot">
+			<Condition type="CDamageConditionFromAmmoType">
+			  <AmmoTypes>
+				<Item>AMMO_REPEATER_HIGH_VELOCITY</Item>
+			  </AmmoTypes>
+			</Condition>
+		  </Item>
+		</Conditions>
+      </Condition>
+	  <CriticalChance value="-1.00000"/>
+	  <CriticalDamageModifierNear value="6.47500"/>
+	  <CriticalDamageModifierFar value="3.50000"/>
+	  <CriticalDamageDistanceNear value="50.00000"/>
+	  <CriticalDamageDistanceFar value="70.00000"/>
+	  <CriticalDamageApplyModifierBeforeNear value="false"/>
+    </Item>
+	<Item type="CDamageModifierModifyCriticalRegionData">
+      <Name>MP_Player_HeadshotPVP_CarbineRepeater_HV</Name>
+      <Condition type="CDamageConditionAnd">
+		<Conditions>
+		  <Item type="CDamageConditionFromWeaponType">
+			<WeaponTypes>
+			  <Item>WEAPON_REPEATER_CARBINE</Item>
+			</WeaponTypes>
+		  </Item>
+		  <Item type="CDamageConditionFromAmmoType">
+			<AmmoTypes>
+			  <Item>AMMO_REPEATER_HIGH_VELOCITY</Item>
+			</AmmoTypes>
+		  </Item>
+		</Conditions>
+      </Condition>
+	  <CriticalChance value="-1.00000"/>
+	  <CriticalDamageModifierNear value="4.87500"/>
+	  <CriticalDamageModifierFar value="2.32500"/>
+	  <CriticalDamageDistanceNear value="50.00000"/>
+	  <CriticalDamageDistanceFar value="70.00000"/>
+	  <CriticalDamageApplyModifierBeforeNear value="false"/>
+    </Item>
+	<Item type="CDamageModifierModifyCriticalRegionData">
+      <Name>MP_Player_HeadshotPVP_LancasterRepeater</Name>
+      <Condition type="CDamageConditionAnd">
+		<Conditions>
+		  <Item type="CDamageConditionFromWeaponType">
+			<WeaponTypes>
+			  <Item>WEAPON_REPEATER_WINCHESTER</Item>
+			</WeaponTypes>
+		  </Item>
+		  <Item type="CDamageConditionNot">
+			<Condition type="CDamageConditionFromAmmoType">
+			  <AmmoTypes>
+				<Item>AMMO_REPEATER_HIGH_VELOCITY</Item>
+			  </AmmoTypes>
+			</Condition>
+		  </Item>
+		</Conditions>
+      </Condition>
+	  <CriticalChance value="-1.00000"/>
+	  <CriticalDamageModifierNear value="4.87500"/>
+	  <CriticalDamageModifierFar value="2.66500"/>
+	  <CriticalDamageDistanceNear value="50.00000"/>
+	  <CriticalDamageDistanceFar value="75.00000"/>
+	  <CriticalDamageApplyModifierBeforeNear value="false"/>
+    </Item>
+	<Item type="CDamageModifierModifyCriticalRegionData">
+      <Name>MP_Player_HeadshotPVP_LancasterRepeater_HV</Name>
+      <Condition type="CDamageConditionAnd">
+		<Conditions>
+		  <Item type="CDamageConditionFromWeaponType">
+			<WeaponTypes>
+			  <Item>WEAPON_REPEATER_WINCHESTER</Item>
+			</WeaponTypes>
+		  </Item>
+		  <Item type="CDamageConditionFromAmmoType">
+			<AmmoTypes>
+			  <Item>AMMO_REPEATER_HIGH_VELOCITY</Item>
+			</AmmoTypes>
+		  </Item>
+		</Conditions>
+      </Condition>
+	  <CriticalChance value="-1.00000"/>
+	  <CriticalDamageModifierNear value="3.67500"/>
+	  <CriticalDamageModifierFar value="1.77500"/>
+	  <CriticalDamageDistanceNear value="50.00000"/>
+	  <CriticalDamageDistanceFar value="75.00000"/>
+	  <CriticalDamageApplyModifierBeforeNear value="false"/>
+    </Item>
+	<Item type="CDamageModifierModifyCriticalRegionData">
+      <Name>MP_Player_HeadshotPVP_LitchfieldRepeater</Name>
+      <Condition type="CDamageConditionAnd">
+		<Conditions>
+		  <Item type="CDamageConditionFromWeaponType">
+			<WeaponTypes>
+			  <Item>WEAPON_REPEATER_HENRY</Item>
+			</WeaponTypes>
+		  </Item>
+		  <Item type="CDamageConditionNot">
+			<Condition type="CDamageConditionFromAmmoType">
+			  <AmmoTypes>
+				<Item>AMMO_REPEATER_HIGH_VELOCITY</Item>
+			  </AmmoTypes>
+			</Condition>
+		  </Item>
+		</Conditions>
+      </Condition>
+	  <CriticalChance value="-1.00000"/>
+	  <CriticalDamageModifierNear value="5.42500"/>
+	  <CriticalDamageModifierFar value="2.90000"/>
+	  <CriticalDamageDistanceNear value="50.00000"/>
+	  <CriticalDamageDistanceFar value="75.00000"/>
+	  <CriticalDamageApplyModifierBeforeNear value="false"/>
+    </Item>
+	<Item type="CDamageModifierModifyCriticalRegionData">
+      <Name>MP_Player_HeadshotPVP_LitchfieldRepeater_HV</Name>
+      <Condition type="CDamageConditionAnd">
+		<Conditions>
+		  <Item type="CDamageConditionFromWeaponType">
+			<WeaponTypes>
+			  <Item>WEAPON_REPEATER_HENRY</Item>
+			</WeaponTypes>
+		  </Item>
+		  <Item type="CDamageConditionFromAmmoType">
+			<AmmoTypes>
+			  <Item>AMMO_REPEATER_HIGH_VELOCITY</Item>
+			</AmmoTypes>
+		  </Item>
+		</Conditions>
+      </Condition>
+	  <CriticalChance value="-1.00000"/>
+	  <CriticalDamageModifierNear value="4.07500"/>
+	  <CriticalDamageModifierFar value="1.97500"/>
+	  <CriticalDamageDistanceNear value="50.00000"/>
+	  <CriticalDamageDistanceFar value="75.00000"/>
+	  <CriticalDamageApplyModifierBeforeNear value="false"/>
+    </Item>
+	<Item type="CDamageModifierModifyCriticalRegionData">
+      <Name>MP_Player_HeadshotPVP_EvansRepeater</Name>
+      <Condition type="CDamageConditionAnd">
+		<Conditions>
+		  <Item type="CDamageConditionFromWeaponType">
+			<WeaponTypes>
+			  <Item>WEAPON_REPEATER_EVANS</Item>
+			</WeaponTypes>
+		  </Item>
+		  <Item type="CDamageConditionNot">
+			<Condition type="CDamageConditionFromAmmoType">
+			  <AmmoTypes>
+				<Item>AMMO_REPEATER_HIGH_VELOCITY</Item>
+			  </AmmoTypes>
+			</Condition>
+		  </Item>
+		</Conditions>
+      </Condition>
+	  <CriticalChance value="-1.00000"/>
+	  <CriticalDamageModifierNear value="4.57500"/>
+	  <CriticalDamageModifierFar value="2.45000"/>
+	  <CriticalDamageDistanceNear value="50.00000"/>
+	  <CriticalDamageDistanceFar value="75.00000"/>
+	  <CriticalDamageApplyModifierBeforeNear value="false"/>
+    </Item>
+	<Item type="CDamageModifierModifyCriticalRegionData">
+      <Name>MP_Player_HeadshotPVP_EvansRepeater_HV</Name>
+      <Condition type="CDamageConditionAnd">
+		<Conditions>
+		  <Item type="CDamageConditionFromWeaponType">
+			<WeaponTypes>
+			  <Item>WEAPON_REPEATER_EVANS</Item>
+			</WeaponTypes>
+		  </Item>
+		  <Item type="CDamageConditionFromAmmoType">
+			<AmmoTypes>
+			  <Item>AMMO_REPEATER_HIGH_VELOCITY</Item>
+			</AmmoTypes>
+		  </Item>
+		</Conditions>
+      </Condition>
+	  <CriticalChance value="-1.00000"/>
+	  <CriticalDamageModifierNear value="3.45000"/>
+	  <CriticalDamageModifierFar value="1.67500"/>
+	  <CriticalDamageDistanceNear value="50.00000"/>
+	  <CriticalDamageDistanceFar value="75.00000"/>
+	  <CriticalDamageApplyModifierBeforeNear value="false"/>
+    </Item>
+	<Item type="CDamageModifierModifyCriticalRegionData">
+      <Name>MP_Player_HeadshotPVP_SpringfieldRifle</Name>
+      <Condition type="CDamageConditionAnd">
+		<Conditions>
+		  <Item type="CDamageConditionFromWeaponType">
+			<WeaponTypes>
+			  <Item>WEAPON_RIFLE_SPRINGFIELD</Item>
+			</WeaponTypes>
+		  </Item>
+		  <Item type="CDamageConditionNot">
+			<Condition type="CDamageConditionFromAmmoType">
+			  <AmmoTypes>
+				<Item>AMMO_RIFLE_HIGH_VELOCITY</Item>
+			  </AmmoTypes>
+			</Condition>
+		  </Item>
+		</Conditions>
+      </Condition>
+	  <CriticalChance value="-1.00000"/>
+	  <CriticalDamageModifierNear value="3.90000"/>
+	  <CriticalDamageModifierFar value="1.55000"/>
+	  <CriticalDamageDistanceNear value="50.00000"/>
+	  <CriticalDamageDistanceFar value="75.00000"/>
+	  <CriticalDamageApplyModifierBeforeNear value="false"/>
+    </Item>
+	<Item type="CDamageModifierModifyCriticalRegionData">
+      <Name>MP_Player_HeadshotPVP_SpringfieldRifle_HV</Name>
+      <Condition type="CDamageConditionAnd">
+		<Conditions>
+		  <Item type="CDamageConditionFromWeaponType">
+			<WeaponTypes>
+			  <Item>WEAPON_RIFLE_SPRINGFIELD</Item>
+			</WeaponTypes>
+		  </Item>
+		  <Item type="CDamageConditionFromAmmoType">
+			<AmmoTypes>
+			  <Item>AMMO_RIFLE_HIGH_VELOCITY</Item>
+			</AmmoTypes>
+		  </Item>
+		</Conditions>
+      </Condition>
+	  <CriticalChance value="-1.00000"/>
+	  <CriticalDamageModifierNear value="3.82500"/>
+	  <CriticalDamageModifierFar value="1.32500"/>
+	  <CriticalDamageDistanceNear value="50.00000"/>
+	  <CriticalDamageDistanceFar value="75.00000"/>
+	  <CriticalDamageApplyModifierBeforeNear value="false"/>
+    </Item>
+	<Item type="CDamageModifierModifyCriticalRegionData">
+      <Name>MP_Player_HeadshotPVP_BoltActionRifle</Name>
+      <Condition type="CDamageConditionAnd">
+		<Conditions>
+		  <Item type="CDamageConditionFromWeaponType">
+			<WeaponTypes>
+			  <Item>WEAPON_RIFLE_BOLTACTION</Item>
+			</WeaponTypes>
+		  </Item>
+		  <Item type="CDamageConditionNot">
+			<Condition type="CDamageConditionFromAmmoType">
+			  <AmmoTypes>
+				<Item>AMMO_RIFLE_HIGH_VELOCITY</Item>
+			  </AmmoTypes>
+			</Condition>
+		  </Item>
+		</Conditions>
+      </Condition>
+	  <CriticalChance value="-1.00000"/>
+	  <CriticalDamageModifierNear value="4.65000"/>
+	  <CriticalDamageModifierFar value="1.95000"/>
+	  <CriticalDamageDistanceNear value="50.00000"/>
+	  <CriticalDamageDistanceFar value="75.00000"/>
+	  <CriticalDamageApplyModifierBeforeNear value="false"/>
+    </Item>
+	<Item type="CDamageModifierModifyCriticalRegionData">
+      <Name>MP_Player_HeadshotPVP_BoltActionRifle_HV</Name>
+      <Condition type="CDamageConditionAnd">
+		<Conditions>
+		  <Item type="CDamageConditionFromWeaponType">
+			<WeaponTypes>
+			  <Item>WEAPON_RIFLE_BOLTACTION</Item>
+			</WeaponTypes>
+		  </Item>
+		  <Item type="CDamageConditionFromAmmoType">
+			<AmmoTypes>
+			  <Item>AMMO_RIFLE_HIGH_VELOCITY</Item>
+			</AmmoTypes>
+		  </Item>
+		</Conditions>
+      </Condition>
+	  <CriticalChance value="-1.00000"/>
+	  <CriticalDamageModifierNear value="4.47500"/>
+	  <CriticalDamageModifierFar value="1.55000"/>
+	  <CriticalDamageDistanceNear value="50.00000"/>
+	  <CriticalDamageDistanceFar value="75.00000"/>
+	  <CriticalDamageApplyModifierBeforeNear value="false"/>
+    </Item>
+	<Item type="CDamageModifierModifyCriticalRegionData">
+      <Name>MP_Player_HeadshotPVP_VarmintRifle</Name>
+      <Condition type="CDamageConditionFromWeaponType">
+		 <WeaponTypes>
+			<Item>WEAPON_RIFLE_VARMINT</Item>
+		</WeaponTypes>
+      </Condition>
+	  <CriticalChance value="-1.00000"/>
+	  <CriticalDamageModifierNear value="6.75000"/>
+	  <CriticalDamageModifierFar value="3.02500"/>
+	  <CriticalDamageDistanceNear value="30.00000"/>
+	  <CriticalDamageDistanceFar value="50.00000"/>
+	  <CriticalDamageApplyModifierBeforeNear value="false"/>
+    </Item>
+
+  </DamageModifiers>
+</CDamageDataManager>

@@ -1,0 +1,16 @@
+<EasyInstall>
+    <Name>Just Fucking Bleed Already!</Name>
+    <Author>fuhq2mofo</Author>
+    <Version>1.3</Version>
+    <Link>https://www.nexusmods.com/reddeadredemption2/mods/1934</Link>
+    <Metadata />
+
+    <Resources>
+        <Resource>
+            <FileReplacement>
+                <GamePath>update:/common/data/damage/default_damage_modifiers.meta</GamePath>
+                <FilePath>default_damage_modifiers.meta</FilePath>
+            </FileReplacement>
+        </Resource>
+    </Resources>
+</EasyInstall>

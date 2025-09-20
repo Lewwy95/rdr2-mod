@@ -1,0 +1,226 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<CBarBrawlDefinitionContainer>
+  <Definitions>
+    <Item type="CBarBrawlDefinition">
+      <Enabled value="true" />
+      <Active value="true"/>
+      <Name>BarBrawl_VAL</Name>
+      <InnerVolume>
+        <VolumeType>Box</VolumeType>
+        <Position x="-309.500" y="808.690" z="121.300" />
+        <Heading x="0.00" y="0.0" z="11.500" />
+        <Scale x="12.00" y="22.000" z="7.700"/>
+      </InnerVolume>
+      <OuterVolume>
+        <VolumeType>Box</VolumeType>
+        <Position x="-309.500" y="808.690" z="121.300" />
+        <Heading x="0.00" y="0.0" z="11.500" />
+        <Scale x="20.00" y="35.000" z="15.000"/>
+      </OuterVolume>
+    </Item>
+	<Item type="CBarBrawlDefinition">
+      <Enabled value="true" />
+      <Active value="true"/>
+      <Name>BarBrawl_Valentine2</Name>
+      <InnerVolume>
+        <VolumeType>Box</VolumeType>
+        <Position x="-241.622" y="769.643" z="118.085" />
+        <Heading x="0.00" y="0.0" z="6.787" />
+        <Scale x="12.00" y="22.000" z="7.700"/>
+      </InnerVolume>
+      <OuterVolume>
+        <VolumeType>Box</VolumeType>
+        <Position x="-241.622" y="769.643" z="118.085" />
+        <Heading x="0.00" y="0.0" z="11.500" />
+        <Scale x="20.00" y="35.000" z="15.000"/>
+      </OuterVolume>
+	</Item>
+	<Item type="CBarBrawlDefinition">
+      <Enabled value="true" />
+      <Active value="true"/>
+      <Name>BarBrawl_Rhodes</Name>
+      <InnerVolume>
+        <VolumeType>Box</VolumeType>
+        <Position x="1341.452" y="-1375.217" z="83.922" />
+        <Heading x="0.00" y="0.0" z="-0.171583" />
+        <Scale x="31.879" y="13.313" z="15.822" />
+      </InnerVolume>
+      <OuterVolume>
+        <VolumeType>Box</VolumeType>
+        <Position x="1341.452" y="-1375.217" z="83.922" />
+        <Heading x="0.00" y="0.0" z="-0.171583" />
+        <Scale x="64.000" y="26.626" z="15.822" />
+      </OuterVolume>
+    </Item>
+	<Item type="CBarBrawlDefinition">
+      <Enabled value="true" />
+      <Active value="true"/>
+      <Name>BarBrawl_Annesburg</Name>
+      <InnerVolume>
+        <VolumeType>Box</VolumeType>
+        <Position x="2957.557617" y="1350.247070" z="47.126999" />
+        <Heading x="0.00" y="0.0" z="-109.744" />
+        <Scale x="15.835343" y="18.651546" z="10.0"/>
+      </InnerVolume>
+      <OuterVolume>
+        <VolumeType>Box</VolumeType>
+        <Position x="2957.557617" y="1350.247070" z="47.126999" />
+        <Heading x="0.00" y="0.0" z="-109.744" />
+        <Scale x="30.835343" y="25.651546" z="20.0"/>
+      </OuterVolume>
+	</Item>
+	<Item type="CBarBrawlDefinition">
+      <Enabled value="true" />
+      <Active value="true"/>
+      <Name>BarBrawl_VanHorn</Name>
+      <InnerVolume>
+        <VolumeType>Box</VolumeType>
+        <Position x="2946.002" y="523.327" z="45.336" />
+        <Heading x="0.00" y="0.0" z="91.235" />
+        <Scale x="15.835343" y="18.651546" z="10.0"/>
+      </InnerVolume>
+      <OuterVolume>
+        <VolumeType>Box</VolumeType>
+        <Position x="2946.002" y="523.327" z="45.336" />
+        <Heading x="0.00" y="0.0" z="91.235" />
+        <Scale x="30.835343" y="25.651546" z="10.0"/>
+      </OuterVolume>
+	</Item>
+	<Item type="CBarBrawlDefinition">
+      <Enabled value="true" />
+      <Active value="true"/>
+      <Name>BarBrawl_SaintDenis</Name>
+      <InnerVolume>
+        <VolumeType>Box</VolumeType>
+        <Position x="2633.985" y="-1227.033" z="53.380" />
+        <Heading x="0.00" y="0.0" z="-123.608" />
+        <Scale x="15.835343" y="18.651546" z="10.0"/>
+      </InnerVolume>
+      <OuterVolume>
+        <VolumeType>Box</VolumeType>
+        <Position x="2633.985" y="-1227.033" z="53.380" />
+        <Heading x="0.00" y="0.0" z="-123.608" />
+        <Scale x="30.835343" y="25.651546" z="10.0"/>
+      </OuterVolume>
+	</Item>
+	<Item type="CBarBrawlDefinition">
+      <Enabled value="true" />
+      <Active value="true"/>
+      <Name>BarBrawl_SaintDenis2</Name>
+      <InnerVolume>
+        <VolumeType>Box</VolumeType>
+        <Position x="2795.991" y="-1168.524" z="47.928" />
+        <Heading x="0.00" y="0.0" z="-15.622" />
+        <Scale x="15.835343" y="18.651546" z="10.0"/>
+      </InnerVolume>
+      <OuterVolume>
+        <VolumeType>Box</VolumeType>
+        <Position x="2795.991" y="-1168.524" z="47.928" />
+        <Heading x="0.00" y="0.0" z="-15.622" />
+        <Scale x="30.835343" y="25.651546" z="10.0"/>
+      </OuterVolume>
+	</Item>
+	<Item type="CBarBrawlDefinition">
+      <Enabled value="true" />
+      <Active value="true"/>
+      <Name>BarBrawl_Blackwater</Name>
+      <InnerVolume>
+        <VolumeType>Box</VolumeType>
+        <Position x="-815.427" y="-1317.431" z="43.693" />
+        <Heading x="0.00" y="0.0" z="76.255" />
+        <Scale x="15.835343" y="18.651546" z="10.0"/>
+      </InnerVolume>
+      <OuterVolume>
+        <VolumeType>Box</VolumeType>
+        <Position x="-815.427" y="-1317.431" z="43.693" />
+        <Heading x="0.00" y="0.0" z="76.255" />
+        <Scale x="30.835343" y="25.651546" z="10.0"/>
+      </OuterVolume>
+	</Item>
+	<Item type="CBarBrawlDefinition">
+      <Enabled value="true" />
+      <Active value="true"/>
+      <Name>BarBrawl_Armadillo</Name>
+      <InnerVolume>
+        <VolumeType>Box</VolumeType>
+        <Position x="-3702.715" y="-2595.681" z="-13.322" />
+        <Heading x="0.00" y="0.0" z="-21.559" />
+        <Scale x="15.835343" y="18.651546" z="10.0"/>
+      </InnerVolume>
+      <OuterVolume>
+        <VolumeType>Box</VolumeType>
+        <Position x="-3702.715" y="-2595.681" z="-13.322" />
+        <Heading x="0.00" y="0.0" z="-21.559" />
+        <Scale x="30.835343" y="25.651546" z="10.0"/>
+      </OuterVolume>
+	</Item>
+	<Item type="CBarBrawlDefinition">
+      <Enabled value="true" />
+      <Active value="true"/>
+      <Name>BarBrawl_Tumbleweed</Name>
+      <InnerVolume>
+        <VolumeType>Box</VolumeType>
+        <Position x="-5512.858" y="-2912.410" z="-1.748" />
+        <Heading x="0.00" y="0.0" z="-3.667" />
+        <Scale x="15.835343" y="18.651546" z="10.0"/>
+      </InnerVolume>
+      <OuterVolume>
+        <VolumeType>Box</VolumeType>
+        <Position x="-3710.780" y="-2594.015" z="-13.297" />
+        <Heading x="0.00" y="0.0" z="-3.667" />
+        <Scale x="30.835343" y="25.651546" z="10.0"/>
+      </OuterVolume>
+	</Item>
+	<Item type="CBarBrawlDefinition">
+      <Enabled value="true" />
+      <Active value="true"/>
+      <Name>BarBrawl_Strawberry</Name>
+      <InnerVolume>
+        <VolumeType>Box</VolumeType>
+        <Position x="-1776.791" y="-370.347" z="156.955" />
+        <Heading x="0.00" y="0.0" z="-43.598" />
+        <Scale x="15.835343" y="18.651546" z="10.0"/>
+      </InnerVolume>
+      <OuterVolume>
+        <VolumeType>Box</VolumeType>
+        <Position x="-1776.791" y="-370.347" z="156.955" />
+        <Heading x="0.00" y="0.0" z="-43.598" />
+        <Scale x="30.835343" y="25.651546" z="10.0"/>
+      </OuterVolume>
+	</Item>
+    <Item type="CBarBrawlDefinition">
+      <Enabled value="true" />
+      <Active value="true"/>
+      <Name>BarBrawl_EmaraldRanch</Name>
+      <InnerVolume>
+        <VolumeType>Box</VolumeType>
+        <Position x="1448.671" y="373.008" z="89.888" />
+        <Heading x="0.00" y="0.0" z="-81.801" />
+        <Scale x="15.835343" y="18.651546" z="10.0"/>
+      </InnerVolume>
+      <OuterVolume>
+        <VolumeType>Box</VolumeType>
+        <Position x="1448.671" y="373.008" z="89.888" />
+        <Heading x="0.00" y="0.0" z="-81.801" />
+        <Scale x="30.835343" y="25.651546" z="10.0"/>
+      </OuterVolume>
+	</Item>
+	<Item type="CBarBrawlDefinition">
+      <Enabled value="true" />
+      <Active value="true"/>
+      <Name>BarBrawl_Morningstar</Name>
+      <InnerVolume>
+        <VolumeType>Box</VolumeType>
+        <Position x="-675.083" y="-1273.124" z="41.908" />
+        <Heading x="0.00" y="0.0" z="-2.178" />
+        <Scale x="30.835343" y="25.651546" z="20.0"/>
+      </InnerVolume>
+      <OuterVolume>
+        <VolumeType>Box</VolumeType>
+        <Position x="-670.083" y="-1272.351" z="45.908" />
+        <Heading x="0.00" y="0.0" z="-2.178" />
+        <Scale x="60.835343" y="50.651546" z="20.0"/>
+      </OuterVolume>
+	</Item>
+  </Definitions>
+</CBarBrawlDefinitionContainer>

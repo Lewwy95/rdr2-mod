@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>	
+<CDispatchData>
+	<BountyResponses>
+		<BountyDispatch>
+			<Name>LAW_WILDERNESS_GRIZZLIES</Name>
+			<RandomWeight value="1.0" />
+			<RequiredRegion>LAW_REGION_GRIZZLIES</RequiredRegion>
+			<RequiredCooldowns>
+				<Item>DefaultCooldown</Item>
+			</RequiredCooldowns>
+			<Flags>CantBeCleared</Flags>
+			<CombatInfoOverride>LAW_WILDERNESS</CombatInfoOverride>
+			<DispatchPhases>
+				
+				<!-- Phase: Riders -->
+				<Phase>
+					<Name>Riders</Name>
+					<GroupMultiplier value="0.3"/>
+					<ConditionalSpawnDelays>
+						<Item>
+							<Condition type="CAIConditionReferenced">
+								<Name>DISPATCH_PLAYER_DISTANCE_TO_TOWN_NEAR</Name>
+							</Condition>
+							<SpawnDelay value="15.00"/>
+						</Item>
+						<Item>
+							<Condition type="CAIConditionReferenced">
+								<Name>DISPATCH_PLAYER_DISTANCE_TO_TOWN_MID</Name>
+							</Condition>
+							<SpawnDelay value="20.00"/>
+						</Item>
+					</ConditionalSpawnDelays>
+					<SpawnDelay value="30.00"/>
+					
+					<DispatchPeds>
+						<DispatchPedGroups>
+							<DispatchGroup>
+								<Preset>WapitiRiderRural</Preset>
+								<MinNumPeds value="1"/>
+								<MaxNumPeds value="2"/>
+							</DispatchGroup>
+						</DispatchPedGroups>
+						<RandomDispatchPedGroups>
+							<DispatchGroup>
+								<Preset>WapitiRiderShotgun</Preset>
+								<RandomWeight value="0.35f"/>
+								<MinNumPeds value="2"/>
+								<MaxNumPeds value="3"/>
+							</DispatchGroup>
+							<DispatchGroup>
+								<Preset>WapitiRiderSniper</Preset>
+								<RandomWeight value="0.65f"/>
+								<MinNumPeds value="2"/>
+								<MaxNumPeds value="3"/>
+							</DispatchGroup>
+						</RandomDispatchPedGroups>
+					</DispatchPeds>
+
+					<NextPhases>
+						<!-- End Response -->
+					</NextPhases>	
+				</Phase>
+				
+			</DispatchPhases>
+		</BountyDispatch>
+	</BountyResponses>
+	<CleanUpDispatchPedPresets>
+		<Item>RiderRuralMountains</Item>
+	</CleanUpDispatchPedPresets>
+</CDispatchData>

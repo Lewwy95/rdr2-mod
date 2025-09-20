@@ -1,0 +1,136 @@
+﻿<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<rage__fwuiFlowBlock>
+  <ID>landing_flow</ID>
+  <EntryPoints>
+    <Item>
+      <Target>wait_for_profile</Target>
+      <ID>default</ID>
+    </Item>
+    <Item>
+      <Target>wait_for_profile</Target>
+      <ID>startup</ID>
+    </Item>
+    <Item>
+      <Target>mp_unavailable</Target>
+      <ID>invite</ID>
+    </Item>
+    <Item>
+      <Target>wait_for_profile</Target>
+      <ID>sign_out</ID>
+    </Item>
+    <Item>
+      <Target>mp_unavailable</Target>
+      <ID>mp_direct</ID>
+    </Item>
+  </EntryPoints>
+  <ExitPoints>
+    <Item>
+      <ID>exit</ID>
+    </Item>
+  </ExitPoints>
+  <FlowRoot>
+    <ID>wait_for_warning</ID>
+    <State type="StateIsWarningScreenActive">
+      <WaitForClose value="true"/>
+    </State>
+    <Children>
+      <Item>
+		<ID>mp_unavailable</ID>
+		<State type="StateGenericWarningScreen">
+		  <Heading>GLOBAL_ALERT_DEFAULT</Heading>
+		  <Body>uvzgxnea_0xfa0d1507</Body>
+		  <ButtonData>
+			<ButtonMap>
+			  <Item key="UI_STICKY_FEED_BUTTON_TYPE_ACCEPT">
+				<Label>IB_OK</Label>
+			  </Item>
+			</ButtonMap>
+		  </ButtonData>
+		</State>
+		<LinkMap>
+		  <Item key="yes">
+			<Target>exit</Target>
+			<LinkType type="rage__fwuiLinkTypeBackward"/>
+			<LinkInfo>LINK_TO_EXTERNAL</LinkInfo>
+		  </Item>
+		 </LinkMap>
+	  </Item>
+	  <Item>
+		<ID>wait_for_profile</ID>
+		<State type="StateWaitForProfileLoad"/>
+		<LinkMap>
+		  <Item key="next">
+			<Target>^.can_access_sp_check</Target>
+		  </Item>
+		  <Item key="exit">
+			<Target>^.can_access_sp_check</Target>
+		  </Item>
+		  <Item key="yes">
+			<Target>^.can_access_sp_check</Target>
+		  </Item>
+		</LinkMap>
+	  </Item>
+	  <Item>
+		<ID>can_access_sp_check</ID>
+		<State type="StateCanAccessSP"/>
+		<LinkMap>
+		  <Item key="yes">
+			<Target>launch_sp</Target>
+		  </Item>
+		  <Item key="no">
+			<Target>sp_unavailable</Target>
+		  </Item>
+		</LinkMap>
+		<Children>
+		  <Item>
+			<ID>sp_unavailable</ID>
+			<State type="StateGenericWarningScreen">
+			  <Heading>GLOBAL_ALERT_DEFAULT</Heading>
+			  <Body>vyxfaaja_0x2a4bc06c</Body>
+			  <ButtonData>
+				<ButtonMap>
+				  <Item key="UI_STICKY_FEED_BUTTON_TYPE_ACCEPT">
+					<Label>IB_OK</Label>
+				  </Item>
+				</ButtonMap>
+			  </ButtonData>
+			</State>
+			<LinkMap>
+			  <Item key="yes">
+				<Target>quit_game</Target>
+			  </Item>
+			 </LinkMap>
+			 <Children>
+			   <Item>
+				<ID>quit_game</ID>
+				<State type="StateQuitGame"/>
+				<LinkMap>
+				  <Item key="back">
+					<Target>^.^.sp_unavailable</Target>
+				  </Item>
+				</LinkMap>
+			   </Item>
+			 </Children>
+		  </Item>
+		  <Item>
+			<ID>launch_sp</ID>
+			<State type="StateDispatchScriptEvent">
+			  <Channel>LANDING_PAGE</Channel>
+			  <Event>
+				<Type>UISCRIPTEVENTTYPE_ITEM_SELECTED</Type>
+				<HashParameter>LOAD_SP</HashParameter>
+			  </Event>
+			</State>
+			<LinkMap>
+			  <Item key="next">
+				<Target>exit</Target>
+				<LinkType type="rage__fwuiLinkTypeBackward"/>
+				<LinkInfo>LINK_TO_EXTERNAL</LinkInfo>
+			  </Item>
+			</LinkMap>
+		  </Item>
+		</Children>
+	  </Item>
+    </Children>
+  </FlowRoot>
+</rage__fwuiFlowBlock>

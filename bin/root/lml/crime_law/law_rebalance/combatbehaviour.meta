@@ -1,0 +1,1938 @@
+<?xml version="1.0" encoding="utf-8"?>
+<CCombatInfoMgr>
+  <CombatInfos>
+    <Item type="CCombatInfo">
+      <Name>PLAYER</Name>
+      <CombatMovement>CM_WillAdvance</CombatMovement>
+      <BehaviourFlags>USE_COVER USE_VEHICLE DO_DRIVEBYS LEAVE_VEHICLES ALLOW_STRAFE_BREAKUP USE_PROXIMITY_FIRING_RATE</BehaviourFlags>
+      <CombatAbility>CA_Professional</CombatAbility>
+      <AttackRanges>CR_Medium</AttackRanges>
+      <TargetLossResponse>TLR_ExitTask</TargetLossResponse>
+      <TargetInjuredReaction>TIR_TreatAsDead</TargetInjuredReaction>
+      <CoverHeightPreference>CHP_Any</CoverHeightPreference>
+      <WeaponShootRateModifier value="2.000000" />
+      <FiringPatternHash>FIRING_PATTERN_FULL_AUTO</FiringPatternHash>
+      <BlindFireChance value="0.000000" />
+      <MaxShootingDistance value="-1.000000" />
+      <TimeBetweenPeeks value="10.000000" />
+      <WeaponAccuracy value="10.000000" />
+      <StrafeWhenMovingChance value="1.000000" />
+      <WalkWhenStrafingChance value="0.000000" />
+      <HeliSpeedModifier value="1.000000" />
+      <HeliSensesRange value="150.000000" />
+      <AttackWindowDistanceForCover value="40.000000" />
+      <TimeToInvalidateInjuredTarget value="5.000000" />
+      <MinimumDistanceToTarget value="7.000000" />
+      <MinimumInCoverDistanceToTarget value="7.000000" />
+      <BulletImpactDetectionRange value="3.000000" />
+      <AimTurnThreshold value="0.39269875" />
+      <OptimalCoverDistance value="-1.000000" />
+      <AutomobileSpeedModifier value="1.000000" />
+      <SpeedToFleeInVehicle value="40.000000" />
+      <TriggerChargeTime_Far value="6.000000" />
+      <TriggerChargeTime_Near value="2.250000" />
+      <MountSpeedModifier value="1.000000" />
+      <MinTimeBetweenProjectileThrows value="4.000000" />
+      <AccuracyOffsetModifier value="1.000000" />
+      <MinTimeInBestCoverForAltCoverUse value="-1.000000" />
+      <CrouchChance value="0.100000" />
+      <BulletReactionChance value="1.000000" />
+      <WeaponPickupChance value="1.000000" />
+      <FiringPatternInCoverHash />
+	  <FiringPatternExplosivesInCoverHash />
+	  <FiringPatternThrownInCoverHash />
+	  <FiringPatternInMountedWeaponHash>FIRING_PATTERN_FULL_AUTO</FiringPatternInMountedWeaponHash>
+    </Item>
+    <Item type="CCombatInfo">
+      <Name>DEFAULT</Name>
+      <CombatMovement>CM_WillAdvance</CombatMovement>
+      <BehaviourFlags>USE_COVER USE_VEHICLE DO_DRIVEBYS LEAVE_VEHICLES STRAFE_BASED_ON_TARGET_PROXIMITY ALLOW_STRAFE_BREAKUP USE_PROXIMITY_FIRING_RATE MAINTAIN_MIN_DISTANCE_TO_TARGET QUIT_WHEN_TARGET_FLEES_INTERACTION_FIGHT</BehaviourFlags>
+      <CombatAbility>CA_Average</CombatAbility>
+      <AttackRanges>CR_Medium</AttackRanges>
+      <TargetLossResponse>TLR_ExitTask</TargetLossResponse>
+      <TargetInjuredReaction>TIR_TreatAsDead</TargetInjuredReaction>
+      <CoverHeightPreference>CHP_Any</CoverHeightPreference>
+      <WeaponShootRateModifier value="1.000000" />
+      <FiringPatternHash>FIRING_PATTERN_BURST_SINGLE_SHOT</FiringPatternHash>
+      <BlindFireChance value="0.010000" />
+      <MaxShootingDistance value="-1.000000" />
+      <TimeBetweenPeeks value="10.000000" />
+      <WeaponAccuracy value="0.440000" />
+      <StrafeWhenMovingChance value="1.000000" />
+      <WalkWhenStrafingChance value="0.000000" />
+      <HeliSpeedModifier value="1.000000" />
+      <HeliSensesRange value="150.000000" />
+      <AttackWindowDistanceForCover value="40.000000" />
+      <TimeToInvalidateInjuredTarget value="5.000000" />
+      <MinimumDistanceToTarget value="7.000000" />
+      <MinimumInCoverDistanceToTarget value="4.000000" />
+      <BulletImpactDetectionRange value="3.000000" />
+      <AimTurnThreshold value="0.39269875" />
+      <OptimalCoverDistance value="-1.000000" />
+      <AutomobileSpeedModifier value="1.000000" />
+      <SpeedToFleeInVehicle value="40.000000" />
+      <TriggerChargeTime_Far value="6.000000" />
+      <TriggerChargeTime_Near value="2.250000" />
+      <MountSpeedModifier value="1.000000" />
+      <MinTimeBetweenProjectileThrows value="4.000000" />
+      <AccuracyOffsetModifier value="1.000000" />
+      <MinTimeInBestCoverForAltCoverUse value="-1.000000" />
+      <CrouchChance value="0.100000" />
+      <BulletReactionChance value="1.000000" />
+      <FiringPatternInCoverHash>FIRING_PATTERN_BURST_FIRE_IN_COVER</FiringPatternInCoverHash>
+	  <FiringPatternExplosivesInCoverHash>FIRING_PATTERN_EXPLOSIVES_IN_COVER</FiringPatternExplosivesInCoverHash>
+	  <FiringPatternThrownInCoverHash>FIRING_PATTERN_THROWN_IN_COVER</FiringPatternThrownInCoverHash>
+	  <FiringPatternInMountedWeaponHash>FIRING_PATTERN_FULL_AUTO</FiringPatternInMountedWeaponHash>
+	  <MinDistanceFromTargetForLastManFlee value="15.000000" />
+	  <ChanceOfLastManFleeFromCombat value="0.300000" />
+    </Item>
+	<!-- Bounty Hunter - Law Professional that doesn't untie folks-->
+    <Item type="CCombatInfo">
+      <Name>BOUNTY_HUNTER</Name>
+      <CombatMovement>CM_WillAdvance</CombatMovement>
+      <BehaviourFlags>USE_COVER USE_VEHICLE DO_DRIVEBYS LEAVE_VEHICLES STRAFE_BASED_ON_TARGET_PROXIMITY STRAFE_DUE_TO_BULLET_EVENTS CAN_CHASE_TARGET_ON_FOOT USE_PROXIMITY_FIRING_RATE ALLOW_STRAFE_BREAKUP CAN_CHARGE WILL_DRAG_INJURED_PEDS_TO_SAFETY MAINTAIN_MIN_DISTANCE_TO_TARGET CAN_FIGHT_ARMED_PEDS_WHEN_NOT_ARMED</BehaviourFlags>
+      <CombatAbility>CA_Professional</CombatAbility>
+      <AttackRanges>CR_Medium</AttackRanges>
+      <TargetLossResponse>TLR_ExitTask</TargetLossResponse>
+      <TargetInjuredReaction>TIR_TreatAsDead</TargetInjuredReaction>
+      <CoverHeightPreference>CHP_Any</CoverHeightPreference>
+      <WeaponShootRateModifier value="2.0" />
+      <FiringPatternHash>FIRING_PATTERN_BURST_SINGLE_SHOT</FiringPatternHash>
+      <BlindFireChance value="0.000000" />
+      <MaxShootingDistance value="-1.000000" />
+      <TimeBetweenPeeks value="10.000000" />
+      <WeaponAccuracy value="0.600000" />
+      <StrafeWhenMovingChance value="1.000000" />
+      <WalkWhenStrafingChance value="0.000000" />
+      <HeliSpeedModifier value="1.000000" />
+      <HeliSensesRange value="150.000000" />
+      <AttackWindowDistanceForCover value="30.000000" />
+      <TimeToInvalidateInjuredTarget value="6.000000" />
+      <MinimumDistanceToTarget value="7.000000" />
+      <MinimumInCoverDistanceToTarget value="4.000000" />
+      <BulletImpactDetectionRange value="3.000000" />
+      <AimTurnThreshold value="0.39269875" />
+      <OptimalCoverDistance value="-1.000000" />
+      <AutomobileSpeedModifier value="1.000000" />
+      <SpeedToFleeInVehicle value="40.000000" />
+      <TriggerChargeTime_Far value="6.000000" />
+      <TriggerChargeTime_Near value="2.250000" />
+      <MountSpeedModifier value="1.000000" />
+      <MinTimeBetweenProjectileThrows value="4.000000" />
+      <AccuracyOffsetModifier value="1.000000" />
+      <MinTimeInBestCoverForAltCoverUse value="-1.000000" />
+      <CrouchChance value="0.100000" />
+      <BulletReactionChance value="1.000000" />
+      <MaxWeaponPickupDistance value="8.000000" />
+      <WeaponPickupChance value="4.000000" />
+      <MinTimeInCombatBeforeCharge value="6.000000" />
+      <StartStandAndFireDistance value="8.000000" />
+      <DistanceToConsiderDismount value="50.000000" />
+      <DistanceToConsiderDismountInWilderness value="35.000000" />
+	  <ConsiderRecentChargeAsActiveTimeout value="15.0" />
+	  <MinTimeBetweenChargesAtSameTarget  value="12.0" />
+	  <MinTimeForSamePedToChargeAgain  value="15.0" />
+      <FiringPatternInCoverHash>FIRING_PATTERN_BURST_FIRE_IN_COVER</FiringPatternInCoverHash>
+	  <FiringPatternExplosivesInCoverHash>FIRING_PATTERN_EXPLOSIVES_IN_COVER</FiringPatternExplosivesInCoverHash>
+	  <FiringPatternThrownInCoverHash>FIRING_PATTERN_THROWN_IN_COVER</FiringPatternThrownInCoverHash>
+	  <MinDistanceFromTargetForLastManFlee value="15.000000" />
+	  <ChanceOfLastManFleeFromCombat value="0.100000" />
+      <MountedChasingProfile>Professional</MountedChasingProfile>
+    </Item>
+    <Item type="CCombatInfo">
+      <Name>GANG_COMPANION</Name>
+	  <CombatStyleModifier>Companion_Misc</CombatStyleModifier>
+      <CombatMovement>CM_WillAdvance</CombatMovement>
+      <BehaviourFlags>USE_COVER USE_VEHICLE DO_DRIVEBYS LEAVE_VEHICLES STRAFE_BASED_ON_TARGET_PROXIMITY CAN_INVESTIGATE USE_PROXIMITY_FIRING_RATE ALLOW_STRAFE_BREAKUP MAINTAIN_MIN_DISTANCE_TO_TARGET USE_RANGE_BASED_WEAPON_SELECTION</BehaviourFlags>
+      <CombatAbility>CA_Professional</CombatAbility>
+      <AttackRanges>CR_Medium</AttackRanges>
+      <TargetLossResponse>TLR_ExitTask</TargetLossResponse>
+      <TargetInjuredReaction>TIR_TreatAsDead</TargetInjuredReaction>
+      <CoverHeightPreference>CHP_Any</CoverHeightPreference>
+      <WeaponShootRateModifier value="1.000000" />
+      <FiringPatternHash>FIRING_PATTERN_BURST_SINGLE_SHOT</FiringPatternHash>
+      <BlindFireChance value="0.000000" />
+      <MaxShootingDistance value="-1.000000" />
+      <TimeBetweenPeeks value="10.000000" />
+      <WeaponAccuracy value="0.800000" />
+      <StrafeWhenMovingChance value="1.000000" />
+      <WalkWhenStrafingChance value="0.000000" />
+      <HeliSpeedModifier value="1.000000" />
+      <HeliSensesRange value="150.000000" />
+      <AttackWindowDistanceForCover value="40.000000" />
+      <TimeToInvalidateInjuredTarget value="5.000000" />
+      <MinimumDistanceToTarget value="7.000000" />
+      <MinimumInCoverDistanceToTarget value="4.000000" />
+      <BulletImpactDetectionRange value="3.000000" />
+      <AimTurnThreshold value="0.39269875" />
+      <OptimalCoverDistance value="-1.000000" />
+      <AutomobileSpeedModifier value="1.000000" />
+      <SpeedToFleeInVehicle value="40.000000" />
+      <TriggerChargeTime_Far value="6.000000" />
+      <TriggerChargeTime_Near value="2.250000" />
+      <MountSpeedModifier value="1.000000" />
+      <MinTimeBetweenProjectileThrows value="4.000000" />
+      <AccuracyOffsetModifier value="1.000000" />
+      <MinTimeInBestCoverForAltCoverUse value="-1.000000" />
+      <CrouchChance value="0.500000" />
+      <BulletReactionChance value="1.000000" />
+      <MaxWeaponPickupDistance value="10.000000" />
+      <WeaponPickupChance value="0.000000" />
+      <ExecuteTargetChance value="0.600000" />
+      <ExecuteTargetFromReloadChance value="0.600000" />
+      <ExecuteTargetMaxDistance value="15.00000" />
+      <FiringPatternInCoverHash>FIRING_PATTERN_BURST_FIRE_IN_COVER</FiringPatternInCoverHash>
+	  <FiringPatternExplosivesInCoverHash>FIRING_PATTERN_EXPLOSIVES_IN_COVER</FiringPatternExplosivesInCoverHash>
+	  <FiringPatternThrownInCoverHash>FIRING_PATTERN_THROWN_IN_COVER</FiringPatternThrownInCoverHash>
+	  <FiringPatternInMountedWeaponHash>FIRING_PATTERN_FULL_AUTO</FiringPatternInMountedWeaponHash>
+    </Item>
+	<Item type="CCombatInfo">
+      <Name>COMPANION_BILL</Name>
+	  <CombatStyleModifier>Companion_Bill</CombatStyleModifier>
+      <CombatMovement>CM_WillAdvance</CombatMovement>
+      <BehaviourFlags>USE_COVER CAN_CHARGE USE_VEHICLE DO_DRIVEBYS LEAVE_VEHICLES STRAFE_BASED_ON_TARGET_PROXIMITY CAN_INVESTIGATE USE_PROXIMITY_FIRING_RATE ALLOW_STRAFE_BREAKUP MAINTAIN_MIN_DISTANCE_TO_TARGET USE_RANGE_BASED_WEAPON_SELECTION</BehaviourFlags>
+      <ExecuteTargetFlags>ETF_2H_Gun</ExecuteTargetFlags>
+      <CombatAbility>CA_Professional</CombatAbility>
+      <AttackRanges>CR_Near</AttackRanges>
+      <TargetLossResponse>TLR_ExitTask</TargetLossResponse>
+      <TargetInjuredReaction>TIR_TreatAsDead</TargetInjuredReaction>
+      <CoverHeightPreference>CHP_Any</CoverHeightPreference>
+      <WeaponShootRateModifier value="0.250000" />
+      <FiringPatternHash>FIRING_PATTERN_COMPANION_BILL</FiringPatternHash>
+      <BlindFireChance value="0.000000" />
+      <MaxShootingDistance value="-1.000000" />
+      <PinnedDownTakeCoverAmount value="60.00000" />
+	  <CoverMaxConsecutiveFlinchesAmount value="30.0" />
+      <TimeBetweenPeeks value="7.000000" />
+      <WeaponAccuracy value="0.700000" />
+      <StrafeWhenMovingChance value="1.000000" />
+      <WalkWhenStrafingChance value="0.000000" />
+      <HeliSpeedModifier value="1.000000" />
+      <HeliSensesRange value="150.000000" />
+      <AttackWindowDistanceForCover value="40.000000" />
+      <TimeToInvalidateInjuredTarget value="5.000000" />
+      <MinimumDistanceToTarget value="7.000000" />
+      <MinimumInCoverDistanceToTarget value="4.000000" />
+      <BulletImpactDetectionRange value="3.000000" />
+      <AimTurnThreshold value="0.39269875" />
+      <OptimalCoverDistance value="-1.000000" />
+      <AutomobileSpeedModifier value="1.000000" />
+      <SpeedToFleeInVehicle value="40.000000" />
+      <TriggerChargeTime_Far value="6.000000" />
+      <TriggerChargeTime_Near value="1.00000" />
+      <MountSpeedModifier value="1.000000" />
+      <MinTimeBetweenProjectileThrows value="4.000000" />
+      <AccuracyOffsetModifier value="1.000000" />
+      <MinTimeInBestCoverForAltCoverUse value="-1.000000" />
+      <CrouchChance value="0.200000" />
+      <BulletReactionChance value="1.000000" />
+      <MaxWeaponPickupDistance value="10.000000" />
+      <WeaponPickupChance value="0.000000" />
+      <ExecuteTargetChance value="0.700000" />
+      <ExecuteTargetFromReloadChance value="0.750000" />
+      <ExecuteTargetMaxDistance value="15.00000" />
+      <FiringPatternInCoverHash>FIRING_PATTERN_IN_COVER_COMPANION_BILL</FiringPatternInCoverHash>
+	  <FiringPatternInMountedWeaponHash>FIRING_PATTERN_FULL_AUTO</FiringPatternInMountedWeaponHash>
+    </Item>
+    <Item type="CCombatInfo">
+      <Name>COMPANION_CHARLES</Name>
+	  <CombatStyleModifier>Companion_Charles</CombatStyleModifier>
+      <CombatMovement>CM_WillAdvance</CombatMovement>
+      <BehaviourFlags>USE_COVER USE_VEHICLE DO_DRIVEBYS LEAVE_VEHICLES STRAFE_BASED_ON_TARGET_PROXIMITY CAN_INVESTIGATE USE_PROXIMITY_FIRING_RATE ALLOW_STRAFE_BREAKUP MAINTAIN_MIN_DISTANCE_TO_TARGET USE_RANGE_BASED_WEAPON_SELECTION</BehaviourFlags>
+      <ExecuteTargetFlags>ETF_Knife</ExecuteTargetFlags>
+      <CombatAbility>CA_Professional</CombatAbility>
+      <AttackRanges>CR_Medium</AttackRanges>
+      <TargetLossResponse>TLR_ExitTask</TargetLossResponse>
+      <TargetInjuredReaction>TIR_TreatAsDead</TargetInjuredReaction>
+      <CoverHeightPreference>CHP_Any</CoverHeightPreference>
+      <WeaponShootRateModifier value="1.000000" />
+      <FiringPatternHash>FIRING_PATTERN_BURST_SINGLE_SHOT</FiringPatternHash>
+      <BlindFireChance value="0.000000" />
+      <MaxShootingDistance value="-1.000000" />
+	  <PinnedDownTakeCoverAmount value="60.00000" />
+	  <CoverMaxConsecutiveFlinchesAmount value="40.0" />
+      <TimeBetweenPeeks value="10.000000" />
+      <WeaponAccuracy value="0.750000" />
+      <StrafeWhenMovingChance value="1.000000" />
+      <WalkWhenStrafingChance value="0.000000" />
+      <HeliSpeedModifier value="1.000000" />
+      <HeliSensesRange value="150.000000" />
+      <AttackWindowDistanceForCover value="40.000000" />
+      <TimeToInvalidateInjuredTarget value="5.000000" />
+      <MinimumDistanceToTarget value="7.000000" />
+      <MinimumInCoverDistanceToTarget value="4.000000" />
+      <BulletImpactDetectionRange value="3.000000" />
+      <AimTurnThreshold value="0.39269875" />
+      <OptimalCoverDistance value="-1.000000" />
+      <AutomobileSpeedModifier value="1.000000" />
+      <SpeedToFleeInVehicle value="40.000000" />
+      <TriggerChargeTime_Far value="6.000000" />
+      <TriggerChargeTime_Near value="2.250000" />
+      <MountSpeedModifier value="1.000000" />
+      <MinTimeBetweenProjectileThrows value="4.000000" />
+      <AccuracyOffsetModifier value="1.000000" />
+      <MinTimeInBestCoverForAltCoverUse value="-1.000000" />
+      <CrouchChance value="0.500000" />
+      <BulletReactionChance value="1.000000" />
+      <MaxWeaponPickupDistance value="10.000000" />
+      <WeaponPickupChance value="0.000000" />
+      <ExecuteTargetChance value="0.600000" />
+      <ExecuteTargetFromReloadChance value="0.600000" />
+      <ExecuteTargetMaxDistance value="15.00000" />
+      <FiringPatternInCoverHash>FIRING_PATTERN_BURST_FIRE_IN_COVER</FiringPatternInCoverHash>
+	  <FiringPatternExplosivesInCoverHash>FIRING_PATTERN_EXPLOSIVES_IN_COVER</FiringPatternExplosivesInCoverHash>
+	  <FiringPatternThrownInCoverHash>FIRING_PATTERN_THROWN_IN_COVER</FiringPatternThrownInCoverHash>
+	  <FiringPatternInMountedWeaponHash>FIRING_PATTERN_FULL_AUTO</FiringPatternInMountedWeaponHash>
+    </Item>
+	<Item type="CCombatInfo">
+      <Name>COMPANION_DUTCH</Name>
+	  <CombatStyleModifier>Companion_Dutch</CombatStyleModifier>
+      <CombatMovement>CM_WillAdvance</CombatMovement>
+      <BehaviourFlags>USE_COVER USE_VEHICLE DO_DRIVEBYS LEAVE_VEHICLES STRAFE_BASED_ON_TARGET_PROXIMITY CAN_INVESTIGATE USE_PROXIMITY_FIRING_RATE ALLOW_STRAFE_BREAKUP MAINTAIN_MIN_DISTANCE_TO_TARGET USE_RANGE_BASED_WEAPON_SELECTION</BehaviourFlags>
+      <ExecuteTargetFlags>ETF_1H_Gun</ExecuteTargetFlags>
+      <CombatAbility>CA_Professional</CombatAbility>
+      <AttackRanges>CR_Medium</AttackRanges>
+      <TargetLossResponse>TLR_ExitTask</TargetLossResponse>
+      <TargetInjuredReaction>TIR_TreatAsDead</TargetInjuredReaction>
+      <CoverHeightPreference>CHP_PreferHigh</CoverHeightPreference>
+      <WeaponShootRateModifier value="1.000000" />
+      <FiringPatternHash>FIRING_PATTERN_COMPANION_DUTCH</FiringPatternHash>
+      <BlindFireChance value="0.000000" />
+      <MaxShootingDistance value="-1.000000" />
+      <PinnedDownTakeCoverAmount value="80.00000" />
+	  <CoverMaxConsecutiveFlinchesAmount value="40.0" />
+      <TimeBetweenPeeks value="9.000000" />
+      <WeaponAccuracy value="0.990000" />
+      <StrafeWhenMovingChance value="1.000000" />
+      <WalkWhenStrafingChance value="0.000000" />
+      <HeliSpeedModifier value="1.000000" />
+      <HeliSensesRange value="150.000000" />
+      <AttackWindowDistanceForCover value="40.000000" />
+      <TimeToInvalidateInjuredTarget value="5.000000" />
+      <MinimumDistanceToTarget value="7.000000" />
+      <MinimumInCoverDistanceToTarget value="4.000000" />
+      <BulletImpactDetectionRange value="1.000000" />
+      <AimTurnThreshold value="0.39269875" />
+      <OptimalCoverDistance value="-1.000000" />
+      <AutomobileSpeedModifier value="1.000000" />
+      <SpeedToFleeInVehicle value="40.000000" />
+      <TriggerChargeTime_Far value="6.000000" />
+      <TriggerChargeTime_Near value="3.250000" />
+      <MountSpeedModifier value="1.000000" />
+      <MinTimeBetweenProjectileThrows value="4.000000" />
+      <AccuracyOffsetModifier value="1.000000" />
+      <MinTimeInBestCoverForAltCoverUse value="-1.000000" />
+      <CrouchChance value="0.500000" />
+      <BulletReactionChance value="0.500000" />
+      <MaxWeaponPickupDistance value="10.000000" />
+      <WeaponPickupChance value="0.000000" />
+      <ExecuteTargetChance value="0.650000" />
+      <ExecuteTargetFromReloadChance value="0.650000" />
+      <ExecuteTargetMaxDistance value="12.00000" />
+      <FiringPatternInCoverHash>FIRING_PATTERN_IN_COVER_COMPANION_DUTCH</FiringPatternInCoverHash>
+	  <FiringPatternInMountedWeaponHash>FIRING_PATTERN_FULL_AUTO</FiringPatternInMountedWeaponHash>
+    </Item>
+	<Item type="CCombatInfo">
+      <Name>COMPANION_HOSEA</Name>
+	  <CombatStyleModifier>Companion_Hosea</CombatStyleModifier>
+      <CombatMovement>CM_WillAdvance</CombatMovement>
+      <BehaviourFlags>USE_COVER USE_VEHICLE DO_DRIVEBYS LEAVE_VEHICLES STRAFE_BASED_ON_TARGET_PROXIMITY CAN_INVESTIGATE USE_PROXIMITY_FIRING_RATE ALLOW_STRAFE_BREAKUP MAINTAIN_MIN_DISTANCE_TO_TARGET USE_RANGE_BASED_WEAPON_SELECTION</BehaviourFlags>
+      <ExecuteTargetFlags>ETF_2H_Gun</ExecuteTargetFlags>
+      <CombatAbility>CA_Professional</CombatAbility>
+      <AttackRanges>CR_Medium</AttackRanges>
+      <TargetLossResponse>TLR_ExitTask</TargetLossResponse>
+      <TargetInjuredReaction>TIR_TreatAsDead</TargetInjuredReaction>
+      <CoverHeightPreference>CHP_Any</CoverHeightPreference>
+      <WeaponShootRateModifier value="1.500000" />
+      <FiringPatternHash>FIRING_PATTERN_COMPANION_HOSEA</FiringPatternHash>
+      <BlindFireChance value="0.000000" />
+      <MaxShootingDistance value="-1.000000" />
+      <PinnedDownTakeCoverAmount value="60.00000" />
+	  <CoverMaxConsecutiveFlinchesAmount value="40.0" />
+      <TimeBetweenPeeks value="12.000000" />
+      <WeaponAccuracy value="0.850000" />
+      <StrafeWhenMovingChance value="1.000000" />
+      <WalkWhenStrafingChance value="0.000000" />
+      <HeliSpeedModifier value="1.000000" />
+      <HeliSensesRange value="150.000000" />
+      <AttackWindowDistanceForCover value="40.000000" />
+      <TimeToInvalidateInjuredTarget value="5.000000" />
+      <MinimumDistanceToTarget value="7.000000" />
+      <MinimumInCoverDistanceToTarget value="4.000000" />
+      <BulletImpactDetectionRange value="3.000000" />
+      <AimTurnThreshold value="0.39269875" />
+      <OptimalCoverDistance value="-1.000000" />
+      <AutomobileSpeedModifier value="1.000000" />
+      <SpeedToFleeInVehicle value="40.000000" />
+      <TriggerChargeTime_Far value="10.000000" />
+      <TriggerChargeTime_Near value="3.250000" />
+      <MountSpeedModifier value="1.000000" />
+      <MinTimeBetweenProjectileThrows value="4.000000" />
+      <AccuracyOffsetModifier value="1.000000" />
+      <MinTimeInBestCoverForAltCoverUse value="-1.000000" />
+      <CrouchChance value="0.500000" />
+      <BulletReactionChance value="1.000000" />
+      <MaxWeaponPickupDistance value="10.000000" />
+      <WeaponPickupChance value="0.000000" />
+      <ExecuteTargetChance value="0.200000" />
+      <ExecuteTargetFromReloadChance value="0.400000" />
+      <ExecuteTargetMaxDistance value="10.00000" />
+      <FiringPatternInCoverHash>FIRING_PATTERN_IN_COVER_COMPANION_HOSEA</FiringPatternInCoverHash>
+	  <FiringPatternInMountedWeaponHash>FIRING_PATTERN_FULL_AUTO</FiringPatternInMountedWeaponHash>
+    </Item>
+    <Item type="CCombatInfo">
+      <Name>COMPANION_JAVIER</Name>
+	  <CombatStyleModifier>Companion_Javier</CombatStyleModifier>
+      <CombatMovement>CM_WillAdvance</CombatMovement>
+      <BehaviourFlags>USE_COVER USE_VEHICLE DO_DRIVEBYS LEAVE_VEHICLES STRAFE_BASED_ON_TARGET_PROXIMITY CAN_INVESTIGATE USE_PROXIMITY_FIRING_RATE ALLOW_STRAFE_BREAKUP MAINTAIN_MIN_DISTANCE_TO_TARGET USE_RANGE_BASED_WEAPON_SELECTION</BehaviourFlags>
+      <ExecuteTargetFlags>ETF_Knife</ExecuteTargetFlags>
+      <CombatAbility>CA_Professional</CombatAbility>
+      <AttackRanges>CR_Medium</AttackRanges>
+      <TargetLossResponse>TLR_ExitTask</TargetLossResponse>
+      <TargetInjuredReaction>TIR_TreatAsDead</TargetInjuredReaction>
+      <CoverHeightPreference>CHP_Any</CoverHeightPreference>
+      <WeaponShootRateModifier value="1.000000" />
+      <FiringPatternHash>FIRING_PATTERN_BURST_SINGLE_SHOT</FiringPatternHash>
+      <BlindFireChance value="0.000000" />
+      <MaxShootingDistance value="-1.000000" />
+	  <PinnedDownTakeCoverAmount value="60.00000" />
+	  <CoverMaxConsecutiveFlinchesAmount value="40.0" />
+      <TimeBetweenPeeks value="10.000000" />
+      <WeaponAccuracy value="0.750000" />
+      <StrafeWhenMovingChance value="1.000000" />
+      <WalkWhenStrafingChance value="0.000000" />
+      <HeliSpeedModifier value="1.000000" />
+      <HeliSensesRange value="150.000000" />
+      <AttackWindowDistanceForCover value="40.000000" />
+      <TimeToInvalidateInjuredTarget value="5.000000" />
+      <MinimumDistanceToTarget value="7.000000" />
+      <MinimumInCoverDistanceToTarget value="4.000000" />
+      <BulletImpactDetectionRange value="3.000000" />
+      <AimTurnThreshold value="0.39269875" />
+      <OptimalCoverDistance value="-1.000000" />
+      <AutomobileSpeedModifier value="1.000000" />
+      <SpeedToFleeInVehicle value="40.000000" />
+      <TriggerChargeTime_Far value="6.000000" />
+      <TriggerChargeTime_Near value="2.250000" />
+      <MountSpeedModifier value="1.000000" />
+      <MinTimeBetweenProjectileThrows value="4.000000" />
+      <AccuracyOffsetModifier value="1.000000" />
+      <MinTimeInBestCoverForAltCoverUse value="-1.000000" />
+      <CrouchChance value="0.500000" />
+      <BulletReactionChance value="1.000000" />
+      <MaxWeaponPickupDistance value="10.000000" />
+      <WeaponPickupChance value="0.000000" />
+      <ExecuteTargetChance value="0.600000" />
+      <ExecuteTargetFromReloadChance value="0.600000" />
+      <ExecuteTargetMaxDistance value="15.00000" />
+      <FiringPatternInCoverHash>FIRING_PATTERN_BURST_FIRE_IN_COVER</FiringPatternInCoverHash>
+	  <FiringPatternExplosivesInCoverHash>FIRING_PATTERN_EXPLOSIVES_IN_COVER</FiringPatternExplosivesInCoverHash>
+	  <FiringPatternThrownInCoverHash>FIRING_PATTERN_THROWN_IN_COVER</FiringPatternThrownInCoverHash>
+	  <FiringPatternInMountedWeaponHash>FIRING_PATTERN_FULL_AUTO</FiringPatternInMountedWeaponHash>
+    </Item>
+	<Item type="CCombatInfo">
+      <Name>COMPANION_JOHN</Name>
+	  <CombatStyleModifier>Companion_John</CombatStyleModifier>
+      <CombatMovement>CM_WillAdvance</CombatMovement>
+      <BehaviourFlags>USE_COVER USE_VEHICLE DO_DRIVEBYS LEAVE_VEHICLES STRAFE_BASED_ON_TARGET_PROXIMITY CAN_INVESTIGATE USE_PROXIMITY_FIRING_RATE ALLOW_STRAFE_BREAKUP MAINTAIN_MIN_DISTANCE_TO_TARGET USE_RANGE_BASED_WEAPON_SELECTION</BehaviourFlags>
+      <CombatAbility>CA_Professional</CombatAbility>
+      <AttackRanges>CR_Medium</AttackRanges>
+      <TargetLossResponse>TLR_ExitTask</TargetLossResponse>
+      <TargetInjuredReaction>TIR_TreatAsDead</TargetInjuredReaction>
+      <CoverHeightPreference>CHP_Any</CoverHeightPreference>
+      <WeaponShootRateModifier value="0.500000" />
+      <FiringPatternHash>FIRING_PATTERN_COMPANION_JOHN</FiringPatternHash>
+      <BlindFireChance value="0.800000" />
+	  <HipFireChanceMultiplier value="1.500000" />
+      <MaxShootingDistance value="-1.000000" />
+      <PinnedDownTakeCoverAmount value="60.00000" />
+	   <CoverMaxConsecutiveFlinchesAmount value="40.0" />
+      <TimeBetweenPeeks value="10.000000" />
+      <WeaponAccuracy value="0.900000" />
+      <StrafeWhenMovingChance value="1.000000" />
+      <WalkWhenStrafingChance value="0.000000" />
+      <HeliSpeedModifier value="1.000000" />
+      <HeliSensesRange value="150.000000" />
+      <AttackWindowDistanceForCover value="40.000000" />
+      <TimeToInvalidateInjuredTarget value="5.000000" />
+      <MinimumDistanceToTarget value="7.000000" />
+      <MinimumInCoverDistanceToTarget value="4.000000" />
+      <BulletImpactDetectionRange value="3.000000" />
+      <AimTurnThreshold value="0.39269875" />
+      <OptimalCoverDistance value="-1.000000" />
+      <AutomobileSpeedModifier value="1.000000" />
+      <SpeedToFleeInVehicle value="40.000000" />
+      <TriggerChargeTime_Far value="6.000000" />
+      <TriggerChargeTime_Near value="2.250000" />
+      <MountSpeedModifier value="1.000000" />
+      <MinTimeBetweenProjectileThrows value="4.000000" />
+      <AccuracyOffsetModifier value="1.000000" />
+      <MinTimeInBestCoverForAltCoverUse value="-1.000000" />
+      <CrouchChance value="0.500000" />
+      <BulletReactionChance value="1.000000" />
+      <MaxWeaponPickupDistance value="10.000000" />
+      <WeaponPickupChance value="0.000000" />
+      <ExecuteTargetChance value="0.600000" />
+      <ExecuteTargetFromReloadChance value="0.700000" />
+      <ExecuteTargetMaxDistance value="13.00000" />
+      <FiringPatternInCoverHash>FIRING_PATTERN_IN_COVER_COMPANION_JOHN</FiringPatternInCoverHash>
+	  <FiringPatternInMountedWeaponHash>FIRING_PATTERN_FULL_AUTO</FiringPatternInMountedWeaponHash>
+    </Item>
+	<Item type="CCombatInfo">
+      <Name>COMPANION_MICAH</Name>
+	  <CombatStyleModifier>Companion_Micah</CombatStyleModifier>
+      <CombatMovement>CM_WillAdvance</CombatMovement>
+      <BehaviourFlags>USE_COVER USE_VEHICLE DO_DRIVEBYS CAN_FLANK LEAVE_VEHICLES STRAFE_BASED_ON_TARGET_PROXIMITY CAN_INVESTIGATE USE_PROXIMITY_FIRING_RATE ALLOW_STRAFE_BREAKUP PREFER_DUAL_WIELD MAINTAIN_MIN_DISTANCE_TO_TARGET USE_RANGE_BASED_WEAPON_SELECTION</BehaviourFlags>
+      <ExecuteTargetFlags>ETF_1H_Gun</ExecuteTargetFlags>
+      <CombatAbility>CA_Professional</CombatAbility>
+      <AttackRanges>CR_VeryFar</AttackRanges>
+      <TargetLossResponse>TLR_ExitTask</TargetLossResponse>
+      <TargetInjuredReaction>TIR_TreatAsDead</TargetInjuredReaction>
+      <CoverHeightPreference>CHP_Any</CoverHeightPreference>
+      <WeaponShootRateModifier value="1.000000" />
+      <FiringPatternHash>FIRING_PATTERN_COMPANION_MICAH</FiringPatternHash>
+      <BlindFireChance value="0.200000" />
+      <MaxShootingDistance value="-1.000000" />
+      <PinnedDownTakeCoverAmount value="60.00000" />
+	  <CoverMaxConsecutiveFlinchesAmount value="40.0" />
+      <TimeBetweenPeeks value="7.000000" />
+      <WeaponAccuracy value="0.850000" />
+      <StrafeWhenMovingChance value="1.000000" />
+      <WalkWhenStrafingChance value="0.000000" />
+      <HeliSpeedModifier value="1.000000" />
+      <HeliSensesRange value="150.000000" />
+      <AttackWindowDistanceForCover value="40.000000" />
+      <TimeToInvalidateInjuredTarget value="5.000000" />
+      <MinimumDistanceToTarget value="7.000000" />
+      <MinimumInCoverDistanceToTarget value="4.000000" />
+      <BulletImpactDetectionRange value="4.000000" />
+      <AimTurnThreshold value="0.39269875" />
+      <OptimalCoverDistance value="-1.000000" />
+      <AutomobileSpeedModifier value="1.000000" />
+      <SpeedToFleeInVehicle value="40.000000" />
+      <TriggerChargeTime_Far value="10.000000" />
+      <TriggerChargeTime_Near value="3.250000" />
+      <MountSpeedModifier value="1.000000" />
+      <MinTimeBetweenProjectileThrows value="4.000000" />
+      <AccuracyOffsetModifier value="1.000000" />
+      <MinTimeInBestCoverForAltCoverUse value="-1.000000" />
+      <CrouchChance value="0.500000" />
+      <BulletReactionChance value="1.000000" />
+      <MaxWeaponPickupDistance value="10.000000" />
+      <WeaponPickupChance value="0.000000" />
+      <ExecuteTargetChance value="0.700000" />
+      <ExecuteTargetFromReloadChance value="0.700000" />
+      <ExecuteTargetMaxDistance value="15.00000" />
+      <FiringPatternInCoverHash>FIRING_PATTERN_IN_COVER_COMPANION_MICAH</FiringPatternInCoverHash>
+	  <FiringPatternInMountedWeaponHash>FIRING_PATTERN_FULL_AUTO</FiringPatternInMountedWeaponHash>
+    </Item>
+    <Item type="CCombatInfo">
+      <Name>GANG_LEMOYNE_RAIDERS</Name>
+	  <CombatStyleModifier>Gang_Lemoyne</CombatStyleModifier>
+      <CombatMovement>CM_WillAdvance</CombatMovement>
+      <BehaviourFlags>USE_COVER USE_VEHICLE DO_DRIVEBYS LEAVE_VEHICLES STRAFE_BASED_ON_TARGET_PROXIMITY ALWAYS_FIGHT COVER_SEARCH_IN_ARC_AWAY_FROM_TARGET CAN_INVESTIGATE CAN_FLANK USE_PROXIMITY_FIRING_RATE MAINTAIN_MIN_DISTANCE_TO_TARGET</BehaviourFlags>
+      <CombatAbility>CA_Professional</CombatAbility>
+      <AttackRanges>CR_Medium</AttackRanges>
+      <TargetLossResponse>TLR_ExitTask</TargetLossResponse>
+      <TargetInjuredReaction>TIR_TreatAsDead</TargetInjuredReaction>
+      <CoverHeightPreference>CHP_PreferLow</CoverHeightPreference>
+      <WeaponShootRateModifier value="0.900000" />
+      <FiringPatternHash>FIRING_PATTERN_EX_CONFEDERATES_COMBAT</FiringPatternHash>
+      <BlindFireChance value="0.000000" />
+      <MaxShootingDistance value="-1.000000" />
+      <TimeBetweenPeeks value="5.000000" />
+      <WeaponAccuracy value="0.500000" />
+      <StrafeWhenMovingChance value="0.800000" />
+      <WalkWhenStrafingChance value="1.000000" />
+      <HeliSpeedModifier value="1.000000" />
+      <HeliSensesRange value="150.000000" />
+      <AttackWindowDistanceForCover value="70.000000" />
+      <TimeToInvalidateInjuredTarget value="5.000000" />
+      <MinimumDistanceToTarget value="2.500000" />
+      <MinimumInCoverDistanceToTarget value="2.500000" />
+      <BulletImpactDetectionRange value="3.000000" />
+      <AimTurnThreshold value="0.39269875" />
+      <OptimalCoverDistance value="-1.000000" />
+      <AutomobileSpeedModifier value="1.000000" />
+      <SpeedToFleeInVehicle value="40.000000" />
+      <TriggerChargeTime_Far value="6.000000" />
+      <TriggerChargeTime_Near value="3.250000" />
+      <MountSpeedModifier value="1.000000" />
+      <MinTimeBetweenProjectileThrows value="4.000000" />
+      <AccuracyOffsetModifier value="1.000000" />
+      <MinTimeInBestCoverForAltCoverUse value="7000000" />
+      <CrouchChance value="0.700000" />
+      <BulletReactionChance value="0.010000" />
+      <MaxWeaponPickupDistance value="8.000000" />
+      <WeaponPickupChance value="0.000000" />
+      <FiringPatternInCoverHash>FIRING_PATTERN_BURST_FIRE_IN_COVER</FiringPatternInCoverHash>
+	  <FiringPatternExplosivesInCoverHash>FIRING_PATTERN_EXPLOSIVES_IN_COVER</FiringPatternExplosivesInCoverHash>
+	  <FiringPatternThrownInCoverHash>FIRING_PATTERN_THROWN_IN_COVER</FiringPatternThrownInCoverHash>
+	  <FiringPatternInMountedWeaponHash>FIRING_PATTERN_FULL_AUTO</FiringPatternInMountedWeaponHash>
+	  <MinDistanceFromTargetForLastManFlee value="15.000000" />
+	  <ChanceOfLastManFleeFromCombat value="0.050000" />
+    </Item>
+    <Item type="CCombatInfo">
+      <Name>GANG_ODRISCOLLS</Name>
+	  <CombatStyleModifier>Gang_ODriscoll</CombatStyleModifier>
+      <CombatMovement>CM_WillAdvance</CombatMovement>
+      <BehaviourFlags>USE_COVER USE_VEHICLE DO_DRIVEBYS LEAVE_VEHICLES STRAFE_BASED_ON_TARGET_PROXIMITY ALWAYS_FIGHT COVER_SEARCH_IN_ARC_AWAY_FROM_TARGET CAN_INVESTIGATE USE_PROXIMITY_FIRING_RATE MAINTAIN_MIN_DISTANCE_TO_TARGET SWITCH_TO_ADVANCE_IF_CANT_FIND_COVER CAN_CHARGE ALLOW_STRAFE_BREAKUP</BehaviourFlags>
+      <CombatAbility>CA_Average</CombatAbility>
+      <AttackRanges>CR_Medium</AttackRanges>
+      <TargetLossResponse>TLR_ExitTask</TargetLossResponse>
+      <TargetInjuredReaction>TIR_TreatAsDead</TargetInjuredReaction>
+      <CoverHeightPreference>CHP_Any</CoverHeightPreference>
+      <WeaponShootRateModifier value="1.000000" />
+      <FiringPatternHash>FIRING_PATTERN_BURST_FIRE</FiringPatternHash>
+      <BlindFireChance value="0.300000" />
+      <MaxShootingDistance value="-1.000000" />
+      <TimeBetweenPeeks value="6.000000" />
+      <WeaponAccuracy value="0.300000" />
+      <StrafeWhenMovingChance value="0.200000" />
+      <WalkWhenStrafingChance value="0.600000" />
+      <HeliSpeedModifier value="1.000000" />
+      <HeliSensesRange value="150.000000" />
+      <AttackWindowDistanceForCover value="40.000000" />
+      <TimeToInvalidateInjuredTarget value="5.000000" />
+      <MinimumDistanceToTarget value="5.000000" />
+      <MinimumInCoverDistanceToTarget value="5.000000" />
+      <BulletImpactDetectionRange value="3.000000" />
+      <AimTurnThreshold value="0.39269875" />
+      <OptimalCoverDistance value="-1.000000" />
+      <AutomobileSpeedModifier value="1.000000" />
+      <SpeedToFleeInVehicle value="40.000000" />
+      <TriggerChargeTime_Far value="6.000000" />
+      <TriggerChargeTime_Near value="2.250000" />
+      <MountSpeedModifier value="1.000000" />
+      <MinTimeBetweenProjectileThrows value="4.000000" />
+      <AccuracyOffsetModifier value="1.000000" />
+      <MinTimeInBestCoverForAltCoverUse value="5.000000" />
+      <CrouchChance value="0.100000" />
+      <BulletReactionChance value="1.000000" />
+      <FiringPatternInCoverHash>FIRING_PATTERN_BURST_FIRE_IN_COVER</FiringPatternInCoverHash>
+	  <FiringPatternExplosivesInCoverHash>FIRING_PATTERN_EXPLOSIVES_IN_COVER</FiringPatternExplosivesInCoverHash>
+	  <FiringPatternThrownInCoverHash>FIRING_PATTERN_THROWN_IN_COVER</FiringPatternThrownInCoverHash>
+	  <FiringPatternInMountedWeaponHash>FIRING_PATTERN_FULL_AUTO</FiringPatternInMountedWeaponHash>
+	  <MinDistanceFromTargetForLastManFlee value="15.000000" />
+	  <ChanceOfLastManFleeFromCombat value="0.300000" />
+    </Item>
+	<Item type="CCombatInfo">
+      <Name>GANG_GRAYS</Name>
+      <CombatMovement>CM_WillAdvance</CombatMovement>
+      <BehaviourFlags>USE_COVER USE_VEHICLE DO_DRIVEBYS LEAVE_VEHICLES STRAFE_BASED_ON_TARGET_PROXIMITY ALWAYS_FIGHT COVER_SEARCH_IN_ARC_AWAY_FROM_TARGET CAN_INVESTIGATE USE_PROXIMITY_FIRING_RATE MAINTAIN_MIN_DISTANCE_TO_TARGET SWITCH_TO_ADVANCE_IF_CANT_FIND_COVER CAN_CHARGE ALLOW_STRAFE_BREAKUP</BehaviourFlags>
+      <CombatAbility>CA_Average</CombatAbility>
+      <AttackRanges>CR_Medium</AttackRanges>
+      <TargetLossResponse>TLR_ExitTask</TargetLossResponse>
+      <TargetInjuredReaction>TIR_TreatAsDead</TargetInjuredReaction>
+      <CoverHeightPreference>CHP_Any</CoverHeightPreference>
+      <WeaponShootRateModifier value="1.000000" />
+      <FiringPatternHash>FIRING_PATTERN_BURST_SINGLE_SHOT</FiringPatternHash>
+      <BlindFireChance value="0.300000" />
+      <MaxShootingDistance value="-1.000000" />
+      <TimeBetweenPeeks value="6.000000" />
+      <WeaponAccuracy value="0.330000" />
+      <StrafeWhenMovingChance value="0.200000" />
+      <WalkWhenStrafingChance value="0.600000" />
+      <HeliSpeedModifier value="1.000000" />
+      <HeliSensesRange value="150.000000" />
+      <AttackWindowDistanceForCover value="40.000000" />
+      <TimeToInvalidateInjuredTarget value="5.000000" />
+      <MinimumDistanceToTarget value="5.000000" />
+      <MinimumInCoverDistanceToTarget value="5.000000" />
+      <BulletImpactDetectionRange value="3.000000" />
+      <AimTurnThreshold value="0.39269875" />
+      <OptimalCoverDistance value="-1.000000" />
+      <AutomobileSpeedModifier value="1.000000" />
+      <SpeedToFleeInVehicle value="40.000000" />
+      <TriggerChargeTime_Far value="6.000000" />
+      <TriggerChargeTime_Near value="2.250000" />
+      <MountSpeedModifier value="1.000000" />
+      <MinTimeBetweenProjectileThrows value="4.000000" />
+      <AccuracyOffsetModifier value="1.000000" />
+      <MinTimeInBestCoverForAltCoverUse value="5.000000" />
+      <CrouchChance value="0.100000" />
+      <BulletReactionChance value="1.000000" />
+      <FiringPatternInCoverHash>FIRING_PATTERN_BURST_FIRE_IN_COVER</FiringPatternInCoverHash>
+	  <FiringPatternExplosivesInCoverHash>FIRING_PATTERN_EXPLOSIVES_IN_COVER</FiringPatternExplosivesInCoverHash>
+	  <FiringPatternThrownInCoverHash>FIRING_PATTERN_THROWN_IN_COVER</FiringPatternThrownInCoverHash>
+	  <FiringPatternInMountedWeaponHash>FIRING_PATTERN_FULL_AUTO</FiringPatternInMountedWeaponHash>
+	  <MinDistanceFromTargetForLastManFlee value="15.000000" />
+	  <ChanceOfLastManFleeFromCombat value="0.400000" />
+    </Item>
+    <Item type="CCombatInfo">
+      <Name>GANG_MURFREE_BROOD</Name>
+	  <CombatStyleModifier>Gang_Murfree</CombatStyleModifier>
+      <CombatMovement>CM_WillAdvance</CombatMovement>
+      <BehaviourFlags>CAN_CHARGE USE_VEHICLE DO_DRIVEBYS LEAVE_VEHICLES ALWAYS_FIGHT COVER_SEARCH_IN_ARC_AWAY_FROM_TARGET USE_PROXIMITY_FIRING_RATE SWITCH_TO_DEFENSIVE_IF_IN_COVER CAN_FIGHT_ARMED_PEDS_WHEN_NOT_ARMED CAN_CHARGE PERMIT_CHARGE_BEYOND_DEFENSIVE_AREA MAINTAIN_MIN_DISTANCE_TO_TARGET</BehaviourFlags>
+      <CombatAbility>CA_Poor</CombatAbility>
+      <AttackRanges>CR_Medium</AttackRanges>
+      <TargetLossResponse>TLR_ExitTask</TargetLossResponse>
+      <TargetInjuredReaction>TIR_TreatAsDead</TargetInjuredReaction>
+      <CoverHeightPreference>CHP_PreferLow</CoverHeightPreference>
+      <WeaponShootRateModifier value="2.000000" />
+      <FiringPatternHash>FIRING_PATTERN_BURST_FIRE</FiringPatternHash>
+      <BlindFireChance value="0.700000" />
+      <MaxShootingDistance value="-1.000000" />
+      <TimeBetweenPeeks value="3.500000" />
+      <WeaponAccuracy value="0.330000" />
+      <StrafeWhenMovingChance value="1.000000" />
+      <WalkWhenStrafingChance value="0.000000" />
+      <HeliSpeedModifier value="1.000000" />
+      <HeliSensesRange value="150.000000" />
+      <AttackWindowDistanceForCover value="40.000000" />
+      <TimeToInvalidateInjuredTarget value="5.000000" />
+      <MinimumDistanceToTarget value="4.000000" />
+      <MinimumInCoverDistanceToTarget value="4.000000" />
+      <BulletImpactDetectionRange value="3.000000" />
+      <AimTurnThreshold value="0.39269875" />
+      <OptimalCoverDistance value="-1.000000" />
+      <AutomobileSpeedModifier value="1.000000" />
+      <SpeedToFleeInVehicle value="40.000000" />
+      <TriggerChargeTime_Far value="6.000000" />
+      <TriggerChargeTime_Near value="2.250000" />
+      <MountSpeedModifier value="1.000000" />
+      <MinTimeBetweenProjectileThrows value="4.000000" />
+      <AccuracyOffsetModifier value="1.000000" />
+      <MinTimeInBestCoverForAltCoverUse value="5.000000" />
+      <CrouchChance value="0.100000" />
+      <BulletReactionChance value="1.000000" />
+      <FiringPatternInCoverHash>FIRING_PATTERN_BURST_FIRE_IN_COVER</FiringPatternInCoverHash>
+	  <FiringPatternExplosivesInCoverHash>FIRING_PATTERN_EXPLOSIVES_IN_COVER</FiringPatternExplosivesInCoverHash>
+	  <FiringPatternThrownInCoverHash>FIRING_PATTERN_THROWN_IN_COVER</FiringPatternThrownInCoverHash>
+	  <FiringPatternInMountedWeaponHash>FIRING_PATTERN_FULL_AUTO</FiringPatternInMountedWeaponHash>
+	  <MinDistanceFromTargetForLastManFlee value="15.000000" />
+	  <ChanceOfLastManFleeFromCombat value="0.300000" />
+    </Item>
+    <Item type="CCombatInfo">
+      <Name>GANG_NIGHT_FOLK</Name>
+	  <CombatStyleModifier>Gang_NightFolk</CombatStyleModifier>
+      <CombatMovement>CM_Defensive</CombatMovement>
+      <BehaviourFlags>USE_VEHICLE DO_DRIVEBYS LEAVE_VEHICLES ALWAYS_FIGHT COVER_SEARCH_IN_ARC_AWAY_FROM_TARGET CAN_INVESTIGATE USE_PROXIMITY_FIRING_RATE CAN_FLANK SWITCH_TO_ADVANCE_IF_CANT_FIND_COVER CAN_FIGHT_ARMED_PEDS_WHEN_NOT_ARMED CAN_CHARGE PERMIT_CHARGE_BEYOND_DEFENSIVE_AREA ALLOW_STRAFE_BREAKUP MAINTAIN_MIN_DISTANCE_TO_TARGET</BehaviourFlags>
+      <CombatAbility>CA_Average</CombatAbility>
+      <AttackRanges>CR_Medium</AttackRanges>
+      <TargetLossResponse>TLR_ExitTask</TargetLossResponse>
+      <TargetInjuredReaction>TIR_TreatAsDead</TargetInjuredReaction>
+      <CoverHeightPreference>CHP_Any</CoverHeightPreference>
+      <WeaponShootRateModifier value="1.000000" />
+      <FiringPatternHash>FIRING_PATTERN_BURST_FIRE</FiringPatternHash>
+      <BlindFireChance value="0.300000" />
+      <MaxShootingDistance value="-1.000000" />
+      <TimeBetweenPeeks value="5.500000" />
+      <WeaponAccuracy value="0.500000" />
+      <StrafeWhenMovingChance value="1.000000" />
+      <WalkWhenStrafingChance value="0.000000" />
+      <HeliSpeedModifier value="1.000000" />
+      <HeliSensesRange value="150.000000" />
+      <AttackWindowDistanceForCover value="40.000000" />
+      <TimeToInvalidateInjuredTarget value="5.000000" />
+      <MinimumDistanceToTarget value="4.000000" />
+      <MinimumInCoverDistanceToTarget value="4.000000" />
+      <BulletImpactDetectionRange value="3.000000" />
+      <AimTurnThreshold value="0.39269875" />
+      <OptimalCoverDistance value="-1.000000" />
+      <AutomobileSpeedModifier value="1.000000" />
+      <SpeedToFleeInVehicle value="40.000000" />
+      <TriggerChargeTime_Far value="6.000000" />
+      <TriggerChargeTime_Near value="2.250000" />
+      <MountSpeedModifier value="1.000000" />
+      <MinTimeBetweenProjectileThrows value="4.000000" />
+      <AccuracyOffsetModifier value="1.000000" />
+      <MinTimeInBestCoverForAltCoverUse value="4.000000" />
+      <CrouchChance value="0.100000" />
+      <BulletReactionChance value="1.000000" />
+      <FiringPatternInCoverHash>FIRING_PATTERN_BURST_FIRE_IN_COVER</FiringPatternInCoverHash>
+	  <FiringPatternExplosivesInCoverHash>FIRING_PATTERN_EXPLOSIVES_IN_COVER</FiringPatternExplosivesInCoverHash>
+	  <FiringPatternThrownInCoverHash>FIRING_PATTERN_THROWN_IN_COVER</FiringPatternThrownInCoverHash>
+	  <FiringPatternInMountedWeaponHash>FIRING_PATTERN_FULL_AUTO</FiringPatternInMountedWeaponHash>
+	  <MinDistanceFromTargetForLastManFlee value="15.000000" />
+	  <ChanceOfLastManFleeFromCombat value="0.300000" />
+    </Item>
+    <Item type="CCombatInfo">
+      <Name>GANG_SKINNER_BROS</Name>
+	  <CombatStyleModifier>Gang_Skinner</CombatStyleModifier>
+      <CombatMovement>CM_WillRetreat</CombatMovement>
+      <BehaviourFlags>ALWAYS_FIGHT CAN_FIGHT_ARMED_PEDS_WHEN_NOT_ARMED CAN_CHARGE USE_VEHICLE DO_DRIVEBYS LEAVE_VEHICLES COVER_SEARCH_IN_ARC_AWAY_FROM_TARGET USE_PROXIMITY_FIRING_RATE CAN_CHARGE PERMIT_CHARGE_BEYOND_DEFENSIVE_AREA SWITCH_TO_DEFENSIVE_IF_IN_COVER ALLOW_STRAFE_BREAKUP MAINTAIN_MIN_DISTANCE_TO_TARGET</BehaviourFlags>
+      <CombatAbility>CA_Average</CombatAbility>
+      <AttackRanges>CR_Medium</AttackRanges>
+      <TargetLossResponse>TLR_ExitTask</TargetLossResponse>
+      <TargetInjuredReaction>TIR_TreatAsDead</TargetInjuredReaction>
+      <CoverHeightPreference>CHP_PreferLow</CoverHeightPreference>
+      <WeaponShootRateModifier value="0.800000" />
+      <FiringPatternHash>FIRING_PATTERN_BURST_FIRE</FiringPatternHash>
+      <BlindFireChance value="0.700000" />
+      <MaxShootingDistance value="-1.000000" />
+      <TimeBetweenPeeks value="3.500000" />
+      <WeaponAccuracy value="0.350000" />
+      <StrafeWhenMovingChance value="1.000000" />
+      <WalkWhenStrafingChance value="0.000000" />
+      <HeliSpeedModifier value="1.000000" />
+      <HeliSensesRange value="150.000000" />
+      <AttackWindowDistanceForCover value="40.000000" />
+      <TimeToInvalidateInjuredTarget value="5.000000" />
+      <MinimumDistanceToTarget value="4.000000" />
+      <MinimumInCoverDistanceToTarget value="4.000000" />
+      <BulletImpactDetectionRange value="3.000000" />
+      <AimTurnThreshold value="0.39269875" />
+      <OptimalCoverDistance value="-1.000000" />
+      <AutomobileSpeedModifier value="1.000000" />
+      <SpeedToFleeInVehicle value="40.000000" />
+      <TriggerChargeTime_Far value="6.000000" />
+      <TriggerChargeTime_Near value="2.250000" />
+      <MountSpeedModifier value="1.000000" />
+      <MinTimeBetweenProjectileThrows value="4.000000" />
+      <AccuracyOffsetModifier value="1.000000" />
+      <MinTimeInBestCoverForAltCoverUse value="-1.000000" />
+      <CrouchChance value="0.100000" />
+      <BulletReactionChance value="1.000000" />
+      <FiringPatternInCoverHash>FIRING_PATTERN_BURST_FIRE_IN_COVER</FiringPatternInCoverHash>
+	  <FiringPatternExplosivesInCoverHash>FIRING_PATTERN_EXPLOSIVES_IN_COVER</FiringPatternExplosivesInCoverHash>
+	  <FiringPatternThrownInCoverHash>FIRING_PATTERN_THROWN_IN_COVER</FiringPatternThrownInCoverHash>
+	  <FiringPatternInMountedWeaponHash>FIRING_PATTERN_FULL_AUTO</FiringPatternInMountedWeaponHash>
+	  <MinDistanceFromTargetForLastManFlee value="15.000000" />
+	  <ChanceOfLastManFleeFromCombat value="0.300000" />
+    </Item>
+    <Item type="CCombatInfo">
+      <Name>GANG_DEL_LOBOS</Name>
+	  <CombatStyleModifier>Gang_DelLobos</CombatStyleModifier>
+      <CombatMovement>CM_WillAdvance</CombatMovement>
+      <BehaviourFlags>USE_VEHICLE DO_DRIVEBYS LEAVE_VEHICLES STRAFE_BASED_ON_TARGET_PROXIMITY ALWAYS_FIGHT COVER_SEARCH_IN_ARC_AWAY_FROM_TARGET CAN_INVESTIGATE USE_PROXIMITY_FIRING_RATE MAINTAIN_MIN_DISTANCE_TO_TARGET SWITCH_TO_ADVANCE_IF_CANT_FIND_COVER CAN_CHARGE ALLOW_STRAFE_BREAKUP</BehaviourFlags>
+      <CombatAbility>CA_Average</CombatAbility>
+      <AttackRanges>CR_Medium</AttackRanges>
+      <TargetLossResponse>TLR_ExitTask</TargetLossResponse>
+      <TargetInjuredReaction>TIR_TreatAsDead</TargetInjuredReaction>
+      <CoverHeightPreference>CHP_Any</CoverHeightPreference>
+      <WeaponShootRateModifier value="1.000000" />
+      <FiringPatternHash>FIRING_PATTERN_BURST_FIRE</FiringPatternHash>
+      <BlindFireChance value="0.300000" />
+      <MaxShootingDistance value="-1.000000" />
+      <TimeBetweenPeeks value="6.000000" />
+      <WeaponAccuracy value="0.330000" />
+      <StrafeWhenMovingChance value="0.200000" />
+      <WalkWhenStrafingChance value="0.600000" />
+      <HeliSpeedModifier value="1.000000" />
+      <HeliSensesRange value="150.000000" />
+      <AttackWindowDistanceForCover value="40.000000" />
+      <TimeToInvalidateInjuredTarget value="5.000000" />
+      <MinimumDistanceToTarget value="5.000000" />
+      <MinimumInCoverDistanceToTarget value="5.000000" />
+      <BulletImpactDetectionRange value="3.000000" />
+      <AimTurnThreshold value="0.39269875" />
+      <OptimalCoverDistance value="-1.000000" />
+      <AutomobileSpeedModifier value="1.000000" />
+      <SpeedToFleeInVehicle value="40.000000" />
+      <TriggerChargeTime_Far value="6.000000" />
+      <TriggerChargeTime_Near value="2.250000" />
+      <MountSpeedModifier value="1.000000" />
+      <MinTimeBetweenProjectileThrows value="4.000000" />
+      <AccuracyOffsetModifier value="1.000000" />
+      <MinTimeInBestCoverForAltCoverUse value="5.000000" />
+      <CrouchChance value="0.100000" />
+      <BulletReactionChance value="1.000000" />
+      <FiringPatternInCoverHash>FIRING_PATTERN_BURST_FIRE_IN_COVER</FiringPatternInCoverHash>
+	  <FiringPatternExplosivesInCoverHash>FIRING_PATTERN_EXPLOSIVES_IN_COVER</FiringPatternExplosivesInCoverHash>
+	  <FiringPatternThrownInCoverHash>FIRING_PATTERN_THROWN_IN_COVER</FiringPatternThrownInCoverHash>
+	  <FiringPatternInMountedWeaponHash>FIRING_PATTERN_FULL_AUTO</FiringPatternInMountedWeaponHash>
+	  <MinDistanceFromTargetForLastManFlee value="15.000000" />
+	  <ChanceOfLastManFleeFromCombat value="0.300000" />
+    </Item>
+    <Item type="CCombatInfo">
+      <Name>GANG_LARAMIE</Name>
+	  <CombatStyleModifier>Gang_Laramie</CombatStyleModifier>
+      <CombatMovement>CM_WillAdvance</CombatMovement>
+      <BehaviourFlags>USE_COVER USE_VEHICLE DO_DRIVEBYS LEAVE_VEHICLES STRAFE_BASED_ON_TARGET_PROXIMITY ALWAYS_FIGHT COVER_SEARCH_IN_ARC_AWAY_FROM_TARGET CAN_INVESTIGATE USE_PROXIMITY_FIRING_RATE MAINTAIN_MIN_DISTANCE_TO_TARGET SWITCH_TO_ADVANCE_IF_CANT_FIND_COVER CAN_CHARGE ALLOW_STRAFE_BREAKUP</BehaviourFlags>
+      <CombatAbility>CA_Average</CombatAbility>
+      <AttackRanges>CR_Medium</AttackRanges>
+      <TargetLossResponse>TLR_ExitTask</TargetLossResponse>
+      <TargetInjuredReaction>TIR_TreatAsDead</TargetInjuredReaction>
+      <CoverHeightPreference>CHP_Any</CoverHeightPreference>
+      <WeaponShootRateModifier value="1.000000" />
+      <FiringPatternHash>FIRING_PATTERN_BURST_FIRE</FiringPatternHash>
+      <BlindFireChance value="0.300000" />
+      <MaxShootingDistance value="-1.000000" />
+      <TimeBetweenPeeks value="6.000000" />
+      <WeaponAccuracy value="0.330000" />
+      <StrafeWhenMovingChance value="0.200000" />
+      <WalkWhenStrafingChance value="0.600000" />
+      <HeliSpeedModifier value="1.000000" />
+      <HeliSensesRange value="150.000000" />
+      <AttackWindowDistanceForCover value="40.000000" />
+      <TimeToInvalidateInjuredTarget value="5.000000" />
+      <MinimumDistanceToTarget value="5.000000" />
+      <MinimumInCoverDistanceToTarget value="5.000000" />
+      <BulletImpactDetectionRange value="3.000000" />
+      <AimTurnThreshold value="0.39269875" />
+      <OptimalCoverDistance value="-1.000000" />
+      <AutomobileSpeedModifier value="1.000000" />
+      <SpeedToFleeInVehicle value="40.000000" />
+      <TriggerChargeTime_Far value="6.000000" />
+      <TriggerChargeTime_Near value="2.250000" />
+      <MountSpeedModifier value="1.000000" />
+      <MinTimeBetweenProjectileThrows value="4.000000" />
+      <AccuracyOffsetModifier value="1.000000" />
+      <MinTimeInBestCoverForAltCoverUse value="5.000000" />
+      <CrouchChance value="0.100000" />
+      <BulletReactionChance value="1.000000" />
+      <FiringPatternInCoverHash>FIRING_PATTERN_BURST_FIRE_IN_COVER</FiringPatternInCoverHash>
+	  <FiringPatternExplosivesInCoverHash>FIRING_PATTERN_EXPLOSIVES_IN_COVER</FiringPatternExplosivesInCoverHash>
+	  <FiringPatternThrownInCoverHash>FIRING_PATTERN_THROWN_IN_COVER</FiringPatternThrownInCoverHash>
+	  <FiringPatternInMountedWeaponHash>FIRING_PATTERN_FULL_AUTO</FiringPatternInMountedWeaponHash>
+	  <MinDistanceFromTargetForLastManFlee value="15.000000" />
+	  <ChanceOfLastManFleeFromCombat value="0.300000" />
+    </Item>
+    <Item type="CCombatInfo">
+      <Name>Law</Name>
+      <CombatMovement>CM_WillAdvance</CombatMovement>
+      <BehaviourFlags>USE_COVER USE_VEHICLE DO_DRIVEBYS LEAVE_VEHICLES STRAFE_BASED_ON_TARGET_PROXIMITY STRAFE_DUE_TO_BULLET_EVENTS CAN_CHASE_TARGET_ON_FOOT USE_PROXIMITY_FIRING_RATE ALLOW_STRAFE_BREAKUP CAN_CHARGE WILL_DRAG_INJURED_PEDS_TO_SAFETY WILL_CUT_FREE_HOGTIED_PEDS MAINTAIN_MIN_DISTANCE_TO_TARGET CAN_FIGHT_ARMED_PEDS_WHEN_NOT_ARMED</BehaviourFlags>
+      <CombatAbility>CA_Professional</CombatAbility>
+      <AttackRanges>CR_Medium</AttackRanges>
+      <TargetLossResponse>TLR_ExitTask</TargetLossResponse>
+      <TargetInjuredReaction>TIR_TreatAsDead</TargetInjuredReaction>
+      <CoverHeightPreference>CHP_Any</CoverHeightPreference>
+      <WeaponShootRateModifier value="2.0" />
+      <FiringPatternHash>FIRING_PATTERN_BURST_SINGLE_SHOT</FiringPatternHash>
+      <BlindFireChance value="0.000000" />
+      <MaxShootingDistance value="-1.000000" />
+      <TimeBetweenPeeks value="10.000000" />
+      <WeaponAccuracy value="0.600000" />
+      <StrafeWhenMovingChance value="1.000000" />
+      <WalkWhenStrafingChance value="0.000000" />
+      <HeliSpeedModifier value="1.000000" />
+      <HeliSensesRange value="150.000000" />
+      <AttackWindowDistanceForCover value="30.000000" />
+      <TimeToInvalidateInjuredTarget value="6.000000" />
+      <MinimumDistanceToTarget value="7.000000" />
+      <MinimumInCoverDistanceToTarget value="4.000000" />
+      <BulletImpactDetectionRange value="3.000000" />
+      <AimTurnThreshold value="0.39269875" />
+      <OptimalCoverDistance value="-1.000000" />
+      <AutomobileSpeedModifier value="1.000000" />
+      <SpeedToFleeInVehicle value="40.000000" />
+      <TriggerChargeTime_Far value="6.000000" />
+      <TriggerChargeTime_Near value="2.250000" />
+      <MountSpeedModifier value="1.000000" />
+      <MinTimeBetweenProjectileThrows value="4.000000" />
+      <AccuracyOffsetModifier value="1.000000" />
+      <MinTimeInBestCoverForAltCoverUse value="-1.000000" />
+      <CrouchChance value="0.100000" />
+      <BulletReactionChance value="1.000000" />
+      <MaxWeaponPickupDistance value="8.000000" />
+      <WeaponPickupChance value="10.000000" />
+      <MinTimeInCombatBeforeCharge value="6.000000" />
+      <StartStandAndFireDistance value="8.000000" />
+      <DistanceToConsiderDismount value="50.000000" />
+      <DistanceToConsiderDismountInWilderness value="35.000000" />
+	  <ConsiderRecentChargeAsActiveTimeout value="15.0" />
+	  <MinTimeBetweenChargesAtSameTarget  value="12.0" />
+	  <MinTimeForSamePedToChargeAgain  value="15.0" />
+      <FiringPatternInCoverHash>FIRING_PATTERN_BURST_FIRE_IN_COVER</FiringPatternInCoverHash>
+	  <FiringPatternExplosivesInCoverHash>FIRING_PATTERN_EXPLOSIVES_IN_COVER</FiringPatternExplosivesInCoverHash>
+	  <FiringPatternThrownInCoverHash>FIRING_PATTERN_THROWN_IN_COVER</FiringPatternThrownInCoverHash>
+	  <FiringPatternInMountedWeaponHash>FIRING_PATTERN_FULL_AUTO</FiringPatternInMountedWeaponHash>
+	  <MinDistanceFromTargetForLastManFlee value="15.000000" />
+	  <ChanceOfLastManFleeFromCombat value="0.100000" />
+      <MountedChasingProfile>Amateur</MountedChasingProfile>
+    </Item>
+    <Item type="CCombatInfo">
+      <Name>LAW_UNSKILLED</Name>
+      <CombatMovement>CM_WillAdvance</CombatMovement>
+      <BehaviourFlags>USE_COVER USE_VEHICLE DO_DRIVEBYS LEAVE_VEHICLES STRAFE_BASED_ON_TARGET_PROXIMITY STRAFE_DUE_TO_BULLET_EVENTS CAN_CHASE_TARGET_ON_FOOT USE_PROXIMITY_FIRING_RATE ALLOW_STRAFE_BREAKUP CAN_CHARGE WILL_DRAG_INJURED_PEDS_TO_SAFETY WILL_CUT_FREE_HOGTIED_PEDS MAINTAIN_MIN_DISTANCE_TO_TARGET CAN_FIGHT_ARMED_PEDS_WHEN_NOT_ARMED</BehaviourFlags>
+      <CombatAbility>CA_Professional</CombatAbility>
+      <AttackRanges>CR_Medium</AttackRanges>
+      <TargetLossResponse>TLR_ExitTask</TargetLossResponse>
+      <TargetInjuredReaction>TIR_TreatAsDead</TargetInjuredReaction>
+      <CoverHeightPreference>CHP_Any</CoverHeightPreference>
+      <WeaponShootRateModifier value="2.0" />
+      <FiringPatternHash>FIRING_PATTERN_BURST_SINGLE_SHOT</FiringPatternHash>
+      <BlindFireChance value="0.000000" />
+      <MaxShootingDistance value="-1.000000" />
+      <TimeBetweenPeeks value="10.000000" />
+      <WeaponAccuracy value="0.500000" />
+      <StrafeWhenMovingChance value="1.000000" />
+      <WalkWhenStrafingChance value="0.000000" />
+      <HeliSpeedModifier value="1.000000" />
+      <HeliSensesRange value="150.000000" />
+      <AttackWindowDistanceForCover value="30.000000" />
+      <TimeToInvalidateInjuredTarget value="6.000000" />
+      <MinimumDistanceToTarget value="7.000000" />
+      <MinimumInCoverDistanceToTarget value="4.000000" />
+      <BulletImpactDetectionRange value="3.000000" />
+      <AimTurnThreshold value="0.39269875" />
+      <OptimalCoverDistance value="-1.000000" />
+      <AutomobileSpeedModifier value="1.000000" />
+      <SpeedToFleeInVehicle value="40.000000" />
+      <TriggerChargeTime_Far value="6.000000" />
+      <TriggerChargeTime_Near value="2.250000" />
+      <MountSpeedModifier value="1.000000" />
+      <MinTimeBetweenProjectileThrows value="4.000000" />
+      <AccuracyOffsetModifier value="1.000000" />
+      <MinTimeInBestCoverForAltCoverUse value="-1.000000" />
+      <CrouchChance value="0.100000" />
+      <BulletReactionChance value="1.000000" />
+      <MaxWeaponPickupDistance value="8.000000" />
+      <WeaponPickupChance value="5.000000" />
+      <MinTimeInCombatBeforeCharge value="6.000000" />
+      <StartStandAndFireDistance value="8.000000" />
+      <DistanceToConsiderDismount value="50.000000" />
+      <DistanceToConsiderDismountInWilderness value="35.000000" />
+	  <ConsiderRecentChargeAsActiveTimeout value="15.0" />
+	  <MinTimeBetweenChargesAtSameTarget  value="12.0" />
+	  <MinTimeForSamePedToChargeAgain  value="15.0" />
+      <FiringPatternInCoverHash>FIRING_PATTERN_BURST_FIRE_IN_COVER</FiringPatternInCoverHash>
+	  <FiringPatternExplosivesInCoverHash>FIRING_PATTERN_EXPLOSIVES_IN_COVER</FiringPatternExplosivesInCoverHash>
+	  <FiringPatternThrownInCoverHash>FIRING_PATTERN_THROWN_IN_COVER</FiringPatternThrownInCoverHash>
+	  <FiringPatternInMountedWeaponHash>FIRING_PATTERN_FULL_AUTO</FiringPatternInMountedWeaponHash>
+	  <MinDistanceFromTargetForLastManFlee value="15.000000" />
+	  <ChanceOfLastManFleeFromCombat value="0.100000" />
+      <MountedChasingProfile>Amateur</MountedChasingProfile>
+    </Item>
+	<Item type="CCombatInfo">
+      <Name>LawMarshal</Name>
+      <CombatMovement>CM_WillAdvance</CombatMovement>
+      <BehaviourFlags>USE_COVER USE_VEHICLE DO_DRIVEBYS LEAVE_VEHICLES STRAFE_BASED_ON_TARGET_PROXIMITY STRAFE_DUE_TO_BULLET_EVENTS CAN_CHASE_TARGET_ON_FOOT USE_PROXIMITY_FIRING_RATE ALLOW_STRAFE_BREAKUP CAN_CHARGE WILL_DRAG_INJURED_PEDS_TO_SAFETY WILL_CUT_FREE_HOGTIED_PEDS MAINTAIN_MIN_DISTANCE_TO_TARGET DISABLE_FLEE_FROM_COMBAT CAN_FIGHT_ARMED_PEDS_WHEN_NOT_ARMED</BehaviourFlags>
+      <CombatAbility>CA_Professional</CombatAbility>
+      <AttackRanges>CR_Medium</AttackRanges>
+      <TargetLossResponse>TLR_ExitTask</TargetLossResponse>
+      <TargetInjuredReaction>TIR_TreatAsDead</TargetInjuredReaction>
+      <CoverHeightPreference>CHP_Any</CoverHeightPreference>
+      <WeaponShootRateModifier value="2.0" />
+      <FiringPatternHash>FIRING_PATTERN_BURST_SINGLE_SHOT</FiringPatternHash>
+      <BlindFireChance value="0.000000" />
+      <MaxShootingDistance value="-1.000000" />
+      <TimeBetweenPeeks value="10.000000" />
+      <WeaponAccuracy value="0.700000" />
+      <StrafeWhenMovingChance value="1.000000" />
+      <WalkWhenStrafingChance value="0.000000" />
+      <HeliSpeedModifier value="1.000000" />
+      <HeliSensesRange value="150.000000" />
+      <AttackWindowDistanceForCover value="30.000000" />
+      <TimeToInvalidateInjuredTarget value="6.000000" />
+      <MinimumDistanceToTarget value="7.000000" />
+      <MinimumInCoverDistanceToTarget value="4.000000" />
+      <BulletImpactDetectionRange value="3.000000" />
+      <AimTurnThreshold value="0.39269875" />
+      <OptimalCoverDistance value="-1.000000" />
+      <AutomobileSpeedModifier value="1.000000" />
+      <SpeedToFleeInVehicle value="40.000000" />
+      <TriggerChargeTime_Far value="6.000000" />
+      <TriggerChargeTime_Near value="2.250000" />
+      <MountSpeedModifier value="1.000000" />
+      <MinTimeBetweenProjectileThrows value="4.000000" />
+      <AccuracyOffsetModifier value="1.000000" />
+      <MinTimeInBestCoverForAltCoverUse value="-1.000000" />
+      <CrouchChance value="0.100000" />
+      <BulletReactionChance value="1.000000" />
+      <MaxWeaponPickupDistance value="8.000000" />
+      <WeaponPickupChance value="10.000000" />
+      <MinTimeInCombatBeforeCharge value="6.000000" />
+      <StartStandAndFireDistance value="8.000000" />
+      <DistanceToConsiderDismount value="50.000000" />
+      <DistanceToConsiderDismountInWilderness value="35.000000" />
+	  <ConsiderRecentChargeAsActiveTimeout value="15.0" />
+	  <MinTimeBetweenChargesAtSameTarget  value="12.0" />
+	  <MinTimeForSamePedToChargeAgain  value="15.0" />
+      <FiringPatternInCoverHash>FIRING_PATTERN_BURST_FIRE_IN_COVER</FiringPatternInCoverHash>
+	  <FiringPatternExplosivesInCoverHash>FIRING_PATTERN_EXPLOSIVES_IN_COVER</FiringPatternExplosivesInCoverHash>
+	  <FiringPatternThrownInCoverHash>FIRING_PATTERN_THROWN_IN_COVER</FiringPatternThrownInCoverHash>
+	  <FiringPatternInMountedWeaponHash>FIRING_PATTERN_FULL_AUTO</FiringPatternInMountedWeaponHash>
+	  <MinDistanceFromTargetForLastManFlee value="15.000000" />
+	  <ChanceOfLastManFleeFromCombat value="0.100000" />
+      <MountedChasingProfile>Professional</MountedChasingProfile>
+    </Item>
+	<Item type="CCombatInfo">
+      <Name>LAW_DEADSHOT</Name>
+      <CombatMovement>CM_WillAdvance</CombatMovement>
+      <BehaviourFlags>USE_COVER USE_VEHICLE DO_DRIVEBYS LEAVE_VEHICLES STRAFE_BASED_ON_TARGET_PROXIMITY STRAFE_DUE_TO_BULLET_EVENTS CAN_CHASE_TARGET_ON_FOOT USE_PROXIMITY_FIRING_RATE ALLOW_STRAFE_BREAKUP CAN_CHARGE WILL_DRAG_INJURED_PEDS_TO_SAFETY WILL_CUT_FREE_HOGTIED_PEDS MAINTAIN_MIN_DISTANCE_TO_TARGET DISABLE_FLEE_FROM_COMBAT CAN_FIGHT_ARMED_PEDS_WHEN_NOT_ARMED</BehaviourFlags>
+      <CombatAbility>CA_Professional</CombatAbility>
+      <AttackRanges>CR_Medium</AttackRanges>
+      <TargetLossResponse>TLR_ExitTask</TargetLossResponse>
+      <TargetInjuredReaction>TIR_TreatAsDead</TargetInjuredReaction>
+      <CoverHeightPreference>CHP_Any</CoverHeightPreference>
+      <WeaponShootRateModifier value="2.0" />
+      <FiringPatternHash>FIRING_PATTERN_BURST_SINGLE_SHOT</FiringPatternHash>
+      <BlindFireChance value="0.000000" />
+      <MaxShootingDistance value="-1.000000" />
+      <TimeBetweenPeeks value="10.000000" />
+      <WeaponAccuracy value="0.880000" />
+      <StrafeWhenMovingChance value="1.000000" />
+      <WalkWhenStrafingChance value="0.000000" />
+      <HeliSpeedModifier value="1.000000" />
+      <HeliSensesRange value="150.000000" />
+      <AttackWindowDistanceForCover value="30.000000" />
+      <TimeToInvalidateInjuredTarget value="6.000000" />
+      <MinimumDistanceToTarget value="7.000000" />
+      <MinimumInCoverDistanceToTarget value="4.000000" />
+      <BulletImpactDetectionRange value="3.000000" />
+      <AimTurnThreshold value="0.39269875" />
+      <OptimalCoverDistance value="-1.000000" />
+      <AutomobileSpeedModifier value="1.000000" />
+      <SpeedToFleeInVehicle value="40.000000" />
+      <TriggerChargeTime_Far value="6.000000" />
+      <TriggerChargeTime_Near value="2.250000" />
+      <MountSpeedModifier value="1.000000" />
+      <MinTimeBetweenProjectileThrows value="4.000000" />
+      <AccuracyOffsetModifier value="1.000000" />
+      <MinTimeInBestCoverForAltCoverUse value="-1.000000" />
+      <CrouchChance value="0.100000" />
+      <BulletReactionChance value="1.000000" />
+      <MaxWeaponPickupDistance value="8.000000" />
+      <WeaponPickupChance value="10.000000" />
+      <MinTimeInCombatBeforeCharge value="6.000000" />
+      <StartStandAndFireDistance value="8.000000" />
+      <DistanceToConsiderDismount value="50.000000" />
+      <DistanceToConsiderDismountInWilderness value="35.000000" />
+	  <ConsiderRecentChargeAsActiveTimeout value="15.0" />
+	  <MinTimeBetweenChargesAtSameTarget  value="12.0" />
+	  <MinTimeForSamePedToChargeAgain  value="15.0" />
+      <FiringPatternInCoverHash>FIRING_PATTERN_BURST_FIRE_IN_COVER</FiringPatternInCoverHash>
+	  <FiringPatternExplosivesInCoverHash>FIRING_PATTERN_EXPLOSIVES_IN_COVER</FiringPatternExplosivesInCoverHash>
+	  <FiringPatternThrownInCoverHash>FIRING_PATTERN_THROWN_IN_COVER</FiringPatternThrownInCoverHash>
+	  <FiringPatternInMountedWeaponHash>FIRING_PATTERN_FULL_AUTO</FiringPatternInMountedWeaponHash>
+	  <MinDistanceFromTargetForLastManFlee value="15.000000" />
+	  <ChanceOfLastManFleeFromCombat value="0.100000" />
+      <MountedChasingProfile>Professional</MountedChasingProfile>
+    </Item>
+	<Item type="CCombatInfo">
+      <Name>LAW_SHARPSHOOTER</Name>
+      <CombatMovement>CM_WillAdvance</CombatMovement>
+      <BehaviourFlags>USE_COVER USE_VEHICLE DO_DRIVEBYS LEAVE_VEHICLES STRAFE_BASED_ON_TARGET_PROXIMITY STRAFE_DUE_TO_BULLET_EVENTS CAN_CHASE_TARGET_ON_FOOT USE_PROXIMITY_FIRING_RATE ALLOW_STRAFE_BREAKUP CAN_CHARGE WILL_DRAG_INJURED_PEDS_TO_SAFETY WILL_CUT_FREE_HOGTIED_PEDS MAINTAIN_MIN_DISTANCE_TO_TARGET DISABLE_FLEE_FROM_COMBAT PERFECT_ACCURACY CAN_FIGHT_ARMED_PEDS_WHEN_NOT_ARMED</BehaviourFlags>
+      <CombatAbility>CA_Professional</CombatAbility>
+      <AttackRanges>CR_Medium</AttackRanges>
+      <TargetLossResponse>TLR_ExitTask</TargetLossResponse>
+      <TargetInjuredReaction>TIR_TreatAsDead</TargetInjuredReaction>
+      <CoverHeightPreference>CHP_Any</CoverHeightPreference>
+      <WeaponShootRateModifier value="2.0" />
+      <FiringPatternHash>FIRING_PATTERN_BURST_SINGLE_SHOT</FiringPatternHash>
+      <BlindFireChance value="0.000000" />
+      <MaxShootingDistance value="-1.000000" />
+      <TimeBetweenPeeks value="10.000000" />
+      <WeaponAccuracy value="0.800000" />
+      <StrafeWhenMovingChance value="1.000000" />
+      <WalkWhenStrafingChance value="0.000000" />
+      <HeliSpeedModifier value="1.000000" />
+      <HeliSensesRange value="150.000000" />
+      <AttackWindowDistanceForCover value="30.000000" />
+      <TimeToInvalidateInjuredTarget value="6.000000" />
+      <MinimumDistanceToTarget value="7.000000" />
+      <MinimumInCoverDistanceToTarget value="4.000000" />
+      <BulletImpactDetectionRange value="3.000000" />
+      <AimTurnThreshold value="0.39269875" />
+      <OptimalCoverDistance value="-1.000000" />
+      <AutomobileSpeedModifier value="1.000000" />
+      <SpeedToFleeInVehicle value="40.000000" />
+      <TriggerChargeTime_Far value="6.000000" />
+      <TriggerChargeTime_Near value="2.250000" />
+      <MountSpeedModifier value="1.000000" />
+      <MinTimeBetweenProjectileThrows value="4.000000" />
+      <AccuracyOffsetModifier value="1.000000" />
+      <MinTimeInBestCoverForAltCoverUse value="-1.000000" />
+      <CrouchChance value="0.100000" />
+      <BulletReactionChance value="1.000000" />
+      <MaxWeaponPickupDistance value="8.000000" />
+      <WeaponPickupChance value="10.000000" />
+      <MinTimeInCombatBeforeCharge value="6.000000" />
+      <StartStandAndFireDistance value="8.000000" />
+      <DistanceToConsiderDismount value="50.000000" />
+      <DistanceToConsiderDismountInWilderness value="35.000000" />
+	  <ConsiderRecentChargeAsActiveTimeout value="15.0" />
+	  <MinTimeBetweenChargesAtSameTarget  value="12.0" />
+	  <MinTimeForSamePedToChargeAgain  value="15.0" />
+      <FiringPatternInCoverHash>FIRING_PATTERN_BURST_FIRE_IN_COVER</FiringPatternInCoverHash>
+	  <FiringPatternExplosivesInCoverHash>FIRING_PATTERN_EXPLOSIVES_IN_COVER</FiringPatternExplosivesInCoverHash>
+	  <FiringPatternThrownInCoverHash>FIRING_PATTERN_THROWN_IN_COVER</FiringPatternThrownInCoverHash>
+	  <FiringPatternInMountedWeaponHash>FIRING_PATTERN_FULL_AUTO</FiringPatternInMountedWeaponHash>
+	  <MinDistanceFromTargetForLastManFlee value="15.000000" />
+	  <ChanceOfLastManFleeFromCombat value="0.100000" />
+      <MountedChasingProfile>Professional</MountedChasingProfile>
+    </Item>
+	<Item type="CCombatInfo">
+      <Name>LawDeputyResident</Name>
+      <CombatMovement>CM_WillAdvance</CombatMovement>
+      <BehaviourFlags>USE_COVER USE_VEHICLE DO_DRIVEBYS LEAVE_VEHICLES STRAFE_BASED_ON_TARGET_PROXIMITY STRAFE_DUE_TO_BULLET_EVENTS CAN_CHASE_TARGET_ON_FOOT USE_PROXIMITY_FIRING_RATE ALLOW_STRAFE_BREAKUP CAN_CHARGE WILL_DRAG_INJURED_PEDS_TO_SAFETY WILL_CUT_FREE_HOGTIED_PEDS MAINTAIN_MIN_DISTANCE_TO_TARGET CAN_FIGHT_ARMED_PEDS_WHEN_NOT_ARMED</BehaviourFlags>
+      <CombatAbility>CA_Average</CombatAbility>
+      <AttackRanges>CR_Medium</AttackRanges>
+      <TargetLossResponse>TLR_ExitTask</TargetLossResponse>
+      <TargetInjuredReaction>TIR_TreatAsDead</TargetInjuredReaction>
+      <CoverHeightPreference>CHP_Any</CoverHeightPreference>
+      <WeaponShootRateModifier value="2.0" />
+      <FiringPatternHash>FIRING_PATTERN_BURST_SINGLE_SHOT</FiringPatternHash>
+      <BlindFireChance value="0.000000" />
+      <MaxShootingDistance value="-1.000000" />
+      <TimeBetweenPeeks value="10.000000" />
+      <WeaponAccuracy value="0.450000" />
+      <StrafeWhenMovingChance value="1.000000" />
+      <WalkWhenStrafingChance value="0.000000" />
+      <HeliSpeedModifier value="1.000000" />
+      <HeliSensesRange value="150.000000" />
+      <AttackWindowDistanceForCover value="30.000000" />
+      <TimeToInvalidateInjuredTarget value="6.000000" />
+      <MinimumDistanceToTarget value="7.000000" />
+      <MinimumInCoverDistanceToTarget value="4.000000" />
+      <BulletImpactDetectionRange value="3.000000" />
+      <AimTurnThreshold value="0.39269875" />
+      <OptimalCoverDistance value="-1.000000" />
+      <AutomobileSpeedModifier value="1.000000" />
+      <SpeedToFleeInVehicle value="40.000000" />
+      <TriggerChargeTime_Far value="6.000000" />
+      <TriggerChargeTime_Near value="2.250000" />
+      <MountSpeedModifier value="1.000000" />
+      <MinTimeBetweenProjectileThrows value="4.000000" />
+      <AccuracyOffsetModifier value="1.000000" />
+      <MinTimeInBestCoverForAltCoverUse value="-1.000000" />
+      <CrouchChance value="0.100000" />
+      <BulletReactionChance value="1.000000" />
+      <MaxWeaponPickupDistance value="8.000000" />
+      <WeaponPickupChance value="2.000000" />
+      <MinTimeInCombatBeforeCharge value="6.000000" />
+      <StartStandAndFireDistance value="8.000000" />
+      <DistanceToConsiderDismount value="50.000000" />
+      <DistanceToConsiderDismountInWilderness value="35.000000" />
+	  <ConsiderRecentChargeAsActiveTimeout value="15.0" />
+	  <MinTimeBetweenChargesAtSameTarget  value="12.0" />
+	  <MinTimeForSamePedToChargeAgain  value="15.0" />
+      <FiringPatternInCoverHash>FIRING_PATTERN_BURST_FIRE_IN_COVER</FiringPatternInCoverHash>
+	  <FiringPatternExplosivesInCoverHash>FIRING_PATTERN_EXPLOSIVES_IN_COVER</FiringPatternExplosivesInCoverHash>
+	  <FiringPatternThrownInCoverHash>FIRING_PATTERN_THROWN_IN_COVER</FiringPatternThrownInCoverHash>
+	  <FiringPatternInMountedWeaponHash>FIRING_PATTERN_FULL_AUTO</FiringPatternInMountedWeaponHash>
+	  <MinDistanceFromTargetForLastManFlee value="15.000000" />
+	  <ChanceOfLastManFleeFromCombat value="0.100000" />
+      <MountedChasingProfile>Amateur</MountedChasingProfile>
+    </Item>
+	<!-- Law Professional - Doesn't run away from combat -->
+    <Item type="CCombatInfo">
+      <Name>LAW_PROFESSIONAL</Name>
+      <CombatMovement>CM_WillAdvance</CombatMovement>
+      <BehaviourFlags>USE_COVER USE_VEHICLE DO_DRIVEBYS LEAVE_VEHICLES STRAFE_BASED_ON_TARGET_PROXIMITY STRAFE_DUE_TO_BULLET_EVENTS CAN_CHASE_TARGET_ON_FOOT USE_PROXIMITY_FIRING_RATE ALLOW_STRAFE_BREAKUP CAN_CHARGE WILL_DRAG_INJURED_PEDS_TO_SAFETY WILL_CUT_FREE_HOGTIED_PEDS MAINTAIN_MIN_DISTANCE_TO_TARGET DISABLE_FLEE_FROM_COMBAT CAN_FIGHT_ARMED_PEDS_WHEN_NOT_ARMED</BehaviourFlags>
+      <CombatAbility>CA_Professional</CombatAbility>
+      <AttackRanges>CR_Medium</AttackRanges>
+      <TargetLossResponse>TLR_ExitTask</TargetLossResponse>
+      <TargetInjuredReaction>TIR_TreatAsDead</TargetInjuredReaction>
+      <CoverHeightPreference>CHP_Any</CoverHeightPreference>
+      <WeaponShootRateModifier value="2.0" />
+      <FiringPatternHash>FIRING_PATTERN_BURST_SINGLE_SHOT</FiringPatternHash>
+      <BlindFireChance value="0.000000" />
+      <MaxShootingDistance value="-1.000000" />
+      <TimeBetweenPeeks value="10.000000" />
+      <WeaponAccuracy value="0.600000" />
+      <StrafeWhenMovingChance value="1.000000" />
+      <WalkWhenStrafingChance value="0.000000" />
+      <HeliSpeedModifier value="1.000000" />
+      <HeliSensesRange value="150.000000" />
+      <AttackWindowDistanceForCover value="30.000000" />
+      <TimeToInvalidateInjuredTarget value="6.000000" />
+      <MinimumDistanceToTarget value="7.000000" />
+      <MinimumInCoverDistanceToTarget value="4.000000" />
+      <BulletImpactDetectionRange value="3.000000" />
+      <AimTurnThreshold value="0.39269875" />
+      <OptimalCoverDistance value="-1.000000" />
+      <AutomobileSpeedModifier value="1.000000" />
+      <SpeedToFleeInVehicle value="40.000000" />
+      <TriggerChargeTime_Far value="6.000000" />
+      <TriggerChargeTime_Near value="2.250000" />
+      <MountSpeedModifier value="1.000000" />
+      <MinTimeBetweenProjectileThrows value="4.000000" />
+      <AccuracyOffsetModifier value="1.000000" />
+      <MinTimeInBestCoverForAltCoverUse value="-1.000000" />
+      <CrouchChance value="0.100000" />
+      <BulletReactionChance value="1.000000" />
+      <MaxWeaponPickupDistance value="8.000000" />
+      <WeaponPickupChance value="10.000000" />
+      <MinTimeInCombatBeforeCharge value="6.000000" />
+      <StartStandAndFireDistance value="8.000000" />
+      <DistanceToConsiderDismount value="50.000000" />
+      <DistanceToConsiderDismountInWilderness value="35.000000" />
+	  <ConsiderRecentChargeAsActiveTimeout value="15.0" />
+	  <MinTimeBetweenChargesAtSameTarget  value="12.0" />
+	  <MinTimeForSamePedToChargeAgain  value="15.0" />
+      <FiringPatternInCoverHash>FIRING_PATTERN_BURST_FIRE_IN_COVER</FiringPatternInCoverHash>
+	  <FiringPatternExplosivesInCoverHash>FIRING_PATTERN_EXPLOSIVES_IN_COVER</FiringPatternExplosivesInCoverHash>
+	  <FiringPatternThrownInCoverHash>FIRING_PATTERN_THROWN_IN_COVER</FiringPatternThrownInCoverHash>
+	  <FiringPatternInMountedWeaponHash>FIRING_PATTERN_FULL_AUTO</FiringPatternInMountedWeaponHash>
+	  <MinDistanceFromTargetForLastManFlee value="15.000000" />
+	  <ChanceOfLastManFleeFromCombat value="0.100000" />
+      <MountedChasingProfile>Professional</MountedChasingProfile>
+    </Item>
+    <Item type="CCombatInfo">
+      <Name>LAW_SURRENDER</Name>
+      <CombatMovement>CM_WillAdvance</CombatMovement>
+      <BehaviourFlags>USE_COVER USE_VEHICLE DO_DRIVEBYS LEAVE_VEHICLES STRAFE_BASED_ON_TARGET_PROXIMITY STRAFE_DUE_TO_BULLET_EVENTS CAN_CHASE_TARGET_ON_FOOT USE_PROXIMITY_FIRING_RATE ALLOW_STRAFE_BREAKUP TRY_TO_FORCE_SURRENDER CAN_CHARGE WILL_DRAG_INJURED_PEDS_TO_SAFETY WILL_CUT_FREE_HOGTIED_PEDS MAINTAIN_MIN_DISTANCE_TO_TARGET CAN_FIGHT_ARMED_PEDS_WHEN_NOT_ARMED</BehaviourFlags>
+      <CombatAbility>CA_Professional</CombatAbility>
+      <AttackRanges>CR_Medium</AttackRanges>
+      <TargetLossResponse>TLR_ExitTask</TargetLossResponse>
+      <TargetInjuredReaction>TIR_TreatAsDead</TargetInjuredReaction>
+      <CoverHeightPreference>CHP_Any</CoverHeightPreference>
+      <WeaponShootRateModifier value="2.0" />
+      <FiringPatternHash>FIRING_PATTERN_BURST_SINGLE_SHOT</FiringPatternHash>
+      <BlindFireChance value="0.000000" />
+      <MaxShootingDistance value="-1.000000" />
+      <TimeBetweenPeeks value="10.000000" />
+      <WeaponAccuracy value="0.750000" />
+      <StrafeWhenMovingChance value="1.000000" />
+      <WalkWhenStrafingChance value="0.000000" />
+      <HeliSpeedModifier value="1.000000" />
+      <HeliSensesRange value="150.000000" />
+      <AttackWindowDistanceForCover value="30.000000" />
+      <TimeToInvalidateInjuredTarget value="6.000000" />
+      <MinimumDistanceToTarget value="7.000000" />
+      <MinimumInCoverDistanceToTarget value="4.000000" />
+      <BulletImpactDetectionRange value="3.000000" />
+      <AimTurnThreshold value="0.39269875" />
+      <OptimalCoverDistance value="-1.000000" />
+      <AutomobileSpeedModifier value="1.000000" />
+      <SpeedToFleeInVehicle value="40.000000" />
+      <TriggerChargeTime_Far value="6.000000" />
+      <TriggerChargeTime_Near value="2.250000" />
+      <MountSpeedModifier value="1.000000" />
+      <MinTimeBetweenProjectileThrows value="4.000000" />
+      <AccuracyOffsetModifier value="1.000000" />
+      <MinTimeInBestCoverForAltCoverUse value="-1.000000" />
+      <CrouchChance value="0.100000" />
+      <BulletReactionChance value="1.000000" />
+      <MaxWeaponPickupDistance value="8.000000" />
+      <WeaponPickupChance value="0.000000" />
+      <MinTimeInCombatBeforeCharge value="6.000000" />
+      <StartStandAndFireDistance value="8.000000" />
+      <DistanceToConsiderDismount value="50.000000" />
+      <DistanceToConsiderDismountInWilderness value="35.000000" />
+	  <ConsiderRecentChargeAsActiveTimeout value="15.0" />
+	  <MinTimeBetweenChargesAtSameTarget  value="12.0" />
+	  <MinTimeForSamePedToChargeAgain  value="15.0" />
+      <FiringPatternInCoverHash>FIRING_PATTERN_BURST_FIRE_IN_COVER</FiringPatternInCoverHash>
+	  <FiringPatternExplosivesInCoverHash>FIRING_PATTERN_EXPLOSIVES_IN_COVER</FiringPatternExplosivesInCoverHash>
+	  <FiringPatternThrownInCoverHash>FIRING_PATTERN_THROWN_IN_COVER</FiringPatternThrownInCoverHash>
+	  <FiringPatternInMountedWeaponHash>FIRING_PATTERN_FULL_AUTO</FiringPatternInMountedWeaponHash>
+	  <MinDistanceFromTargetForLastManFlee value="15.000000" />
+	  <ChanceOfLastManFleeFromCombat value="0.100000" />
+    </Item>
+	<Item type="CCombatInfo">
+      <Name>LAW_SHERIFF</Name>
+      <CombatMovement>CM_WillAdvance</CombatMovement>
+      <BehaviourFlags>ALWAYS_EQUIP_BEST_WEAPON USE_COVER USE_VEHICLE DO_DRIVEBYS LEAVE_VEHICLES STRAFE_BASED_ON_TARGET_PROXIMITY STRAFE_DUE_TO_BULLET_EVENTS CAN_CHASE_TARGET_ON_FOOT USE_PROXIMITY_FIRING_RATE ALLOW_STRAFE_BREAKUP SWITCH_TO_ADVANCE_IF_CANT_FIND_COVER CAN_CHARGE WILL_DRAG_INJURED_PEDS_TO_SAFETY WILL_CUT_FREE_HOGTIED_PEDS DISABLE_RETREAT_DUE_TO_TARGET_PROXIMITY MAINTAIN_MIN_DISTANCE_TO_TARGET DISABLE_FLEE_FROM_COMBAT CAN_FIGHT_ARMED_PEDS_WHEN_NOT_ARMED</BehaviourFlags>
+      <CombatAbility>CA_Professional</CombatAbility>
+      <AttackRanges>CR_Medium</AttackRanges>
+      <TargetLossResponse>TLR_ExitTask</TargetLossResponse>
+      <TargetInjuredReaction>TIR_TreatAsDead</TargetInjuredReaction>
+      <CoverHeightPreference>CHP_Any</CoverHeightPreference>
+      <WeaponShootRateModifier value="2.5" />
+      <FiringPatternHash>FIRING_PATTERN_BURST_FIRE_RIFLE</FiringPatternHash>
+      <BlindFireChance value="0.000000" />
+      <MaxShootingDistance value="-1.000000" />
+      <TimeBetweenPeeks value="7.000000" />
+      <WeaponAccuracy value="0.95000" />
+      <StrafeWhenMovingChance value="1.000000" />
+      <WalkWhenStrafingChance value="0.000000" />
+      <HeliSpeedModifier value="1.000000" />
+      <HeliSensesRange value="150.000000" />
+      <AttackWindowDistanceForCover value="30.000000" />
+      <TimeToInvalidateInjuredTarget value="3.000000" />
+      <MinimumDistanceToTarget value="7.000000" />
+      <MinimumInCoverDistanceToTarget value="4.000000" />
+      <BulletImpactDetectionRange value="3.000000" />
+      <AimTurnThreshold value="0.39269875" />
+      <OptimalCoverDistance value="-1.000000" />
+      <AutomobileSpeedModifier value="1.000000" />
+      <SpeedToFleeInVehicle value="40.000000" /> 
+      <TriggerChargeTime_Far value="6.000000" />
+      <TriggerChargeTime_Near value="2.250000" />
+      <MountSpeedModifier value="1.000000" />
+      <MinTimeBetweenProjectileThrows value="4.000000" />
+      <AccuracyOffsetModifier value="1.000000" />
+      <MinTimeInBestCoverForAltCoverUse value="-1.000000" />
+      <CrouchChance value="0.100000" />
+      <BulletReactionChance value="1.000000" />
+      <MaxWeaponPickupDistance value="8.000000" />
+      <WeaponPickupChance value="10.000000" />
+      <MinTimeInCombatBeforeCharge value="10.000000" />
+      <StartStandAndFireDistance value="8.000000" />
+      <DistanceToConsiderDismount value="50.000000" />
+      <DistanceToConsiderDismountInWilderness value="35.000000" />
+	  <FiringPatternInCoverHash>FIRING_PATTERN_BURST_FIRE_IN_COVER</FiringPatternInCoverHash>
+	  <FiringPatternExplosivesInCoverHash>FIRING_PATTERN_EXPLOSIVES_IN_COVER</FiringPatternExplosivesInCoverHash>
+	  <FiringPatternThrownInCoverHash>FIRING_PATTERN_THROWN_IN_COVER</FiringPatternThrownInCoverHash>
+	  <FiringPatternInMountedWeaponHash>FIRING_PATTERN_FULL_AUTO</FiringPatternInMountedWeaponHash>
+	  <MinDistanceFromTargetForLastManFlee value="15.000000" />
+	  <ChanceOfLastManFleeFromCombat value="0.000000" />
+      <MountedChasingProfile>Professional</MountedChasingProfile>
+    </Item>
+	<Item type="CCombatInfo">
+      <Name>LAW_SHOTGUN</Name>
+      <CombatMovement>CM_WillAdvance</CombatMovement>
+      <BehaviourFlags>USE_COVER USE_VEHICLE DO_DRIVEBYS LEAVE_VEHICLES STRAFE_BASED_ON_TARGET_PROXIMITY STRAFE_DUE_TO_BULLET_EVENTS CAN_CHASE_TARGET_ON_FOOT USE_PROXIMITY_FIRING_RATE ALLOW_STRAFE_BREAKUP SWITCH_TO_ADVANCE_IF_CANT_FIND_COVER CAN_CHARGE WILL_DRAG_INJURED_PEDS_TO_SAFETY WILL_CUT_FREE_HOGTIED_PEDS DISABLE_RETREAT_DUE_TO_TARGET_PROXIMITY MAINTAIN_MIN_DISTANCE_TO_TARGET CAN_FIGHT_ARMED_PEDS_WHEN_NOT_ARMED</BehaviourFlags>
+      <CombatAbility>CA_Professional</CombatAbility>
+      <AttackRanges>CR_Near</AttackRanges>
+      <TargetLossResponse>TLR_ExitTask</TargetLossResponse>
+      <TargetInjuredReaction>TIR_TreatAsDead</TargetInjuredReaction>
+      <CoverHeightPreference>CHP_Any</CoverHeightPreference>
+      <WeaponShootRateModifier value="2.5" />
+      <FiringPatternHash>FIRING_PATTERN_BURST_SINGLE_SHOT</FiringPatternHash>
+      <BlindFireChance value="0.000000" />
+      <MaxShootingDistance value="-1.000000" />
+      <TimeBetweenPeeks value="10.000000" />
+      <WeaponAccuracy value="0.650000" />
+      <StrafeWhenMovingChance value="1.000000" />
+      <WalkWhenStrafingChance value="0.000000" />
+      <HeliSpeedModifier value="1.000000" />
+      <HeliSensesRange value="150.000000" />
+      <AttackWindowDistanceForCover value="30.000000" />
+      <TimeToInvalidateInjuredTarget value="3.000000" />
+      <MinimumDistanceToTarget value="7.000000" />
+      <MinimumInCoverDistanceToTarget value="4.000000" />
+      <BulletImpactDetectionRange value="3.000000" />
+      <AimTurnThreshold value="0.39269875" />
+      <OptimalCoverDistance value="-1.000000" />
+      <AutomobileSpeedModifier value="1.000000" />
+      <SpeedToFleeInVehicle value="40.000000" /> 
+      <TriggerChargeTime_Far value="2.500000" />
+      <TriggerChargeTime_Near value="1.120000" />
+      <MountSpeedModifier value="1.000000" />
+      <MinTimeBetweenProjectileThrows value="4.000000" />
+      <AccuracyOffsetModifier value="1.000000" />
+      <MinTimeInBestCoverForAltCoverUse value="-1.000000" />
+      <CrouchChance value="0.100000" />
+      <BulletReactionChance value="1.000000" />
+      <MaxWeaponPickupDistance value="8.000000" />
+      <WeaponPickupChance value="10.000000" />
+      <MinTimeInCombatBeforeCharge value="3.000000" />
+      <StartStandAndFireDistance value="8.000000" />
+      <DistanceToConsiderDismount value="50.000000" />
+      <DistanceToConsiderDismountInWilderness value="35.000000" />
+	  <ConsiderRecentChargeAsActiveTimeout value="8.0" />
+	  <MinTimeBetweenChargesAtSameTarget  value="6.0" />
+	  <MinTimeForSamePedToChargeAgain  value="8.0" />
+	  <FiringPatternInCoverHash>FIRING_PATTERN_BURST_FIRE_IN_COVER</FiringPatternInCoverHash>
+	  <FiringPatternExplosivesInCoverHash>FIRING_PATTERN_EXPLOSIVES_IN_COVER</FiringPatternExplosivesInCoverHash>
+	  <FiringPatternThrownInCoverHash>FIRING_PATTERN_THROWN_IN_COVER</FiringPatternThrownInCoverHash>
+	  <FiringPatternInMountedWeaponHash>FIRING_PATTERN_FULL_AUTO</FiringPatternInMountedWeaponHash>
+	  <MinDistanceFromTargetForLastManFlee value="15.000000" />
+	  <ChanceOfLastManFleeFromCombat value="0.100000" />
+      <MountedChasingProfile>Standard</MountedChasingProfile>
+    </Item>
+	<Item type="CCombatInfo">
+      <Name>LAW_SHOTGUN_UNSKILLED</Name>
+      <CombatMovement>CM_WillAdvance</CombatMovement>
+      <BehaviourFlags>USE_COVER USE_VEHICLE DO_DRIVEBYS LEAVE_VEHICLES STRAFE_BASED_ON_TARGET_PROXIMITY STRAFE_DUE_TO_BULLET_EVENTS CAN_CHASE_TARGET_ON_FOOT USE_PROXIMITY_FIRING_RATE ALLOW_STRAFE_BREAKUP SWITCH_TO_ADVANCE_IF_CANT_FIND_COVER CAN_CHARGE WILL_DRAG_INJURED_PEDS_TO_SAFETY WILL_CUT_FREE_HOGTIED_PEDS DISABLE_RETREAT_DUE_TO_TARGET_PROXIMITY MAINTAIN_MIN_DISTANCE_TO_TARGET CAN_FIGHT_ARMED_PEDS_WHEN_NOT_ARMED</BehaviourFlags>
+      <CombatAbility>CA_Professional</CombatAbility>
+      <AttackRanges>CR_Near</AttackRanges>
+      <TargetLossResponse>TLR_ExitTask</TargetLossResponse>
+      <TargetInjuredReaction>TIR_TreatAsDead</TargetInjuredReaction>
+      <CoverHeightPreference>CHP_Any</CoverHeightPreference>
+      <WeaponShootRateModifier value="2.5" />
+      <FiringPatternHash>FIRING_PATTERN_BURST_SINGLE_SHOT</FiringPatternHash>
+      <BlindFireChance value="0.000000" />
+      <MaxShootingDistance value="-1.000000" />
+      <TimeBetweenPeeks value="10.000000" />
+      <WeaponAccuracy value="0.487500" />
+      <StrafeWhenMovingChance value="1.000000" />
+      <WalkWhenStrafingChance value="0.000000" />
+      <HeliSpeedModifier value="1.000000" />
+      <HeliSensesRange value="150.000000" />
+      <AttackWindowDistanceForCover value="30.000000" />
+      <TimeToInvalidateInjuredTarget value="3.000000" />
+      <MinimumDistanceToTarget value="7.000000" />
+      <MinimumInCoverDistanceToTarget value="4.000000" />
+      <BulletImpactDetectionRange value="3.000000" />
+      <AimTurnThreshold value="0.39269875" />
+      <OptimalCoverDistance value="-1.000000" />
+      <AutomobileSpeedModifier value="1.000000" />
+      <SpeedToFleeInVehicle value="40.000000" /> 
+      <TriggerChargeTime_Far value="2.500000" />
+      <TriggerChargeTime_Near value="1.120000" />
+      <MountSpeedModifier value="1.000000" />
+      <MinTimeBetweenProjectileThrows value="4.000000" />
+      <AccuracyOffsetModifier value="1.000000" />
+      <MinTimeInBestCoverForAltCoverUse value="-1.000000" />
+      <CrouchChance value="0.100000" />
+      <BulletReactionChance value="1.000000" />
+      <MaxWeaponPickupDistance value="8.000000" />
+      <WeaponPickupChance value="5.000000" />
+      <MinTimeInCombatBeforeCharge value="3.000000" />
+      <StartStandAndFireDistance value="8.000000" />
+      <DistanceToConsiderDismount value="50.000000" />
+      <DistanceToConsiderDismountInWilderness value="35.000000" />
+	  <ConsiderRecentChargeAsActiveTimeout value="8.0" />
+	  <MinTimeBetweenChargesAtSameTarget  value="6.0" />
+	  <MinTimeForSamePedToChargeAgain  value="8.0" />
+	  <FiringPatternInCoverHash>FIRING_PATTERN_BURST_FIRE_IN_COVER</FiringPatternInCoverHash>
+	  <FiringPatternExplosivesInCoverHash>FIRING_PATTERN_EXPLOSIVES_IN_COVER</FiringPatternExplosivesInCoverHash>
+	  <FiringPatternThrownInCoverHash>FIRING_PATTERN_THROWN_IN_COVER</FiringPatternThrownInCoverHash>
+	  <FiringPatternInMountedWeaponHash>FIRING_PATTERN_FULL_AUTO</FiringPatternInMountedWeaponHash>
+	  <MinDistanceFromTargetForLastManFlee value="15.000000" />
+	  <ChanceOfLastManFleeFromCombat value="0.100000" />
+      <MountedChasingProfile>Standard</MountedChasingProfile>
+    </Item>
+	<Item type="CCombatInfo">
+      <Name>LAW_SNIPER</Name>
+      <CombatMovement>CM_Defensive</CombatMovement>
+      <BehaviourFlags>USE_COVER USE_VEHICLE LEAVE_VEHICLES STRAFE_BASED_ON_TARGET_PROXIMITY STRAFE_DUE_TO_BULLET_EVENTS CAN_CHASE_TARGET_ON_FOOT USE_PROXIMITY_FIRING_RATE ALLOW_STRAFE_BREAKUP WILL_DRAG_INJURED_PEDS_TO_SAFETY WILL_CUT_FREE_HOGTIED_PEDS SWITCH_TO_ADVANCE_IF_CANT_FIND_COVER MAINTAIN_MIN_DISTANCE_TO_TARGET USE_RANGE_BASED_WEAPON_SELECTION</BehaviourFlags>
+      <CombatAbility>CA_Professional</CombatAbility>
+      <AttackRanges>CR_VeryFar</AttackRanges>
+      <TargetLossResponse>TLR_ExitTask</TargetLossResponse>
+      <TargetInjuredReaction>TIR_TreatAsDead</TargetInjuredReaction>
+      <CoverHeightPreference>CHP_Any</CoverHeightPreference>
+      <WeaponShootRateModifier value="2.0" />
+      <FiringPatternHash>FIRING_PATTERN_BURST_FIRE</FiringPatternHash>
+      <BlindFireChance value="0.000000" />
+      <MaxShootingDistance value="-1.000000" />
+      <TimeBetweenPeeks value="7.000000" />
+      <WeaponAccuracy value="0.750000" />
+      <StrafeWhenMovingChance value="1.000000" />
+      <WalkWhenStrafingChance value="0.000000" />
+      <HeliSpeedModifier value="1.000000" />
+      <HeliSensesRange value="150.000000" />
+      <AttackWindowDistanceForCover value="30.000000" />
+      <TimeToInvalidateInjuredTarget value="3.000000" />
+      <MinimumDistanceToTarget value="7.000000" />
+      <MinimumInCoverDistanceToTarget value="4.000000" />
+      <BulletImpactDetectionRange value="3.000000" />
+      <AimTurnThreshold value="0.39269875" />
+      <OptimalCoverDistance value="-1.000000" />
+      <AutomobileSpeedModifier value="1.000000" />
+      <SpeedToFleeInVehicle value="40.000000" /> 
+      <TriggerChargeTime_Far value="6.000000" />
+      <TriggerChargeTime_Near value="2.250000" />
+      <MountSpeedModifier value="1.000000" />
+      <MinTimeBetweenProjectileThrows value="4.000000" />
+      <AccuracyOffsetModifier value="1.000000" />
+      <MinTimeInBestCoverForAltCoverUse value="-1.000000" />
+      <CrouchChance value="0.100000" />
+      <BulletReactionChance value="1.000000" />
+      <MaxWeaponPickupDistance value="8.000000" />
+      <WeaponPickupChance value="10.000000" />
+      <MinTimeInCombatBeforeCharge value="10.000000" />
+      <StartStandAndFireDistance value="8.000000" />
+      <DistanceToConsiderDismount value="50.000000" />
+      <DistanceToConsiderDismountInWilderness value="35.000000" />
+	  <FiringPatternInCoverHash>FIRING_PATTERN_BURST_FIRE_IN_COVER</FiringPatternInCoverHash>
+	  <FiringPatternExplosivesInCoverHash>FIRING_PATTERN_EXPLOSIVES_IN_COVER</FiringPatternExplosivesInCoverHash>
+	  <FiringPatternThrownInCoverHash>FIRING_PATTERN_THROWN_IN_COVER</FiringPatternThrownInCoverHash>
+	  <FiringPatternInMountedWeaponHash>FIRING_PATTERN_FULL_AUTO</FiringPatternInMountedWeaponHash>
+	  <TacticalPointPreference>TPP_PreferSniper</TacticalPointPreference>
+	  <MinDistanceFromTargetForLastManFlee value="15.000000" />
+	  <ChanceOfLastManFleeFromCombat value="0.100000" />
+      <MountedChasingProfile>Standard</MountedChasingProfile>
+    </Item>
+	<Item type="CCombatInfo">
+      <Name>LAW_SNIPER_UNSKILLED</Name>
+      <CombatMovement>CM_Defensive</CombatMovement>
+      <BehaviourFlags>USE_COVER USE_VEHICLE LEAVE_VEHICLES STRAFE_BASED_ON_TARGET_PROXIMITY STRAFE_DUE_TO_BULLET_EVENTS CAN_CHASE_TARGET_ON_FOOT USE_PROXIMITY_FIRING_RATE ALLOW_STRAFE_BREAKUP WILL_DRAG_INJURED_PEDS_TO_SAFETY WILL_CUT_FREE_HOGTIED_PEDS SWITCH_TO_ADVANCE_IF_CANT_FIND_COVER MAINTAIN_MIN_DISTANCE_TO_TARGET USE_RANGE_BASED_WEAPON_SELECTION</BehaviourFlags>
+      <CombatAbility>CA_Average</CombatAbility>
+      <AttackRanges>CR_VeryFar</AttackRanges>
+      <TargetLossResponse>TLR_ExitTask</TargetLossResponse>
+      <TargetInjuredReaction>TIR_TreatAsDead</TargetInjuredReaction>
+      <CoverHeightPreference>CHP_Any</CoverHeightPreference>
+      <WeaponShootRateModifier value="2.0" />
+      <FiringPatternHash>FIRING_PATTERN_BURST_FIRE</FiringPatternHash>
+      <BlindFireChance value="0.000000" />
+      <MaxShootingDistance value="-1.000000" />
+      <TimeBetweenPeeks value="7.000000" />
+      <WeaponAccuracy value="0.562500" />
+      <StrafeWhenMovingChance value="1.000000" />
+      <WalkWhenStrafingChance value="0.000000" />
+      <HeliSpeedModifier value="1.000000" />
+      <HeliSensesRange value="150.000000" />
+      <AttackWindowDistanceForCover value="30.000000" />
+      <TimeToInvalidateInjuredTarget value="3.000000" />
+      <MinimumDistanceToTarget value="7.000000" />
+      <MinimumInCoverDistanceToTarget value="4.000000" />
+      <BulletImpactDetectionRange value="3.000000" />
+      <AimTurnThreshold value="0.39269875" />
+      <OptimalCoverDistance value="-1.000000" />
+      <AutomobileSpeedModifier value="1.000000" />
+      <SpeedToFleeInVehicle value="40.000000" /> 
+      <TriggerChargeTime_Far value="6.000000" />
+      <TriggerChargeTime_Near value="2.250000" />
+      <MountSpeedModifier value="1.000000" />
+      <MinTimeBetweenProjectileThrows value="4.000000" />
+      <AccuracyOffsetModifier value="1.000000" />
+      <MinTimeInBestCoverForAltCoverUse value="-1.000000" />
+      <CrouchChance value="0.100000" />
+      <BulletReactionChance value="1.000000" />
+      <MaxWeaponPickupDistance value="8.000000" />
+      <WeaponPickupChance value="5.000000" />
+      <MinTimeInCombatBeforeCharge value="10.000000" />
+      <StartStandAndFireDistance value="8.000000" />
+      <DistanceToConsiderDismount value="50.000000" />
+      <DistanceToConsiderDismountInWilderness value="35.000000" />
+	  <FiringPatternInCoverHash>FIRING_PATTERN_BURST_FIRE_IN_COVER</FiringPatternInCoverHash>
+	  <FiringPatternExplosivesInCoverHash>FIRING_PATTERN_EXPLOSIVES_IN_COVER</FiringPatternExplosivesInCoverHash>
+	  <FiringPatternThrownInCoverHash>FIRING_PATTERN_THROWN_IN_COVER</FiringPatternThrownInCoverHash>
+	  <FiringPatternInMountedWeaponHash>FIRING_PATTERN_FULL_AUTO</FiringPatternInMountedWeaponHash>
+	  <TacticalPointPreference>TPP_PreferSniper</TacticalPointPreference>
+	  <MinDistanceFromTargetForLastManFlee value="15.000000" />
+	  <ChanceOfLastManFleeFromCombat value="0.100000" />
+      <MountedChasingProfile>Standard</MountedChasingProfile>
+    </Item>
+	<Item type="CCombatInfo">
+      <Name>LAW_WILDERNESS</Name>
+      <CombatMovement>CM_WillAdvance</CombatMovement>
+      <BehaviourFlags>USE_COVER USE_VEHICLE DO_DRIVEBYS LEAVE_VEHICLES STRAFE_BASED_ON_TARGET_PROXIMITY STRAFE_DUE_TO_BULLET_EVENTS CAN_CHASE_TARGET_ON_FOOT USE_PROXIMITY_FIRING_RATE ALLOW_STRAFE_BREAKUP SWITCH_TO_ADVANCE_IF_CANT_FIND_COVER CAN_CHARGE WILL_DRAG_INJURED_PEDS_TO_SAFETY WILL_CUT_FREE_HOGTIED_PEDS DISABLE_RETREAT_DUE_TO_TARGET_PROXIMITY MAINTAIN_MIN_DISTANCE_TO_TARGET USE_RANGE_BASED_WEAPON_SELECTION CAN_FIGHT_ARMED_PEDS_WHEN_NOT_ARMED</BehaviourFlags>
+      <CombatAbility>CA_Professional</CombatAbility>
+      <AttackRanges>CR_Medium</AttackRanges>
+      <TargetLossResponse>TLR_ExitTask</TargetLossResponse>
+      <TargetInjuredReaction>TIR_TreatAsDead</TargetInjuredReaction>
+      <CoverHeightPreference>CHP_Any</CoverHeightPreference>
+      <WeaponShootRateModifier value="2.5" />
+      <FiringPatternHash>FIRING_PATTERN_BURST_FIRE_RIFLE</FiringPatternHash>
+      <BlindFireChance value="0.000000" />
+      <MaxShootingDistance value="-1.000000" />
+      <TimeBetweenPeeks value="7.000000" />
+      <WeaponAccuracy value="0.75000" />
+      <StrafeWhenMovingChance value="1.000000" />
+      <WalkWhenStrafingChance value="0.000000" />
+      <HeliSpeedModifier value="1.000000" />
+      <HeliSensesRange value="150.000000" />
+      <AttackWindowDistanceForCover value="30.000000" />
+      <TimeToInvalidateInjuredTarget value="3.000000" />
+      <MinimumDistanceToTarget value="7.000000" />
+      <MinimumInCoverDistanceToTarget value="4.000000" />
+      <BulletImpactDetectionRange value="3.000000" />
+      <AimTurnThreshold value="0.39269875" />
+      <OptimalCoverDistance value="-1.000000" />
+      <AutomobileSpeedModifier value="1.000000" />
+      <SpeedToFleeInVehicle value="40.000000" /> 
+      <TriggerChargeTime_Far value="6.000000" />
+      <TriggerChargeTime_Near value="2.250000" />
+      <MountSpeedModifier value="1.000000" />
+      <MinTimeBetweenProjectileThrows value="4.000000" />
+      <AccuracyOffsetModifier value="1.000000" />
+      <MinTimeInBestCoverForAltCoverUse value="-1.000000" />
+      <CrouchChance value="0.100000" />
+      <BulletReactionChance value="1.000000" />
+      <MaxWeaponPickupDistance value="8.000000" />
+      <WeaponPickupChance value="10.000000" />
+      <MinTimeInCombatBeforeCharge value="10.000000" />
+      <StartStandAndFireDistance value="8.000000" />
+      <DistanceToConsiderDismount value="50.000000" />
+      <DistanceToConsiderDismountInWilderness value="35.000000" />
+      <MountedChasingProfile>Amateur</MountedChasingProfile>
+	  <FiringPatternInCoverHash>FIRING_PATTERN_BURST_FIRE_IN_COVER</FiringPatternInCoverHash>
+	  <FiringPatternExplosivesInCoverHash>FIRING_PATTERN_EXPLOSIVES_IN_COVER</FiringPatternExplosivesInCoverHash>
+	  <FiringPatternThrownInCoverHash>FIRING_PATTERN_THROWN_IN_COVER</FiringPatternThrownInCoverHash>
+	  <FiringPatternInMountedWeaponHash>FIRING_PATTERN_FULL_AUTO</FiringPatternInMountedWeaponHash>
+	  <TacticalPointPreference>TPP_PreferSniper</TacticalPointPreference>
+	  <MinDistanceFromTargetForLastManFlee value="15.000000" />
+	  <ChanceOfLastManFleeFromCombat value="0.100000" />
+    </Item>
+	<Item type="CCombatInfo">
+      <Name>LAW_WILDERNESS_UNSKILLED</Name>
+      <CombatMovement>CM_WillAdvance</CombatMovement>
+      <BehaviourFlags>USE_COVER USE_VEHICLE DO_DRIVEBYS LEAVE_VEHICLES STRAFE_BASED_ON_TARGET_PROXIMITY STRAFE_DUE_TO_BULLET_EVENTS CAN_CHASE_TARGET_ON_FOOT USE_PROXIMITY_FIRING_RATE ALLOW_STRAFE_BREAKUP SWITCH_TO_ADVANCE_IF_CANT_FIND_COVER CAN_CHARGE WILL_DRAG_INJURED_PEDS_TO_SAFETY WILL_CUT_FREE_HOGTIED_PEDS DISABLE_RETREAT_DUE_TO_TARGET_PROXIMITY MAINTAIN_MIN_DISTANCE_TO_TARGET USE_RANGE_BASED_WEAPON_SELECTION CAN_FIGHT_ARMED_PEDS_WHEN_NOT_ARMED</BehaviourFlags>
+      <CombatAbility>CA_Average</CombatAbility>
+      <AttackRanges>CR_Medium</AttackRanges>
+      <TargetLossResponse>TLR_ExitTask</TargetLossResponse>
+      <TargetInjuredReaction>TIR_TreatAsDead</TargetInjuredReaction>
+      <CoverHeightPreference>CHP_Any</CoverHeightPreference>
+      <WeaponShootRateModifier value="2.5" />
+      <FiringPatternHash>FIRING_PATTERN_BURST_FIRE_RIFLE</FiringPatternHash>
+      <BlindFireChance value="0.000000" />
+      <MaxShootingDistance value="-1.000000" />
+      <TimeBetweenPeeks value="7.000000" />
+      <WeaponAccuracy value="0.562500" />
+      <StrafeWhenMovingChance value="1.000000" />
+      <WalkWhenStrafingChance value="0.000000" />
+      <HeliSpeedModifier value="1.000000" />
+      <HeliSensesRange value="150.000000" />
+      <AttackWindowDistanceForCover value="30.000000" />
+      <TimeToInvalidateInjuredTarget value="3.000000" />
+      <MinimumDistanceToTarget value="7.000000" />
+      <MinimumInCoverDistanceToTarget value="4.000000" />
+      <BulletImpactDetectionRange value="3.000000" />
+      <AimTurnThreshold value="0.39269875" />
+      <OptimalCoverDistance value="-1.000000" />
+      <AutomobileSpeedModifier value="1.000000" />
+      <SpeedToFleeInVehicle value="40.000000" /> 
+      <TriggerChargeTime_Far value="6.000000" />
+      <TriggerChargeTime_Near value="2.250000" />
+      <MountSpeedModifier value="1.000000" />
+      <MinTimeBetweenProjectileThrows value="4.000000" />
+      <AccuracyOffsetModifier value="1.000000" />
+      <MinTimeInBestCoverForAltCoverUse value="-1.000000" />
+      <CrouchChance value="0.100000" />
+      <BulletReactionChance value="1.000000" />
+      <MaxWeaponPickupDistance value="8.000000" />
+      <WeaponPickupChance value="5.000000" />
+      <MinTimeInCombatBeforeCharge value="10.000000" />
+      <StartStandAndFireDistance value="8.000000" />
+      <DistanceToConsiderDismount value="50.000000" />
+      <DistanceToConsiderDismountInWilderness value="35.000000" />
+      <MountedChasingProfile>Amateur</MountedChasingProfile>
+	  <FiringPatternInCoverHash>FIRING_PATTERN_BURST_FIRE_IN_COVER</FiringPatternInCoverHash>
+	  <FiringPatternExplosivesInCoverHash>FIRING_PATTERN_EXPLOSIVES_IN_COVER</FiringPatternExplosivesInCoverHash>
+	  <FiringPatternThrownInCoverHash>FIRING_PATTERN_THROWN_IN_COVER</FiringPatternThrownInCoverHash>
+	  <FiringPatternInMountedWeaponHash>FIRING_PATTERN_FULL_AUTO</FiringPatternInMountedWeaponHash>
+	  <TacticalPointPreference>TPP_PreferSniper</TacticalPointPreference>
+	  <MinDistanceFromTargetForLastManFlee value="15.000000" />
+	  <ChanceOfLastManFleeFromCombat value="0.100000" />
+    </Item>
+    <Item type="CCombatInfo">
+      <Name>COMBAT_ANIMAL</Name>
+      <CombatMovement>CM_WillAdvance</CombatMovement>
+      <BehaviourFlags>LEAVE_VEHICLES CAN_FIGHT_ARMED_PEDS_WHEN_NOT_ARMED</BehaviourFlags>
+      <CombatAbility>CA_Average</CombatAbility>
+      <AttackRanges>CR_Medium</AttackRanges>
+      <TargetLossResponse>TLR_ExitTask</TargetLossResponse>
+      <TargetInjuredReaction>TIR_TreatAsDead</TargetInjuredReaction>
+      <CoverHeightPreference>CHP_Any</CoverHeightPreference>
+      <WeaponShootRateModifier value="1.000000" />
+      <FiringPatternHash>FIRING_PATTERN_BURST_SINGLE_SHOT</FiringPatternHash>
+      <BlindFireChance value="0.000000" />
+      <MaxShootingDistance value="-1.000000" />
+      <TimeBetweenPeeks value="10.000000" />
+      <WeaponAccuracy value="0.200000" />
+      <StrafeWhenMovingChance value="1.000000" />
+      <WalkWhenStrafingChance value="0.000000" />
+      <HeliSpeedModifier value="1.000000" />
+      <HeliSensesRange value="150.000000" />
+      <AttackWindowDistanceForCover value="40.000000" />
+      <TimeToInvalidateInjuredTarget value="5.000000" />
+      <MinimumDistanceToTarget value="7.000000" />
+      <BulletImpactDetectionRange value="8.000000" />
+      <AimTurnThreshold value="0.39269875" />
+      <OptimalCoverDistance value="-1.000000" />
+      <AutomobileSpeedModifier value="1.000000" />
+      <SpeedToFleeInVehicle value="40.000000" />
+      <TriggerChargeTime_Far value="6.000000" />
+      <TriggerChargeTime_Near value="2.250000" />
+      <MountSpeedModifier value="1.000000" />
+      <MinTimeBetweenProjectileThrows value="4.000000" />
+      <AccuracyOffsetModifier value="1.000000" />
+      <MinTimeInBestCoverForAltCoverUse value="-1.000000" />
+      <CrouchChance value="0.100000" />
+      <BulletReactionChance value="1.000000" />
+      <FiringPatternInCoverHash>FIRING_PATTERN_BURST_FIRE_IN_COVER</FiringPatternInCoverHash>
+	  <FiringPatternExplosivesInCoverHash>FIRING_PATTERN_EXPLOSIVES_IN_COVER</FiringPatternExplosivesInCoverHash>
+	  <FiringPatternThrownInCoverHash>FIRING_PATTERN_THROWN_IN_COVER</FiringPatternThrownInCoverHash>
+	  <FiringPatternInMountedWeaponHash>FIRING_PATTERN_FULL_AUTO</FiringPatternInMountedWeaponHash>
+    </Item>
+    <Item type="CCombatInfo">
+      <Name>COMBAT_ALLIGATOR</Name>
+      <CombatMovement>CM_WillAdvance</CombatMovement>
+      <BehaviourFlags>LEAVE_VEHICLES CAN_FIGHT_ARMED_PEDS_WHEN_NOT_ARMED</BehaviourFlags>
+      <CombatAbility>CA_Average</CombatAbility>
+      <AttackRanges>CR_Medium</AttackRanges>
+      <TargetLossResponse>TLR_ExitTask</TargetLossResponse>
+      <TargetInjuredReaction>TIR_TreatAsDead</TargetInjuredReaction>
+      <CoverHeightPreference>CHP_Any</CoverHeightPreference>
+      <WeaponShootRateModifier value="1.000000" />
+      <FiringPatternHash>FIRING_PATTERN_BURST_SINGLE_SHOT</FiringPatternHash>
+      <BlindFireChance value="0.000000" />
+      <MaxShootingDistance value="-1.000000" />
+      <TimeBetweenPeeks value="10.000000" />
+      <WeaponAccuracy value="0.200000" />
+      <StrafeWhenMovingChance value="1.000000" />
+      <WalkWhenStrafingChance value="0.000000" />
+      <HeliSpeedModifier value="1.000000" />
+      <HeliSensesRange value="150.000000" />
+      <AttackWindowDistanceForCover value="40.000000" />
+      <TimeToInvalidateInjuredTarget value="5.000000" />
+      <MinimumDistanceToTarget value="7.000000" />
+      <BulletImpactDetectionRange value="16.000000" />
+      <AimTurnThreshold value="0.39269875" />
+      <OptimalCoverDistance value="-1.000000" />
+      <AutomobileSpeedModifier value="1.000000" />
+      <SpeedToFleeInVehicle value="40.000000" />
+      <TriggerChargeTime_Far value="6.000000" />
+      <TriggerChargeTime_Near value="2.250000" />
+      <MountSpeedModifier value="1.000000" />
+      <MinTimeBetweenProjectileThrows value="4.000000" />
+      <AccuracyOffsetModifier value="1.000000" />
+      <MinTimeInBestCoverForAltCoverUse value="-1.000000" />
+      <CrouchChance value="0.100000" />
+      <BulletReactionChance value="1.000000" />
+      <FiringPatternInCoverHash>FIRING_PATTERN_BURST_FIRE_IN_COVER</FiringPatternInCoverHash>
+	  <FiringPatternExplosivesInCoverHash>FIRING_PATTERN_EXPLOSIVES_IN_COVER</FiringPatternExplosivesInCoverHash>
+	  <FiringPatternThrownInCoverHash>FIRING_PATTERN_THROWN_IN_COVER</FiringPatternThrownInCoverHash>
+	  <FiringPatternInMountedWeaponHash>FIRING_PATTERN_FULL_AUTO</FiringPatternInMountedWeaponHash>
+    </Item>    
+	
+	<Item type="CCombatInfo">
+      <Name>AGGRESSIVE_TOWNSFOLK</Name>
+      <CombatMovement>CM_WillAdvance</CombatMovement>
+      <BehaviourFlags>USE_COVER USE_VEHICLE DO_DRIVEBYS LEAVE_VEHICLES STRAFE_BASED_ON_TARGET_PROXIMITY ALLOW_STRAFE_BREAKUP USE_PROXIMITY_FIRING_RATE MAINTAIN_MIN_DISTANCE_TO_TARGET</BehaviourFlags>
+      <CombatAbility>CA_Average</CombatAbility>
+      <AttackRanges>CR_Medium</AttackRanges>
+      <TargetLossResponse>TLR_ExitTask</TargetLossResponse>
+      <TargetInjuredReaction>TIR_TreatAsDead</TargetInjuredReaction>
+      <CoverHeightPreference>CHP_Any</CoverHeightPreference>
+      <WeaponShootRateModifier value="1.000000" />
+      <FiringPatternHash>FIRING_PATTERN_BURST_SINGLE_SHOT</FiringPatternHash>
+      <BlindFireChance value="0.010000" />
+      <MaxShootingDistance value="-1.000000" />
+      <TimeBetweenPeeks value="10.000000" />
+      <WeaponAccuracy value="0.400000" />
+      <StrafeWhenMovingChance value="1.000000" />
+      <WalkWhenStrafingChance value="0.000000" />
+      <HeliSpeedModifier value="1.000000" />
+      <HeliSensesRange value="150.000000" />
+      <AttackWindowDistanceForCover value="40.000000" />
+      <TimeToInvalidateInjuredTarget value="5.000000" />
+      <MinimumDistanceToTarget value="7.000000" />
+      <MinimumInCoverDistanceToTarget value="7.000000" />
+      <BulletImpactDetectionRange value="3.000000" />
+      <AimTurnThreshold value="0.39269875" />
+      <OptimalCoverDistance value="-1.000000" />
+      <AutomobileSpeedModifier value="1.000000" />
+      <SpeedToFleeInVehicle value="40.000000" />
+      <TriggerChargeTime_Far value="6.000000" />
+      <TriggerChargeTime_Near value="2.250000" />
+      <MountSpeedModifier value="1.000000" />
+      <MinTimeBetweenProjectileThrows value="4.000000" />
+      <AccuracyOffsetModifier value="1.000000" />
+      <MinTimeInBestCoverForAltCoverUse value="-1.000000" />
+      <CrouchChance value="0.100000" />
+      <BulletReactionChance value="1.000000" />
+      <FiringPatternInCoverHash>FIRING_PATTERN_BURST_FIRE_IN_COVER</FiringPatternInCoverHash>
+	  <FiringPatternExplosivesInCoverHash>FIRING_PATTERN_EXPLOSIVES_IN_COVER</FiringPatternExplosivesInCoverHash>
+	  <FiringPatternThrownInCoverHash>FIRING_PATTERN_THROWN_IN_COVER</FiringPatternThrownInCoverHash>
+	  <FiringPatternInMountedWeaponHash>FIRING_PATTERN_FULL_AUTO</FiringPatternInMountedWeaponHash>
+	  <MinDistanceFromTargetForLastManFlee value="15.000000" />
+	  <ChanceOfLastManFleeFromCombat value="0.300000" />
+    </Item>
+    <Item type="CCombatInfo">
+      <Name>Guard</Name>
+      <CombatMovement>CM_Defensive</CombatMovement>
+      <BehaviourFlags>ALWAYS_EQUIP_BEST_WEAPON USE_COVER USE_VEHICLE DO_DRIVEBYS LEAVE_VEHICLES STRAFE_BASED_ON_TARGET_PROXIMITY CAN_INVESTIGATE STRAFE_DUE_TO_BULLET_EVENTS CAN_CHASE_TARGET_ON_FOOT USE_PROXIMITY_FIRING_RATE ALLOW_STRAFE_BREAKUP CAN_CHARGE WILL_DRAG_INJURED_PEDS_TO_SAFETY WILL_CUT_FREE_HOGTIED_PEDS MAINTAIN_MIN_DISTANCE_TO_TARGET DISABLE_FLEE_FROM_COMBAT</BehaviourFlags>
+      <CombatAbility>CA_Average</CombatAbility>
+      <AttackRanges>CR_Medium</AttackRanges>
+      <TargetLossResponse>TLR_ExitTask</TargetLossResponse>
+      <TargetInjuredReaction>TIR_TreatAsDead</TargetInjuredReaction>
+      <CoverHeightPreference>CHP_Any</CoverHeightPreference>
+      <WeaponShootRateModifier value="2.0" />
+      <FiringPatternHash>FIRING_PATTERN_BURST_SINGLE_SHOT</FiringPatternHash>
+      <BlindFireChance value="0.000000" />
+      <MaxShootingDistance value="-1.000000" />
+      <TimeBetweenPeeks value="10.000000" />
+      <WeaponAccuracy value="0.450000" />
+      <StrafeWhenMovingChance value="1.000000" />
+      <WalkWhenStrafingChance value="0.000000" />
+      <HeliSpeedModifier value="1.000000" />
+      <HeliSensesRange value="150.000000" />
+      <AttackWindowDistanceForCover value="30.000000" />
+      <TimeToInvalidateInjuredTarget value="6.000000" />
+      <MinimumDistanceToTarget value="7.000000" />
+      <MinimumInCoverDistanceToTarget value="4.000000" />
+      <BulletImpactDetectionRange value="3.000000" />
+      <AimTurnThreshold value="0.39269875" />
+      <OptimalCoverDistance value="-1.000000" />
+      <AutomobileSpeedModifier value="1.000000" />
+      <SpeedToFleeInVehicle value="40.000000" />
+      <TriggerChargeTime_Far value="6.000000" />
+      <TriggerChargeTime_Near value="2.250000" />
+      <MountSpeedModifier value="1.000000" />
+      <MinTimeBetweenProjectileThrows value="4.000000" />
+      <AccuracyOffsetModifier value="1.000000" />
+      <MinTimeInBestCoverForAltCoverUse value="-1.000000" />
+      <CrouchChance value="0.100000" />
+      <BulletReactionChance value="1.000000" />
+      <MaxWeaponPickupDistance value="8.000000" />
+      <WeaponPickupChance value="0.000000" />
+      <MinTimeInCombatBeforeCharge value="6.000000" />
+      <StartStandAndFireDistance value="8.000000" />
+      <DistanceToConsiderDismount value="50.000000" />
+      <DistanceToConsiderDismountInWilderness value="35.000000" />
+	  <ConsiderRecentChargeAsActiveTimeout value="15.0" />
+	  <MinTimeBetweenChargesAtSameTarget  value="12.0" />
+	  <MinTimeForSamePedToChargeAgain  value="15.0" />
+      <FiringPatternInCoverHash>FIRING_PATTERN_BURST_FIRE_IN_COVER</FiringPatternInCoverHash>
+	  <FiringPatternExplosivesInCoverHash>FIRING_PATTERN_EXPLOSIVES_IN_COVER</FiringPatternExplosivesInCoverHash>
+	  <FiringPatternThrownInCoverHash>FIRING_PATTERN_THROWN_IN_COVER</FiringPatternThrownInCoverHash>
+	  <FiringPatternInMountedWeaponHash>FIRING_PATTERN_FULL_AUTO</FiringPatternInMountedWeaponHash>
+	  <MinDistanceFromTargetForLastManFlee value="15.000000" />
+	  <ChanceOfLastManFleeFromCombat value="0.300000" />
+    </Item>
+    <Item type="CCombatInfo">
+      <Name>Guard_Unskilled</Name>
+      <CombatMovement>CM_Defensive</CombatMovement>
+      <BehaviourFlags>ALWAYS_EQUIP_BEST_WEAPON USE_COVER USE_VEHICLE DO_DRIVEBYS LEAVE_VEHICLES STRAFE_BASED_ON_TARGET_PROXIMITY CAN_INVESTIGATE STRAFE_DUE_TO_BULLET_EVENTS CAN_CHASE_TARGET_ON_FOOT USE_PROXIMITY_FIRING_RATE ALLOW_STRAFE_BREAKUP CAN_CHARGE WILL_DRAG_INJURED_PEDS_TO_SAFETY WILL_CUT_FREE_HOGTIED_PEDS MAINTAIN_MIN_DISTANCE_TO_TARGET DISABLE_FLEE_FROM_COMBAT</BehaviourFlags>
+      <CombatAbility>CA_Average</CombatAbility>
+      <AttackRanges>CR_Medium</AttackRanges>
+      <TargetLossResponse>TLR_ExitTask</TargetLossResponse>
+      <TargetInjuredReaction>TIR_TreatAsDead</TargetInjuredReaction>
+      <CoverHeightPreference>CHP_Any</CoverHeightPreference>
+      <WeaponShootRateModifier value="2.0" />
+      <FiringPatternHash>FIRING_PATTERN_BURST_SINGLE_SHOT</FiringPatternHash>
+      <BlindFireChance value="0.000000" />
+      <MaxShootingDistance value="-1.000000" />
+      <TimeBetweenPeeks value="10.000000" />
+      <WeaponAccuracy value="0.250000" />
+      <StrafeWhenMovingChance value="1.000000" />
+      <WalkWhenStrafingChance value="0.000000" />
+      <HeliSpeedModifier value="1.000000" />
+      <HeliSensesRange value="150.000000" />
+      <AttackWindowDistanceForCover value="30.000000" />
+      <TimeToInvalidateInjuredTarget value="6.000000" />
+      <MinimumDistanceToTarget value="7.000000" />
+      <MinimumInCoverDistanceToTarget value="4.000000" />
+      <BulletImpactDetectionRange value="3.000000" />
+      <AimTurnThreshold value="0.39269875" />
+      <OptimalCoverDistance value="-1.000000" />
+      <AutomobileSpeedModifier value="1.000000" />
+      <SpeedToFleeInVehicle value="40.000000" />
+      <TriggerChargeTime_Far value="6.000000" />
+      <TriggerChargeTime_Near value="2.250000" />
+      <MountSpeedModifier value="1.000000" />
+      <MinTimeBetweenProjectileThrows value="4.000000" />
+      <AccuracyOffsetModifier value="1.000000" />
+      <MinTimeInBestCoverForAltCoverUse value="-1.000000" />
+      <CrouchChance value="0.100000" />
+      <BulletReactionChance value="1.000000" />
+      <MaxWeaponPickupDistance value="8.000000" />
+      <WeaponPickupChance value="0.000000" />
+      <MinTimeInCombatBeforeCharge value="6.000000" />
+      <StartStandAndFireDistance value="8.000000" />
+      <DistanceToConsiderDismount value="50.000000" />
+      <DistanceToConsiderDismountInWilderness value="35.000000" />
+	  <ConsiderRecentChargeAsActiveTimeout value="15.0" />
+	  <MinTimeBetweenChargesAtSameTarget  value="12.0" />
+	  <MinTimeForSamePedToChargeAgain  value="15.0" />
+      <FiringPatternInCoverHash>FIRING_PATTERN_BURST_FIRE_IN_COVER</FiringPatternInCoverHash>
+	  <FiringPatternExplosivesInCoverHash>FIRING_PATTERN_EXPLOSIVES_IN_COVER</FiringPatternExplosivesInCoverHash>
+	  <FiringPatternThrownInCoverHash>FIRING_PATTERN_THROWN_IN_COVER</FiringPatternThrownInCoverHash>
+	  <FiringPatternInMountedWeaponHash>FIRING_PATTERN_FULL_AUTO</FiringPatternInMountedWeaponHash>
+	  <MinDistanceFromTargetForLastManFlee value="15.000000" />
+	  <ChanceOfLastManFleeFromCombat value="0.300000" />
+    </Item>
+	<Item type="CCombatInfo">
+      <Name>RoughTraveler</Name>
+      <CombatMovement>CM_WillAdvance</CombatMovement>
+      <BehaviourFlags>USE_COVER USE_VEHICLE DO_DRIVEBYS LEAVE_VEHICLES STRAFE_BASED_ON_TARGET_PROXIMITY CAN_INVESTIGATE ALLOW_STRAFE_BREAKUP USE_PROXIMITY_FIRING_RATE MAINTAIN_MIN_DISTANCE_TO_TARGET QUIT_WHEN_TARGET_FLEES_INTERACTION_FIGHT</BehaviourFlags>
+      <CombatAbility>CA_Average</CombatAbility>
+      <AttackRanges>CR_Medium</AttackRanges>
+      <TargetLossResponse>TLR_ExitTask</TargetLossResponse>
+      <TargetInjuredReaction>TIR_TreatAsDead</TargetInjuredReaction>
+      <CoverHeightPreference>CHP_Any</CoverHeightPreference>
+      <WeaponShootRateModifier value="1.000000" />
+      <FiringPatternHash>FIRING_PATTERN_BURST_SINGLE_SHOT</FiringPatternHash>
+      <BlindFireChance value="0.010000" />
+      <MaxShootingDistance value="-1.000000" />
+      <TimeBetweenPeeks value="10.000000" />
+      <WeaponAccuracy value="0.300000" />
+      <StrafeWhenMovingChance value="1.000000" />
+      <WalkWhenStrafingChance value="0.000000" />
+      <HeliSpeedModifier value="1.000000" />
+      <HeliSensesRange value="150.000000" />
+      <AttackWindowDistanceForCover value="40.000000" />
+      <TimeToInvalidateInjuredTarget value="5.000000" />
+      <MinimumDistanceToTarget value="7.000000" />
+      <MinimumInCoverDistanceToTarget value="4.000000" />
+      <BulletImpactDetectionRange value="3.000000" />
+      <AimTurnThreshold value="0.39269875" />
+      <OptimalCoverDistance value="-1.000000" />
+      <AutomobileSpeedModifier value="1.000000" />
+      <SpeedToFleeInVehicle value="40.000000" />
+      <TriggerChargeTime_Far value="6.000000" />
+      <TriggerChargeTime_Near value="2.250000" />
+      <MountSpeedModifier value="1.000000" />
+      <MinTimeBetweenProjectileThrows value="4.000000" />
+      <AccuracyOffsetModifier value="1.000000" />
+      <MinTimeInBestCoverForAltCoverUse value="-1.000000" />
+      <CrouchChance value="0.100000" />
+      <BulletReactionChance value="1.000000" />
+      <FiringPatternInCoverHash>FIRING_PATTERN_BURST_FIRE_IN_COVER</FiringPatternInCoverHash>
+	  <FiringPatternExplosivesInCoverHash>FIRING_PATTERN_EXPLOSIVES_IN_COVER</FiringPatternExplosivesInCoverHash>
+	  <FiringPatternThrownInCoverHash>FIRING_PATTERN_THROWN_IN_COVER</FiringPatternThrownInCoverHash>
+	  <FiringPatternInMountedWeaponHash>FIRING_PATTERN_FULL_AUTO</FiringPatternInMountedWeaponHash>
+	  <MinDistanceFromTargetForLastManFlee value="15.000000" />
+	  <ChanceOfLastManFleeFromCombat value="0.300000" />
+    </Item>
+  </CombatInfos>
+</CCombatInfoMgr>

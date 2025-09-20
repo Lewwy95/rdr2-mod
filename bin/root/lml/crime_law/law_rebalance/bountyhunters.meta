@@ -1,0 +1,253 @@
+<?xml version="1.0" encoding="UTF-8"?>	
+<CDispatchData>
+	<BountyResponses>
+		<BountyDispatch>
+			<Name>LAW_BOUNTY_HUNTERS_CSI</Name>
+			<RandomWeight value="1.0" />
+			<RequiredRegionType>REGION_TYPE_WILDERNESS</RequiredRegionType>
+			<RequiredCooldowns>
+				<Item>BountyHuntersGlobalCooldown</Item>
+			</RequiredCooldowns>
+			<MinBounty value="1200" />
+			<MaxWantedLevel value="0" />
+			<CSIMaxDurationMS value="0" /> <!-- No time limit -->
+			<MaxLocationOverrideRadius value="20.000000" />
+			<MinDistanceToTown value="100.000000" />
+			<IdealSpawnDistanceToTown value="100.000000" />
+			<InitialSearchSituation>BountyHuntersCSI</InitialSearchSituation>
+			<Flags>DisableIfPlayerIsOnAMission CantBeCleared CanSpawnInFrontDuringEscape MoveIncidentLocationToInitialSpawnPosition DisableInMP DisableCleanUp SaveDispatchedPedAppearance SetCriminalKnown CantAcquireFreeResourcesBeforeCombat NoFollowUpIncidentIfLeftRegion</Flags>
+			<DispatchPhases>
+				
+				<!-- Phase: Bounty Hunter Control -->
+				<Phase>
+					<Name>InitialRiders</Name>
+					<GroupMultiplier value="0.3f"/>
+					
+					<DispatchPeds>
+						<DispatchPedGroups>
+							<DispatchGroup>
+								<Preset>BountyHunter</Preset>
+								<MinNumPeds value="2"/>
+								<MaxNumPeds value="2"/>
+							</DispatchGroup>
+						</DispatchPedGroups>
+						<GreedyAcquireCondition type="CAIConditionReferenced">
+							<Name>SHOULD_GRAB_AVAILABLE_DISPATCH_PED</Name>
+						</GreedyAcquireCondition>
+					</DispatchPeds>
+					
+					<PhaseEndConditions>
+						<Condition type="CAIConditionTimeInDispatchPhase">
+							<LowerBound value="500"/>
+						</Condition>
+					</PhaseEndConditions>					
+					
+					<!-- Select a bounty hunter response appropriate per the wanted score -->
+					<!-- Try highest bounty first, default to OneStarBountyHunters -->					
+					<!-- Keeping BountyLowerBound levels near the WantedLevelThresholds in dispatch.meta -->
+					<!-- Bounty values are in cents -->
+					<NextPhases>
+						<PhaseOption>
+							<Condition type="CAIConditionWantedLevel">
+								<WantedLevelLowerBound value="5"/>
+							</Condition>
+							<Name>FiveStarBountyHunters</Name>
+						</PhaseOption>
+						<PhaseOption>
+							<Condition type="CAIConditionWantedLevel">
+								<WantedLevelLowerBound value="4"/>
+							</Condition>
+							<Name>FourStarBountyHunters</Name>
+						</PhaseOption>
+						<PhaseOption>
+							<Condition type="CAIConditionWantedLevel">
+								<WantedLevelLowerBound value="3"/>
+							</Condition>
+							<Name>ThreeStarBountyHunters</Name>
+						</PhaseOption>
+						<PhaseOption>
+							<Condition type="CAIConditionWantedLevel">
+								<WantedLevelLowerBound value="2"/>
+							</Condition>
+							<Name>TwoStarBountyHunters</Name>
+						</PhaseOption>
+						<PhaseOption>
+							<Condition type="NULL"/>
+							<Name>OneStarBountyHunters</Name>
+						</PhaseOption>
+					</NextPhases>
+				</Phase>
+				
+				<!-- Phase: OneStarBountyHunters -->
+				<Phase>
+					<Name>OneStarBountyHunters</Name>
+					<GroupMultiplier value="0.3f"/>
+					
+					<DispatchPeds>
+						<GreedyAcquireCondition type="CAIConditionReferenced">
+							<Name>SHOULD_GRAB_AVAILABLE_DISPATCH_PED</Name>
+						</GreedyAcquireCondition>
+					</DispatchPeds>
+				
+					<PhaseEndConditions>
+						<Condition type="NULL"/>
+					</PhaseEndConditions>
+					
+					<NextPhases>
+						<!-- End Response -->
+					</NextPhases>
+				</Phase>
+				
+				<!-- Phase: TwoStarBountyHunters -->
+				<Phase>
+					<Name>TwoStarBountyHunters</Name>
+					<GroupMultiplier value="0.3f"/>
+					
+					<DispatchPeds>						
+						<RandomDispatchPedGroups>
+							<DispatchGroup>
+								<Preset>BountyHunterShotgun</Preset>
+								<RandomWeight value="0.6f"/>
+								<MinNumPeds value="1"/>
+								<MaxNumPeds value="2"/>
+							</DispatchGroup>
+							<DispatchGroup>
+								<Preset>BountyHunterSniper</Preset>
+								<RandomWeight value="0.1f"/>
+								<MinNumPeds value="1"/>
+								<MaxNumPeds value="2"/>
+							</DispatchGroup>
+						</RandomDispatchPedGroups>
+						<GreedyAcquireCondition type="CAIConditionReferenced">
+							<Name>SHOULD_GRAB_AVAILABLE_DISPATCH_PED</Name>
+						</GreedyAcquireCondition>
+					</DispatchPeds>
+				
+					<PhaseEndConditions>
+						<Condition type="NULL"/>
+					</PhaseEndConditions>
+					
+					<NextPhases>
+						<!-- End Response -->
+					</NextPhases>
+				</Phase>
+				
+				<!-- Phase: ThreeStarBountyHunters -->
+				<Phase>
+					<Name>ThreeStarBountyHunters</Name>
+					<GroupMultiplier value="0.3f"/>
+					
+					<DispatchPeds>
+						<DispatchPedGroups>
+							<DispatchGroup>
+								<Preset>BountyHunterSniper</Preset>
+								<MinNumPeds value="1"/>
+								<MaxNumPeds value="1"/>
+							</DispatchGroup>
+							<!-- Chance for doggos -->
+							<DispatchGroup>
+								<SelectionConditions>
+									<Condition type="CAIConditionRandom">
+										<Chances value="0.1f"/>
+									</Condition>
+								</SelectionConditions>
+								<Preset>PoliceDog</Preset>
+								<MinNumPeds value="2"/>
+								<MaxNumPeds value="2"/>
+							</DispatchGroup>
+						</DispatchPedGroups>
+						
+						<RandomDispatchPedGroups>
+							<DispatchGroup>
+								<Preset>BountyHunterShotgun</Preset>
+								<RandomWeight value="0.6f"/>
+								<MinNumPeds value="2"/>
+								<MaxNumPeds value="2"/>
+							</DispatchGroup>
+							<DispatchGroup>
+								<Preset>BountyHunterSniper</Preset>
+								<RandomWeight value="0.1f"/>
+								<MinNumPeds value="2"/>
+								<MaxNumPeds value="2"/>
+							</DispatchGroup>
+						</RandomDispatchPedGroups>
+						<GreedyAcquireCondition type="CAIConditionReferenced">
+							<Name>SHOULD_GRAB_AVAILABLE_DISPATCH_PED</Name>
+						</GreedyAcquireCondition>
+					</DispatchPeds>
+				
+					<PhaseEndConditions>
+						<Condition type="NULL"/>
+					</PhaseEndConditions>
+					
+					<NextPhases>
+						<!-- End Response -->
+					</NextPhases>
+				</Phase>
+				
+				<!-- Phase: FourStarBountyHunters -->
+				<Phase>
+					<Name>FourStarBountyHunters</Name>
+					<GroupMultiplier value="0.3f"/>
+					
+					<DispatchPeds>
+						<DispatchPedGroups>
+							<DispatchGroup>
+								<Preset>MarshalSniper</Preset>
+								<MinNumPeds value="3"/>
+								<MaxNumPeds value="3"/>
+							</DispatchGroup>
+							<DispatchGroup>
+								<Preset>MarshalShotgun</Preset>
+								<MinNumPeds value="2"/>
+								<MaxNumPeds value="2"/>
+							</DispatchGroup>
+						</DispatchPedGroups>
+					</DispatchPeds>
+				
+					<PhaseEndConditions>
+						<Condition type="CAIConditionReferenced">
+							<Name>DISPATCH_LOW_SEVERITY_ESCALATION_WILDERNESS</Name>
+						</Condition>
+					</PhaseEndConditions>
+					
+					<NextPhases>
+						<Condition type="NULL"/>
+					</NextPhases>
+				</Phase>
+				
+				<!-- Phase: FiveStarBountyHunters -->
+				<Phase>
+					<Name>FiveStarBountyHunters</Name>
+					<GroupMultiplier value="0.3f"/>
+					
+					<DispatchPeds>
+						<DispatchPedGroups>
+							<DispatchGroup>
+								<Preset>PinkertonSniper</Preset>
+								<MinNumPeds value="3"/>
+								<MaxNumPeds value="3"/>
+							</DispatchGroup>
+							<DispatchGroup>
+								<Preset>PinkertonShotgun</Preset>
+								<MinNumPeds value="3"/>
+								<MaxNumPeds value="4"/>
+							</DispatchGroup>
+						</DispatchPedGroups>
+					</DispatchPeds>
+				
+					<PhaseEndConditions>
+						<Condition type="NULL"/>
+					</PhaseEndConditions>
+					
+					<NextPhases>
+						<!-- End Response -->
+					</NextPhases>
+				</Phase>
+			</DispatchPhases>
+		</BountyDispatch>
+	</BountyResponses>
+	<CleanUpDispatchPedPresets>
+		<Item>BountyHunter</Item>
+	</CleanUpDispatchPedPresets>
+</CDispatchData>

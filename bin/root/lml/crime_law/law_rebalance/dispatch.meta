@@ -1,0 +1,2383 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!-- Crime and Law Rebalance and Enhancement -->
+<!-- DO NOT COPY -->
+	
+<CDispatchData xmlns:xi="http://www.w3.org/2001/XInclude">
+	<ParoleDuration value="9000"/>
+	<InHeliRadiusMultiplier value="1.0"/>
+	<ImmediateDetectionRange value="25.0"/>
+	<OnScreenImmediateDetectionRange value="45.0f"/>
+	<MaxDistanceToIncidentForInFrontSpawning value="150.0f"/>
+	<MinDotForInFrontSpawning value="0.5f"/> <!-- 60 degrees -->
+	<LawSpawnDelayMin>
+		<SLOW value="0.0"/>
+		<MEDIUM value="0.0"/>
+		<FAST value="0.0"/>
+	</LawSpawnDelayMin>
+	<LawSpawnDelayMax>
+		<SLOW value="0.0"/>
+		<MEDIUM value="0.0"/>
+		<FAST value="0.0"/>
+	</LawSpawnDelayMax>
+	<AmbulanceSpawnDelayMin>
+		<SLOW value="40.0"/>
+		<MEDIUM value="30.0"/>
+		<FAST value="20.0"/>
+	</AmbulanceSpawnDelayMin>
+	<AmbulanceSpawnDelayMax>
+		<SLOW value="50.0"/>
+		<MEDIUM value="40.0"/>
+		<FAST value="30.0"/>
+	</AmbulanceSpawnDelayMax>
+	<FireSpawnDelayMin>
+		<SLOW value="40.0"/>
+		<MEDIUM value="30.0"/>
+		<FAST value="20.0"/>
+	</FireSpawnDelayMin>
+	<FireSpawnDelayMax>
+		<SLOW value="75.0"/>
+		<MEDIUM value="60.0"/>
+		<FAST value="45.0"/>
+	</FireSpawnDelayMax>
+	<DispatchOrderDistances>
+		<MinOnFootOrderDistance value="75.0"/>
+		<MaxOnFootOrderDistance value="250.0"/>
+		<OnFootVelocityThreshold value="5.0"/>
+		<MinInVehicleOrderDistance value="0.0"/>
+		<MaxInVehicleOrderDistance value="0.0"/>
+		<InVehicleVelocityThreshold value="10.0"/>
+		<MinOnMountOrderDistance value="90.0"/>
+		<MaxOnMountOrderDistance value="250.0"/>
+		<OnMountVelocityThreshold value="10.0"/>
+		<MinOrderLifetimeMS value="5000"/>
+		<MinEscapingPlayerVelocity value="0.5"/>
+		<MinFleeingPlayerVelocity value="3.0"/>
+		<MinFleeingPlayerTime value="5.0"/>
+		<MinTimeChasingToCull value="3.0"/>
+		<MinFleeingPlayerCullDistance value="20.0"/>
+		<MaxDotBehindEscapingPlayer value="-0.500000"/> <!-- 60 degrees behind -->
+		<MaxDotBehindFleeingPlayer value="-0.707107"/> <!-- 45 degrees behind -->
+		<MinTimeBetweenCullingPedsBehindPlayerMS value="2000"/>
+		<MinPedsBehindFleeingPlayerToCull value="2"/>
+	</DispatchOrderDistances>
+	<SinglePlayerWantedLevelThresholds><!-- Law peds increase difficulty/accuracy at each threshold -->
+		<WantedLevelClean value="0"/>
+		<WantedLevel1 value="1"/>
+		<WantedLevel2 value="5000"/>
+		<WantedLevel3 value="15000"/>
+		<WantedLevel4 value="25000"/>
+		<WantedLevel5 value="100000"/>
+	</SinglePlayerWantedLevelThresholds>
+	<MultiPlayerWantedLevelThresholds><!-- Law peds increase difficulty/accuracy at each threshold -->
+		<WantedLevelClean value="0"/>
+		<WantedLevel1 value="1"/>
+		<WantedLevel2 value="250"/>
+		<WantedLevel3 value="2500"/>
+		<WantedLevel4 value="5000"/>
+		<WantedLevel5 value="7500"/>
+	</MultiPlayerWantedLevelThresholds>
+	<SingleplayerWantedLevelRadius>
+		<WantedLevelClean value="15.0"/>
+		<WantedLevel1 value="25.0"/>
+		<WantedLevel2 value="90.0"/>
+		<WantedLevel3 value="115.0"/>
+		<WantedLevel4 value="150.0"/>
+		<WantedLevel5 value="200.0"/>
+	</SingleplayerWantedLevelRadius>
+	<MultiplayerWantedLevelRadius>
+		<WantedLevelClean value="60.0"/>
+		<WantedLevel1 value="75.0"/>
+		<WantedLevel2 value="90.0"/>
+		<WantedLevel3 value="115.0"/>
+		<WantedLevel4 value="150.0"/>
+		<WantedLevel5 value="200.0"/>
+	</MultiplayerWantedLevelRadius>
+	<HiddenEvasionTimes>
+		<WantedLevelClean value="5000"/>
+		<WantedLevel1 value="15000"/>
+		<WantedLevel2 value="30000"/>
+		<WantedLevel3 value="45000"/>
+		<WantedLevel4 value="60000"/>
+		<WantedLevel5 value="75000"/>
+	</HiddenEvasionTimes>
+	<MultiplayerHiddenEvasionTimes>
+		<WantedLevelClean value="0"/>
+		<WantedLevel1 value="0"/>
+		<WantedLevel2 value="0"/>
+		<WantedLevel3 value="0"/>
+		<WantedLevel4 value="0"/>
+		<WantedLevel5 value="0"/>
+	</MultiplayerHiddenEvasionTimes>
+	<CopsToPreserveAroundPlayer>
+		<WantedLevelClean value="4"/>
+		<WantedLevel1 value="6"/>
+		<WantedLevel2 value="6"/>
+		<WantedLevel3 value="8"/>
+		<WantedLevel4 value="10"/>
+		<WantedLevel5 value="12"/>
+	</CopsToPreserveAroundPlayer>
+	<MultiplayerCopsToPreserveAroundPlayer>
+		<WantedLevelClean value="4"/>
+		<WantedLevel1 value="6"/>
+		<WantedLevel2 value="6"/>
+		<WantedLevel3 value="8"/>
+		<WantedLevel4 value="10"/>
+		<WantedLevel5 value="12"/>
+	</MultiplayerCopsToPreserveAroundPlayer>
+	<VehicleSets>
+		<Vehicle>
+			<Name>ARMY_LEADER</Name>
+			<ConditionalVehicleSets>
+				<Item>
+					<VehicleModels>
+						<Vehicle>A_C_Horse_AmericanPaint_Tobiano</Vehicle>
+					</VehicleModels>
+					<PedModels>
+						<Ped>MSP_TRAINROBBERY2_MALES_01</Ped>
+					</PedModels>
+				</Item>
+			</ConditionalVehicleSets>
+		</Vehicle>
+		
+		<Vehicle>
+			<Name>ARMY_RIDER</Name>
+			<ConditionalVehicleSets>
+				<Item>
+					<VehicleModels>
+						<Vehicle>A_C_Horse_Morgan_Bay</Vehicle>
+						<Vehicle>A_C_Horse_Morgan_Palomino</Vehicle>
+						<Vehicle>A_C_Horse_TennesseeWalker_BlackRabicano</Vehicle>
+						<Vehicle>A_C_Horse_TennesseeWalker_Chestnut</Vehicle>
+						<Vehicle>A_C_Horse_AmericanStandardbred_Black</Vehicle>
+					</VehicleModels>
+					<PedModels>
+						<Ped>S_M_M_ARMY_01</Ped>
+						<Ped>S_M_Y_ARMY_01</Ped>
+					</PedModels>
+				</Item>
+			</ConditionalVehicleSets>
+		</Vehicle> 
+		<Vehicle>
+			<Name>LAW_LEADER_RURAL_FOOTHILLS</Name>
+			<ConditionalVehicleSets>
+				<Item>
+					<VehicleModels>
+						<Vehicle>A_C_Horse_AmericanPaint_Tobiano</Vehicle>
+					</VehicleModels>
+					<PedModels>
+						<Ped>S_M_M_DISPATCHLEADERRURAL_01</Ped>
+					</PedModels>
+				</Item>
+			</ConditionalVehicleSets>
+		</Vehicle>
+		<Vehicle>
+			<Name>LAW_LEADER_RURAL_LOWLANDS</Name>
+			<ConditionalVehicleSets>
+				<Item>
+					<VehicleModels>
+						<Vehicle>A_C_Horse_Appaloosa_Blanket</Vehicle>
+					</VehicleModels>
+					<PedModels>
+						<Ped>S_M_M_DISPATCHLEADERRURAL_01</Ped>
+					</PedModels>
+				</Item>
+			</ConditionalVehicleSets>
+		</Vehicle>
+		<Vehicle>
+			<Name>LAW_LEADER_RURAL_MOUNTAINS</Name>
+			<ConditionalVehicleSets>
+				<Item>
+					<VehicleModels>
+						<Vehicle>A_C_Horse_Nokota_BlueRoan</Vehicle>
+					</VehicleModels>
+					<PedModels>
+						<Ped>S_M_M_DISPATCHLEADERRURAL_01</Ped>
+					</PedModels>
+				</Item>
+			</ConditionalVehicleSets>
+		</Vehicle>
+		<Vehicle>
+			<Name>LAW_LEADER_RURAL_PLAINS</Name>
+			<ConditionalVehicleSets>
+				<Item>
+					<VehicleModels>
+						<Vehicle>A_C_Horse_AmericanPaint_Overo</Vehicle>
+					</VehicleModels>
+					<PedModels>
+						<Ped>S_M_M_DISPATCHLEADERRURAL_01</Ped>
+					</PedModels>
+				</Item>
+			</ConditionalVehicleSets>
+		</Vehicle>
+		<Vehicle>
+			<Name>RIDER_PLAINS</Name>
+			<ConditionalVehicleSets>
+				<Item>
+		    		<VehicleModels>
+			 			<Vehicle>A_C_Horse_KentuckySaddle_Black</Vehicle>
+			 			<Vehicle>A_C_Horse_KentuckySaddle_Grey</Vehicle>
+			 			<Vehicle>A_C_Horse_KentuckySaddle_ChestnutPinto</Vehicle>
+			 			<Vehicle>A_C_Horse_Morgan_Bay</Vehicle>
+			 			<Vehicle>A_C_Horse_Morgan_FlaxenChestnut</Vehicle>
+			 			<Vehicle>A_C_Horse_Morgan_Palomino</Vehicle>
+			 			<Vehicle>A_C_Horse_TennesseeWalker_BlackRabicano</Vehicle>
+			 			<Vehicle>A_C_Horse_TennesseeWalker_Chestnut</Vehicle>
+			 			<Vehicle>A_C_Horse_TennesseeWalker_RedRoan</Vehicle>
+		    		</VehicleModels>
+					<PedModels>
+						<Ped>S_M_M_DISPATCHLAWRURAL_01</Ped> 
+					</PedModels>
+				</Item>
+			</ConditionalVehicleSets>
+		</Vehicle>
+		<Vehicle>
+			<Name>RIDER_MOUNTAINS</Name>
+			<ConditionalVehicleSets>
+				<Item>
+		    		<VehicleModels>
+			 			<Vehicle>A_C_Horse_KentuckySaddle_ChestnutPinto</Vehicle>
+			 			<Vehicle>A_C_Horse_KentuckySaddle_Grey</Vehicle>
+			 			<Vehicle>A_C_Horse_Morgan_FlaxenChestnut</Vehicle>
+			 			<Vehicle>A_C_Horse_TennesseeWalker_Chestnut</Vehicle>
+			 			<Vehicle>A_C_Horse_AmericanStandardbred_Black</Vehicle>
+		    		</VehicleModels>
+					<PedModels>
+						<Ped>S_M_M_DISPATCHLAWRURAL_01</Ped> 
+					</PedModels>
+				</Item>
+			</ConditionalVehicleSets>
+		</Vehicle>
+		<Vehicle>
+			<Name>RIDER_LOWLANDS</Name>
+			<ConditionalVehicleSets>
+				<Item>
+		    		<VehicleModels>
+			 			<Vehicle>A_C_Horse_Morgan_Bay</Vehicle>
+			 			<Vehicle>A_C_Horse_Morgan_Palomino</Vehicle>
+			 			<Vehicle>A_C_Horse_TennesseeWalker_BlackRabicano</Vehicle>
+			 			<Vehicle>A_C_Horse_TennesseeWalker_Chestnut</Vehicle>
+			 			<Vehicle>A_C_Horse_AmericanStandardbred_Black</Vehicle>
+		    		</VehicleModels>
+					<PedModels>
+						<Ped>S_M_M_DISPATCHLAWRURAL_01</Ped>
+					</PedModels>
+				</Item>
+			</ConditionalVehicleSets>
+		</Vehicle>
+		<Vehicle>
+			<Name>RIDER_RHODES_RESIDENT</Name>
+			<ConditionalVehicleSets>
+				<Item>
+		    		<VehicleModels>
+			 			<Vehicle>A_C_Horse_KentuckySaddle_Black</Vehicle>
+			 			<Vehicle>A_C_Horse_KentuckySaddle_Grey</Vehicle>
+			 			<Vehicle>A_C_Horse_Morgan_Palomino</Vehicle>
+			 			<Vehicle>A_C_Horse_TennesseeWalker_RedRoan</Vehicle>
+			 			<Vehicle>A_C_Horse_AmericanStandardbred_Buckskin</Vehicle>
+
+		    		</VehicleModels>
+					<PedModels>
+						<Ped>A_M_M_RHDDEPUTYRESIDENT_01</Ped>
+					</PedModels>
+				</Item>
+			</ConditionalVehicleSets>
+		</Vehicle>
+		<Vehicle>
+			<Name>RIDER_FOOTHILLS</Name>
+			<ConditionalVehicleSets>
+				<Item>
+		    		<VehicleModels>
+			 			<Vehicle>A_C_Horse_KentuckySaddle_Black</Vehicle>
+			 			<Vehicle>A_C_Horse_KentuckySaddle_ChestnutPinto</Vehicle>
+			 			<Vehicle>A_C_Horse_Morgan_Bay</Vehicle>
+			 			<Vehicle>A_C_Horse_TennesseeWalker_RedRoan</Vehicle>
+			 			<Vehicle>A_C_Horse_AmericanStandardbred_Buckskin</Vehicle>
+		    		</VehicleModels>
+					<PedModels>
+						<Ped>S_M_M_DISPATCHLAWRURAL_01</Ped> 
+					</PedModels>
+				</Item>
+			</ConditionalVehicleSets>
+		</Vehicle>
+		<Vehicle>
+			<Name>RIDER_BLW</Name>
+			<ConditionalVehicleSets>
+				<Item>
+		    		<VehicleModels>
+			 			<Vehicle>A_C_Horse_HungarianHalfbred_PiebaldTobiano</Vehicle>
+			 			<Vehicle>A_C_Horse_Nokota_WhiteRoan</Vehicle>
+			 			<Vehicle>A_C_Horse_Mustang_WildBay</Vehicle>
+			 			<Vehicle>A_C_Horse_Mustang_GrulloDun</Vehicle>
+			 			<Vehicle>A_C_Horse_Thoroughbred_DappleGrey</Vehicle>
+		    		</VehicleModels>
+					<PedModels>
+						<Ped>S_M_M_AmbientBlWPolice_01</Ped> 
+					</PedModels>
+				</Item>
+			</ConditionalVehicleSets>
+		</Vehicle>
+		<Vehicle>
+			<Name>RIDER_NBX</Name>
+			<ConditionalVehicleSets>
+				<Item>
+		    		<VehicleModels>
+			 			<Vehicle>A_C_Horse_Morgan_FlaxenChestnut</Vehicle>
+			 			<Vehicle>A_C_Horse_HungarianHalfbred_FlaxenChestnut</Vehicle>
+			 			<Vehicle>A_C_Horse_TennesseeWalker_BlackRabicano</Vehicle>
+			 			<Vehicle>A_C_Horse_Thoroughbred_BloodBay</Vehicle>
+			 			<Vehicle>A_C_Horse_Thoroughbred_DappleGrey</Vehicle>
+		    		</VehicleModels>
+					<PedModels>
+						<Ped>S_M_M_DispatchPolice_01</Ped> 
+					</PedModels>
+				</Item>
+			</ConditionalVehicleSets>
+		</Vehicle>
+		<Vehicle>
+			<Name>RIDER_WAPITI</Name>
+			<ConditionalVehicleSets>
+				<Item>
+		    		<VehicleModels>
+			 			<Vehicle>A_C_Horse_Nokota_BlueRoan</Vehicle>
+			 			<Vehicle>A_C_Horse_Mustang_WildBay</Vehicle>
+		    		</VehicleModels>
+					<PedModels>
+						<Ped>A_M_M_WapWarriors_01</Ped> 
+					</PedModels>
+				</Item>
+			</ConditionalVehicleSets>
+		</Vehicle>
+		<Vehicle>
+			<Name>ON_FOOT_PLAINS</Name>
+			<ConditionalVehicleSets>
+				<Item>
+					<PedModels>
+						<Ped>S_M_M_AMBIENTLAWRURAL_01</Ped>
+					</PedModels>
+				</Item>
+			</ConditionalVehicleSets>
+		</Vehicle>
+		<Vehicle>
+			<Name>ON_FOOT_FOOTHILLS</Name>
+			<ConditionalVehicleSets>
+				<Item>
+					<PedModels>
+						<Ped>S_M_M_AMBIENTLAWRURAL_01</Ped> 
+					</PedModels>
+				</Item>
+			</ConditionalVehicleSets>
+		</Vehicle>
+		<Vehicle>
+			<Name>ON_FOOT_MOUNTAIN</Name>
+			<ConditionalVehicleSets>
+				<Item>
+					<PedModels>
+						<Ped>S_M_M_AMBIENTLAWRURAL_01</Ped> 
+					</PedModels>
+				</Item>
+			</ConditionalVehicleSets>
+		</Vehicle>
+		<Vehicle>
+			<Name>ON_FOOT_LOWLANDS</Name>
+			<ConditionalVehicleSets>
+				<Item>
+					<PedModels>
+						<Ped>S_M_M_AMBIENTLAWRURAL_01</Ped>
+					</PedModels>
+				</Item>
+			</ConditionalVehicleSets>
+		</Vehicle>
+		<Vehicle>
+			<Name>ON_FOOT_BLACK_WATER</Name>
+			<ConditionalVehicleSets>
+				<Item>
+					<PedModels>
+						<Ped>S_M_M_AMBIENTBLWPOLICE_01</Ped> 
+					</PedModels>
+				</Item>
+			</ConditionalVehicleSets>
+		</Vehicle>
+		<Vehicle>
+			<Name>ON_FOOT_SAINT_DENIS</Name>
+			<ConditionalVehicleSets>
+				<Item>
+					<PedModels>
+						<Ped>S_M_M_DISPATCHPOLICE_01</Ped> 
+					</PedModels>
+				</Item>
+			</ConditionalVehicleSets>
+		</Vehicle>
+		<Vehicle>
+			<Name>ON_FOOT_SAINT_DENIS_LEADER</Name>
+			<ConditionalVehicleSets>
+				<Item>
+					<PedModels>
+						<Ped>S_M_M_DISPATCHLEADERPOLICE_01</Ped> 
+					</PedModels>
+				</Item>
+			</ConditionalVehicleSets>
+		</Vehicle>
+		<Vehicle>
+			<Name>ON_FOOT_SISIKA_GUARD</Name>
+			<ConditionalVehicleSets>
+				<Item>
+					<PedModels>
+						<Ped>S_M_M_SKPGUARD_01</Ped> 
+					</PedModels>
+				</Item>
+			</ConditionalVehicleSets>
+		</Vehicle>
+		<Vehicle>
+			<Name>ON_FOOT_GUAMA</Name>
+			<ConditionalVehicleSets>
+				<Item>
+					<PedModels>
+						<Ped>S_M_M_FussarHenchman_01</Ped> 
+					</PedModels>
+				</Item>
+			</ConditionalVehicleSets>
+		</Vehicle>
+		<Vehicle>
+			<Name>ON_FOOT_PINKERTONS</Name>
+			<ConditionalVehicleSets>
+				<Item>
+					<PedModels>
+						<Ped>S_M_M_PINLAW_01</Ped>
+					</PedModels>
+				</Item>
+			</ConditionalVehicleSets>
+		</Vehicle>
+		<Vehicle>
+			<Name>ON_FOOT_WAPITI</Name>
+			<ConditionalVehicleSets>
+				<Item>
+					<PedModels>
+						<Ped>A_M_M_WapWarriors_01</Ped> 
+					</PedModels>
+				</Item>
+			</ConditionalVehicleSets>
+		</Vehicle>
+		<Vehicle>
+			<Name>WAGON_BLW</Name>
+			<ConditionalVehicleSets>
+				<Item>
+		    		<VehicleModels>
+			 			<Vehicle>POLICEWAGON01X</Vehicle>
+		    		</VehicleModels>
+					<PedModels>
+						<Ped>S_M_M_AMBIENTBLWPOLICE_01</Ped>
+					</PedModels>
+				</Item>
+			</ConditionalVehicleSets>
+		</Vehicle>
+		<Vehicle>
+			<Name>WAGON_PLAINS</Name>
+			<ConditionalVehicleSets>
+				<Item>
+		    		<VehicleModels>
+			 			<Vehicle>POLICEWAGON01X</Vehicle>
+		    		</VehicleModels>
+					<PedModels>
+						<Ped>S_M_M_DISPATCHLAWRURAL_01</Ped>
+					</PedModels>
+				</Item>
+			</ConditionalVehicleSets>
+		</Vehicle>
+		<Vehicle>
+			<Name>WAGON_MOUNTAIN</Name>
+			<ConditionalVehicleSets>
+				<Item>
+		    		<VehicleModels>
+			 			<Vehicle>POLICEWAGON01X</Vehicle>
+		    		</VehicleModels>
+					<PedModels>
+						<Ped>S_M_M_DISPATCHLAWRURAL_01</Ped> 
+					</PedModels>
+				</Item>
+			</ConditionalVehicleSets>
+		</Vehicle>
+		<Vehicle>
+			<Name>WAGON_LOWLANDS</Name>
+			<ConditionalVehicleSets>
+				<Item>
+		    		<VehicleModels>
+			 			<Vehicle>POLICEWAGON01X</Vehicle>
+		    		</VehicleModels>
+					<PedModels>
+						<Ped>S_M_M_DISPATCHLAWRURAL_01</Ped>
+					</PedModels>
+				</Item>
+			</ConditionalVehicleSets>
+		</Vehicle>
+		<Vehicle>
+			<Name>WAGON_FOOTHILLS</Name>
+			<ConditionalVehicleSets>
+				<Item>
+		    		<VehicleModels>
+			 			<Vehicle>POLICEWAGON01X</Vehicle>
+		    		</VehicleModels>
+					<PedModels>
+						<Ped>S_M_M_DISPATCHLAWRURAL_01</Ped> 
+					</PedModels>
+				</Item>
+			</ConditionalVehicleSets>
+		</Vehicle>
+		<Vehicle>
+			<Name>WAGON_NBX</Name>
+			<ConditionalVehicleSets>
+				<Item>
+		    		<VehicleModels>
+			 			<Vehicle>POLICEWAGON01X</Vehicle>
+		    		</VehicleModels>
+					<PedModels>
+						<Ped>S_M_M_DISPATCHPOLICE_01</Ped>
+					</PedModels>
+				</Item>
+			</ConditionalVehicleSets>
+		</Vehicle>
+		<Vehicle>
+			<Name>WAGON_MARSHALS</Name>
+			<ConditionalVehicleSets>
+				<Item>
+					<VehicleModels>
+						<Vehicle>POLICEWAGON01X</Vehicle>
+					</VehicleModels>
+					<PedModels>
+						<Ped>S_M_M_MARSHALLSRURAL_01</Ped>
+					</PedModels>
+				</Item>
+			</ConditionalVehicleSets>
+		</Vehicle>
+		<Vehicle>
+			<Name>WAGON_RHO_DEPUTY_RESIDENT</Name>
+			<ConditionalVehicleSets>
+				<Item>
+		    		<VehicleModels>
+			 			<Vehicle>POLICEWAGON01X</Vehicle>
+		    		</VehicleModels>
+					<PedModels>
+						<Ped>A_M_M_RHDDEPUTYRESIDENT_01</Ped>
+					</PedModels>
+				</Item>
+			</ConditionalVehicleSets>
+		</Vehicle>
+		<Vehicle>
+			<Name>RIDERS_BOUNTY_HUNTERS</Name>
+			<ConditionalVehicleSets>
+				<Item>
+		    		<VehicleModels>
+			 			<Vehicle>A_C_Horse_HungarianHalfbred_FlaxenChestnut</Vehicle>
+			 			<Vehicle>A_C_Horse_Mustang_GrulloDun</Vehicle>
+			 			<Vehicle>A_C_Horse_Thoroughbred_BloodBay</Vehicle>
+		    		</VehicleModels>
+					<PedModels>
+						<Ped>G_M_M_BountyHunters_01</Ped> 
+					</PedModels>
+				</Item>
+			</ConditionalVehicleSets>
+		</Vehicle>
+		<Vehicle>
+			<Name>RIDERS_BOUNTY_HUNTERS_SPECIAL</Name>
+			<ConditionalVehicleSets>
+				<Item>
+		    		<VehicleModels>
+			 			<Vehicle>A_C_Horse_Ardennes_BayRoan</Vehicle>
+			 			<Vehicle>A_C_Horse_DutchWarmblood_SootyBuckskin</Vehicle>
+			 			<Vehicle>A_C_Horse_HungarianHalfbred_DarkDappleGrey</Vehicle>
+		    		</VehicleModels>
+					<PedModels>
+						<Ped>G_M_M_BountyHunters_01</Ped> 
+					</PedModels>
+				</Item>
+			</ConditionalVehicleSets>
+		</Vehicle>
+		<Vehicle>
+			<Name>RIDERS_MARSHALS</Name>
+			<ConditionalVehicleSets>
+				<Item>
+		    		<VehicleModels>
+			 			<Vehicle>A_C_Horse_AmericanPaint_Tobiano</Vehicle>
+			 			<Vehicle>A_C_Horse_Appaloosa_Blanket</Vehicle>
+			 			<Vehicle>A_C_Horse_HungarianHalfbred_PiebaldTobiano</Vehicle>
+			 			<Vehicle>A_C_Horse_Mustang_WildBay</Vehicle>
+			 			<Vehicle>A_C_Horse_Nokota_WhiteRoan</Vehicle>
+		    		</VehicleModels>
+					<PedModels>
+						<Ped>S_M_M_MARSHALLSRURAL_01</Ped> 
+					</PedModels>
+				</Item>
+			</ConditionalVehicleSets>
+		</Vehicle>
+		<Vehicle>
+			<Name>RIDERS_SPECIALSHARPSHOOTER</Name>
+			<ConditionalVehicleSets>
+				<Item>
+		    		<VehicleModels>
+			 			<Vehicle>A_C_Horse_AmericanStandardbred_PalominoDapple</Vehicle>
+			 			<Vehicle>A_C_Horse_Andalusian_DarkBay</Vehicle>
+			 			<Vehicle>A_C_Horse_DutchWarmblood_SealBrown</Vehicle>
+		    		</VehicleModels>
+					<PedModels>
+						<Ped>S_M_M_DISPATCHLAWRURAL_01</Ped> 
+					</PedModels>
+				</Item>
+			</ConditionalVehicleSets>
+		</Vehicle>
+		<Vehicle>
+			<Name>RIDERS_PINKERTONS</Name>
+			<ConditionalVehicleSets>
+				<Item>
+		    		<VehicleModels>
+			 			<Vehicle>a_c_horse_arabian_rosegreybay</Vehicle>
+			 			<Vehicle>a_c_horse_arabian_black</Vehicle>
+			 			<Vehicle>a_c_horse_turkoman_silver</Vehicle>
+			 			<Vehicle>A_C_Horse_Thoroughbred_BloodBay</Vehicle>
+			 			<Vehicle>a_c_horse_missourifoxtrotter_sablechampagne</Vehicle>
+						<Vehicle>a_c_horse_missourifoxtrotter_silverdapplepinto</Vehicle>
+						<Vehicle>a_c_horse_thoroughbred_blackchestnut</Vehicle>
+						<Vehicle>a_c_horse_turkoman_gold</Vehicle>
+		    		</VehicleModels>
+					<PedModels>
+						<Ped>S_M_M_PINLAW_01</Ped>
+					</PedModels>
+				</Item>
+			</ConditionalVehicleSets>
+		</Vehicle>
+		<Vehicle>
+		  <Name>POLICE_BOAT</Name>
+		  <ConditionalVehicleSets>
+			<Item>
+			  <VehicleModels>
+				<Vehicle>boatSteam</Vehicle>
+			  </VehicleModels>
+			  <PedModels>
+				<Ped>S_M_M_DISPATCHLAWRURAL_01</Ped>
+			  </PedModels>
+			</Item>
+		  </ConditionalVehicleSets>
+		</Vehicle>
+		<Vehicle>
+		  <Name>POLICE_DOGS</Name>
+		  <ConditionalVehicleSets>
+			<Item>
+			  <PedModels>
+				<Ped>A_C_DogHound_01</Ped>
+			  </PedModels>
+			</Item>
+		  </ConditionalVehicleSets>
+		</Vehicle>
+		<Vehicle>
+			<Name>ON_FOOT_ARM_DEPUTY_RESIDENT</Name>
+			<ConditionalVehicleSets>
+				<Item>
+					<PedModels>
+						<Ped>A_M_M_ARMDEPUTYRESIDENT_01</Ped>
+					</PedModels>
+				</Item>
+			</ConditionalVehicleSets>
+		</Vehicle>
+		<Vehicle>
+			<Name>ON_FOOT_VAL_DEPUTY_RESIDENT</Name>
+			<ConditionalVehicleSets>
+				<Item>
+					<PedModels>
+						<Ped>A_M_M_VALDEPUTYRESIDENT_01</Ped>
+					</PedModels>
+				</Item>
+			</ConditionalVehicleSets>
+		</Vehicle>
+		<Vehicle>
+			<Name>ON_FOOT_RHO_DEPUTY_RESIDENT</Name>
+			<ConditionalVehicleSets>
+				<Item>
+					<PedModels>
+						<Ped>A_M_M_RHDDEPUTYRESIDENT_01</Ped>
+					</PedModels>
+				</Item>
+			</ConditionalVehicleSets>
+		</Vehicle>
+		<Vehicle>
+			<Name>ON_FOOT_ASB_DEPUTY_RESIDENT</Name>
+			<ConditionalVehicleSets>
+				<Item>
+					<PedModels>
+						<Ped>A_M_M_ASBDEPUTYRESIDENT_01</Ped>
+					</PedModels>
+				</Item>
+			</ConditionalVehicleSets>
+		</Vehicle>
+		<Vehicle>
+			<Name>ON_FOOT_STRAW_DEPUTY_RESIDENT</Name>
+			<ConditionalVehicleSets>
+				<Item>
+					<PedModels>
+						<Ped>A_M_M_STRDEPUTYRESIDENT_01</Ped>
+					</PedModels>
+				</Item>
+			</ConditionalVehicleSets>
+		</Vehicle>
+  </VehicleSets>
+	<PedVariations>
+		<Item key="A_C_Horse_Morgan_Bay">
+			<BaseAmbientModelSet>ANIMAL_HORSE_LAW_DISPATCH</BaseAmbientModelSet>
+			<ModelVariations>
+				<Item>
+          			<Component value="PV_COMP_LOWR"/>
+					<!-- 1 = Saddle turned on -->
+					<DrawableId value="1" />
+				</Item>
+				<Item>
+          			<Component value="PV_COMP_UPPR"/>
+					<!-- 2 = Bridle Rope turned on -->
+					<DrawableId value="2" />
+				</Item>
+			</ModelVariations>
+		</Item>
+	</PedVariations>
+	<DispatchCombatSpecs>
+		<Spec>
+			<Name>DEFAULT</Name>
+			<Loadouts>
+				<Item>
+					<LoadoutName>LO_LAWDISPATCH</LoadoutName>
+				</Item>
+			</Loadouts>
+			<CombatInfo>LAW</CombatInfo>
+			<MountedChasingProfileOverride>Amateur</MountedChasingProfileOverride>
+		</Spec>
+		<Spec>
+			<Name>DEFAULT_PISTOL</Name>
+			<Loadouts>
+				<Item>
+					<LoadoutName>LO_LAWDISPATCH</LoadoutName>
+					<RandomWeight value="1.0" />
+				</Item>
+				<Item>
+					<LoadoutName>LO_LAWDISPATCH_PISTOL_REPEATER</LoadoutName>
+					<RandomWeight value="3.0" />
+				</Item>
+			</Loadouts>
+			<CombatInfo>LAW</CombatInfo>
+			<MountedChasingProfileOverride>Amateur</MountedChasingProfileOverride>
+		</Spec>
+		<Spec>
+			<Name>DEFAULT_UNSKILLED</Name>
+			<Loadouts>
+				<Item>
+					<LoadoutName>LO_LAWDISPATCH</LoadoutName>
+				</Item>
+			</Loadouts>
+			<CombatInfo>LAW_UNSKILLED</CombatInfo>
+			<MountedChasingProfileOverride>Amateur</MountedChasingProfileOverride>
+		</Spec>
+		<Spec>
+			<Name>DEFAULT_UNSKILLED_PISTOL</Name>
+			<Loadouts>
+				<Item>
+					<LoadoutName>LO_LAWDISPATCH</LoadoutName>
+					<RandomWeight value="1.0" />
+				</Item>
+				<Item>
+					<LoadoutName>LO_LAWDISPATCH_PISTOL_REPEATER</LoadoutName>
+					<RandomWeight value="2.0" />
+				</Item>
+			</Loadouts>
+			<CombatInfo>LAW_UNSKILLED</CombatInfo>
+			<MountedChasingProfileOverride>Amateur</MountedChasingProfileOverride>
+		</Spec>
+		<Spec>
+			<Name>RESIDENT</Name>
+			<Loadouts>
+				<Item>
+					<LoadoutName>LO_LAW</LoadoutName>
+					<RandomWeight value="5.0" />
+				</Item>
+				<Item>
+					<LoadoutName>LO_LAWSHOTGUN</LoadoutName>
+					<RandomWeight value="2.0" />
+				</Item>
+			</Loadouts>
+			<CombatInfo>LAW</CombatInfo>
+			<MountedChasingProfileOverride>Amateur</MountedChasingProfileOverride>
+		</Spec>
+		<Spec>
+			<Name>RESIDENT_REPEATER_OR_SHOTGUN</Name>
+			<Loadouts>
+				<Item>
+					<LoadoutName>LO_LAWREPEATER</LoadoutName>
+					<RandomWeight value="2.0" />
+				</Item>
+				<Item>
+					<LoadoutName>LO_LAWSHOTGUN</LoadoutName>
+					<RandomWeight value="2.0" />
+				</Item>
+			</Loadouts>
+			<CombatInfo>LAW</CombatInfo>
+			<MountedChasingProfileOverride>Amateur</MountedChasingProfileOverride>
+		</Spec>
+		<Spec>
+			<Name>DEFAULTCARBINE</Name>
+			<Loadouts>
+				<Item>
+					<LoadoutName>LO_LAWREPEATER</LoadoutName>
+					<RandomWeight value="0.8" />
+				</Item>
+				<Item>
+					<LoadoutName>LO_LAWDISPATCH</LoadoutName>
+					<RandomWeight value="0.2" />
+				</Item>
+			</Loadouts>
+			<CombatInfo>LAW</CombatInfo>
+			<MountedChasingProfileOverride>Amateur</MountedChasingProfileOverride>
+		</Spec>
+		<Spec>
+			<Name>DEFAULTCARBINE_UNSKILLED</Name>
+			<Loadouts>
+				<Item>
+					<LoadoutName>LO_LAWREPEATER</LoadoutName>
+					<RandomWeight value="0.8" />
+				</Item>
+				<Item>
+					<LoadoutName>LO_LAWDISPATCH</LoadoutName>
+					<RandomWeight value="0.2" />
+				</Item>
+			</Loadouts>
+			<CombatInfo>LAW_UNSKILLED</CombatInfo>
+			<MountedChasingProfileOverride>Amateur</MountedChasingProfileOverride>
+		</Spec>
+		<Spec>
+			<Name>WAGONSPEC</Name>
+			<Loadouts>
+				<Item>
+					<LoadoutName>LO_LAWREPEATER</LoadoutName>
+					<RandomWeight value="3.0" />
+				</Item>
+				<Item>
+					<LoadoutName>LO_LAWDISPATCH</LoadoutName>
+					<RandomWeight value="0.5" />
+				</Item>
+				<Item>
+					<LoadoutName>LO_LAWSHOTGUN</LoadoutName>
+					<RandomWeight value="1.5" />
+				</Item>
+			</Loadouts>
+			<CombatInfo>LAW</CombatInfo>
+			<MountedChasingProfileOverride>Standard</MountedChasingProfileOverride>
+		</Spec>
+		<Spec>
+			<Name>WAGONSPEC_PROFESSIONAL</Name>
+			<Loadouts>
+				<Item>
+					<LoadoutName>LO_LAWSNIPER_PROFESSIONAL</LoadoutName>
+					<RandomWeight value="1.0" />
+				</Item>
+				<Item>
+					<LoadoutName>LO_LAWREPEATER_PROFESSIONAL</LoadoutName>
+					<RandomWeight value="1.5" />
+				</Item>
+				<Item>
+					<LoadoutName>LO_LAWSHOTGUN_PROFESSIONAL</LoadoutName>
+					<RandomWeight value="1.5" />
+				</Item>
+			</Loadouts>
+			<CombatInfo>LAW</CombatInfo>
+			<MountedChasingProfileOverride>Professional</MountedChasingProfileOverride>
+		</Spec>
+		<Spec>
+			<Name>CARBINE</Name>
+			<Loadouts>
+				<Item>
+					<LoadoutName>LO_LAWREPEATER</LoadoutName>
+				</Item>
+			</Loadouts>
+			<CombatInfo>LAW</CombatInfo>
+			<MountedChasingProfileOverride>Amateur</MountedChasingProfileOverride>
+		</Spec>
+		<Spec>
+			<Name>CARBINE_UNSKILLED</Name>
+			<Loadouts>
+				<Item>
+					<LoadoutName>LO_LAWREPEATER</LoadoutName>
+				</Item>
+			</Loadouts>
+			<CombatInfo>LAW_UNSKILLED</CombatInfo>
+			<MountedChasingProfileOverride>Amateur</MountedChasingProfileOverride>
+		</Spec>
+		<Spec>
+			<Name>CARBINE_PROFESSIONAL</Name>
+			<Loadouts>
+				<Item>
+					<LoadoutName>LO_LAWREPEATER_PROFESSIONAL</LoadoutName>
+				</Item>
+			</Loadouts>
+			<CombatInfo>LAW</CombatInfo>
+			<MountedChasingProfileOverride>Professional</MountedChasingProfileOverride>
+		</Spec>
+		<Spec>
+			<Name>SURRENDER</Name>
+			<Loadouts>
+				<Item>
+					<LoadoutName>LO_LAWDISPATCH</LoadoutName>
+				</Item>
+			</Loadouts>
+			<CombatInfo>LAW_SURRENDER</CombatInfo>
+			<MountedChasingProfileOverride>Amateur</MountedChasingProfileOverride>
+		</Spec>
+		<Spec>
+			<Name>SNIPER</Name>
+			<Loadouts>
+				<Item>
+					<LoadoutName>LO_LAWSNIPER</LoadoutName>
+				</Item>
+			</Loadouts>
+			<CombatInfo>LAW_SNIPER</CombatInfo>
+			<MountedChasingProfileOverride>Standard</MountedChasingProfileOverride>
+		</Spec>
+		<Spec>
+			<Name>SNIPER_UNSKILLED</Name>
+			<Loadouts>
+				<Item>
+					<LoadoutName>LO_LAWSNIPER</LoadoutName>
+				</Item>
+			</Loadouts>
+			<CombatInfo>LAW_SNIPER_UNSKILLED</CombatInfo>
+			<MountedChasingProfileOverride>Standard</MountedChasingProfileOverride>
+		</Spec>
+		<Spec>
+			<Name>SNIPER_PROFESSIONAL</Name>
+			<Loadouts>
+				<Item>
+					<LoadoutName>LO_LAWSNIPER_PROFESSIONAL</LoadoutName>
+				</Item>
+			</Loadouts>
+			<CombatInfo>LAW_SNIPER</CombatInfo>
+			<MountedChasingProfileOverride>Professional</MountedChasingProfileOverride>
+		</Spec>
+		<Spec>
+			<Name>SNIPER_PINKERTONS</Name>
+			<Loadouts>
+				<Item>
+					<LoadoutName>LO_LAWSNIPER_PROFESSIONAL</LoadoutName>
+				</Item>
+			</Loadouts>
+			<CombatInfo>LAW_DEADSHOT</CombatInfo>
+			<MountedChasingProfileOverride>Disabled</MountedChasingProfileOverride>
+		</Spec>
+		<Spec>
+			<Name>SHOTGUN</Name>
+			<Loadouts>
+				<Item>
+					<LoadoutName>LO_LAWSHOTGUN</LoadoutName>
+					<RandomWeight value="3.0" />
+				</Item>
+				<Item>
+					<LoadoutName>LO_LAWDISPATCH</LoadoutName>
+					<RandomWeight value="1.0" />
+				</Item>
+			</Loadouts>
+			<CombatInfo>LAW_SHOTGUN</CombatInfo>
+			<MountedChasingProfileOverride>Standard</MountedChasingProfileOverride>
+		</Spec>
+		<Spec>
+			<Name>SHOTGUN_UNSKILLED</Name>
+			<Loadouts>
+				<Item>
+					<LoadoutName>LO_LAWSHOTGUN</LoadoutName>
+					<RandomWeight value="3.0" />
+				</Item>
+				<Item>
+					<LoadoutName>LO_LAWDISPATCH</LoadoutName>
+					<RandomWeight value="1.0" />
+				</Item>
+			</Loadouts>
+			<CombatInfo>LAW_SHOTGUN_UNSKILLED</CombatInfo>
+			<MountedChasingProfileOverride>Standard</MountedChasingProfileOverride>
+		</Spec>
+		<Spec>
+			<Name>SHOTGUN_PROFESSIONAL</Name>
+			<Loadouts>
+				<Item>
+					<LoadoutName>LO_LAWSHOTGUN_PROFESSIONAL</LoadoutName>
+				</Item>
+			</Loadouts>
+			<CombatInfo>LAW_SHOTGUN</CombatInfo>
+			<MountedChasingProfileOverride>Professional</MountedChasingProfileOverride>
+		</Spec>
+		<Spec>
+			<Name>SHOTGUN_PINKERTONS</Name>
+			<Loadouts>
+				<Item>
+					<LoadoutName>LO_LAWSHOTGUN_PROFESSIONAL</LoadoutName>
+				</Item>
+			</Loadouts>
+			<CombatInfo>LAW_DEADSHOT</CombatInfo>
+			<MountedChasingProfileOverride>Disabled</MountedChasingProfileOverride>
+		</Spec>
+		<Spec>
+			<Name>SHOTGUN_OR_SNIPER</Name>
+			<Loadouts>
+				<Item>
+					<LoadoutName>LO_LAWSHOTGUN</LoadoutName>
+					<RandomWeight value="0.5" />
+				</Item>
+				<Item>
+					<LoadoutName>LO_LAWSNIPER</LoadoutName>
+					<RandomWeight value="0.5" />
+				</Item>
+			</Loadouts>
+			<CombatInfo>LAW</CombatInfo>
+			<MountedChasingProfileOverride>Standard</MountedChasingProfileOverride>
+		</Spec>
+		<Spec>
+			<Name>WILDERNESS</Name>
+			<Loadouts>
+				<Item>
+					<LoadoutName>LO_LAWREPEATER</LoadoutName>
+					<RandomWeight value="0.85" />
+				</Item>
+				<Item>
+					<LoadoutName>LO_LAWSHOTGUN</LoadoutName>
+					<RandomWeight value="0.15" />
+				</Item>
+			</Loadouts>
+			<CombatInfo>LAW_WILDERNESS</CombatInfo>
+			<MountedChasingProfileOverride>Amateur</MountedChasingProfileOverride>
+		</Spec>
+		<Spec>
+			<Name>WILDERNESS_UNSKILLED</Name>
+			<Loadouts>
+				<Item>
+					<LoadoutName>LO_LAWREPEATER</LoadoutName>
+					<RandomWeight value="0.85" />
+				</Item>
+				<Item>
+					<LoadoutName>LO_LAWSHOTGUN</LoadoutName>
+					<RandomWeight value="0.15" />
+				</Item>
+			</Loadouts>
+			<CombatInfo>LAW_WILDERNESS</CombatInfo>
+			<MountedChasingProfileOverride>Amateur</MountedChasingProfileOverride>
+		</Spec>
+		<Spec>
+			<Name>WILDERNESS_PROFESSIONAL</Name>
+			<Loadouts>
+				<Item>
+					<LoadoutName>LO_LAWREPEATER_PROFESSIONAL</LoadoutName>
+					<RandomWeight value="0.15" />
+				</Item>
+				<Item>
+					<LoadoutName>LO_LAWSNIPER_PROFESSIONAL</LoadoutName>
+					<RandomWeight value="0.1" />
+				</Item>
+				<Item>
+					<LoadoutName>LO_LAWSHOTGUN_PROFESSIONAL</LoadoutName>
+					<RandomWeight value="0.75" />
+				</Item>
+			</Loadouts>
+			<CombatInfo>LAW_PROFESSIONAL</CombatInfo>
+			<MountedChasingProfileOverride>Professional</MountedChasingProfileOverride>
+		</Spec>
+		<Spec>
+			<Name>WILDERNESS_SISIKA</Name>
+			<Loadouts>
+				<Item>
+					<LoadoutName>LO_LAWREPEATER_PROFESSIONAL</LoadoutName>
+					<RandomWeight value="0.65" />
+				</Item>
+				<Item>
+					<LoadoutName>LO_LAWSNIPER_PROFESSIONAL</LoadoutName>
+					<RandomWeight value="0.1" />
+				</Item>
+				<Item>
+					<LoadoutName>LO_LAWSHOTGUN_PROFESSIONAL</LoadoutName>
+					<RandomWeight value="0.25" />
+				</Item>
+			</Loadouts>
+			<CombatInfo>LAW_PROFESSIONAL</CombatInfo>
+			<MountedChasingProfileOverride>Professional</MountedChasingProfileOverride>
+		</Spec>
+		<Spec>
+			<Name>REVOLVER_SHARPSHOOTER</Name>
+			<Loadouts>
+				<Item>
+					<LoadoutName>LO_LAWREVOLVER</LoadoutName>
+				</Item>
+			</Loadouts>
+			<CombatInfo>LAW_SHARPSHOOTER</CombatInfo>
+			<MountedChasingProfileOverride>Professional</MountedChasingProfileOverride>
+		</Spec>
+	</DispatchCombatSpecs>
+	<DispatchPedGroupPresets>
+		
+		<DispatchGroup key="ArmyLeader">
+			<CombatSpec>REVOLVER_SHARPSHOOTER</CombatSpec>
+			<DispatchType>DT_PoliceRiders</DispatchType>
+			<VehicleSet>ARMY_LEADER</VehicleSet>
+		</DispatchGroup>
+		
+		<DispatchGroup key="ArmyRider">
+			<CombatSpec>CARBINE_PROFESSIONAL</CombatSpec>
+			<DispatchType>DT_PoliceRiders</DispatchType>
+			<VehicleSet>ARMY_RIDER</VehicleSet>
+		</DispatchGroup> 
+		
+		<DispatchGroup key="ArmadilloResident">
+			<CombatSpec>RESIDENT</CombatSpec>
+			<DispatchType>DT_OnFoot</DispatchType>
+			<VehicleSet>ON_FOOT_ARM_DEPUTY_RESIDENT</VehicleSet>
+		</DispatchGroup>
+		<DispatchGroup key="BlackwaterOnFoot">
+			<CombatSpec>DEFAULT_PISTOL</CombatSpec>
+			<DispatchType>DT_OnFoot</DispatchType>
+			<VehicleSet>ON_FOOT_BLACK_WATER</VehicleSet>
+		</DispatchGroup>
+		<DispatchGroup key="BlackwaterRider">
+			<CombatSpec>DEFAULT_PISTOL</CombatSpec>
+			<DispatchType>DT_PoliceRiders</DispatchType>
+			<VehicleSet>RIDER_BLW</VehicleSet>
+		</DispatchGroup>
+		<DispatchGroup key="BlackwaterRiderRural">
+			<CombatSpec>SNIPER_PROFESSIONAL</CombatSpec>
+			<DispatchType>DT_PoliceRiders</DispatchType>
+			<VehicleSet>RIDER_BLW</VehicleSet>
+		</DispatchGroup>
+		<DispatchGroup key="BlackwaterRiderShotgun">
+			<CombatSpec>SHOTGUN_PROFESSIONAL</CombatSpec>
+			<DispatchType>DT_PoliceRiders</DispatchType>
+			<VehicleSet>RIDER_BLW</VehicleSet>
+		</DispatchGroup>
+		<DispatchGroup key="BlackwaterRiderSniper">
+			<CombatSpec>SNIPER_PROFESSIONAL</CombatSpec>
+			<DispatchType>DT_PoliceRiders</DispatchType>
+			<VehicleSet>RIDER_BLW</VehicleSet>
+		</DispatchGroup>
+		<DispatchGroup key="BlackwaterWagon">
+			<CombatSpec>WAGONSPEC_PROFESSIONAL</CombatSpec>
+			<DispatchType>DT_PoliceAutomobile</DispatchType>
+			<VehicleSet>WAGON_BLW</VehicleSet>
+		</DispatchGroup>
+		<DispatchGroup key="BountyHunter">
+			<CombatSpec>WILDERNESS</CombatSpec>
+			<DispatchType>DT_PoliceRiders</DispatchType>
+			<VehicleSet>RIDERS_BOUNTY_HUNTERS</VehicleSet>
+		</DispatchGroup>
+		<DispatchGroup key="BountyHunterShotgun">
+			<CombatSpec>SHOTGUN</CombatSpec>
+			<DispatchType>DT_PoliceRiders</DispatchType>
+			<VehicleSet>RIDERS_BOUNTY_HUNTERS_SPECIAL</VehicleSet>
+		</DispatchGroup>
+		<DispatchGroup key="BountyHunterSniper">
+			<CombatSpec>SNIPER</CombatSpec>
+			<DispatchType>DT_PoliceRiders</DispatchType>
+			<VehicleSet>RIDERS_BOUNTY_HUNTERS_SPECIAL</VehicleSet>
+		</DispatchGroup>
+		<DispatchGroup key="Guarma">
+			<CombatSpec>DEFAULT</CombatSpec>
+			<DispatchType>DT_OnFoot</DispatchType>
+			<VehicleSet>ON_FOOT_GUAMA</VehicleSet>
+		</DispatchGroup>
+		<DispatchGroup key="GuarmaRural">
+			<CombatSpec>WILDERNESS</CombatSpec>
+			<DispatchType>DT_OnFoot</DispatchType>
+			<VehicleSet>ON_FOOT_GUAMA</VehicleSet>
+		</DispatchGroup>
+		<DispatchGroup key="GuarmaSniper">
+			<CombatSpec>SNIPER</CombatSpec>
+			<DispatchType>DT_OnFoot</DispatchType>
+			<VehicleSet>ON_FOOT_GUAMA</VehicleSet>
+		</DispatchGroup>
+		<DispatchGroup key="LawLeaderRuralFoothills">
+			<CombatSpec>WILDERNESS_PROFESSIONAL</CombatSpec>
+			<DispatchType>DT_PoliceRiders</DispatchType>
+			<VehicleSet>LAW_LEADER_RURAL_FOOTHILLS</VehicleSet>
+		</DispatchGroup>
+		<DispatchGroup key="LawLeaderRuralLowlands">
+			<CombatSpec>WILDERNESS_PROFESSIONAL</CombatSpec>
+			<DispatchType>DT_PoliceRiders</DispatchType>
+			<VehicleSet>LAW_LEADER_RURAL_LOWLANDS</VehicleSet>
+		</DispatchGroup>
+		<DispatchGroup key="LawLeaderRuralMountains">
+			<CombatSpec>WILDERNESS_PROFESSIONAL</CombatSpec>
+			<DispatchType>DT_PoliceRiders</DispatchType>
+			<VehicleSet>LAW_LEADER_RURAL_MOUNTAINS</VehicleSet>
+		</DispatchGroup>
+		<DispatchGroup key="LawLeaderRuralPlains">
+			<CombatSpec>WILDERNESS_PROFESSIONAL</CombatSpec>
+			<DispatchType>DT_PoliceRiders</DispatchType>
+			<VehicleSet>LAW_LEADER_RURAL_PLAINS</VehicleSet>
+		</DispatchGroup>
+		<DispatchGroup key="MarshalCarbine">
+			<CombatSpec>CARBINE_PROFESSIONAL</CombatSpec>
+			<DispatchType>DT_PoliceRiders</DispatchType>
+			<VehicleSet>RIDERS_MARSHALS</VehicleSet>
+		</DispatchGroup>
+		<DispatchGroup key="MarshalShotgun">
+			<CombatSpec>SHOTGUN_PROFESSIONAL</CombatSpec>
+			<DispatchType>DT_PoliceRiders</DispatchType>
+			<VehicleSet>RIDERS_MARSHALS</VehicleSet>
+		</DispatchGroup>
+		<DispatchGroup key="MarshalSniper">
+			<CombatSpec>SNIPER_PROFESSIONAL</CombatSpec>
+			<DispatchType>DT_PoliceRiders</DispatchType>
+			<VehicleSet>RIDERS_MARSHALS</VehicleSet>
+		</DispatchGroup>
+		<DispatchGroup key="MarshalWagon">
+			<CombatSpec>WAGONSPEC_PROFESSIONAL</CombatSpec>
+			<DispatchType>DT_PoliceAutomobile</DispatchType>
+			<VehicleSet>WAGON_MARSHALS</VehicleSet>
+		</DispatchGroup>
+		<DispatchGroup key="OnFootFoothills">
+			<CombatSpec>DEFAULT</CombatSpec>
+			<DispatchType>DT_OnFoot</DispatchType>
+			<VehicleSet>ON_FOOT_FOOTHILLS</VehicleSet>
+		</DispatchGroup>
+		<DispatchGroup key="OnFootLowlands">
+			<CombatSpec>DEFAULT</CombatSpec>
+			<DispatchType>DT_OnFoot</DispatchType>
+			<VehicleSet>ON_FOOT_LOWLANDS</VehicleSet>
+		</DispatchGroup>
+		<DispatchGroup key="OnFootMountain">
+			<CombatSpec>DEFAULT</CombatSpec>
+			<DispatchType>DT_OnFoot</DispatchType>
+			<VehicleSet>ON_FOOT_MOUNTAIN</VehicleSet>
+		</DispatchGroup>
+		<DispatchGroup key="OnFootPlains">
+			<CombatSpec>DEFAULT</CombatSpec>
+			<DispatchType>DT_OnFoot</DispatchType>
+			<VehicleSet>ON_FOOT_PLAINS</VehicleSet>
+		</DispatchGroup>
+		<DispatchGroup key="PinkertonShotgun">
+			<CombatSpec>SHOTGUN_PINKERTONS</CombatSpec>
+			<DispatchType>DT_PoliceRiders</DispatchType>
+			<VehicleSet>RIDERS_PINKERTONS</VehicleSet>
+		</DispatchGroup>
+		<DispatchGroup key="PinkertonSniper">
+			<CombatSpec>SNIPER_PINKERTONS</CombatSpec>
+			<DispatchType>DT_PoliceRiders</DispatchType>
+			<VehicleSet>RIDERS_PINKERTONS</VehicleSet>
+		</DispatchGroup>
+		<DispatchGroup key="PoliceDog">
+			<DispatchType>DT_PoliceDogs</DispatchType>
+			<VehicleSet>POLICE_DOGS</VehicleSet>
+		</DispatchGroup>
+		<DispatchGroup key="RhodesResidentOnFoot">
+			<CombatSpec>RESIDENT</CombatSpec>
+			<DispatchType>DT_OnFoot</DispatchType>
+			<VehicleSet>ON_FOOT_RHO_DEPUTY_RESIDENT</VehicleSet>
+		</DispatchGroup>
+		<DispatchGroup key="RhodesResidentOnFootCarbine">
+			<CombatSpec>CARBINE</CombatSpec>
+			<DispatchType>DT_OnFoot</DispatchType>
+			<VehicleSet>ON_FOOT_RHO_DEPUTY_RESIDENT</VehicleSet>
+		</DispatchGroup>
+		<DispatchGroup key="RhodesResidentOnFootShotgun">
+			<CombatSpec>SHOTGUN</CombatSpec>
+			<DispatchType>DT_OnFoot</DispatchType>
+			<VehicleSet>ON_FOOT_RHO_DEPUTY_RESIDENT</VehicleSet>
+		</DispatchGroup>
+		<DispatchGroup key="RhodesResidentWagon">
+			<CombatSpec>RESIDENT</CombatSpec>
+			<DispatchType>DT_PoliceAutomobile</DispatchType>
+			<VehicleSet>WAGON_RHO_DEPUTY_RESIDENT</VehicleSet>
+		</DispatchGroup>
+		<DispatchGroup key="RiderFoothills">
+			<CombatSpec>DEFAULT</CombatSpec>
+			<DispatchType>DT_PoliceRiders</DispatchType>
+			<VehicleSet>RIDER_FOOTHILLS</VehicleSet>
+		</DispatchGroup>
+		<DispatchGroup key="RiderFoothillsDefaultCarbine">
+			<CombatSpec>DEFAULTCARBINE</CombatSpec>
+			<DispatchType>DT_PoliceRiders</DispatchType>
+			<VehicleSet>RIDER_FOOTHILLS</VehicleSet>
+		</DispatchGroup>
+		<DispatchGroup key="RiderFoothillsShotgun">
+			<CombatSpec>SHOTGUN</CombatSpec>
+			<DispatchType>DT_PoliceRiders</DispatchType>
+			<VehicleSet>RIDER_FOOTHILLS</VehicleSet>
+		</DispatchGroup>
+		<DispatchGroup key="RiderFoothillsSniper">
+			<CombatSpec>SNIPER</CombatSpec>
+			<DispatchType>DT_PoliceRiders</DispatchType>
+			<VehicleSet>RIDER_FOOTHILLS</VehicleSet>
+		</DispatchGroup>
+		<DispatchGroup key="RiderLowlands">
+			<CombatSpec>DEFAULT</CombatSpec>
+			<DispatchType>DT_PoliceRiders</DispatchType>
+			<VehicleSet>RIDER_LOWLANDS</VehicleSet>
+		</DispatchGroup>
+		<DispatchGroup key="RiderLowlandsCarbine">
+			<CombatSpec>CARBINE</CombatSpec>
+			<DispatchType>DT_PoliceRiders</DispatchType>
+			<VehicleSet>RIDER_LOWLANDS</VehicleSet>
+		</DispatchGroup>
+		<DispatchGroup key="RiderLowlandsDefaultCarbine">
+			<CombatSpec>DEFAULTCARBINE</CombatSpec>
+			<DispatchType>DT_PoliceRiders</DispatchType>
+			<VehicleSet>RIDER_LOWLANDS</VehicleSet>
+		</DispatchGroup>
+		<DispatchGroup key="RiderLowlandsShotgun">
+			<CombatSpec>SHOTGUN</CombatSpec>
+			<DispatchType>DT_PoliceRiders</DispatchType>
+			<VehicleSet>RIDER_LOWLANDS</VehicleSet>
+		</DispatchGroup>
+		<DispatchGroup key="RiderLowlandsShotgunOrSniper">
+			<CombatSpec>SHOTGUN_OR_SNIPER</CombatSpec>
+			<DispatchType>DT_PoliceRiders</DispatchType>
+			<VehicleSet>RIDER_LOWLANDS</VehicleSet>
+		</DispatchGroup>
+		<DispatchGroup key="RiderLowlandsSniper">
+			<CombatSpec>SNIPER</CombatSpec>
+			<DispatchType>DT_PoliceRiders</DispatchType>
+			<VehicleSet>RIDER_LOWLANDS</VehicleSet>
+		</DispatchGroup>
+		<DispatchGroup key="RiderMountains">
+			<CombatSpec>DEFAULT</CombatSpec>
+			<DispatchType>DT_PoliceRiders</DispatchType>
+			<VehicleSet>RIDER_MOUNTAINS</VehicleSet>
+		</DispatchGroup>
+		<DispatchGroup key="RiderMountainsCarbine">
+			<CombatSpec>CARBINE</CombatSpec>
+			<DispatchType>DT_PoliceRiders</DispatchType>
+			<VehicleSet>RIDER_MOUNTAINS</VehicleSet>
+		</DispatchGroup>
+		<DispatchGroup key="RiderMountainsDefaultCarbine">
+			<CombatSpec>DEFAULTCARBINE</CombatSpec>
+			<DispatchType>DT_PoliceRiders</DispatchType>
+			<VehicleSet>RIDER_MOUNTAINS</VehicleSet>
+		</DispatchGroup>
+		<DispatchGroup key="RiderMountainsShotgun">
+			<CombatSpec>SHOTGUN</CombatSpec>
+			<DispatchType>DT_PoliceRiders</DispatchType>
+			<VehicleSet>RIDER_MOUNTAINS</VehicleSet>
+		</DispatchGroup>
+		<DispatchGroup key="RiderMountainsSniper">
+			<CombatSpec>SNIPER</CombatSpec>
+			<DispatchType>DT_PoliceRiders</DispatchType>
+			<VehicleSet>RIDER_MOUNTAINS</VehicleSet>
+		</DispatchGroup>
+		<DispatchGroup key="RiderPlains">
+			<CombatSpec>DEFAULT</CombatSpec>
+			<DispatchType>DT_PoliceRiders</DispatchType>
+			<VehicleSet>RIDER_PLAINS</VehicleSet>
+		</DispatchGroup>
+		<DispatchGroup key="RiderPlainsCarbine">
+			<CombatSpec>CARBINE</CombatSpec>
+			<DispatchType>DT_PoliceRiders</DispatchType>
+			<VehicleSet>RIDER_PLAINS</VehicleSet>
+		</DispatchGroup>
+		<DispatchGroup key="RiderPlainsDefaultCarbine">
+			<CombatSpec>DEFAULTCARBINE</CombatSpec>
+			<DispatchType>DT_PoliceRiders</DispatchType>
+			<VehicleSet>RIDER_PLAINS</VehicleSet>
+		</DispatchGroup>
+		<DispatchGroup key="RiderPlainsShotgun">
+			<CombatSpec>SHOTGUN</CombatSpec>
+			<DispatchType>DT_PoliceRiders</DispatchType>
+			<VehicleSet>RIDER_PLAINS</VehicleSet>
+		</DispatchGroup>
+		<DispatchGroup key="RiderPlainsSniper">
+			<CombatSpec>SNIPER</CombatSpec>
+			<DispatchType>DT_PoliceRiders</DispatchType>
+			<VehicleSet>RIDER_PLAINS</VehicleSet>
+		</DispatchGroup>
+		<DispatchGroup key="RiderRhodesResident">
+			<CombatSpec>RESIDENT</CombatSpec>
+			<DispatchType>DT_PoliceRiders</DispatchType>
+			<VehicleSet>RIDER_RHODES_RESIDENT</VehicleSet>
+		</DispatchGroup>
+		<DispatchGroup key="RiderRhodesResidentRepeaterOrShotgun">
+			<CombatSpec>RESIDENT_REPEATER_OR_SHOTGUN</CombatSpec>
+			<DispatchType>DT_PoliceRiders</DispatchType>
+			<VehicleSet>RIDER_RHODES_RESIDENT</VehicleSet>
+		</DispatchGroup>
+		<DispatchGroup key="RiderRuralFoothills">
+			<CombatSpec>WILDERNESS</CombatSpec>
+			<DispatchType>DT_PoliceRiders</DispatchType>
+			<VehicleSet>RIDER_FOOTHILLS</VehicleSet>
+		</DispatchGroup>
+		<DispatchGroup key="RiderRuralFoothillsProfessional">
+			<CombatSpec>WILDERNESS_PROFESSIONAL</CombatSpec>
+			<DispatchType>DT_PoliceRiders</DispatchType>
+			<VehicleSet>RIDER_FOOTHILLS</VehicleSet>
+		</DispatchGroup>
+		<DispatchGroup key="RiderRuralLowlands">
+			<CombatSpec>WILDERNESS</CombatSpec>
+			<DispatchType>DT_PoliceRiders</DispatchType>
+			<VehicleSet>RIDER_LOWLANDS</VehicleSet>
+		</DispatchGroup>
+		<DispatchGroup key="RiderRuralLowlandsProfessional">
+			<CombatSpec>WILDERNESS_PROFESSIONAL</CombatSpec>
+			<DispatchType>DT_PoliceRiders</DispatchType>
+			<VehicleSet>RIDER_LOWLANDS</VehicleSet>
+		</DispatchGroup>
+		<DispatchGroup key="RiderRuralMountains">
+			<CombatSpec>WILDERNESS</CombatSpec>
+			<DispatchType>DT_PoliceRiders</DispatchType>
+			<VehicleSet>RIDER_MOUNTAINS</VehicleSet>
+		</DispatchGroup>
+		<DispatchGroup key="RiderRuralMountainsProfessional">
+			<CombatSpec>WILDERNESS_PROFESSIONAL</CombatSpec>
+			<DispatchType>DT_PoliceRiders</DispatchType>
+			<VehicleSet>RIDER_MOUNTAINS</VehicleSet>
+		</DispatchGroup>
+		<DispatchGroup key="RiderRuralPlains">
+			<CombatSpec>WILDERNESS</CombatSpec>
+			<DispatchType>DT_PoliceRiders</DispatchType>
+			<VehicleSet>RIDER_PLAINS</VehicleSet>
+		</DispatchGroup>
+		<DispatchGroup key="RiderRuralPlainsProfessional">
+			<CombatSpec>WILDERNESS_PROFESSIONAL</CombatSpec>
+			<DispatchType>DT_PoliceRiders</DispatchType>
+			<VehicleSet>RIDER_PLAINS</VehicleSet>
+		</DispatchGroup>
+		<DispatchGroup key="RiderSpecialSharpshooter">
+			<CombatSpec>REVOLVER_SHARPSHOOTER</CombatSpec>
+			<DispatchType>DT_PoliceRiders</DispatchType>
+			<VehicleSet>RIDERS_SPECIALSHARPSHOOTER</VehicleSet>
+		</DispatchGroup>
+		<DispatchGroup key="SaintDenisOnFoot">
+			<CombatSpec>DEFAULT_PISTOL</CombatSpec>
+			<DispatchType>DT_OnFoot</DispatchType>
+			<VehicleSet>ON_FOOT_SAINT_DENIS</VehicleSet>
+		</DispatchGroup>
+		<DispatchGroup key="SaintDenisOnFootLeader">
+			<CombatSpec>DEFAULT_PISTOL</CombatSpec>
+			<DispatchType>DT_OnFoot</DispatchType>
+			<VehicleSet>ON_FOOT_SAINT_DENIS_LEADER</VehicleSet>
+		</DispatchGroup>
+		<DispatchGroup key="SaintDenisOnFootCarbine">
+			<CombatSpec>CARBINE_PROFESSIONAL</CombatSpec>
+			<DispatchType>DT_OnFoot</DispatchType>
+			<VehicleSet>ON_FOOT_SAINT_DENIS</VehicleSet>
+		</DispatchGroup>
+		<DispatchGroup key="SaintDenisOnFootDefaultCarbine">
+			<CombatSpec>CARBINE_PROFESSIONAL</CombatSpec>
+			<DispatchType>DT_OnFoot</DispatchType>
+			<VehicleSet>ON_FOOT_SAINT_DENIS</VehicleSet>
+		</DispatchGroup>
+		<DispatchGroup key="SaintDenisOnFootShotgun">
+			<CombatSpec>SHOTGUN_PROFESSIONAL</CombatSpec>
+			<DispatchType>DT_OnFoot</DispatchType>
+			<VehicleSet>ON_FOOT_SAINT_DENIS</VehicleSet>
+		</DispatchGroup>
+		<DispatchGroup key="SaintDenisOnFootSniper">
+			<CombatSpec>SNIPER_PROFESSIONAL</CombatSpec>
+			<DispatchType>DT_OnFoot</DispatchType>
+			<VehicleSet>ON_FOOT_SAINT_DENIS</VehicleSet>
+		</DispatchGroup>
+		<DispatchGroup key="SaintDenisRiderCarbine">
+			<CombatSpec>CARBINE_PROFESSIONAL</CombatSpec>
+			<DispatchType>DT_PoliceRiders</DispatchType>
+			<VehicleSet>RIDER_NBX</VehicleSet>
+		</DispatchGroup>
+		<DispatchGroup key="SaintDenisRiderShotgun">
+			<CombatSpec>SHOTGUN_PROFESSIONAL</CombatSpec>
+			<DispatchType>DT_PoliceRiders</DispatchType>
+			<VehicleSet>RIDER_NBX</VehicleSet>
+		</DispatchGroup>
+		<DispatchGroup key="SaintDenisRural">
+			<CombatSpec>SNIPER_PROFESSIONAL</CombatSpec>
+			<DispatchType>DT_OnFoot</DispatchType>
+			<VehicleSet>ON_FOOT_SAINT_DENIS</VehicleSet>
+		</DispatchGroup>
+		<DispatchGroup key="SaintDenisOnFootSkilled">
+			<CombatSpec>DEFAULT_PISTOL</CombatSpec>
+			<DispatchType>DT_OnFoot</DispatchType>
+			<VehicleSet>ON_FOOT_SAINT_DENIS</VehicleSet>
+		</DispatchGroup>
+		<DispatchGroup key="SaintDenisOnFootCarbineSkilled">
+			<CombatSpec>CARBINE_PROFESSIONAL</CombatSpec>
+			<DispatchType>DT_OnFoot</DispatchType>
+			<VehicleSet>ON_FOOT_SAINT_DENIS</VehicleSet>
+		</DispatchGroup>
+		<DispatchGroup key="SaintDenisOnFootShotgunSkilled">
+			<CombatSpec>SHOTGUN_PROFESSIONAL</CombatSpec>
+			<DispatchType>DT_OnFoot</DispatchType>
+			<VehicleSet>ON_FOOT_SAINT_DENIS</VehicleSet>
+		</DispatchGroup>
+		<DispatchGroup key="SaintDenisOnFootSniperSkilled">
+			<CombatSpec>SNIPER_PROFESSIONAL</CombatSpec>
+			<DispatchType>DT_OnFoot</DispatchType>
+			<VehicleSet>ON_FOOT_SAINT_DENIS</VehicleSet>
+		</DispatchGroup>
+		<DispatchGroup key="SaintDenisRiderCarbineSkilled">
+			<CombatSpec>CARBINE</CombatSpec>
+			<DispatchType>DT_PoliceRiders</DispatchType>
+			<VehicleSet>RIDER_NBX</VehicleSet>
+		</DispatchGroup>
+		<DispatchGroup key="SaintDenisRiderShotgunSkilled">
+			<CombatSpec>SHOTGUN</CombatSpec>
+			<DispatchType>DT_PoliceRiders</DispatchType>
+			<VehicleSet>RIDER_NBX</VehicleSet>
+		</DispatchGroup>
+		<DispatchGroup key="SisikaGuardOnFootWilderness">
+			<CombatSpec>WILDERNESS_SISIKA</CombatSpec>
+			<DispatchType>DT_OnFoot</DispatchType>
+			<VehicleSet>ON_FOOT_SISIKA_GUARD</VehicleSet>
+		</DispatchGroup>
+		<DispatchGroup key="StrawberryResident">
+			<CombatSpec>RESIDENT</CombatSpec>
+			<DispatchType>DT_OnFoot</DispatchType>
+			<VehicleSet>ON_FOOT_STRAW_DEPUTY_RESIDENT</VehicleSet>
+		</DispatchGroup>
+		<DispatchGroup key="StrawberryResidentCarbine">
+			<CombatSpec>CARBINE</CombatSpec>
+			<DispatchType>DT_OnFoot</DispatchType>
+			<VehicleSet>ON_FOOT_STRAW_DEPUTY_RESIDENT</VehicleSet>
+		</DispatchGroup>
+		<DispatchGroup key="StrawberryResidentShotgun">
+			<CombatSpec>SHOTGUN</CombatSpec>
+			<DispatchType>DT_OnFoot</DispatchType>
+			<VehicleSet>ON_FOOT_STRAW_DEPUTY_RESIDENT</VehicleSet>
+		</DispatchGroup>
+		<DispatchGroup key="ValentineResident">
+			<CombatSpec>RESIDENT</CombatSpec>
+			<DispatchType>DT_OnFoot</DispatchType>
+			<VehicleSet>ON_FOOT_VAL_DEPUTY_RESIDENT</VehicleSet>
+		</DispatchGroup>
+		<DispatchGroup key="WapitiRiderDefaultCarbine">
+			<CombatSpec>DEFAULTCARBINE</CombatSpec>
+			<DispatchType>DT_PoliceRiders</DispatchType>
+			<VehicleSet>RIDER_WAPITI</VehicleSet>
+		</DispatchGroup>
+		<DispatchGroup key="WapitiRiderRural">
+			<CombatSpec>WILDERNESS</CombatSpec>
+			<DispatchType>DT_PoliceRiders</DispatchType>
+			<VehicleSet>RIDER_WAPITI</VehicleSet>
+		</DispatchGroup>
+		<DispatchGroup key="WapitiRiderShotgun">
+			<CombatSpec>SHOTGUN</CombatSpec>
+			<DispatchType>DT_PoliceRiders</DispatchType>
+			<VehicleSet>RIDER_WAPITI</VehicleSet>
+		</DispatchGroup>
+		<DispatchGroup key="WapitiRiderSniper">
+			<CombatSpec>SNIPER</CombatSpec>
+			<DispatchType>DT_PoliceRiders</DispatchType>
+			<VehicleSet>RIDER_WAPITI</VehicleSet>
+		</DispatchGroup>
+	</DispatchPedGroupPresets>
+	<WantedResponses>
+		<WantedLevel1>
+		</WantedLevel1>
+		<WantedLevel2>
+		</WantedLevel2>
+		<WantedLevel3>
+		</WantedLevel3>
+		<WantedLevel4>
+		</WantedLevel4>
+		<WantedLevel5>
+		</WantedLevel5>
+	</WantedResponses>
+	<RegionInfo>
+		<Item key="LAW_REGION_HEARTLANDS">
+			<RegionType>REGION_TYPE_WILDERNESS</RegionType>
+			<Flags>CriminalsCanBeIdentifiedRegardlessOfDistance IsLawlessRegion</Flags>
+			<MaxReports value="0"/>
+		</Item>
+		<Item key="LAW_REGION_SCARLETT_MEADOWS">
+			<RegionType>REGION_TYPE_WILDERNESS</RegionType>
+			<Flags>CriminalsCanBeIdentifiedRegardlessOfDistance IsLawlessRegion</Flags>
+			<MaxReports value="0"/>
+		</Item>
+		<Item key="LAW_REGION_BAYOU_NWA">
+			<RegionType>REGION_TYPE_WILDERNESS</RegionType>
+			<Flags>CriminalsCanBeIdentifiedRegardlessOfDistance IsLawlessRegion</Flags>
+			<MaxReports value="0"/>
+		</Item>
+		<Item key="LAW_REGION_BLUEGILL_MARSH">
+			<RegionType>REGION_TYPE_WILDERNESS</RegionType>
+			<Flags>CriminalsCanBeIdentifiedRegardlessOfDistance IsLawlessRegion</Flags>
+			<MaxReports value="0"/>
+		</Item>
+		<Item key="LAW_REGION_ROANOKE_RIDGE">
+			<RegionType>REGION_TYPE_WILDERNESS</RegionType>
+			<Flags>CriminalsCanBeIdentifiedRegardlessOfDistance IsLawlessRegion</Flags>
+			<MaxReports value="0"/>
+		</Item>
+		<Item key="LAW_REGION_CUMBERLAND_FOREST">
+			<RegionType>REGION_TYPE_WILDERNESS</RegionType>
+			<Flags>CriminalsCanBeIdentifiedRegardlessOfDistance IsLawlessRegion</Flags>
+			<MaxReports value="0"/>
+		</Item>
+		<Item key="LAW_REGION_GRIZZLIES">
+			<RegionType>REGION_TYPE_WILDERNESS</RegionType>
+			<Flags>CriminalsCanBeIdentifiedRegardlessOfDistance IsLawlessRegion</Flags>
+			<MaxReports value="0"/>
+		</Item>
+		<Item key="LAW_REGION_BIG_VALLEY">
+			<RegionType>REGION_TYPE_WILDERNESS</RegionType>
+			<Flags>CriminalsCanBeIdentifiedRegardlessOfDistance IsLawlessRegion</Flags>
+			<MaxReports value="0"/>
+		</Item>
+		<Item key="LAW_REGION_GREAT_PLAINS">
+			<RegionType>REGION_TYPE_WILDERNESS</RegionType>
+			<Flags>CriminalsCanBeIdentifiedRegardlessOfDistance IsLawlessRegion</Flags>
+			<MaxReports value="0"/>
+		</Item>
+		<Item key="LAW_REGION_GREAT_PLAINS_MAINGAME">
+			<RegionType>REGION_TYPE_WILDERNESS</RegionType>
+			<Flags>CriminalsCanBeIdentifiedRegardlessOfDistance IsLawlessRegion</Flags>
+			<MaxReports value="10"/>
+		</Item>
+		<Item key="LAW_REGION_TALL_TREES">
+			<RegionType>REGION_TYPE_WILDERNESS</RegionType>
+			<Flags>CriminalsCanBeIdentifiedRegardlessOfDistance IsLawlessRegion</Flags>
+			<MaxReports value="0"/>
+		</Item>
+		<Item key="LAW_REGION_TALL_TREES_MAINGAME">
+			<RegionType>REGION_TYPE_WILDERNESS</RegionType>
+			<Flags>CriminalsCanBeIdentifiedRegardlessOfDistance IsLawlessRegion</Flags>
+			<MaxReports value="10"/>
+		</Item>
+		<Item key="LAW_REGION_GUAMA">
+			<RegionType>REGION_TYPE_WILDERNESS</RegionType>
+			<Flags>CriminalsCanBeIdentifiedRegardlessOfDistance DisableBlipsWhileOnMission DontIgnoreLowSeverityCrimes</Flags>
+			<MaxReports value="0"/>
+			<MaxLawInvestigators value="1"/>
+		</Item>
+		<Item key="LAW_REGION_OLD_MAP_WILDERNESS">
+			<RegionType>REGION_TYPE_WILDERNESS</RegionType>
+			<Flags>CriminalsCanBeIdentifiedRegardlessOfDistance IsLawlessRegion</Flags>
+			<MaxReports value="0"/>
+		</Item>
+		<Item key="LAW_REGION_OLD_MAP_WILDERNESS_MAINGAME">
+			<RegionType>REGION_TYPE_WILDERNESS</RegionType>
+			<Flags>EnableDynamicOrderDistance CriminalsCanBeIdentifiedRegardlessOfDistance IsLawlessRegion</Flags>
+			<MinSpawnDistance value="100.000000" />
+			<IdealSpawnDistance value="150.000000" />
+			<MaxSpawnDistance value="250.000000" />
+			<MaxReports value="10"/>
+		</Item>
+		<Item key="LAW_REGION_EMERALD_RANCH">
+			<RegionType>REGION_TYPE_WILDERNESS</RegionType>
+			<Flags>CriminalsCanBeIdentifiedRegardlessOfDistance</Flags>
+			<MaxReports value="0"/>
+		</Item>
+		<Item key="LAW_REGION_PRONGHORN_RANCH">
+			<RegionType>REGION_TYPE_WILDERNESS</RegionType>
+			<Flags>CriminalsCanBeIdentifiedRegardlessOfDistance IsLawlessRegion</Flags>
+			<MaxReports value="0"/>
+		</Item>
+		<Item key="LAW_REGION_VALENTINE">
+			<RegionType>REGION_TYPE_TOWN</RegionType>
+			<Flags>OnlySpawnMountsNearRoads</Flags>
+			<CenterPosition x="-297.8979" y="783.4763" z="117.3506" />
+			<Radius value="125.00" />
+			<InitialPOISearchSituation>CSITownInitialSearch</InitialPOISearchSituation>
+			<MaxReports value="10"/>
+		</Item>
+		<Item key="LAW_REGION_VALENTINE_LOCKDOWN">
+			<RegionType>REGION_TYPE_TOWN</RegionType>
+			<Flags>OnlySpawnMountsNearRoads</Flags>
+			<InitialPOISearchSituation>CSITownInitialSearch</InitialPOISearchSituation>
+			<MaxReports value="10"/>
+		</Item>
+		<Item key="LAW_REGION_RHODES">
+			<RegionType>REGION_TYPE_TOWN</RegionType>
+			<Flags>OnlySpawnMountsNearRoads</Flags>
+			<CenterPosition x="1323.98" y="-1305.5" z="75.625" />
+			<Radius value="115.00" />
+			<InitialPOISearchSituation>CSITownInitialSearch</InitialPOISearchSituation>
+			<MaxReports value="10"/>
+		</Item>
+		<Item key="LAW_REGION_RHODES_LOCKDOWN">
+			<RegionType>REGION_TYPE_TOWN</RegionType>
+			<Flags>OnlySpawnMountsNearRoads</Flags>
+			<InitialPOISearchSituation>CSITownInitialSearch</InitialPOISearchSituation>
+			<MaxReports value="10"/>
+		</Item>
+		<Item key="LAW_REGION_SAINT_DENIS">
+			<RegionType>REGION_TYPE_TOWN</RegionType>
+			<Flags>EnableDynamicOrderDistance PreferSpawnPointsInFrontOfPlayer CullPedsBehindFleeingPlayer DontShareTargetInformation OnlySpawnMountsNearRoads AllowSpawningMountsOnTrainTracks EnableAmbientLawDuringActiveIncident</Flags>
+			<CenterPosition x="2681.68" y="-1256.906" z="50.446" />
+			<Radius value="500.00" />
+			<InitialPOISearchSituation>CSITownInitialSearch</InitialPOISearchSituation>
+			<MinSpawnDistance value="55.000000" />
+			<IdealSpawnDistance value="60.000000" />
+			<MaxSpawnDistance value="120.000000" />
+			<MaxReports value="10"/>
+			<MaxLawDuringIncident value="15" />
+		</Item>
+		<Item key="LAW_REGION_SAINT_DENIS_RURAL">
+			<RegionType>REGION_TYPE_TOWN</RegionType>
+			<InitialPOISearchSituation>CSITownInitialSearch</InitialPOISearchSituation>
+			<MaxReports value="10"/>
+		</Item>
+		<Item key="LAW_REGION_MANICATO">
+			<RegionType>REGION_TYPE_TOWN</RegionType>
+			<Flags>DisableBlipsWhileOnMission</Flags>
+			<MaxReports value="0"/>
+			<MaxLawInvestigators value="1"/>
+			<InitialPOISearchSituation>CSITownInitialSearch</InitialPOISearchSituation>
+		</Item>
+		<Item key="LAW_REGION_ANNESBURG">
+			<RegionType>REGION_TYPE_TOWN</RegionType>
+			<Flags>OnlySpawnMountsNearRoads AllowSpawningMountsOnTrainTracks</Flags>
+			<CenterPosition x="2913.711" y="1356.16" z="45.121" />
+			<Radius value="130.00" />
+			<InitialPOISearchSituation>CSITownInitialSearch</InitialPOISearchSituation>
+			<MaxReports value="10"/>
+		</Item>
+		<Item key="LAW_REGION_STRAWBERRY">
+			<RegionType>REGION_TYPE_TOWN</RegionType>
+			<Flags>OnlySpawnMountsNearRoads</Flags>
+			<CenterPosition x="-1791.5217" y="-395.2781" z="159.2376" />
+			<Radius value="75.00" />
+			<InitialPOISearchSituation>CSITownInitialSearch</InitialPOISearchSituation>
+			<MaxReports value="10"/>
+		</Item>
+		<Item key="LAW_REGION_BLACKWATER">
+			<Flags>PreferSpawnPointsInFrontOfPlayer</Flags>
+			<RegionType>REGION_TYPE_TOWN</RegionType>
+			<Flags>OnlySpawnMountsNearRoads</Flags>
+			<CenterPosition x="-799.313" y="-1297.88" z="42.533" />
+			<Radius value="225.00" />
+			<InitialPOISearchSituation>CSITownInitialSearch</InitialPOISearchSituation>
+			<MaxReports value="10"/>
+		</Item>
+		<Item key="LAW_REGION_THIEVES_LANDING">
+			<RegionType>REGION_TYPE_TOWN</RegionType>
+			<MaxReports value="0"/>
+			<Flags>OnlySpawnMountsNearRoads IsLawlessRegion</Flags>
+			<InitialPOISearchSituation>CSITownInitialSearch</InitialPOISearchSituation>
+		</Item>
+		<Item key="LAW_REGION_THIEVES_LANDING_MAINGAME">
+			<RegionType>REGION_TYPE_TOWN</RegionType>
+			<MaxReports value="0"/>
+			<Flags>OnlySpawnMountsNearRoads IsLawlessRegion</Flags>
+			<InitialPOISearchSituation>CSITownInitialSearch</InitialPOISearchSituation>
+		</Item>
+		<Item key="LAW_REGION_VAN_HORN">
+			<RegionType>REGION_TYPE_TOWN</RegionType>
+			<MaxReports value="0"/>
+			<Flags>OnlySpawnMountsNearRoads IsLawlessRegion</Flags>
+			<InitialPOISearchSituation>CSITownInitialSearch</InitialPOISearchSituation>
+		</Item>
+		<Item key="LAW_REGION_CORNWALL">
+			<RegionType>REGION_TYPE_TOWN</RegionType>
+			<Flags>OnlySpawnMountsNearRoads IsLawlessRegion</Flags>
+			<InitialPOISearchSituation>CSITownInitialSearch</InitialPOISearchSituation>
+			<MaxReports value="0"/>
+		</Item>
+		<Item key="LAW_REGION_BRAITHWAITE_MANOR">
+			<RegionType>REGION_TYPE_TOWN</RegionType>
+			<InitialPOISearchSituation>CSITownInitialSearch IsLawlessRegion</InitialPOISearchSituation>
+			<MaxReports value="0"/>
+		</Item>
+		<Item key="LAW_REGION_CALIGA_HALL">
+			<RegionType>REGION_TYPE_TOWN</RegionType>
+			<InitialPOISearchSituation>CSITownInitialSearch IsLawlessRegion</InitialPOISearchSituation>
+			<MaxReports value="0"/>
+		</Item>
+		<Item key="LAW_REGION_AGUASDULCES">
+			<RegionType>REGION_TYPE_TOWN</RegionType>
+			<Flags>DisableBlipsWhileOnMission</Flags>
+			<MaxReports value="0"/>
+			<MaxLawInvestigators value="1"/>
+			<Flags>OnlySpawnMountsNearRoads</Flags>
+			<InitialPOISearchSituation>CSITownInitialSearch</InitialPOISearchSituation>
+		</Item>
+		<Item key="LAW_REGION_EL_NIDO">
+			<RegionType>REGION_TYPE_TOWN</RegionType>
+			<Flags>DisableBlipsWhileOnMission</Flags>
+			<MaxReports value="0"/>
+			<MaxLawInvestigators value="1"/>
+			<InitialPOISearchSituation>CSITownInitialSearch</InitialPOISearchSituation>
+		</Item>
+		<Item key="LAW_REGION_LAGRAS">
+			<RegionType>REGION_TYPE_TOWN</RegionType>
+			<Flags>OnlySpawnMountsNearRoads IsLawlessRegion</Flags>
+			<InitialPOISearchSituation>CSITownInitialSearch</InitialPOISearchSituation>
+		</Item>
+		<Item key="LAW_REGION_SISIKA">
+			<RegionType>REGION_TYPE_TOWN</RegionType>
+			<Flags>OnlySpawnMountsNearRoads</Flags>
+			<InitialPOISearchSituation>CSITownInitialSearch</InitialPOISearchSituation>
+			<MaxReports value="10"/>
+		</Item>
+		<Item key="LAW_REGION_BUTCHER_CREEK">
+			<RegionType>REGION_TYPE_TOWN</RegionType>
+			<Flags>OnlySpawnMountsNearRoads IsLawlessRegion</Flags>
+			<InitialPOISearchSituation>CSITownInitialSearch</InitialPOISearchSituation>
+			<MaxReports value="0"/>
+		</Item>
+		<Item key="LAW_REGION_FORT_WALLACE">
+			<RegionType>REGION_TYPE_TOWN</RegionType>
+			<InitialPOISearchSituation>CSITownInitialSearch</InitialPOISearchSituation>
+			<MaxReports value="10"/>
+		</Item>
+		<Item key="LAW_REGION_WAPITI">
+			<RegionType>REGION_TYPE_TOWN</RegionType>
+			<MaxReports value="0"/>
+			<Flags>OnlySpawnMountsNearRoads IsLawlessRegion</Flags>
+			<InitialPOISearchSituation>CSITownInitialSearch</InitialPOISearchSituation>
+		</Item>
+		<Item key="LAW_REGION_BEECHERS_HOPE">
+			<RegionType>REGION_TYPE_TOWN</RegionType>
+			<InitialPOISearchSituation>CSITownInitialSearch</InitialPOISearchSituation>
+			<MaxReports value="10"/>
+		</Item>
+		<Item key="LAW_REGION_MANZANITA_POST">
+			<RegionType>REGION_TYPE_TOWN</RegionType>
+			<Flags>OnlySpawnMountsNearRoads IsLawlessRegion</Flags>
+			<InitialPOISearchSituation>CSITownInitialSearch</InitialPOISearchSituation>
+			<MaxReports value="0"/>
+		</Item>
+		<Item key="LAW_REGION_MANZANITA_POST_MAINGAME">
+			<RegionType>REGION_TYPE_TOWN</RegionType>
+			<Flags>OnlySpawnMountsNearRoads IsLawlessRegion</Flags>
+			<InitialPOISearchSituation>CSITownInitialSearch</InitialPOISearchSituation>
+			<MaxReports value="0"/>
+		</Item>
+		<Item key="LAW_REGION_BLACKWATER_MAINGAME">
+			<Flags>PreferSpawnPointsInFrontOfPlayer</Flags>
+			<RegionType>REGION_TYPE_TOWN</RegionType>
+			<Flags>OnlySpawnMountsNearRoads</Flags>
+			<InitialPOISearchSituation>CSITownInitialSearch</InitialPOISearchSituation>
+		</Item>
+		<Item key="LAW_REGION_OCCUPIED_CARAVAN_CAMP">
+			<RegionType>REGION_TYPE_WILDERNESS</RegionType>
+			<MaxReports value="0"/>
+		</Item>
+		<Item key="LAW_REGION_MACFARLANES_RANCH">
+			<RegionType>REGION_TYPE_TOWN</RegionType>
+			<Flags>OnlySpawnMountsNearRoads IsLawlessRegion</Flags>
+			<InitialPOISearchSituation>CSITownInitialSearch</InitialPOISearchSituation>
+			<MaxReports value="0"/>
+		</Item>
+		<Item key="LAW_REGION_ARMADILLO">
+			<RegionType>REGION_TYPE_TOWN</RegionType>
+			<Flags>OnlySpawnMountsNearRoads IsLawlessRegion</Flags>
+			<InitialPOISearchSituation>CSITownInitialSearch</InitialPOISearchSituation>
+			<MaxReports value="0"/>
+		</Item>
+		<Item key="LAW_REGION_RIDGEWOOD_FARM">
+			<RegionType>REGION_TYPE_TOWN</RegionType>
+			<Flags>OnlySpawnMountsNearRoads IsLawlessRegion</Flags>
+			<InitialPOISearchSituation>CSITownInitialSearch</InitialPOISearchSituation>
+			<MaxReports value="0"/>
+		</Item>
+		<Item key="LAW_REGION_TUMBLEWEED">
+			<RegionType>REGION_TYPE_TOWN</RegionType>
+			<Flags>OnlySpawnMountsNearRoads</Flags>
+			<CenterPosition x="-5508.505" y="-2936.243" z="-2.854" />
+			<Radius value="75.00" />
+			<InitialPOISearchSituation>CSITownInitialSearch</InitialPOISearchSituation>
+			<MaxReports value="10"/>
+		</Item>
+	</RegionInfo>
+	<BountyResponseCooldowns>
+		<Item>
+			<Name>DefaultCooldown</Name>
+		</Item>
+		<Item>
+			<Name>BountyHuntersGlobalCooldown</Name>
+			<DelayInGameHoursAfterBountyAcquired>
+				<Item> <!-- WANTED_CLEAN -->
+					<Min value="10"/>
+					<Max value="12"/>
+				</Item>
+				<Item> <!-- WANTED_LEVEL1 -->
+					<Min value="4"/>
+					<Max value="12"/>
+				</Item>
+				<Item> <!-- WANTED_LEVEL2 -->
+					<Min value="3"/>
+					<Max value="10"/>
+				</Item>
+				<Item> <!-- WANTED_LEVEL3 -->
+					<Min value="3"/>
+					<Max value="5"/>
+				</Item>
+				<Item> <!-- WANTED_LEVEL4+ -->
+					<Min value="3"/>
+					<Max value="3"/>
+				</Item>
+			</DelayInGameHoursAfterBountyAcquired>
+			<DelayInGameHoursAfterMyIncident>
+				<Item> <!-- WANTED_CLEAN -->
+					<Min value="12"/>
+					<Max value="14"/>
+				</Item>
+				<Item> <!-- WANTED_LEVEL1 -->
+					<Min value="2"/>
+					<Max value="4"/>
+				</Item>
+				<Item> <!-- WANTED_LEVEL2 -->
+					<Min value="2"/>
+					<Max value="5"/>
+				</Item>
+				<Item> <!-- WANTED_LEVEL3 -->
+					<Min value="2"/>
+					<Max value="4"/>
+				</Item>
+				<Item> <!-- WANTED_LEVEL4+ -->
+					<Min value="2"/>
+					<Max value="2"/>
+				</Item>
+			</DelayInGameHoursAfterMyIncident>
+			<DelayInGameHoursAfterMyIncidentTargetKilled>
+				<Item> <!-- WANTED_CLEAN -->
+					<Min value="4"/>
+					<Max value="6"/>
+				</Item>
+				<Item> <!-- WANTED_LEVEL1 -->
+					<Min value="3"/>
+					<Max value="5"/>
+				</Item>
+				<Item> <!-- WANTED_LEVEL2 -->
+					<Min value="3"/>
+					<Max value="4"/>
+				</Item>
+				<Item> <!-- WANTED_LEVEL3 -->
+					<Min value="2"/>
+					<Max value="3"/>
+				</Item>
+				<Item> <!-- WANTED_LEVEL4+ -->
+					<Min value="2"/>
+				</Item>
+			</DelayInGameHoursAfterMyIncidentTargetKilled>
+			<DelayInGameHoursAfterMyIncidentTargetUndetected>
+				<Min value="3"/>
+			</DelayInGameHoursAfterMyIncidentTargetUndetected>
+			<MinBountyLevelForTargetUndetected>WANTED_LEVEL3</MinBountyLevelForTargetUndetected>
+			<RequiresLocalCrime value="false" />
+		</Item>
+	</BountyResponseCooldowns>
+
+	<!-- Timed responses -->
+	<BountyResponses>
+	
+		<!-- ### WILDERNESS ### -->
+		
+		<!-- BAYOU NWA -->
+		<xi:include href="common:/data/dispatchresponses/wilderness/bayounwa.meta" xpointer="xpointer(/CDispatchData/BountyResponses/BountyDispatch)" />
+		
+		<!-- BIG VALLEY -->
+		<xi:include href="common:/data/dispatchresponses/wilderness/bigvalley.meta" xpointer="xpointer(/CDispatchData/BountyResponses/BountyDispatch)" />
+
+		<!-- BLUEGILL MARSH -->
+		<xi:include href="common:/data/dispatchresponses/wilderness/bluegillmarsh.meta" xpointer="xpointer(/CDispatchData/BountyResponses/BountyDispatch)" />
+		
+		<!-- BOUNTY HUNTERS -->
+		<xi:include href="common:/data/dispatchresponses/wilderness/bountyhunters.meta" xpointer="xpointer(/CDispatchData/BountyResponses/BountyDispatch)" />
+		
+		<!-- CUMBERLAND FOREST -->
+		<xi:include href="common:/data/dispatchresponses/wilderness/cumberlandforest.meta" xpointer="xpointer(/CDispatchData/BountyResponses/BountyDispatch)" />
+		
+		<!-- GREAT PLAINS -->
+		<xi:include href="common:/data/dispatchresponses/wilderness/greatplains.meta" xpointer="xpointer(/CDispatchData/BountyResponses/BountyDispatch)" />
+		
+		<!-- GREAT PLAINS MAINGAME -->
+		<xi:include href="common:/data/dispatchresponses/wilderness/greatplainsmaingame.meta" xpointer="xpointer(/CDispatchData/BountyResponses/BountyDispatch)" />
+		
+		<!-- GRIZZLIES -->
+		<xi:include href="common:/data/dispatchresponses/wilderness/grizzlies.meta" xpointer="xpointer(/CDispatchData/BountyResponses/BountyDispatch)" />
+		
+		<!-- GUARMA -->
+		<xi:include href="common:/data/dispatchresponses/wilderness/guarma.meta" xpointer="xpointer(/CDispatchData/BountyResponses/BountyDispatch)" />
+    
+		<!-- HEARTLANDS -->
+		<xi:include href="common:/data/dispatchresponses/wilderness/heartlands.meta" xpointer="xpointer(/CDispatchData/BountyResponses/BountyDispatch)" />
+		
+		<!-- OLD MAP -->
+		<xi:include href="common:/data/dispatchresponses/wilderness/oldmap.meta" xpointer="xpointer(/CDispatchData/BountyResponses/BountyDispatch)" />
+		
+		<!-- OLD MAP MAINGAME -->
+		<xi:include href="common:/data/dispatchresponses/wilderness/oldmapmaingame.meta" xpointer="xpointer(/CDispatchData/BountyResponses/BountyDispatch)" />
+
+		<!-- ROANOKE RIDGE -->
+		<xi:include href="common:/data/dispatchresponses/wilderness/roanokeridge.meta" xpointer="xpointer(/CDispatchData/BountyResponses/BountyDispatch)" />
+		
+		<!-- SCARLETT MEADOWS -->
+		<xi:include href="common:/data/dispatchresponses/wilderness/scarlettmeadows.meta" xpointer="xpointer(/CDispatchData/BountyResponses/BountyDispatch)" />
+		
+		<!-- TALL TREES -->
+		<xi:include href="common:/data/dispatchresponses/wilderness/talltrees.meta" xpointer="xpointer(/CDispatchData/BountyResponses/BountyDispatch)" />
+		
+		<!-- TALL TREES MAINGAME -->
+		<xi:include href="common:/data/dispatchresponses/wilderness/talltreesmaingame.meta" xpointer="xpointer(/CDispatchData/BountyResponses/BountyDispatch)" />
+		
+		<!-- ### TOWNS ### -->
+				
+		<!-- ANNESBURG -->
+		<xi:include href="common:/data/dispatchresponses/towns/annesburg.meta" xpointer="xpointer(/CDispatchData/BountyResponses/BountyDispatch)" />
+				
+		<!-- ARMADILLO MP -->
+		<xi:include href="common:/data/dispatchresponses/towns/armadillo_mp.meta" xpointer="xpointer(/CDispatchData/BountyResponses/BountyDispatch)" />
+	
+		<!-- BLACKWATER -->
+		<xi:include href="common:/data/dispatchresponses/towns/blackwater.meta" xpointer="xpointer(/CDispatchData/BountyResponses/BountyDispatch)" />
+		
+		<!-- BLACKWATER MAIN GAME -->
+		<xi:include href="common:/data/dispatchresponses/towns/blackwatermaingame.meta" xpointer="xpointer(/CDispatchData/BountyResponses/BountyDispatch)" />
+		
+		<!-- RHODES -->
+		<xi:include href="common:/data/dispatchresponses/towns/rhodes.meta" xpointer="xpointer(/CDispatchData/BountyResponses/BountyDispatch)" />
+		
+		<!-- RHODES LOCKDOWN -->
+		<xi:include href="common:/data/dispatchresponses/towns/rhodeslockdown.meta" xpointer="xpointer(/CDispatchData/BountyResponses/BountyDispatch)" />
+			
+		<!-- SAINT DENIS -->
+		<xi:include href="common:/data/dispatchresponses/towns/saintdenis.meta" xpointer="xpointer(/CDispatchData/BountyResponses/BountyDispatch)" />
+		
+		<!-- SAINT DENIS RURAL -->
+		<xi:include href="common:/data/dispatchresponses/towns/saintdenisrural.meta" xpointer="xpointer(/CDispatchData/BountyResponses/BountyDispatch)" />
+		
+		<!-- STRAWBERRY -->
+		<xi:include href="common:/data/dispatchresponses/towns/strawberry.meta" xpointer="xpointer(/CDispatchData/BountyResponses/BountyDispatch)" />
+		
+		<!-- TUMBLEWEED -->
+		<xi:include href="common:/data/dispatchresponses/towns/tumbleweed.meta" xpointer="xpointer(/CDispatchData/BountyResponses/BountyDispatch)" />
+		
+		<!-- VALENTINE -->
+		<xi:include href="common:/data/dispatchresponses/towns/valentine.meta" xpointer="xpointer(/CDispatchData/BountyResponses/BountyDispatch)" />
+		
+		<!-- VALENTINE LOCKDOWN -->
+		<xi:include href="common:/data/dispatchresponses/towns/valentinelockdown.meta" xpointer="xpointer(/CDispatchData/BountyResponses/BountyDispatch)" />
+		
+		<!-- VALENTINE JAILBREAK -->
+		<xi:include href="common:/data/dispatchresponses/towns/valentinejailbreak.meta" xpointer="xpointer(/CDispatchData/BountyResponses/BountyDispatch)" />
+		
+		<!-- ### SETTLEMENTS ### -->
+		
+		<!-- AGUASDULCES -->
+		<xi:include href="common:/data/dispatchresponses/settlements/aguasdulces.meta" xpointer="xpointer(/CDispatchData/BountyResponses/BountyDispatch)" />
+
+		<!-- BEECHER'S HOPE -->
+		<xi:include href="common:/data/dispatchresponses/settlements/beechershope.meta" xpointer="xpointer(/CDispatchData/BountyResponses/BountyDispatch)" />		
+
+		<!-- BRAITHWAITE MANOR -->
+		<xi:include href="common:/data/dispatchresponses/settlements/braithwaitemanor.meta" xpointer="xpointer(/CDispatchData/BountyResponses/BountyDispatch)" />
+		
+		<!-- CALIGA HALL -->
+		<xi:include href="common:/data/dispatchresponses/settlements/caligahall.meta" xpointer="xpointer(/CDispatchData/BountyResponses/BountyDispatch)" />
+		
+		<!-- CORNWALL -->
+		<xi:include href="common:/data/dispatchresponses/settlements/cornwall.meta" xpointer="xpointer(/CDispatchData/BountyResponses/BountyDispatch)" />
+		
+		<!-- EL NIDO -->
+		<xi:include href="common:/data/dispatchresponses/settlements/elnido.meta" xpointer="xpointer(/CDispatchData/BountyResponses/BountyDispatch)" />
+		
+		<!-- EMERALD RANCH -->
+		<xi:include href="common:/data/dispatchresponses/settlements/emeraldranch.meta" xpointer="xpointer(/CDispatchData/BountyResponses/BountyDispatch)" />
+		
+		<!-- FORT WALLACE -->
+		<xi:include href="common:/data/dispatchresponses/settlements/fortwallace.meta" xpointer="xpointer(/CDispatchData/BountyResponses/BountyDispatch)" />
+		
+		<!-- LAGRAS -->
+		<xi:include href="common:/data/dispatchresponses/settlements/lagras.meta" xpointer="xpointer(/CDispatchData/BountyResponses/BountyDispatch)" />	
+		
+		<!-- MACFARLANE'S RANCH -->
+		<xi:include href="common:/data/dispatchresponses/settlements/macfarlanesranch.meta" xpointer="xpointer(/CDispatchData/BountyResponses/BountyDispatch)" />
+
+		<!-- MANICATO -->
+		<xi:include href="common:/data/dispatchresponses/settlements/manicato.meta" xpointer="xpointer(/CDispatchData/BountyResponses/BountyDispatch)" />
+		
+		<!-- MANZANITA POST -->
+		<xi:include href="common:/data/dispatchresponses/settlements/manzanitapost.meta" xpointer="xpointer(/CDispatchData/BountyResponses/BountyDispatch)" />
+		
+		<!-- MANZANITA POST MAINGAME -->
+		<xi:include href="common:/data/dispatchresponses/settlements/manzanitapostmaingame.meta" xpointer="xpointer(/CDispatchData/BountyResponses/BountyDispatch)" />
+
+		
+		<!-- PRONGHORN RANCH -->
+		<xi:include href="common:/data/dispatchresponses/settlements/pronghornranch.meta" xpointer="xpointer(/CDispatchData/BountyResponses/BountyDispatch)" />
+		
+		<!-- RIDGEWOOD FARM -->
+		<xi:include href="common:/data/dispatchresponses/settlements/ridgewoodfarm.meta" xpointer="xpointer(/CDispatchData/BountyResponses/BountyDispatch)" />
+		
+		<!-- SISIKA -->
+		<xi:include href="common:/data/dispatchresponses/settlements/sisika.meta" xpointer="xpointer(/CDispatchData/BountyResponses/BountyDispatch)" />
+		
+		<!-- THIEVES LANDING -->
+		<xi:include href="common:/data/dispatchresponses/settlements/thieveslandingmaingame.meta" xpointer="xpointer(/CDispatchData/BountyResponses/BountyDispatch)" />
+
+		<!-- WAPITI -->
+		<xi:include href="common:/data/dispatchresponses/settlements/wapiti.meta" xpointer="xpointer(/CDispatchData/BountyResponses/BountyDispatch)" />
+		
+		<!-- ### CUSTOM ### -->
+		
+		<!-- TRAIN ROBBERY -->
+		<xi:include href="common:/data/dispatchresponses/custom/trainrobbery.meta" xpointer="xpointer(/CDispatchData/BountyResponses/BountyDispatch)" />
+		
+		<!-- CUSTOM MUD3B -->
+		<xi:include href="common:/data/dispatchresponses/custom/custom_mud3b.meta" xpointer="xpointer(/CDispatchData/BountyResponses/BountyDispatch)" />
+		
+		<!-- ### MP RESPONSES ### -->
+		
+		<!-- NET PLAINS LARGE -->
+		<xi:include href="common:/data/dispatchresponses/custom/netplainslarge.meta" xpointer="xpointer(/CDispatchData/BountyResponses/BountyDispatch)" />
+		
+		<!-- NET PLAINS SMALL -->
+		<xi:include href="common:/data/dispatchresponses/custom/netplainssmall.meta" xpointer="xpointer(/CDispatchData/BountyResponses/BountyDispatch)" />
+		
+		<!-- NET PLAINS SMALL DELAYED RESPONSE -->
+		<xi:include href="common:/data/dispatchresponses/custom/netplainssmalldelayedresponse.meta" xpointer="xpointer(/CDispatchData/BountyResponses/BountyDispatch)" />
+		
+	</BountyResponses>
+	
+	<CleanUpDispatchPedPresets>
+		<!-- ### WILDERNESS ### -->
+		
+		<!-- BAYOU NWA -->
+		<xi:include href="common:/data/dispatchresponses/wilderness/bayounwa.meta" xpointer="xpointer(/CDispatchData/CleanUpDispatchPedPresets/Item)" />
+		
+		<!-- BIG VALLEY -->
+		<xi:include href="common:/data/dispatchresponses/wilderness/bigvalley.meta" xpointer="xpointer(/CDispatchData/CleanUpDispatchPedPresets/Item)" />
+
+		<!-- BLUEGILL MARSH -->
+		<xi:include href="common:/data/dispatchresponses/wilderness/bluegillmarsh.meta" xpointer="xpointer(/CDispatchData/CleanUpDispatchPedPresets/Item)" />
+		
+		<!-- BOUNTY HUNTERS -->
+		<xi:include href="common:/data/dispatchresponses/wilderness/bountyhunters.meta" xpointer="xpointer(/CDispatchData/CleanUpDispatchPedPresets/Item)" />
+		
+		<!-- CUMBERLAND FOREST -->
+		<xi:include href="common:/data/dispatchresponses/wilderness/cumberlandforest.meta" xpointer="xpointer(/CDispatchData/CleanUpDispatchPedPresets/Item)" />
+		
+		<!-- GREAT PLAINS -->
+		<xi:include href="common:/data/dispatchresponses/wilderness/greatplains.meta" xpointer="xpointer(/CDispatchData/CleanUpDispatchPedPresets/Item)" />
+		
+		<!-- GREAT PLAINS MAINGAME -->
+		<xi:include href="common:/data/dispatchresponses/wilderness/greatplainsmaingame.meta" xpointer="xpointer(/CDispatchData/CleanUpDispatchPedPresets/Item)" />
+		
+		<!-- GRIZZLIES -->
+		<xi:include href="common:/data/dispatchresponses/wilderness/grizzlies.meta" xpointer="xpointer(/CDispatchData/CleanUpDispatchPedPresets/Item)" />
+		
+		<!-- GUARMA -->
+		<xi:include href="common:/data/dispatchresponses/wilderness/guarma.meta" xpointer="xpointer(/CDispatchData/CleanUpDispatchPedPresets/Item)" />
+    
+		<!-- HEARTLANDS -->
+		<xi:include href="common:/data/dispatchresponses/wilderness/heartlands.meta" xpointer="xpointer(/CDispatchData/CleanUpDispatchPedPresets/Item)" />
+		
+		<!-- OLD MAP -->
+		<xi:include href="common:/data/dispatchresponses/wilderness/oldmap.meta" xpointer="xpointer(/CDispatchData/CleanUpDispatchPedPresets/Item)" />
+		
+		<!-- OLD MAP MAINGAME -->
+		<xi:include href="common:/data/dispatchresponses/wilderness/oldmapmaingame.meta" xpointer="xpointer(/CDispatchData/CleanUpDispatchPedPresets/Item)" />
+
+		<!-- ROANOKE RIDGE -->
+		<xi:include href="common:/data/dispatchresponses/wilderness/roanokeridge.meta" xpointer="xpointer(/CDispatchData/CleanUpDispatchPedPresets/Item)" />
+		
+		<!-- SCARLETT MEADOWS -->
+		<xi:include href="common:/data/dispatchresponses/wilderness/scarlettmeadows.meta" xpointer="xpointer(/CDispatchData/CleanUpDispatchPedPresets/Item)" />
+		
+		<!-- TALL TREES -->
+		<xi:include href="common:/data/dispatchresponses/wilderness/talltrees.meta" xpointer="xpointer(/CDispatchData/CleanUpDispatchPedPresets/Item)" />
+		
+		<!-- TALL TREES MAINGAME -->
+		<xi:include href="common:/data/dispatchresponses/wilderness/talltreesmaingame.meta" xpointer="xpointer(/CDispatchData/CleanUpDispatchPedPresets/Item)" />
+		
+		<!-- ### TOWNS ### -->
+				
+		<!-- ANNESBURG -->
+		<xi:include href="common:/data/dispatchresponses/towns/annesburg.meta" xpointer="xpointer(/CDispatchData/CleanUpDispatchPedPresets/Item)" />
+				
+		<!-- ARMADILLO MP -->
+		<xi:include href="common:/data/dispatchresponses/towns/armadillo_mp.meta" xpointer="xpointer(/CDispatchData/CleanUpDispatchPedPresets/Item)" />
+	
+		<!-- BLACKWATER -->
+		<xi:include href="common:/data/dispatchresponses/towns/blackwater.meta" xpointer="xpointer(/CDispatchData/CleanUpDispatchPedPresets/Item)" />
+		
+		<!-- BLACKWATER MAIN GAME -->
+		<xi:include href="common:/data/dispatchresponses/towns/blackwatermaingame.meta" xpointer="xpointer(/CDispatchData/CleanUpDispatchPedPresets/Item)" />
+		
+		<!-- RHODES -->
+		<xi:include href="common:/data/dispatchresponses/towns/rhodes.meta" xpointer="xpointer(/CDispatchData/CleanUpDispatchPedPresets/Item)" />
+		
+		<!-- RHODES LOCKDOWN -->
+		<xi:include href="common:/data/dispatchresponses/towns/rhodeslockdown.meta" xpointer="xpointer(/CDispatchData/CleanUpDispatchPedPresets/Item)" />
+			
+		<!-- SAINT DENIS -->
+		<xi:include href="common:/data/dispatchresponses/towns/saintdenis.meta" xpointer="xpointer(/CDispatchData/CleanUpDispatchPedPresets/Item)" />
+			
+		<!-- SAINT DENIS RURAL -->
+		<xi:include href="common:/data/dispatchresponses/towns/saintdenisrural.meta" xpointer="xpointer(/CDispatchData/CleanUpDispatchPedPresets/Item)" />
+		
+		<!-- STRAWBERRY -->
+		<xi:include href="common:/data/dispatchresponses/towns/strawberry.meta" xpointer="xpointer(/CDispatchData/CleanUpDispatchPedPresets/Item)" />
+		
+		<!-- TUMBLEWEED -->
+		<xi:include href="common:/data/dispatchresponses/towns/tumbleweed.meta" xpointer="xpointer(/CDispatchData/CleanUpDispatchPedPresets/Item)" />
+		
+		<!-- VALENTINE -->
+		<xi:include href="common:/data/dispatchresponses/towns/valentine.meta" xpointer="xpointer(/CDispatchData/CleanUpDispatchPedPresets/Item)" />
+		
+		<!-- VALENTINE LOCKDOWN -->
+		<xi:include href="common:/data/dispatchresponses/towns/valentinelockdown.meta" xpointer="xpointer(/CDispatchData/CleanUpDispatchPedPresets/Item)" />
+		
+		<!-- VALENTINE JAILBREAK -->
+		<xi:include href="common:/data/dispatchresponses/towns/valentinejailbreak.meta" xpointer="xpointer(/CDispatchData/CleanUpDispatchPedPresets/Item)" />
+		
+		<!-- ### SETTLEMENTS ### -->
+		
+		<!-- AGUASDULCES -->
+		<xi:include href="common:/data/dispatchresponses/settlements/aguasdulces.meta" xpointer="xpointer(/CDispatchData/CleanUpDispatchPedPresets/Item)" />
+
+		<!-- BEECHER'S HOPE -->
+		<xi:include href="common:/data/dispatchresponses/settlements/beechershope.meta" xpointer="xpointer(/CDispatchData/CleanUpDispatchPedPresets/Item)" />		
+
+		<!-- BRAITHWAITE MANOR -->
+		<xi:include href="common:/data/dispatchresponses/settlements/braithwaitemanor.meta" xpointer="xpointer(/CDispatchData/CleanUpDispatchPedPresets/Item)" />
+		
+		<!-- CALIGA HALL -->
+		<xi:include href="common:/data/dispatchresponses/settlements/caligahall.meta" xpointer="xpointer(/CDispatchData/CleanUpDispatchPedPresets/Item)" />
+		
+		<!-- CORNWALL -->
+		<xi:include href="common:/data/dispatchresponses/settlements/cornwall.meta" xpointer="xpointer(/CDispatchData/CleanUpDispatchPedPresets/Item)" />
+		
+		<!-- EL NIDO -->
+		<xi:include href="common:/data/dispatchresponses/settlements/elnido.meta" xpointer="xpointer(/CDispatchData/CleanUpDispatchPedPresets/Item)" />
+		
+		<!-- EMERALD RANCH -->
+		<xi:include href="common:/data/dispatchresponses/settlements/emeraldranch.meta" xpointer="xpointer(/CDispatchData/CleanUpDispatchPedPresets/Item)" />
+		
+		<!-- FORT WALLACE -->
+		<xi:include href="common:/data/dispatchresponses/settlements/fortwallace.meta" xpointer="xpointer(/CDispatchData/CleanUpDispatchPedPresets/Item)" />
+		
+		<!-- LAGRAS -->
+		<xi:include href="common:/data/dispatchresponses/settlements/lagras.meta" xpointer="xpointer(/CDispatchData/CleanUpDispatchPedPresets/Item)" />	
+		
+		<!-- MACFARLANE'S RANCH -->
+		<xi:include href="common:/data/dispatchresponses/settlements/macfarlanesranch.meta" xpointer="xpointer(/CDispatchData/CleanUpDispatchPedPresets/Item)" />
+
+		<!-- MANICATO -->
+		<xi:include href="common:/data/dispatchresponses/settlements/manicato.meta" xpointer="xpointer(/CDispatchData/CleanUpDispatchPedPresets/Item)" />
+		
+		<!-- MANZANITA POST -->
+		<xi:include href="common:/data/dispatchresponses/settlements/manzanitapost.meta" xpointer="xpointer(/CDispatchData/CleanUpDispatchPedPresets/Item)" />
+		
+		<!-- MANZANITA POST MAINGAME -->
+		<xi:include href="common:/data/dispatchresponses/settlements/manzanitapostmaingame.meta" xpointer="xpointer(/CDispatchData/CleanUpDispatchPedPresets/Item)" />
+
+		
+		<!-- PRONGHORN RANCH -->
+		<xi:include href="common:/data/dispatchresponses/settlements/pronghornranch.meta" xpointer="xpointer(/CDispatchData/CleanUpDispatchPedPresets/Item)" />
+		
+		<!-- RIDGEWOOD FARM -->
+		<xi:include href="common:/data/dispatchresponses/settlements/ridgewoodfarm.meta" xpointer="xpointer(/CDispatchData/CleanUpDispatchPedPresets/Item)" />
+		
+		<!-- SISIKA -->
+		<xi:include href="common:/data/dispatchresponses/settlements/sisika.meta" xpointer="xpointer(/CDispatchData/CleanUpDispatchPedPresets/Item)" />
+
+		<!-- THIEVES LANDING -->
+		<xi:include href="common:/data/dispatchresponses/settlements/thieveslandingmaingame.meta" xpointer="xpointer(/CDispatchData/BountyResponses/BountyDispatch)" />
+		
+		<!-- WAPITI -->
+		<xi:include href="common:/data/dispatchresponses/settlements/wapiti.meta" xpointer="xpointer(/CDispatchData/CleanUpDispatchPedPresets/Item)" />
+		
+		<!-- ### CUSTOM ### -->
+		
+		<!-- TRAIN ROBBERY -->
+		<xi:include href="common:/data/dispatchresponses/custom/trainrobbery.meta" xpointer="xpointer(/CDispatchData/CleanUpDispatchPedPresets/Item)" />
+		
+		<!-- CUSTOM MUD3B -->
+		<xi:include href="common:/data/dispatchresponses/custom/custom_mud3b.meta" xpointer="xpointer(/CDispatchData/CleanUpDispatchPedPresets/Item)" />
+		
+	</CleanUpDispatchPedPresets>
+	
+	<EmergencyResponses>
+    </EmergencyResponses>
+  
+  <!-- Mayhem modifiers for cooldowns (in game hours) -->
+  
+  <MayhemCooldownModifiers>
+    <Modifier key="MAYHEM_MODIFIER_GUNSHOT" type="CCooldownModifierGunshotData">
+      <Value value="-0.500000"/>
+      <Interval value="0.200000"/>
+      <MinRemainingTimeToApply value="1.000000"/>
+    </Modifier>
+    <Modifier key="MAYHEM_MODIFIER_REGION_CHANGED" type="CCooldownModifierRegionChangedData">
+      <Value value="1.000000"/>
+      <Interval value="0.000000"/>
+      <MinRemainingTimeToApply value="1.100000"/>
+    </Modifier>
+    <Modifier key="MAYHEM_MODIFIER_ON_THE_MOVE" type="CCooldownModifierOnTheMoveData">
+      <Value value="0.500000"/>
+      <Interval value="0.000000"/>
+      <Distance value="100.000000"/>
+    </Modifier>
+    <Modifier key="MAYHEM_MODIFIER_LINGER" type="CCooldownModifierLingerData">
+      <Value value="-0.2500000"/>
+      <Interval value="0.250000"/>
+      <Distance value="100.000000"/>
+    </Modifier>
+	</MayhemCooldownModifiers>
+
+	<DispatchApproachParams>
+		<OnFootParams>
+			<!-- Low Severity -->
+			<Item>
+				<Thresholds>
+					<Item>
+						<MinDistance value="25.0f"/>
+						<MBR value="1.25f"/>
+					</Item>
+					<Item>
+						<!-- No min distance -->
+						<MBR value="1.0f"/>
+					</Item>
+				</Thresholds>
+			</Item>
+			<!-- Medium & High Severity -->
+			<Item>
+				<Thresholds>
+					<Item>
+						<MinDistance value="25.0f"/>
+						<MBR value="2.5f"/>
+					</Item>
+					<Item>
+						<MinDistance value="10.0f"/>
+						<MBR value="1.75"/>
+					</Item>
+					<Item>
+						<MinDistance value="4.0f"/>
+						<MBR value="1.25f"/>
+					</Item>
+					<Item>
+						<!-- No min distance -->
+						<MBR value="1.0f"/>
+					</Item>
+				</Thresholds>
+			</Item>
+		</OnFootParams>
+		<OnMountParams>
+			<!-- Low Severity -->
+			<Item>
+				<Thresholds>
+					<Item>
+						<MinDistance value="25.0f"/>
+						<MBR value="1.25f"/>
+					</Item>
+					<Item>
+						<!-- No min distance -->
+						<MBR value="1.0f"/>
+					</Item>
+				</Thresholds>
+			</Item>
+			<!-- Medium & High Severity -->
+			<Item>
+				<Thresholds>
+					<Item>
+						<MinDistance value="75.0f"/>
+						<MBR value="2.5f"/>
+					</Item>
+					<Item>
+						<MinDistance value="50.0f"/>
+						<MBR value="1.75"/>
+					</Item>
+					<Item>
+						<MinDistance value="10.0f"/>
+						<MBR value="1.25f"/>
+					</Item>
+					<Item>
+						<!-- No min distance -->
+						<MBR value="1.0f"/>
+					</Item>
+				</Thresholds>
+			</Item>
+		</OnMountParams>
+	</DispatchApproachParams>
+</CDispatchData>
+

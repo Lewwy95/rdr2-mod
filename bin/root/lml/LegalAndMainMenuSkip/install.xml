@@ -1,0 +1,15 @@
+<EasyInstall>
+    <Name>Legal and Main Menu Skip</Name>
+    <Author>WesternGamer</Author>
+    <Version>1.0.0</Version>
+    <Link>https://www.nexusmods.com/reddeadredemption2/mods/1469</Link>
+    <Metadata/>
+    <Resources>
+		<Resource>
+			<FileReplacement>
+                <GamePath>update:/x64/data/ui/startup_data/0xE279D1A8.ymt</GamePath>
+                <FilePath>0xE279D1A8.ymt</FilePath>
+            </FileReplacement>
+        </Resource>      
+    </Resources>
+</EasyInstall>

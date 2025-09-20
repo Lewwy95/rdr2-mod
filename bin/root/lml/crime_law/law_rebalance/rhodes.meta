@@ -1,0 +1,703 @@
+<?xml version="1.0" encoding="UTF-8"?>	
+<CDispatchData>
+	<BountyResponses>
+		<BountyDispatch>
+			<Name>LAW_LOCAL_RHODES</Name>
+			<RandomWeight value="1.0" />
+			<RequiredRegion>LAW_REGION_RHODES</RequiredRegion>
+			<RequiredCooldowns>
+				<Item>DefaultCooldown</Item>
+			</RequiredCooldowns>
+			<DispatchPhases>
+				
+				<!-- Phase: On Foot -->
+				<Phase>
+					<Name>OnFoot</Name>
+					<GroupMultiplier value="0.4f"/>
+
+					<!--Phase peds--> 
+					<DispatchPeds>
+						<DispatchPedGroups>
+							<DispatchGroup>
+								<Preset>OnFootLowlands</Preset>
+								<MinNumPeds value="1"/>
+								<MaxNumPeds value="1"/>
+							</DispatchGroup>
+						</DispatchPedGroups>
+						<GreedyAcquireCondition type="CAIConditionReferenced">
+							<Name>SHOULD_GRAB_AVAILABLE_DISPATCH_PED_LOW_SEVERITY</Name>
+						</GreedyAcquireCondition>
+					</DispatchPeds>
+					
+					<!--Phase end conditions-->
+					<PhaseEndConditions>
+						<Condition type="CAIConditionOr">
+							<Conditions>
+								<Condition type="CAIConditionReferenced">
+									<Name>DISPATCH_LOW_SEVERITY_ESCALATION_TOWN</Name>
+								</Condition>
+								<Condition type="CAIConditionReferenced">
+									<Name>DISPATCH_LOW_SEVERITY_RESTART_TOWN</Name>
+								</Condition>
+							</Conditions>
+						</Condition>
+					</PhaseEndConditions>
+
+					<!--Next phase options-->
+					<NextPhases>
+						<PhaseOption>
+							<Condition type="CAIConditionIncidentSeverity">
+								<MinSeverity>High</MinSeverity>
+							</Condition>
+							<Name>HighSeverityReinforcements</Name>
+						</PhaseOption>
+						<PhaseOption>
+							<Condition type="CAIConditionReferenced">
+								<Name>DISPATCH_LOW_SEVERITY_ESCALATION_TOWN</Name>
+							</Condition>
+							<Name>MediumSeverityReinforcements</Name>
+						</PhaseOption>
+						<PhaseOption>
+							<!-- Repeat the current phase if we haven't met the conditions to escalate. -->
+							<Condition type="NULL"/>
+							<Name>OnFoot</Name>
+						</PhaseOption>
+					</NextPhases>
+				</Phase>
+				
+				<!-- Phase: MediumSeverityReinforcements -->
+				<Phase>
+					<Name>MediumSeverityReinforcements</Name>
+					<GroupMultiplier value="0.4f"/>
+						
+					<!--Phase peds--> 
+					<DispatchPeds>
+						<DispatchPedGroups>
+							<DispatchGroup>
+								<Preset>OnFootLowlands</Preset>
+								<MinNumPeds value="1"/>
+								<MaxNumPeds value="1"/>
+							</DispatchGroup>						
+						</DispatchPedGroups>
+						<GreedyAcquireCondition type="CAIConditionReferenced">
+							<Name>SHOULD_GRAB_AVAILABLE_DISPATCH_PED_LOW_SEVERITY</Name>
+						</GreedyAcquireCondition>
+					</DispatchPeds>
+					
+					<!--Phase end conditions-->
+					<PhaseEndConditions>
+						<Condition type="CAIConditionReferenced">
+							<Name>DISPATCH_MEDIUM_SEVERITY_ESCALATION_TOWN</Name>
+						</Condition>
+					</PhaseEndConditions>
+
+					<!--Next phase options-->
+					<NextPhases>
+						<PhaseOption>
+							<Condition type="NULL"/>
+							<Name>HighSeverityReinforcements</Name>
+						</PhaseOption>
+					</NextPhases>			
+				</Phase>
+				
+				<!-- Phase: HighSeverityReinforcements -->
+				<Phase>
+					<Name>HighSeverityReinforcements</Name>
+					<GroupMultiplier value="0.4f"/>
+						
+					<!--Phase peds--> 
+					<DispatchPeds>
+						<DispatchPedGroups>
+							<DispatchGroup>
+								<SelectionConditions>
+									<Condition type="CAIConditionPedsRemainingInCurrentIncident">
+										<UpperBound value="2"/>
+									</Condition>
+								</SelectionConditions>
+								<Preset>OnFootLowlands</Preset>
+								<MinNumPeds value="1"/>
+								<MaxNumPeds value="1"/>
+							</DispatchGroup>
+						</DispatchPedGroups>
+						<GreedyAcquireCondition type="CAIConditionReferenced">
+							<Name>SHOULD_GRAB_AVAILABLE_DISPATCH_PED</Name>
+						</GreedyAcquireCondition>
+					</DispatchPeds>
+					
+					<!--Phase end conditions-->
+					<PhaseEndConditions>
+						<Condition type="CAIConditionReferenced">
+							<Name>DISPATCH_HIGH_SEVERITY_ESCALATION_TOWN</Name>
+						</Condition>
+					</PhaseEndConditions>
+
+					<!--Next phase options-->
+					<NextPhases>
+						<PhaseOption>
+							<Condition type="NULL"/>
+							<Name>InitialCombatReinforcements</Name>
+						</PhaseOption>
+					</NextPhases>				
+				</Phase>
+				
+				<!-- Phase: InitialCombatReinforcements -->
+				<Phase>
+					<Name>InitialCombatReinforcements</Name>
+					<GroupMultiplier value="0.4f"/>
+					<SpawnDelay value="1.00"/>
+						
+					<!--Phase peds--> 
+					<DispatchPeds>
+						<DispatchPedGroups>
+							<DispatchGroup>
+								<Preset>OnFootLowlands</Preset>
+								<MinNumPeds value="1"/>
+								<MaxNumPeds value="1"/>
+							</DispatchGroup>
+						</DispatchPedGroups>
+						<GreedyAcquireCondition type="CAIConditionReferenced">
+							<Name>SHOULD_GRAB_AVAILABLE_DISPATCH_PED</Name>
+						</GreedyAcquireCondition>
+					</DispatchPeds>
+					
+					<!--Phase end conditions-->
+					<!--Determine when this phase can be stopped and transition to the next-->
+					<PhaseEndConditions>
+						<Condition type="CAIConditionReferenced">
+							<Name>DISPATCH_GENERIC_ESCALATION_TOWN</Name>
+						</Condition>
+					</PhaseEndConditions>
+
+					<!--Next phase options-->
+					<!--Determine what next states are possible transitions-->
+					<NextPhases>
+						<PhaseOption>
+						<!-- Go to Phase Control if we are on the outskirts of town -->
+							<Condition type="CDispatchConditionDistanceToClosestTown">
+								<MinDistance value="15.00"/>
+							</Condition>
+							<Name>RHOPhaseControl</Name>
+						</PhaseOption>
+						<PhaseOption>
+							<Condition type="NULL"/>
+							<Name>RHOInitialTownsFolk</Name>
+						</PhaseOption>
+					</NextPhases>
+				</Phase>
+				
+				<!-- Phase: RHOInitialTownsFolk -->
+				<Phase>
+					<Name>RHOInitialTownsFolk</Name>
+					<GroupMultiplier value="0.3f"/>
+					<SpawnDelay value="1.00"/>
+					
+					<DispatchPeds>
+						<DispatchPedGroups>
+							<DispatchGroup>
+								<Preset>RhodesResidentOnFoot</Preset>
+								<MinNumPeds value="2"/>
+								<MaxNumPeds value="3"/>
+							</DispatchGroup>
+							<DispatchGroup>
+								<SelectionConditions>
+									<Condition type="CAIConditionNumTimesDispatchPhaseSelected">
+										<Phase>RHOInitialTownsFolk</Phase>
+										<LowerBound value="2"/>
+									</Condition>
+								</SelectionConditions>
+								<Preset>RhodesResidentOnFootShotgun</Preset>
+								<MinNumPeds value="1"/>
+								<MaxNumPeds value="1"/>
+							</DispatchGroup>
+						</DispatchPedGroups>
+					</DispatchPeds>
+					<PhaseEndConditions>
+						<!--Phase end conditions-->
+						<Condition type="CAIConditionReferenced">
+							<Name>DISPATCH_GENERIC_ESCALATION_TOWN</Name>
+						</Condition>
+					</PhaseEndConditions>
+					
+					<NextPhases>
+						<PhaseOption>
+						<!-- Go to Phase Control if we are on the outskirts of town -->
+							<Condition type="CDispatchConditionDistanceToClosestTown">
+								<MinDistance value="15.00"/>
+							</Condition>
+							<Name>RHOPhaseControl</Name>
+						</PhaseOption>
+						<PhaseOption>
+							<Condition type="CAIConditionNumTimesDispatchPhaseSelected">
+								<Phase>RHOInitialTownsFolk</Phase>
+								<LowerBound value="2"/>
+							</Condition>
+							<Name>RHOPhaseControl</Name>
+						</PhaseOption>
+						<PhaseOption>
+							<Name>RHOInitialTownsFolk</Name>
+						</PhaseOption>
+					</NextPhases>
+				</Phase>
+
+				<!-- Phase: RHOPhaseControl -->				
+				<Phase>
+					<Name>RHOPhaseControl</Name>
+					
+					<PhaseEndConditions>
+						<Condition type="CAIConditionReferenced">
+							<Name>DISPATCH_PHASE_CONTROL_ESCALATION_TOWN</Name>
+						</Condition>
+					</PhaseEndConditions>
+					
+					<NextPhases>
+						
+						<!-- PRE-CHECK for 4 star wanted level-->
+						<PhaseOption>
+							<!-- Random chance for a DualWield wave 3 times -->
+							<Condition type="CAIConditionAnd">
+								<Conditions>
+									<Condition type="CAIConditionNot">
+										<Condition type="CAIConditionNumTimesDispatchPhaseSelected">
+											<Phase>DualWield</Phase>
+											<LowerBound value="3"/>
+										</Condition>
+									</Condition>
+									<Condition type="CAIConditionRandom">
+										<Chances value="0.2f"/>
+									</Condition>
+								</Conditions>
+							</Condition>
+							<Name>DualWield</Name>
+						</PhaseOption>
+						
+						<!-- Town Mob -->
+						<PhaseOption>
+							<Condition type="CAIConditionAnd">
+								<Conditions>
+									<Condition type="CAIConditionNot">
+										<Condition type="CAIConditionIsInNetworkSession"/>
+									</Condition>
+									<Condition type="CAIConditionNot">
+										<Condition type="CAIConditionNumTimesDispatchPhaseSelected">
+											<Phase>Script_TownMob</Phase>
+											<LowerBound value="1"/>
+										</Condition>
+									</Condition>
+									<Condition type="CAIConditionNumTimesDispatchPhaseSelected">
+										<Phase>RHOPhaseControl</Phase>
+										<LowerBound value="3"/>
+									</Condition>
+									<Condition type="CAIConditionWantedLevel">
+										<WantedLevelLowerBound value="3"/>
+									</Condition>
+									<Condition type="CAIConditionRandom">
+										<Chances value="0.5f"/>
+									</Condition>
+								</Conditions>
+							</Condition>
+							<Name>Script_TownMob</Name>
+						</PhaseOption>
+						
+						<!-- LargeCarbine -->
+						<PhaseOption>
+							<Condition type="CAIConditionAnd">
+								<Conditions>
+									<Condition type="CAIConditionRandom">
+										<Chances value="0.25f"/>
+									</Condition>
+									<Condition type="CAIConditionNumTimesDispatchPhaseSelected">
+										<Phase>RHOPhaseControl</Phase>
+										<LowerBound value="4"/>
+										<UpperBound value="8"/>
+									</Condition>
+								</Conditions>
+							</Condition>
+							<Name>LargeCarbineRiders</Name>
+						</PhaseOption>
+						
+						<!-- Wagons -->
+						<PhaseOption>
+							<Condition type="CAIConditionOr">
+								<Conditions>
+									<Condition type="CAIConditionAnd">
+										<Conditions>
+											<Condition type="CAIConditionNot">
+												<Condition type="CAIConditionIsInNetworkSession"/>
+											</Condition>
+											<Condition type="CAIConditionRandom">
+												<Chances value="0.25f"/>
+											</Condition>
+											<Condition type="CAIConditionNot">
+												<Condition type="CAIConditionNumTimesDispatchPhaseSelected">
+													<Phase>Wagons</Phase>
+													<LowerBound value="1"/>
+												</Condition>
+											</Condition>
+											<Condition type="CAIConditionNumTimesDispatchPhaseSelected">
+												<Phase>RHOPhaseControl</Phase>
+												<LowerBound value="4"/>
+												<UpperBound value="8"/>
+											</Condition>
+										</Conditions>
+									</Condition>
+									<Condition type="CAIConditionAnd">
+										<Conditions>
+											<Condition type="CAIConditionNot">
+												<Condition type="CAIConditionIsInNetworkSession"/>
+											</Condition>
+											<Condition type="CAIConditionNumTimesDispatchPhaseSelected">
+												<Phase>RHOPhaseControl</Phase>
+												<LowerBound value="8"/>
+											</Condition>
+											<Condition type="CAIConditionNot">
+												<Condition type="CAIConditionNumTimesDispatchPhaseSelected">
+													<Phase>Wagons</Phase>
+													<LowerBound value="1"/>
+												</Condition>
+											</Condition>
+										</Conditions>
+									</Condition>
+								</Conditions>
+							</Condition>
+							<Name>Wagons</Name>
+						</PhaseOption>
+						
+						<!-- EndlessRiders -->
+						<PhaseOption>
+							<Condition type="CAIConditionNumTimesDispatchPhaseSelected">
+								<Phase>RHOPhaseControl</Phase>
+								<LowerBound value="15"/>
+							</Condition>
+							<Name>EndlessRiders</Name>
+						</PhaseOption>
+						
+						<!-- BaseFellas -->
+						<PhaseOption>
+							<Name>BaseRiders</Name>
+						</PhaseOption>
+						
+						<!-- DEFAULT: If we fell through everything, reloop to RHOPhaseControl -->
+						<PhaseOption>
+							<Name>RHOPhaseControl</Name>
+						</PhaseOption>
+					</NextPhases>
+				</Phase>
+				
+				<!-- SCRIPT PHASE TRIGGERS -->
+				<Phase>
+					<Name>Script_TownMob</Name>
+					<ScriptHash>TOWNMOB</ScriptHash>
+					<ScriptEventFlags>SF_TownEvent</ScriptEventFlags>
+					
+					<DispatchPeds>
+						<GreedyAcquireCondition type="CAIConditionReferenced">
+							<Name>SHOULD_GRAB_AVAILABLE_DISPATCH_PED</Name>
+						</GreedyAcquireCondition>
+					</DispatchPeds>
+					
+					<PhaseEndConditions>
+						<Condition type="CAIConditionTimeInDispatchPhase">
+							<LowerBound value="2500"/>
+						</Condition>
+					</PhaseEndConditions>
+					
+					<NextPhases>
+						<PhaseOption>
+							<Name>MobPhaseControl</Name>
+						</PhaseOption>
+					</NextPhases>
+				</Phase>
+				
+				<!-- Phase: MobPhaseControl -->
+				<Phase>
+					<Name>MobPhaseControl</Name>
+					
+					<DispatchPeds>
+						<GreedyAcquireCondition type="CAIConditionReferenced">
+							<Name>SHOULD_GRAB_AVAILABLE_DISPATCH_PED</Name>
+						</GreedyAcquireCondition>
+					</DispatchPeds>
+					
+					<PhaseEndConditions>
+						<Condition type="CAIConditionOr">
+							<Conditions>
+								<Condition type="CAIConditionAnd">
+									<Conditions>
+										<Condition type="CAIConditionTimeInDispatchPhase">
+											<LowerBound value="5000"/>
+										</Condition>
+										<Condition type="CAIConditionPedsRemainingInCurrentIncident">
+											<UpperBound value="2"/>
+										</Condition>
+									</Conditions>
+								</Condition>
+								<Condition type="CAIConditionAnd">
+									<Conditions>
+										<Condition type="CAIConditionTimeInDispatchPhase">
+											<LowerBound value="15000"/>
+										</Condition>
+										<Condition type="CAIConditionPedsRemainingInCurrentIncident">
+											<UpperBound value="4"/>
+										</Condition>
+									</Conditions>
+								</Condition>
+							</Conditions>
+						</Condition>
+					</PhaseEndConditions>
+					
+					<NextPhases>
+						<!-- RHOPhaseControl -->
+						<PhaseOption>							
+							<Condition type="CAIConditionNot">
+								<Condition type="CAIConditionIsScriptFlagActive">
+									<ScriptEventFlags>SF_TownEvent</ScriptEventFlags>
+								</Condition>
+							</Condition>
+							<Name>RHOPhaseControl</Name>
+						</PhaseOption>
+						<!-- MobReinforcements -->
+						<PhaseOption>
+							<Condition type="NULL"/>
+							<Name>MobReinforcements</Name>
+						</PhaseOption>
+					</NextPhases>
+				</Phase>
+				
+				<!-- Phase: MobReinforcements -->
+				<Phase>
+					<Name>MobReinforcements</Name>
+					<GroupMultiplier value="0.3f"/>					
+					<SpawnDelay value="1.00"/>
+
+					<DispatchPeds>
+						<DispatchPedGroups>
+							<DispatchGroup>
+								<Preset>RiderLowlands</Preset>
+								<MinNumPeds value="1"/>
+								<MaxNumPeds value="1"/>
+							</DispatchGroup>
+						</DispatchPedGroups>
+						<RandomDispatchPedGroups>
+							<DispatchGroup>
+								<Preset>RiderLowlands</Preset>
+								<RandomWeight value="0.35"/>
+								<MinNumPeds value="1"/>
+								<MaxNumPeds value="1"/>
+							</DispatchGroup>
+							<DispatchGroup>
+								<Preset>RiderLowlandsDefaultCarbine</Preset>
+								<RandomWeight value="0.25f"/>
+								<MinNumPeds value="1"/>
+								<MaxNumPeds value="1"/>
+							</DispatchGroup>
+							<DispatchGroup>
+								<Preset>RiderLowlandsSniper</Preset>
+								<RandomWeight value="0.15f"/>
+								<MinNumPeds value="1"/>
+								<MaxNumPeds value="1"/>
+							</DispatchGroup>
+							<DispatchGroup>
+								<Preset>RiderLowlandsShotgun</Preset>
+								<RandomWeight value="0.25f"/>
+								<MinNumPeds value="1"/>
+								<MaxNumPeds value="1"/>
+							</DispatchGroup>
+						</RandomDispatchPedGroups>
+						<GreedyAcquireCondition type="CAIConditionReferenced">
+							<Name>SHOULD_GRAB_AVAILABLE_DISPATCH_PED</Name>
+						</GreedyAcquireCondition>
+					</DispatchPeds>
+					
+					<PhaseEndConditions>
+						<Condition type="CAIConditionTimeInDispatchPhase">
+							<LowerBound value="2000"/>
+						</Condition>
+					</PhaseEndConditions>
+					
+					<NextPhases>
+						<PhaseOption>
+							<Name>MobPhaseControl</Name>
+						</PhaseOption>
+					</NextPhases>
+				</Phase>
+				
+				<!-- Phase: BaseRiders -->
+				<Phase>
+					<Name>BaseRiders</Name>
+					<GroupMultiplier value="0.3f"/>
+					
+					<!-- add a spawn delay so that we don't have insta-triggers upon killing a lawped -->
+					<SpawnDelay value="1.00"/>
+
+					<DispatchPeds>
+						<DispatchPedGroups>
+							<DispatchGroup>
+								<Preset>RiderLowlands</Preset>
+								<MinNumPeds value="2"/>
+								<MaxNumPeds value="3"/>
+							</DispatchGroup>
+						</DispatchPedGroups>
+						<RandomDispatchPedGroups>
+							<DispatchGroup>
+								<Preset>RiderLowlands</Preset>
+								<RandomWeight value="0.35"/>
+								<MinNumPeds value="2"/>
+								<MaxNumPeds value="3"/>
+							</DispatchGroup>
+							<DispatchGroup>
+								<Preset>RiderLowlandsDefaultCarbine</Preset>
+								<RandomWeight value="0.30f"/>
+								<MinNumPeds value="1"/>
+								<MaxNumPeds value="2"/>
+							</DispatchGroup>
+							<DispatchGroup>
+								<Preset>RiderLowlandsShotgun</Preset>
+								<RandomWeight value="0.35f"/>
+								<MinNumPeds value="1"/>
+								<MaxNumPeds value="2"/>
+							</DispatchGroup>
+						</RandomDispatchPedGroups>
+					</DispatchPeds>
+					
+					<PhaseEndConditions>
+						<Condition type="CAIConditionTimeInDispatchPhase">
+							<LowerBound value="2000"/>
+						</Condition>
+					</PhaseEndConditions>
+					
+					<NextPhases>
+						<!-- End Response -->
+					</NextPhases>	
+				</Phase>
+				
+				<!-- Phase: Solo Dual Wield Guy -->
+				<Phase>
+					<Name>DualWield</Name>
+
+					<DispatchPeds>
+						<DispatchPedGroups>
+							<DispatchGroup>
+								<Preset>RiderSpecialSharpshooter</Preset>
+								<MinNumPeds value="1"/>
+								<MaxNumPeds value="1"/>
+							</DispatchGroup>						
+						</DispatchPedGroups>
+					</DispatchPeds>
+				
+					<PhaseEndConditions>
+						<Condition type="CAIConditionTimeInDispatchPhase">
+							<LowerBound value="1000"/>
+						</Condition>
+					</PhaseEndConditions>
+
+					<NextPhases>
+						<PhaseOption>
+							<Name>RHOPhaseControl</Name>
+						</PhaseOption>
+					</NextPhases>
+				</Phase>
+
+				<!-- Phase: LargeCarbineRiders -->
+				<Phase>
+					<Name>LargeCarbineRiders</Name>
+					<GroupMultiplier value="0.3f"/>
+
+					<DispatchPeds>
+						<DispatchPedGroups>
+							<DispatchGroup>
+								<Preset>RiderLowlandsCarbine</Preset>
+								<MinNumPeds value="4"/>
+								<MaxNumPeds value="6"/>
+							</DispatchGroup>
+						</DispatchPedGroups>
+					</DispatchPeds>
+					
+					<PhaseEndConditions>
+						<Condition type="CAIConditionTimeInDispatchPhase">
+							<LowerBound value="1000"/>
+						</Condition>
+					</PhaseEndConditions>
+					
+					<NextPhases>
+						<PhaseOption>
+							<Name>RHOPhaseControl</Name>
+						</PhaseOption>
+					</NextPhases>
+				</Phase>
+
+				<!-- Phase: Wagons -->
+				<Phase>
+					<Name>Wagons</Name>
+
+					<DispatchPeds>
+						<DispatchPedGroups>
+							<DispatchGroup>
+								<Preset>RhodesResidentWagon</Preset>
+								<MinNumPeds value="6"/>
+								<MaxNumPeds value="6"/>
+							</DispatchGroup>
+						</DispatchPedGroups>
+					</DispatchPeds>
+						
+					<PhaseEndConditions>
+						<Condition type="CAIConditionTimeInDispatchPhase">
+							<LowerBound value="1000"/>
+						</Condition>
+					</PhaseEndConditions>	
+						
+					<NextPhases>
+						<PhaseOption>
+							<Name>RHOPhaseControl</Name>
+						</PhaseOption>
+					</NextPhases>
+				</Phase>
+				
+				<!-- Phase: Endless Riders -->
+				<Phase>
+					<Name>EndlessRiders</Name>
+					<GroupMultiplier value="0.3f"/>
+					
+					<DispatchPeds>
+						<RandomDispatchPedGroups>
+							<DispatchGroup>
+								<Preset>RiderLowlandsSniper</Preset>
+								<RandomWeight value="0.2f"/>
+								<MinNumPeds value="3"/>
+								<MaxNumPeds value="5"/>
+							</DispatchGroup>
+						
+							<DispatchGroup>
+								<Preset>RiderLowlandsShotgun</Preset>
+								<RandomWeight value="0.2f"/>
+								<MinNumPeds value="4"/>
+								<MaxNumPeds value="5"/>
+							</DispatchGroup>
+							
+							<DispatchGroup>
+								<Preset>RiderLowlands</Preset>
+								<RandomWeight value="0.6f"/>
+								<MinNumPeds value="4"/>
+								<MaxNumPeds value="6"/>
+							</DispatchGroup>
+						</RandomDispatchPedGroups>
+					</DispatchPeds>
+				
+					<PhaseEndConditions>
+						<Condition type="CAIConditionTimeInDispatchPhase">
+							<LowerBound value="1000"/>
+						</Condition>
+					</PhaseEndConditions>
+
+					<NextPhases>
+						<PhaseOption>
+							<Name>RHOPhaseControl</Name>
+						</PhaseOption>
+					</NextPhases>
+				</Phase>
+			</DispatchPhases>
+		</BountyDispatch>
+	</BountyResponses>
+	<CleanUpDispatchPedPresets>
+		<Item>RiderLowlands</Item>
+	</CleanUpDispatchPedPresets>
+</CDispatchData>

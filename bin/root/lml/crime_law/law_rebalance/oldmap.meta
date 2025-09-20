@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>	
+<CDispatchData>
+	<BountyResponses>
+		<BountyDispatch>
+			<Name>LAW_WILDERNESS_OLD_MAP</Name>
+			<RandomWeight value="1.0" />
+			<RequiredRegion>LAW_REGION_OLD_MAP_WILDERNESS</RequiredRegion>
+			<RequiredCooldowns>
+				<Item>DefaultCooldown</Item>
+			</RequiredCooldowns>
+			<Flags>CantBeCleared</Flags>
+			<CombatInfoOverride>LAW_WILDERNESS</CombatInfoOverride>
+			<DispatchPhases>
+				
+				<!-- Phase: Riders -->
+				<Phase>
+					<Name>Riders</Name>
+					<GroupMultiplier value="0.3"/>
+					<ConditionalSpawnDelays>
+						<Item>
+							<Condition type="CAIConditionReferenced">
+								<Name>DISPATCH_PLAYER_DISTANCE_TO_TOWN_NEAR</Name>
+							</Condition>
+							<SpawnDelay value="15.00"/>
+						</Item>
+						<Item>
+							<Condition type="CAIConditionReferenced">
+								<Name>DISPATCH_PLAYER_DISTANCE_TO_TOWN_MID</Name>
+							</Condition>
+							<SpawnDelay value="20.00"/>
+						</Item>
+					</ConditionalSpawnDelays>
+					<SpawnDelay value="25.00"/>
+					
+					<DispatchPeds>
+						<DispatchPedGroups>
+							<DispatchGroup>
+								<Preset>LawLeaderRuralPlains</Preset>
+								<MinNumPeds value="1"/>
+								<MaxNumPeds value="1"/>
+							</DispatchGroup>
+							<DispatchGroup>
+								<Preset>RiderRuralPlains</Preset>
+								<MinNumPeds value="1"/>
+								<MaxNumPeds value="1"/>
+								<MinSeverityMultiplier value="0.0f"/>
+								<MaxSeverityMultiplier value="3.0f"/>
+							</DispatchGroup>
+						</DispatchPedGroups>
+						<GreedyAcquireCondition type="CAIConditionReferenced">
+							<Name>SHOULD_GRAB_AVAILABLE_DISPATCH_PED</Name>
+						</GreedyAcquireCondition>
+					</DispatchPeds>
+				
+					<PhaseEndConditions>
+						<Condition type="CAIConditionReferenced">
+							<Name>DISPATCH_LOW_SEVERITY_ESCALATION_WILDERNESS</Name>
+						</Condition>
+					</PhaseEndConditions>
+					
+					<!-- Reloop back to BLWPhaseControl -->
+					<NextPhases>
+						<!-- End Response -->
+					</NextPhases>	
+				</Phase>
+			</DispatchPhases>
+		</BountyDispatch>
+	</BountyResponses>
+	<CleanUpDispatchPedPresets>
+		<Item>RiderRuralPlains</Item>
+	</CleanUpDispatchPedPresets>
+</CDispatchData>
