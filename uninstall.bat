@@ -12,6 +12,8 @@ del /s /q "%~dp0..\ScriptHookRDR2.dll"
 rmdir /s /q "%~dp0..\lml"
 
 :: Check for other files placed in game directory and delete them
+del /s /q "%~dp0..\asiloader.txt"
+del /s /q "%~dp0..\ModManager.txt"
 del /s /q "%~dp0..\lml.ini"
 del /s /q "%~dp0..\ScriptHookConfig.ini"
 del /s /q "%~dp0..\BarBrawls.asi"

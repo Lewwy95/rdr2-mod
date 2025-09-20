@@ -82,11 +82,8 @@ if not exist "%~dp0..\ScriptHookRDR2.dll" (
     del /s /q "%~dp0\bin\temp\*"
 
     :: Extract LML folder and move it to the game directory
-    xcopy /s /y /i "%~dp0\bin\root\*" "%~dp0..\"
-
-    :: Delete left over files (if applicable)
-    del /s /q "%~dp0..\dll.zip"
-    del /s /q "%~dp0..\asi-ini.zip"
+    mkdir "%~dp0..\lml"
+    copy "%~dp0\bin\root\lml\*" "%~dp0..\lml\"
 )
 cls
 
