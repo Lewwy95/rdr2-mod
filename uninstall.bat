@@ -13,6 +13,7 @@ rmdir /s /q "%~dp0..\lml"
 
 :: Check for ASI and INI files placed in game directory and delete them
 del /s /q "%~dp0..\lml.ini"
+del /s /q "%~dp0..\BarBrawls.asi"
 del /s /q "%~dp0..\NoBulletTrail.asi"
 del /s /q "%~dp0..\RDR2NoBlackBars.asi"
 del /s /q "%~dp0..\vfs.asi"
