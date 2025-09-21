@@ -76,8 +76,8 @@ if not exist "%~dp0..\ScriptHookRDR2.dll" (
     xcopy /s /y /i "%~dp0\bin\temp\*" "%~dp0..\"
     del /s /q "%~dp0\bin\temp\*"
 
-    :: Extract ASI and INI files and move them to the game directory
-    powershell -c "Expand-Archive '%~dp0\bin\root\asi-ini.zip' -Force '%~dp0\bin\temp'"
+    :: Extract modloader and its files and move them to the game directory
+    powershell -c "Expand-Archive '%~dp0\bin\root\modloader.zip' -Force '%~dp0\bin\temp'"
     xcopy /s /y /i "%~dp0\bin\temp\*" "%~dp0..\"
     del /s /q "%~dp0\bin\temp\*"
 

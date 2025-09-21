@@ -8,8 +8,9 @@ del /s /q "%~dp0..\ModManager.NativeInterop.dll"
 del /s /q "%~dp0..\NLog.dll"
 del /s /q "%~dp0..\ScriptHookRDR2.dll"
 
-:: Check for Lenny Mod Loader and delete it
+:: Check for mod folders including LML and delete it
 rmdir /s /q "%~dp0..\lml"
+rmdir /s /q "%~dp0..\DSX"
 
 :: Check for other files placed in game directory and delete them
 del /s /q "%~dp0..\asiloader.log"
@@ -17,6 +18,7 @@ del /s /q "%~dp0..\ModManager.log"
 del /s /q "%~dp0..\lml.ini"
 del /s /q "%~dp0..\ScriptHookConfig.ini"
 del /s /q "%~dp0..\BarBrawls.asi"
+del /s /q "%~dp0..\DSX.asi"
 del /s /q "%~dp0..\NoBulletTrail.asi"
 del /s /q "%~dp0..\RDR2NoBlackBars.asi"
 del /s /q "%~dp0..\vfs.asi"
