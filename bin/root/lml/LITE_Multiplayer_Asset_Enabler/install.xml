@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<EasyInstall>
+  <Name>LITE - Multiplayer Asset Enabler</Name>
+  <Author>Chunk</Author>
+  <Version>1.4.0</Version>
+  <Link></Link>
+  <Metadata></Metadata>
+  <Resources>
+    <Resource>
+      <FileReplacement>	  
+        <GamePath>update:/pack_patch/mp001/content.xml</GamePath>
+        <FilePath>unlocks/mp001.xml</FilePath>
+      </FileReplacement>
+      <FileReplacement>
+        <GamePath>update:/pack_patch/mp003/content.xml</GamePath>
+        <FilePath>unlocks/mp003.xml</FilePath>
+      </FileReplacement>
+      <FileReplacement>
+        <GamePath>update:/pack_patch/mp004/content.xml</GamePath>
+        <FilePath>unlocks/mp004.xml</FilePath>
+      </FileReplacement>
+      <FileReplacement>
+        <GamePath>update:/pack_patch/mp005/content.xml</GamePath>
+        <FilePath>unlocks/mp005.xml</FilePath>
+      </FileReplacement>
+      <FileReplacement>
+        <GamePath>update:/pack_patch/mp006/content.xml</GamePath>
+        <FilePath>unlocks/mp006.xml</FilePath>
+      </FileReplacement>
+      <FileReplacement>
+        <GamePath>update:/pack_patch/mp007/content.xml</GamePath>
+        <FilePath>unlocks/mp007.xml</FilePath>
+      </FileReplacement>
+      <FileReplacement>
+        <GamePath>update:/pack_patch/mp008/content.xml</GamePath>
+        <FilePath>unlocks/mp008.xml</FilePath>
+      </FileReplacement>
+      <FileReplacement>
+        <GamePath>dlc_mp009:/content.xml</GamePath>
+        <FilePath>unlocks/mp009.xml</FilePath>
+      </FileReplacement>
+      <FileReplacement>
+        <GamePath>update:/pack_patch/patchpack_mp001/content.xml</GamePath>
+        <FilePath>unlocks/patchpackmp001.xml</FilePath>
+      </FileReplacement>		  
+    </Resource>	
+  </Resources>
+</EasyInstall>

@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CDataFileMgr__ContentsOfDataFileXml>
+  <disabledFiles />
+  <includedXmlFiles />
+  <includedDataFiles />
+  <dataFiles>
+	<Item>
+		<filename>dlc_mp003:/%PLATFORM%/packs/base/models/metaped_textures_c.rpf</filename>
+		<disabled value="true"/>
+		<persistent value="false"/>
+		<doPostLoad value="false" />
+		<overlay value="true"/>
+		<fileType>RPF_FILE</fileType>
+	</Item>
+	<Item>
+		<filename>dlc_mp003:/%PLATFORM%/packs/base/models/metapeds_c.rpf</filename>
+		<disabled value="true"/>
+		<persistent value="false"/>
+		<doPostLoad value="false" />
+		<overlay value="true"/>
+		<fileType>RPF_FILE</fileType>
+	</Item>
+	<Item>
+		<filename>dlc_mp003:/%PLATFORM%/packs/base/models/metaped_textures_m.rpf</filename>
+		<disabled value="true"/>
+		<persistent value="false"/>
+		<doPostLoad value="false" />
+		<overlay value="true"/>
+		<fileType>RPF_FILE</fileType>
+	</Item>
+	<Item>
+		<filename>dlc_mp003:/%PLATFORM%/packs/base/models/metapeds_m.rpf</filename>
+		<disabled value="true"/>
+		<persistent value="false"/>
+		<doPostLoad value="false" />
+		<overlay value="true"/>
+		<fileType>RPF_FILE</fileType>
+	</Item>
+  </dataFiles>
+  <contentChangeSets>
+		<Item>
+			<changeSetName>MP003_METAPED_RPF</changeSetName>
+			  <filesToInvalidate/>
+			  <filesToDisable/>
+			  <filesToEnable>
+				<Item>dlc_mp003:/%PLATFORM%/packs/base/models/metaped_textures_c.rpf</Item>
+				<Item>dlc_mp003:/%PLATFORM%/packs/base/models/metapeds_c.rpf</Item>
+				<Item>dlc_mp003:/%PLATFORM%/packs/base/models/metaped_textures_m.rpf</Item>
+				<Item>dlc_mp003:/%PLATFORM%/packs/base/models/metapeds_m.rpf</Item>
+			  </filesToEnable>
+			<executionConditions/>
+		</Item>
+	</contentChangeSets>
+  <patchFiles />
+</CDataFileMgr__ContentsOfDataFileXml>

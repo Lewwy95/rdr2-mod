@@ -1,0 +1,16 @@
+<EasyInstall>
+    <Name>Persistent Dirt</Name>
+    <Author>black0cs</Author>
+    <Version>2024</Version>
+    <Link></Link>
+    <Metadata>
+    </Metadata>
+    <Resources>
+        <Resource>
+            <FileReplacement>
+                <GamePath>update:/common/data/visualsettings.dat</GamePath>
+                <FilePath>visualsettings.dat</FilePath>
+            </FileReplacement>
+        </Resource>
+    </Resources>
+</EasyInstall>

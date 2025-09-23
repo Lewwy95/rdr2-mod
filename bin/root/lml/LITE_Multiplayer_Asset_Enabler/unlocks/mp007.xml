@@ -1,0 +1,294 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CDataFileMgr__ContentsOfDataFileXml>
+  <disabledFiles />
+  <includedXmlFiles />
+  <includedDataFiles />
+  <dataFiles>
+		<Item>
+			<filename>dlc_mp007:/%PLATFORM%/anim/ingame/clip_mech_weapons_special.rpf</filename>
+			<fileType>RPF_FILE</fileType>
+			<overlay value="false"/>
+			<disabled value="true"/>
+			<persistent value="true"/>
+			<contents>CONTENTS_ANIMATION</contents>
+		</Item>
+		<Item>
+			<filename>dlc_mp007:/%PLATFORM%/anim/ingame/clip_mech_weapons_longarms.rpf</filename>
+			<fileType>RPF_FILE</fileType>
+			<overlay value="false"/>
+			<disabled value="true"/>
+			<persistent value="true"/>
+			<contents>CONTENTS_ANIMATION</contents>
+		</Item>
+		<Item>
+			<filename>dlc_mp007:/%PLATFORM%/anim/ingame/clip_mech_inventory.rpf</filename>
+			<fileType>RPF_FILE</fileType>
+			<overlay value="false"/>
+			<disabled value="true"/>
+			<persistent value="true"/>
+			<contents>CONTENTS_ANIMATION</contents>
+		</Item>
+		<Item>
+			<filename>dlc_mp007:/%PLATFORM%/anim/megadictionaries/clip_mega_mech_weapons_longarms.rpf</filename>
+			<fileType>RPF_FILE</fileType>
+			<overlay value="false"/>
+			<disabled value="true"/>
+			<persistent value="true"/>
+			<contents>CONTENTS_ANIMATION</contents>
+		</Item>
+		<Item>
+		  <filename>dlc_mp007:/%PLATFORM%/anim/megadictionaries/clip_mega_mech_weapons_special.rpf</filename>
+		  <fileType>RPF_FILE</fileType>
+		  <overlay value="false"/>
+		  <disabled value="true"/>
+		  <persistent value="true"/>
+		  <contents>CONTENTS_ANIMATION</contents>
+		</Item>
+		<Item>
+			<filename>dlc_mp007:/%PLATFORM%/levels/rdr3/props/lev_des/mp007_naturalist.rpf</filename>
+			<overlay value="false" />
+			<disabled value="true"/>
+			<persistent value="false"/>
+			<fileType>RPF_FILE</fileType>
+		</Item>
+		<Item>
+			<filename>dlc_mp007:/%PLATFORM%/levels/rdr3/props/lev_des/mp007_naturalist.ityp</filename>
+			<fileType>DLC_ITYP_REQUEST</fileType>
+			<overlay value="false" />
+			<disabled value="true" />
+			<persistent value="false"/>
+			<contents>CONTENTS_PROPS</contents>
+		</Item>
+		<Item>
+			<filename>dlc_mp007:/%PLATFORM%/levels/rdr3/props/lev_des/mp007_s_bullets.rpf</filename>
+			<overlay value="false" />
+			<disabled value="true"/>
+			<persistent value="false"/>
+			<fileType>RPF_FILE</fileType>
+		</Item>
+		<Item>
+			<filename>dlc_mp007:/%PLATFORM%/levels/rdr3/props/lev_des/mp007_s_bullets.ityp</filename>
+			<fileType>DLC_ITYP_REQUEST</fileType>
+			<overlay value="false" />
+			<disabled value="true" />
+			<persistent value="false"/>
+			<contents>CONTENTS_PROPS</contents>
+		</Item>
+		<Item>
+			<filename>dlc_mp007:/%PLATFORM%/levels/rdr3/props/lev_des/mp007_s_pelts.rpf</filename>
+			<overlay value="false" />
+			<disabled value="true"/>
+			<persistent value="false"/>
+			<fileType>RPF_FILE</fileType>
+		</Item>
+		<Item>
+			<filename>dlc_mp007:/%PLATFORM%/levels/rdr3/props/lev_des/mp007_s_pelts.ityp</filename>
+			<fileType>DLC_ITYP_REQUEST</fileType>
+			<overlay value="false" />
+			<disabled value="true" />
+			<persistent value="false"/>
+			<contents>CONTENTS_PROPS</contents>
+		</Item>		
+		<Item>
+			<filename>dlc_mp007:/%PLATFORM%/data/ai/quickSelectItems</filename>
+			<overlay value="false"/>
+			<disabled value="true"/>
+			<persistent value="false"/>
+			<fileType>WHEEL_INFO_FILE</fileType>
+		</Item>
+		<Item>
+			<filename>dlc_mp007:/%PLATFORM%/data/ai/quickSelectSlots</filename>
+			<overlay value="false"/>
+			<disabled value="true"/>
+			<persistent value="false"/>
+			<fileType>WHEEL_SLOT_FILE</fileType>
+		</Item>
+		<Item>
+			<filename>dlc_mp007:/%PLATFORM%/data/ai/weapon_rifle_elephant</filename>
+			<overlay value="false"/>
+			<disabled value="true" />
+			<persistent value="false"/>
+			<fileType>WEAPONINFO_FILE</fileType>
+		</Item>
+		<Item>
+			<filename>dlc_mp007:/%PLATFORM%/data/ai/weapon_bow_improved</filename>
+			<overlay value="false"/>
+			<disabled value="true" />
+			<persistent value="false"/>
+			<fileType>WEAPONINFO_FILE</fileType>
+		</Item>
+		<Item>
+			<filename>dlc_mp007:/%PLATFORM%/data/ai/weapon_kit_camera_advanced</filename>
+			<overlay value="false"/>
+			<disabled value="true" />
+			<persistent value="false"/>
+			<fileType>WEAPONINFO_FILE</fileType>
+		</Item>
+		<Item>
+			<filename>dlc_mp007:/%PLATFORM%/data/ai/weapon_melee_machete_horror</filename>
+			<overlay value="false"/>
+			<disabled value="true" />
+			<persistent value="false"/>
+			<fileType>WEAPONINFO_FILE</fileType>
+		</Item>
+		<Item>
+			<filename>dlc_mp007:/common/data/ai/weapon_rifle_elephant_mp</filename>
+			<overlay value="false"/>
+			<disabled value="true"/>
+			<persistent value="false"/>
+			<fileType>WEAPONINFO_MP_PATCH_FILE</fileType>
+		</Item>
+		<Item>
+			<filename>dlc_mp007:/common/packs/base/data/ai/weaponanimations</filename>
+			<overlay value="false"/>
+			<disabled value="true"/>
+			<persistent value="true"/>
+			<fileType>WEAPON_ANIMATIONS_FILE</fileType>
+		</Item>
+		<Item>
+			<filename>dlc_mp007:/common/data/pickups</filename>
+			<overlay value="false"/>
+			<disabled value="true"/>
+			<persistent value="false"/>
+			<fileType>DLC_WEAPON_PICKUPS</fileType>
+		</Item>
+		<Item>
+			<filename>dlc_mp007:/common/data/ai/weaponcomponents</filename>
+			<overlay value="false"/>
+			<disabled value="true"/>
+			<persistent value="false"/>
+			<fileType>WEAPONCOMPONENTSINFO_FILE</fileType>
+		</Item>
+		<Item>
+			<filename>dlc_mp007:/common/data/weaponArchetypes</filename>
+			<overlay value="false"/>
+			<disabled value="true"/>
+			<persistent value="false"/>
+			<fileType>WEAPON_METADATA_FILE</fileType>
+		</Item>
+		<Item>
+			<filename>dlc_mp007:/%PLATFORM%/packs/base/data/weapontxdchain</filename>
+			<disabled value="true"/>
+			<persistent value="false"/>
+			<fileType>WEAPON_TXD_CHAIN_FILE</fileType>
+		</Item>
+		<Item>
+			<filename>dlc_mp007:/%PLATFORM%/packs/base/models/weapons.rpf</filename>
+			<disabled value="true"/>
+			<persistent value="false"/>
+			<overlay value="false"/>
+			<fileType>RPF_FILE</fileType>
+		</Item>
+		<Item>
+			<filename>dlc_mp007:/%PLATFORM%/packs/base/models/metaped_textures_c.rpf</filename>
+			<disabled value="true"/>
+			<persistent value="false"/>
+			<doPostLoad value="false" />
+			<overlay value="true"/>
+			<fileType>RPF_FILE</fileType>
+		</Item>
+		<Item>
+			<filename>dlc_mp007:/%PLATFORM%/packs/base/models/metapeds_c.rpf</filename>
+			<disabled value="true"/>
+			<persistent value="false"/>
+			<doPostLoad value="false" />
+			<overlay value="true"/>
+			<fileType>RPF_FILE</fileType>
+		</Item>
+		<Item>
+			<filename>dlc_mp007:/%PLATFORM%/packs/base/models/metaped_textures_m.rpf</filename>
+			<disabled value="true"/>
+			<persistent value="false"/>
+			<doPostLoad value="false" />
+			<overlay value="true"/>
+			<fileType>RPF_FILE</fileType>
+		</Item>
+		<Item>
+			<filename>dlc_mp007:/%PLATFORM%/packs/base/models/metapeds_m.rpf</filename>
+			<disabled value="true"/>
+			<persistent value="false"/>
+			<doPostLoad value="false" />
+			<overlay value="true"/>
+			<fileType>RPF_FILE</fileType>
+		</Item>
+	</dataFiles>
+  <contentChangeSets>
+		<Item>
+			<changeSetName>MP007_ANIM</changeSetName>
+			<filesToInvalidate/>
+			<filesToDisable/>
+			<filesToEnable>
+				<item>dlc_mp007:/%PLATFORM%/anim/ingame/clip_mech_weapons_longarms.rpf</item>
+				<item>dlc_mp007:/%PLATFORM%/anim/ingame/clip_mech_weapons_special.rpf</item>
+				<Item>dlc_mp007:/%PLATFORM%/anim/ingame/clip_mech_inventory.rpf</Item>
+				<Item>dlc_mp007:/%PLATFORM%/anim/megadictionaries/clip_mega_mech_weapons_longarms.rpf</Item>
+				<Item>dlc_mp007:/%PLATFORM%/anim/megadictionaries/clip_mega_mech_weapons_special.rpf</Item>
+			</filesToEnable>
+			<executionConditions/>
+		</Item>
+		<Item>
+		<changeSetName>MP007_PROPS</changeSetName>
+			<filesToInvalidate/>
+			<filesToDisable/>
+			<filesToEnable>
+				<Item>dlc_mp007:/%PLATFORM%/levels/rdr3/props/lev_des/mp007_naturalist.rpf</Item>
+				<Item>dlc_mp007:/%PLATFORM%/levels/rdr3/props/lev_des/mp007_naturalist.ityp</Item>
+				<Item>dlc_mp007:/%PLATFORM%/levels/rdr3/props/lev_des/mp007_s_bullets.rpf</Item>
+				<Item>dlc_mp007:/%PLATFORM%/levels/rdr3/props/lev_des/mp007_s_bullets.ityp</Item>
+				<Item>dlc_mp007:/%PLATFORM%/levels/rdr3/props/lev_des/mp007_s_pelts.rpf</Item>
+				<Item>dlc_mp007:/%PLATFORM%/levels/rdr3/props/lev_des/mp007_s_pelts.ityp</Item>				
+			</filesToEnable>
+			<executionConditions/>
+		</Item>
+		<Item>
+			<changeSetName>MP007_WEAPONS_EARLY</changeSetName>
+			<filesToInvalidate/>
+			<filesToDisable/>
+			<filesToEnable>
+				<Item>dlc_mp007:/%PLATFORM%/data/ai/quickSelectItems</Item>
+				<Item>dlc_mp007:/%PLATFORM%/data/ai/quickSelectSlots</Item>
+			</filesToEnable>
+			<executionConditions/>
+		</Item>
+		<Item>
+			<changeSetName>MP007_WEAPONS_RPF</changeSetName>
+			<filesToInvalidate/>
+			<filesToDisable/>
+			<filesToEnable>
+				<Item>dlc_mp007:/%PLATFORM%/packs/base/models/weapons.rpf</Item>
+			</filesToEnable>
+			<executionConditions/>
+		</Item>
+		<Item>
+			<changeSetName>MP007_WEAPONS_NON_RPF</changeSetName>
+			<filesToInvalidate/>
+			<filesToDisable/>
+			<filesToEnable>
+				<Item>dlc_mp007:/common/data/pickups</Item>
+				<Item>dlc_mp007:/%PLATFORM%/data/ai/weapon_rifle_elephant</Item>
+				<Item>dlc_mp007:/%PLATFORM%/data/ai/weapon_bow_improved</Item>
+				<Item>dlc_mp007:/%PLATFORM%/data/ai/weapon_kit_camera_advanced</Item>
+				<Item>dlc_mp007:/%PLATFORM%/data/ai/weapon_melee_machete_horror</Item>
+				<Item>dlc_mp007:/common/data/ai/weaponcomponents</Item>
+				<Item>dlc_mp007:/common/data/ai/weapon_rifle_elephant_mp</Item>
+				<Item>dlc_mp007:/common/packs/base/data/ai/weaponanimations</Item>
+				<Item>dlc_mp007:/%PLATFORM%/packs/base/data/weapontxdchain</Item>
+				<Item>dlc_mp007:/common/data/weaponarchetypes</Item>
+			</filesToEnable>
+			<executionConditions/>
+		</Item>
+		<Item>
+			<changeSetName>MP007_METAPED_RPF</changeSetName>
+				<filesToInvalidate/>
+				<filesToDisable/>
+				<filesToEnable>
+				<Item>dlc_mp007:/%PLATFORM%/packs/base/models/metaped_textures_c.rpf</Item>
+				<Item>dlc_mp007:/%PLATFORM%/packs/base/models/metaped_textures_m.rpf</Item>
+				<Item>dlc_mp007:/%PLATFORM%/packs/base/models/metapeds_c.rpf</Item>
+				<Item>dlc_mp007:/%PLATFORM%/packs/base/models/metapeds_m.rpf</Item>
+				</filesToEnable>
+			<executionConditions/>
+		</Item>
+  </contentChangeSets>
+  <patchFiles />
+</CDataFileMgr__ContentsOfDataFileXml>

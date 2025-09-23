@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CDataFileMgr__ContentsOfDataFileXml>
+    <disabledFiles />
+    <includedXmlFiles />
+    <includedDataFiles />
+    <dataFiles>
+	<Item>
+	    <filename>dlc_mp001:/%PLATFORM%/levels/rdr3/props/lev_des/mp001_lev_des_mp.rpf</filename>
+	    <overlay value="true" />
+	    <disabled value="true"/>
+	    <persistent value="false"/>
+	    <fileType>RPF_FILE</fileType>
+	</Item>	
+	<Item>
+	    <filename>dlc_mp001:/%PLATFORM%/packs/base/models/metaped_textures_b.rpf</filename>
+	    <disabled value="true"/>
+	    <persistent value="false"/>
+	    <doPostLoad value="false" />
+	    <overlay value="false"/>
+	    <fileType>RPF_FILE</fileType>
+	</Item>
+	<Item>
+	    <filename>dlc_mp001:/%PLATFORM%/packs/base/models/metaped_textures_cutscene_m_r.rpf</filename>
+	    <disabled value="true"/>
+	    <persistent value="false"/>
+	    <doPostLoad value="false" />
+	    <overlay value="false"/>
+	    <fileType>RPF_FILE</fileType>
+	</Item>
+	<Item>
+	    <filename>dlc_mp001:/%PLATFORM%/packs/base/models/metaped_textures_m.rpf</filename>
+	    <disabled value="true"/>
+	    <persistent value="false"/>
+	    <doPostLoad value="false" />
+	    <overlay value="false"/>
+	    <fileType>RPF_FILE</fileType>
+	</Item>
+	<Item>
+	    <filename>dlc_mp001:/%PLATFORM%/packs/base/models/metapeds_b.rpf</filename>
+	    <disabled value="true"/>
+	    <persistent value="false"/>
+	    <doPostLoad value="false" />
+	    <overlay value="false"/>
+	    <fileType>RPF_FILE</fileType>
+	</Item>
+	<Item>
+	    <filename>dlc_mp001:/%PLATFORM%/packs/base/models/metapeds_cutscene_m_r.rpf</filename>
+	    <disabled value="true"/>
+	    <persistent value="false"/>
+	    <doPostLoad value="false" />
+	    <overlay value="false"/>
+	    <fileType>RPF_FILE</fileType>
+	</Item>
+	<Item>
+	    <filename>dlc_mp001:/%PLATFORM%/packs/base/models/metapeds_m.rpf</filename>
+	    <disabled value="true"/>
+	    <persistent value="false"/>
+	    <doPostLoad value="false" />
+	    <overlay value="false"/>
+	    <fileType>RPF_FILE</fileType>
+	</Item>
+	<Item>
+	    <filename>dlc_mp001:/%PLATFORM%/textures/mp001_palettes.#td</filename>
+	    <fileType>RESIDENT_TXD</fileType>
+	    <overlay value="false"/>
+	    <disabled value="true"/>
+	    <persistent value="false"/>
+	</Item>
+	<Item>
+	    <filename>dlc_mp001:/%PLATFORM%/textures/mp001_swatches</filename>
+	    <fileType>SWATCHES_TXD</fileType>
+	    <overlay value="false"/>
+	    <disabled value="true"/>
+	    <persistent value="false"/>
+	</Item>
+     </dataFiles>
+<contentChangeSets>
+	<Item>
+	    <changeSetName>MP001_METAPED_RPF</changeSetName>
+	      <filesToInvalidate/>
+	      <filesToDisable/>
+	      <filesToEnable>
+		<Item>dlc_mp001:/%PLATFORM%/packs/base/models/metaped_textures_b.rpf</Item>
+		<Item>dlc_mp001:/%PLATFORM%/packs/base/models/metaped_textures_cutscene_m_r.rpf</Item>
+		<Item>dlc_mp001:/%PLATFORM%/packs/base/models/metaped_textures_m.rpf</Item>
+		<Item>dlc_mp001:/%PLATFORM%/packs/base/models/metapeds_b.rpf</Item>
+		<Item>dlc_mp001:/%PLATFORM%/packs/base/models/metapeds_cutscene_m_r.rpf</Item>
+		<Item>dlc_mp001:/%PLATFORM%/packs/base/models/metapeds_m.rpf</Item>
+		<Item>dlc_mp001:/%PLATFORM%/textures/mp001_palettes.#td</Item>
+		<Item>dlc_mp001:/%PLATFORM%/textures/mp001_swatches</Item>
+	      </filesToEnable>
+	    <executionConditions/>
+	</Item>
+    <Item>
+        <changeSetName>MP001_PROPS</changeSetName>
+          <filesToInvalidate/>
+          <filesToDisable/>
+          <filesToEnable>         
+            <Item>dlc_mp001:/%PLATFORM%/levels/rdr3/props/lev_des/mp001_lev_des_mp.rpf</Item>                           
+          </filesToEnable>
+        <executionConditions/>
+    </Item>	
+    </contentChangeSets>
+    <patchFiles />
+</CDataFileMgr__ContentsOfDataFileXml>

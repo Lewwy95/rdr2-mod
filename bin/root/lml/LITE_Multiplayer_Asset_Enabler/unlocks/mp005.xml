@@ -1,0 +1,331 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CDataFileMgr__ContentsOfDataFileXml>
+  <disabledFiles />
+  <includedXmlFiles />
+  <includedDataFiles />
+  <dataFiles>
+	<Item>
+	  <filename>dlc_mp005:/%PLATFORM%/data/ai/quickSelectItems</filename>
+	  <overlay value="false"/>
+	  <disabled value="true"/>
+	  <persistent value="false"/>
+	  <fileType>WHEEL_INFO_FILE</fileType>
+	</Item>
+	<Item>
+	  <filename>dlc_mp005:/%PLATFORM%/data/ai/quickSelectSlots</filename>
+	  <overlay value="false"/>
+	  <disabled value="true"/>
+	  <persistent value="false"/>
+	  <fileType>WHEEL_SLOT_FILE</fileType>
+	</Item>
+	<Item>
+	  <filename>dlc_mp005:/%PLATFORM%/packs/base/models/weapons.rpf</filename>
+	  <disabled value="true"/>
+	  <persistent value="false"/>
+	  <overlay value="false"/>
+	  <fileType>RPF_FILE</fileType>
+	</Item>
+	<Item>
+		<filename>dlc_mp005:/%PLATFORM%/packs/base/data/weapontxdchain</filename>
+		<disabled value="true"/>
+		<persistent value="false"/>
+		<fileType>WEAPON_TXD_CHAIN_FILE</fileType>
+	</Item>
+	<Item>
+	  <filename>dlc_mp005:/common/data/pickups</filename>
+	  <fileType>DLC_WEAPON_PICKUPS</fileType>
+	  <overlay value="false"/>
+	  <disabled value="true"/>
+	  <persistent value="false"/>
+	</Item>
+	<Item>
+	  <filename>dlc_mp005:/%PLATFORM%/data/ai/weapons_mp005_bountyhunter</filename>
+	  <fileType>WEAPONINFO_FILE</fileType>
+	  <overlay value="false"/>
+	  <disabled value="true" />
+	  <persistent value="false"/>
+	</Item>
+	<Item>
+	  <filename>dlc_mp005:/%PLATFORM%/data/ai/weapons_mp005_collector</filename>
+	  <fileType>WEAPONINFO_FILE</fileType>
+	  <overlay value="false"/>
+	  <disabled value="true" />
+	  <persistent value="false"/>
+	</Item>
+	<Item>
+	  <filename>dlc_mp005:/%PLATFORM%/data/ai/weapons_mp005_trader</filename>
+	  <fileType>WEAPONINFO_FILE</fileType>
+	  <overlay value="false"/>
+	  <disabled value="true" />
+	  <persistent value="false"/>
+	</Item>
+	<Item>
+	  <filename>dlc_mp005:/common/data/ai/aimupperbodydata</filename>
+	  <overlay value="false"/>
+	  <disabled value="true"/>
+	  <persistent value="true"/>
+	  <fileType>AIM_UPPER_BODY_DATA_FILE</fileType>
+	</Item>
+	<Item>
+	  <filename>dlc_mp005:/common/data/weaponarchetypes</filename>
+	  <overlay value="false"/>
+	  <disabled value="true"/>
+	  <persistent value="false"/>
+	  <fileType>WEAPON_METADATA_FILE</fileType>
+	</Item>
+	<Item>
+		<filename>dlc_mp005:/common/data/ai/weaponanimations</filename>
+		<fileType>WEAPON_ANIMATIONS_FILE</fileType>
+		<overlay value="false"/>
+		<disabled value="true"/>
+		<persistent value="true"/>
+	</Item>
+	<Item>
+		<filename>dlc_mp008:/%PLATFORM%/anim/ingame/clip_mech_inventory.rpf</filename>
+		<fileType>RPF_FILE</fileType>
+		<overlay value="false"/>
+		<disabled value="true"/>
+		<persistent value="true"/>
+		<contents>CONTENTS_ANIMATION</contents>
+	</Item>
+	<Item>
+		<filename>dlc_mp005:/%PLATFORM%/anim/ingame/clip_mech_weapons_special.rpf</filename>
+		<fileType>RPF_FILE</fileType>
+		<overlay value="false"/>
+		<disabled value="true"/>
+		<persistent value="true"/>
+		<contents>CONTENTS_ANIMATION</contents>
+	</Item>
+	<Item>
+		<filename>dlc_mp005:/%PLATFORM%/anim/ingame/clip_mech_weapons_core.rpf</filename>
+		<fileType>RPF_FILE</fileType>
+		<overlay value="false"/>
+		<disabled value="true"/>
+		<persistent value="true"/>
+		<contents>CONTENTS_ANIMATION</contents>
+	</Item>
+	<Item>
+		<filename>dlc_mp005:/%PLATFORM%/anim/ingame/clip_mech_weapons_thrown.rpf</filename>
+		<fileType>RPF_FILE</fileType>
+		<overlay value="false"/>
+		<disabled value="true"/>
+		<persistent value="true"/>
+		<contents>CONTENTS_ANIMATION</contents>
+	</Item>
+    <Item>
+		<filename>dlc_mp005:/%PLATFORM%/anim/ingame/clip_veh_horseback.rpf</filename>
+		<fileType>RPF_FILE</fileType>
+		<overlay value="false"/>
+		<disabled value="true"/>
+		<persistent value="false"/>
+		<contents>CONTENTS_ANIMATION</contents>
+	</Item>
+	<Item>
+		<filename>dlc_mp005:/%PLATFORM%/anim/megadictionaries/clip_mega_mech_weapons_special.rpf</filename>
+		<fileType>RPF_FILE</fileType>
+		<overlay value="false"/>
+		<disabled value="true"/>
+		<persistent value="true"/>
+		<contents>CONTENTS_ANIMATION</contents>
+	</Item>
+	<Item>
+		<filename>dlc_mp005:/%PLATFORM%/anim/megadictionaries/clip_mega_mech_weapons_thrown.rpf</filename>
+		<fileType>RPF_FILE</fileType>
+		<overlay value="false"/>
+		<disabled value="true"/>
+		<persistent value="true"/>
+		<contents>CONTENTS_ANIMATION</contents>
+	</Item>
+	<Item>
+	  <filename>dlc_mp005:/%PLATFORM%/anim/ingame/clip_mech_animal_interaction.rpf</filename>
+      <fileType>RPF_FILE</fileType>
+	  <overlay value="false"/>
+	  <disabled value="true"/>
+	  <persistent value="true"/>
+	  <locked value="true"/>
+	  <contents>CONTENTS_ANIMATION</contents>
+	</Item>
+	<Item>
+      <filename>dlc_mp005:/%PLATFORM%/anim/motions/mech_weapons.rpf</filename>
+      <fileType>RPF_FILE</fileType>
+      <disabled value="true"/>
+      <persistent value="true"/>
+      <overlay value="false"/>
+      <contents>CONTENTS_ANIMATION</contents>
+    </Item>
+	<Item>
+		<filename>dlc_mp005:/%PLATFORM%/levels/rdr3/props/lev_des/mp005_s_lev_des.rpf</filename>
+		<overlay value="false" />
+		<disabled value="true"/>
+		<persistent value="false"/>
+		<fileType>RPF_FILE</fileType>
+	</Item>
+	<Item>
+		<filename>dlc_mp005:/%PLATFORM%/levels/rdr3/props/lev_des/mp005_s_lev_des.ityp</filename>
+		<fileType>DLC_ITYP_REQUEST</fileType>
+		<overlay value="false" />
+		<disabled value="true" />
+		<persistent value="false"/>
+		<contents>CONTENTS_PROPS</contents>
+	</Item>
+	<Item>
+		<filename>dlc_mp005:/%PLATFORM%/levels/rdr3/props/lev_des/mp005_s_lev_des_mp.rpf</filename>
+		<overlay value="false" />
+		<disabled value="true"/>
+		<persistent value="false"/>
+		<fileType>RPF_FILE</fileType>
+	</Item>
+	<Item>
+		<filename>dlc_mp005:/%PLATFORM%/levels/rdr3/props/lev_des/mp005_s_lev_des_mp.ityp</filename>
+		<fileType>DLC_ITYP_REQUEST</fileType>
+		<overlay value="false" />
+		<disabled value="true" />
+		<persistent value="false"/>
+		<contents>CONTENTS_PROPS</contents>
+	</Item>
+	<Item>
+		<filename>dlc_mp005:/%PLATFORM%/levels/rdr3/props/propgroups.rpf</filename>
+		<overlay value="true" />
+		<disabled value="true"/>
+		<persistent value="false"/>
+		<loadCompletely value="true"/>
+		<fileType>RPF_FILE</fileType>
+	</Item>
+	<Item>
+		<filename>dlc_mp005:/%PLATFORM%/packs/base/models/metapeds_c.rpf</filename>
+		<disabled value="true"/>
+		<persistent value="false"/>
+		<doPostLoad value="false" />
+		<overlay value="true"/>
+		<fileType>RPF_FILE</fileType>
+	</Item>
+	<Item>
+		<filename>dlc_mp005:/%PLATFORM%/textures/mp005_palettes.#td</filename>
+		<fileType>RESIDENT_TXD</fileType>
+		<overlay value="true"/>
+		<disabled value="true"/>
+		<persistent value="true"/>
+	</Item>
+	<Item>
+		<filename>dlc_mp005:/%PLATFORM%/packs/base/models/metaped_textures_c.rpf</filename>
+		<disabled value="true"/>
+		<persistent value="false"/>
+		<doPostLoad value="false" />
+		<overlay value="true"/>
+		<fileType>RPF_FILE</fileType>
+	</Item>
+	<Item>
+		<filename>dlc_mp005:/%PLATFORM%/packs/base/models/metaped_textures_m.rpf</filename>
+		<disabled value="true"/>
+		<persistent value="false"/>
+		<doPostLoad value="false" />
+		<overlay value="true"/>
+		<fileType>RPF_FILE</fileType>
+	</Item>
+	<Item>
+		<filename>dlc_mp005:/%PLATFORM%/packs/base/models/metapeds_m.rpf</filename>
+		<disabled value="true"/>
+		<persistent value="false"/>
+		<doPostLoad value="false" />
+		<overlay value="true"/>
+		<fileType>RPF_FILE</fileType>
+	</Item>
+	<Item>
+		<filename>dlc_mp005:/%PLATFORM%/audio/dlcmp005_game.dat</filename>
+		<fileType>AUDIO_GAMEDATA</fileType>
+		<overlay value="false" />
+		<disabled value="true" />
+		<persistent value="false"/>
+	</Item>
+  </dataFiles>
+  <contentChangeSets>
+    <Item>
+	  <changeSetName>MP005_WEAPONS_EARLY</changeSetName>
+	  <filesToInvalidate/>
+	  <filesToDisable/>
+	  <filesToEnable>
+		<Item>dlc_mp005:/%PLATFORM%/data/ai/quickSelectItems</Item>
+		<Item>dlc_mp005:/%PLATFORM%/data/ai/quickSelectSlots</Item>
+	  </filesToEnable>
+		<executionConditions/>
+	</Item>
+	<Item>
+	  <changeSetName>MP005_WEAPONS_RPF</changeSetName>
+	  <filesToInvalidate/>
+	  <filesToDisable/>
+	  <filesToEnable>
+		<Item>dlc_mp005:/%PLATFORM%/packs/base/models/weapons.rpf</Item>
+	  </filesToEnable>
+		<executionConditions/>
+	</Item>
+	<Item>
+	  <changeSetName>MP005_WEAPONS_NON_RPF</changeSetName>
+	  <filesToInvalidate/>
+	  <filesToDisable/>
+	  <filesToEnable>
+		<Item>dlc_mp005:/%PLATFORM%/packs/base/data/weapontxdchain</Item>
+		<Item>dlc_mp005:/common/data/pickups</Item>
+		<Item>dlc_mp005:/%PLATFORM%/data/ai/weapons_mp005_bountyhunter</Item>
+		<Item>dlc_mp005:/%PLATFORM%/data/ai/weapons_mp005_collector</Item>
+		<Item>dlc_mp005:/%PLATFORM%/data/ai/weapons_mp005_trader</Item>
+		<Item>dlc_mp005:/common/data/ai/aimupperbodydata</Item>
+		<Item>dlc_mp005:/common/data/weaponarchetypes</Item>
+		<Item>dlc_mp005:/common/data/ai/weaponanimations</Item>
+		</filesToEnable>
+		<executionConditions/>
+	</Item>
+    <Item>
+		<changeSetName>MP005_ANIM</changeSetName>
+		<filesToInvalidate/>
+		<filesToDisable/>
+		<filesToEnable>
+			<Item>dlc_mp005:/%PLATFORM%/anim/ingame/clip_mech_animal_interaction.rpf</Item>
+			<Item>dlc_mp008:/%PLATFORM%/anim/ingame/clip_mech_inventory.rpf</Item>
+			<Item>dlc_mp005:/%PLATFORM%/anim/ingame/clip_mech_weapons_core.rpf</Item>
+			<Item>dlc_mp005:/%PLATFORM%/anim/ingame/clip_mech_weapons_special.rpf</Item>
+			<Item>dlc_mp005:/%PLATFORM%/anim/ingame/clip_mech_weapons_thrown.rpf</Item>
+			<Item>dlc_mp005:/%PLATFORM%/anim/ingame/clip_veh_horseback.rpf</Item>
+			<Item>dlc_mp005:/%PLATFORM%/anim/motions/mech_weapons.rpf</Item>
+			<Item>dlc_mp005:/%PLATFORM%/anim/megadictionaries/clip_mega_mech_weapons_special.rpf</Item>
+			<Item>dlc_mp005:/%PLATFORM%/anim/megadictionaries/clip_mega_mech_weapons_thrown.rpf</Item>
+		</filesToEnable>
+		<executionConditions/>
+	</Item>
+    <Item>
+	<changeSetName>MP005_PROPS</changeSetName>
+		<filesToInvalidate/>
+		<filesToDisable/>
+		<filesToEnable>
+			<Item>dlc_mp005:/%PLATFORM%/levels/rdr3/props/propgroups.rpf</Item>
+			<Item>dlc_mp005:/%PLATFORM%/levels/rdr3/props/lev_des/mp005_s_lev_des.rpf</Item>
+			<Item>dlc_mp005:/%PLATFORM%/levels/rdr3/props/lev_des/mp005_s_lev_des.ityp</Item>
+			<Item>dlc_mp005:/%PLATFORM%/levels/rdr3/props/lev_des/mp005_s_lev_des_mp.rpf</Item>
+			<Item>dlc_mp005:/%PLATFORM%/levels/rdr3/props/lev_des/mp005_s_lev_des_mp.ityp</Item>
+		</filesToEnable>
+		<executionConditions/>
+	</Item>
+	<Item>
+		<changeSetName>MP005_METAPED_RPF</changeSetName>
+			<filesToInvalidate/>
+			<filesToDisable/>
+			<filesToEnable>
+			<Item>dlc_mp005:/%PLATFORM%/packs/base/models/metapeds_c.rpf</Item>
+			<Item>dlc_mp005:/%PLATFORM%/packs/base/models/metaped_textures_c.rpf</Item>
+			<Item>dlc_mp005:/%PLATFORM%/packs/base/models/metaped_textures_m.rpf</Item>
+			<Item>dlc_mp005:/%PLATFORM%/packs/base/models/metapeds_m.rpf</Item>
+			<Item>dlc_mp005:/%PLATFORM%/textures/mp005_palettes.#td</Item>
+			</filesToEnable>
+		<executionConditions/>
+	</Item>
+	<Item>
+		<changeSetName>MP005_AUDIO</changeSetName>
+		<filesToInvalidate/>
+		<filesToDisable/>
+		<filesToEnable>
+			<Item>dlc_mp005:/%PLATFORM%/audio/dlcmp005_game.dat</Item>
+		</filesToEnable>
+		<executionConditions/>
+	</Item>
+  </contentChangeSets>
+  <patchFiles />
+</CDataFileMgr__ContentsOfDataFileXml>

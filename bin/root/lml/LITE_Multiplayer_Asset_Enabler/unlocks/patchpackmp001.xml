@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CDataFileMgr__ContentsOfDataFileXml>
+	<disabledFiles/>
+	<includedXmlFiles/>
+	<includedDataFiles/>
+	<dataFiles>
+		<Item>
+			<filename>dlc_patchpack_mp001:/%PLATFORM%/levels/rdr3/props/lev_des/mp001_lev_des_mp.ityp</filename>
+			<fileType>DLC_ITYP_REQUEST</fileType>
+			<overlay value="true"/>
+			<disabled value="true"/>
+			<persistent value="false"/>
+			<contents>CONTENTS_PROPS</contents>
+		</Item>
+	</dataFiles>
+	<contentChangeSets>
+		<Item>
+			<changeSetName>PATCHPACK_MP001_EARLY</changeSetName>
+			<filesToInvalidate/>
+			<filesToDisable/>
+			<filesToEnable>
+				<!-- PROPS -->
+				<Item>dlc_patchpack_mp001:/%PLATFORM%/levels/rdr3/props/lev_des/mp001_lev_des_mp.ityp</Item>
+			</filesToEnable>
+			<executionConditions/>
+		</Item>
+	</contentChangeSets>
+	<patchFiles/>
+</CDataFileMgr__ContentsOfDataFileXml>

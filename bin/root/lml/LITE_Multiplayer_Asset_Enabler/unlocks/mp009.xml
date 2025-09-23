@@ -1,0 +1,192 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CDataFileMgr__ContentsOfDataFileXml>
+	<disabledFiles />
+	<includedXmlFiles />
+	<includedDataFiles />
+	<dataFiles>
+		<Item>
+			<filename>dlc_mp009:/%PLATFORM%/anim/ingame/clip_script_mp.rpf</filename>
+			<fileType>RPF_FILE</fileType>
+			<overlay value="true"/>
+			<disabled value="true"/>
+			<persistent value="true"/>
+			<contents>CONTENTS_ANIMATION</contents>
+		</Item>
+		<Item>
+			<filename>dlc_mp009:/%PLATFORM%/levels/rdr3/props/lev_des/mp009_s_lev_des.rpf</filename>
+			<overlay value="false" />
+			<disabled value="true"/>
+			<persistent value="false"/>
+			<fileType>RPF_FILE</fileType>
+		</Item>
+		<Item>
+			<filename>dlc_mp009:/%PLATFORM%/levels/rdr3/props/lev_des/mp009_s_lev_des.ityp</filename>
+			<fileType>DLC_ITYP_REQUEST</fileType>
+			<overlay value="false" />
+			<disabled value="true" />
+			<persistent value="false"/>
+			<contents>CONTENTS_PROPS</contents>
+		</Item>
+		<Item>
+			<filename>dlc_mp009:/common/data/pickups</filename>
+			<fileType>DLC_WEAPON_PICKUPS</fileType>
+			<overlay value="false"/>
+			<disabled value="true"/>
+			<persistent value="false"/>
+		</Item>
+		<Item>
+			<filename>dlc_mp009:/%PLATFORM%/data/ai/quickSelectItems</filename>
+			<overlay value="false"/>
+			<disabled value="true"/>
+			<persistent value="false"/>
+			<fileType>WHEEL_INFO_FILE</fileType>
+	</Item>
+		<Item>
+			<filename>dlc_mp009:/%PLATFORM%/data/ai/quickSelectSlots</filename>
+			<overlay value="false"/>
+			<disabled value="true"/>
+			<persistent value="false"/>
+			<fileType>WHEEL_SLOT_FILE</fileType>
+		</Item>
+		<Item>
+			<filename>dlc_mp009:/%PLATFORM%/data/ai/weapon_melee_knife_horror</filename>
+			<overlay value="false"/>
+			<disabled value="true" />
+			<persistent value="false"/>
+			<fileType>WEAPONINFO_FILE</fileType>
+		</Item>
+		<Item>
+			<filename>dlc_mp009:/%PLATFORM%/data/ai/weapon_melee_knife_hunting</filename>
+			<overlay value="false"/>
+			<disabled value="true" />
+			<persistent value="false"/>
+			<fileType>WEAPONINFO_FILE</fileType>
+		</Item>
+		<Item>
+			<filename>dlc_mp009:/%PLATFORM%/data/ai/weapon_melee_lantern_halloween</filename>
+			<overlay value="false"/>
+			<disabled value="true" />
+			<persistent value="false"/>
+			<fileType>WEAPONINFO_FILE</fileType>
+		</Item>
+		<Item>
+			<filename>dlc_mp009:/%PLATFORM%/packs/base/data/weapontxdchain</filename>
+			<disabled value="true"/>
+			<persistent value="false"/>
+			<fileType>WEAPON_TXD_CHAIN_FILE</fileType>
+		</Item>
+		<Item>
+			<filename>dlc_mp009:/%PLATFORM%/packs/base/models/weapons.rpf</filename>
+			<disabled value="true"/>
+			<persistent value="false"/>
+			<overlay value="false"/>
+			<fileType>RPF_FILE</fileType>
+		</Item>
+		<Item>
+			<filename>dlc_mp009:/common/data/weaponArchetypes</filename>
+			<overlay value="false"/>
+			<disabled value="true"/>
+			<persistent value="false"/>
+			<fileType>WEAPON_METADATA_FILE</fileType>
+		</Item>
+		<Item>
+			<filename>dlc_mp009:/%PLATFORM%/packs/base/models/metaped_textures_m.rpf</filename>
+			<disabled value="true"/>
+			<persistent value="false"/>
+			<doPostLoad value="false" />
+			<overlay value="true"/>
+			<fileType>RPF_FILE</fileType>
+		</Item>
+		<Item>
+			<filename>dlc_mp009:/%PLATFORM%/packs/base/models/metapeds_m.rpf</filename>
+			<disabled value="true"/>
+			<persistent value="false"/>
+			<doPostLoad value="false" />
+			<overlay value="true"/>
+			<fileType>RPF_FILE</fileType>
+		</Item>
+		<Item>
+			<filename>dlc_mp009:/%PLATFORM%/packs/base/models/metaped_textures_c.rpf</filename>
+			<disabled value="true"/>
+			<persistent value="false"/>
+			<doPostLoad value="false" />
+			<overlay value="true"/>
+			<fileType>RPF_FILE</fileType>
+		</Item>
+		<Item>
+			<filename>dlc_mp009:/%PLATFORM%/packs/base/models/metapeds_c.rpf</filename>
+			<disabled value="true"/>
+			<persistent value="false"/>
+			<doPostLoad value="false" />
+			<overlay value="true"/>
+			<fileType>RPF_FILE</fileType>
+		</Item>
+	</dataFiles>
+	<contentChangeSets>
+		<Item>
+			<changeSetName>MP009_ANIM</changeSetName>
+			<filesToInvalidate/>
+			<filesToDisable/>
+			<filesToEnable>
+				<Item>dlc_mp009:/%PLATFORM%/anim/ingame/clip_script_mp.rpf</Item>
+			</filesToEnable>
+			<executionConditions/>
+		</Item>
+		<Item>
+		<changeSetName>MP009_PROPS</changeSetName>
+			<filesToInvalidate/>
+			<filesToDisable/>
+			<filesToEnable>
+				<Item>dlc_mp009:/%PLATFORM%/levels/rdr3/props/lev_des/mp009_s_lev_des.rpf</Item>
+				<Item>dlc_mp009:/%PLATFORM%/levels/rdr3/props/lev_des/mp009_s_lev_des.ityp</Item>
+			</filesToEnable>
+			<executionConditions/>
+		</Item>
+		<Item>
+			<changeSetName>MP009_WEAPONS_EARLY</changeSetName>
+			<filesToInvalidate/>
+			<filesToDisable/>
+			<filesToEnable>
+				<Item>dlc_mp009:/%PLATFORM%/data/ai/quickSelectItems</Item>
+				<Item>dlc_mp009:/%PLATFORM%/data/ai/quickSelectSlots</Item>
+			</filesToEnable>
+			<executionConditions/>
+		</Item>
+		<Item>
+			<changeSetName>MP009_WEAPONS_RPF</changeSetName>
+			<filesToInvalidate/>
+			<filesToDisable/>
+			<filesToEnable>
+				<Item>dlc_mp009:/%PLATFORM%/packs/base/models/weapons.rpf</Item>
+			</filesToEnable>
+			<executionConditions/>
+		</Item>
+		<Item>
+			<changeSetName>MP009_WEAPONS_NON_RPF</changeSetName>
+			<filesToInvalidate/>
+			<filesToDisable/>
+			<filesToEnable>
+				<Item>dlc_mp009:/common/data/pickups</Item>
+				<Item>dlc_mp009:/%PLATFORM%/data/ai/weapon_melee_knife_horror</Item>
+				<Item>dlc_mp009:/%PLATFORM%/data/ai/weapon_melee_knife_hunting</Item>
+				<Item>dlc_mp009:/%PLATFORM%/data/ai/weapon_melee_lantern_halloween</Item>
+				<Item>dlc_mp009:/%PLATFORM%/packs/base/data/weapontxdchain</Item>
+				<Item>dlc_mp009:/common/data/weaponarchetypes</Item>
+			</filesToEnable>
+			<executionConditions/>
+		</Item>
+		<Item>
+			<changeSetName>MP009_METAPED_RPF</changeSetName>
+			<filesToInvalidate/>
+			<filesToDisable/>
+			<filesToEnable>
+				<Item>dlc_mp009:/%PLATFORM%/packs/base/models/metaped_textures_m.rpf</Item>
+				<Item>dlc_mp009:/%PLATFORM%/packs/base/models/metapeds_m.rpf</Item>
+				<Item>dlc_mp009:/%PLATFORM%/packs/base/models/metaped_textures_c.rpf</Item>
+				<Item>dlc_mp009:/%PLATFORM%/packs/base/models/metapeds_c.rpf</Item>
+			</filesToEnable>
+			<executionConditions/>
+		</Item>
+	</contentChangeSets>
+	<patchFiles />
+</CDataFileMgr__ContentsOfDataFileXml>

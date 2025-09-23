@@ -1,0 +1,295 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CDataFileMgr__ContentsOfDataFileXml>
+	<disabledFiles />
+	<includedXmlFiles />
+	<includedDataFiles />
+	<dataFiles>
+		<Item>
+			<filename>dlc_mp006:/common/data/ai/aimupperbodydata</filename>
+			<overlay value="false"/>
+			<disabled value="true"/>
+			<persistent value="true"/>
+			<fileType>AIM_UPPER_BODY_DATA_FILE</fileType>
+		</Item>
+		<Item>
+			<filename>dlc_mp006:/%PLATFORM%/data/ai/quickSelectItems</filename>
+			<overlay value="false"/>
+			<disabled value="true"/>
+			<persistent value="false"/>
+			<fileType>WHEEL_INFO_FILE</fileType>
+		</Item>
+		<Item>
+			<filename>dlc_mp006:/%PLATFORM%/data/ai/quickSelectSlots</filename>
+			<overlay value="false"/>
+			<disabled value="true"/>
+			<persistent value="false"/>
+			<fileType>WHEEL_SLOT_FILE</fileType>
+		</Item>
+		<Item>
+			<filename>dlc_mp006:/%PLATFORM%/data/ai/weapon_revolver_navy</filename>
+			<overlay value="false"/>
+			<disabled value="true" />
+			<persistent value="false"/>
+			<fileType>WEAPONINFO_FILE</fileType>
+		</Item>
+		<Item>
+			<filename>dlc_mp006:/%PLATFORM%/data/ai/weapons_mp006_moonshiner</filename>
+			<overlay value="false"/>
+			<disabled value="true" />
+			<persistent value="false"/>
+			<fileType>WEAPONINFO_FILE</fileType>
+		</Item>
+		<Item>
+			<filename>dlc_mp006:/common/data/ai/weapon_revolver_navy_mp</filename>
+			<overlay value="false"/>
+			<disabled value="true"/>
+			<persistent value="false"/>
+			<fileType>WEAPONINFO_MP_PATCH_FILE</fileType>
+		</Item>
+		<Item>
+			<filename>dlc_mp006:/common/data/weaponArchetypes</filename>
+			<overlay value="false"/>
+			<disabled value="true"/>
+			<persistent value="false"/>
+			<fileType>WEAPON_METADATA_FILE</fileType>
+		</Item>
+		<Item>
+			<filename>dlc_mp006:/common/packs/base/data/ai/weaponanimations</filename>
+			<overlay value="false"/>
+			<disabled value="true"/>
+			<persistent value="true"/>
+			<fileType>WEAPON_ANIMATIONS_FILE</fileType>
+		</Item>
+		<Item>
+			<filename>dlc_mp006:/common/data/pickups</filename>
+			<overlay value="false"/>
+			<disabled value="true"/>
+			<persistent value="false"/>
+			<fileType>DLC_WEAPON_PICKUPS</fileType>
+		</Item>
+		<Item>
+			<filename>dlc_mp006:/common/data/ai/weaponcomponents</filename>
+			<overlay value="false"/>
+			<disabled value="true"/>
+			<persistent value="false"/>
+			<fileType>WEAPONCOMPONENTSINFO_FILE</fileType>
+		</Item>
+		<Item>
+			<filename>dlc_mp006:/%PLATFORM%/packs/base/data/weapontxdchain</filename>
+			<disabled value="true"/>
+			<persistent value="false"/>
+			<fileType>WEAPON_TXD_CHAIN_FILE</fileType>
+		</Item>
+		<Item>
+			<filename>dlc_mp006:/%PLATFORM%/packs/base/models/weapons.rpf</filename>
+			<disabled value="true"/>
+			<persistent value="false"/>
+			<overlay value="false"/>
+			<fileType>RPF_FILE</fileType>
+		</Item>
+		<Item>
+			<filename>dlc_mp006:/%PLATFORM%/anim/motions/mech_weapons.rpf</filename>
+			<fileType>RPF_FILE</fileType>
+			<disabled value="true"/>
+			<persistent value="true"/>
+			<overlay value="false"/>
+			<contents>CONTENTS_ANIMATION</contents>
+		</Item>
+    	<Item>
+      		<filename>dlc_mp006:/%PLATFORM%/anim/megadictionaries/clip_mega_mech_cover.rpf</filename>
+      		<fileType>RPF_FILE</fileType>
+      		<overlay value="true"/>
+      		<disabled value="true"/>
+      		<persistent value="true"/>
+      		<contents>CONTENTS_ANIMATION</contents>
+    	</Item>		
+    <Item>
+      <filename>dlc_mp006:/%PLATFORM%/anim/megadictionaries/clip_mega_mech_weapons_dual.rpf</filename>
+      <fileType>RPF_FILE</fileType>
+      <overlay value="false"/>
+      <disabled value="true"/>
+      <persistent value="true"/>
+      <contents>CONTENTS_ANIMATION</contents>
+    </Item>
+	<Item>
+		<filename>dlc_mp006:/%PLATFORM%/anim/megadictionaries/clip_mega_mech_weapons_shortarms.rpf</filename>
+		<fileType>RPF_FILE</fileType>
+		<overlay value="false"/>
+		<disabled value="true"/>
+		<persistent value="true"/>
+		<contents>CONTENTS_ANIMATION</contents>
+	</Item>
+	<Item>
+		<filename>dlc_mp006:/%PLATFORM%/anim/megadictionaries/clip_mega_mech_weapons_special.rpf</filename>
+		<fileType>RPF_FILE</fileType>
+		<overlay value="false"/>
+		<disabled value="true"/>
+		<persistent value="true"/>
+		<contents>CONTENTS_ANIMATION</contents>
+	</Item>
+	<Item>
+		<filename>dlc_mp006:/%PLATFORM%/anim/ingame/clip_script_mp.rpf</filename>
+		<fileType>RPF_FILE</fileType>
+		<overlay value="false"/>
+		<disabled value="true"/>
+		<persistent value="true"/>
+		<contents>CONTENTS_ANIMATION</contents>
+	</Item>
+	<Item>
+		<filename>dlc_mp006:/%PLATFORM%/levels/rdr3/props/lev_des/mp006_holiday2019.rpf</filename>
+		<overlay value="false" />
+		<disabled value="true"/>
+		<persistent value="false"/>
+		<fileType>RPF_FILE</fileType>
+	</Item>
+	<Item>
+		<filename>dlc_mp006:/%PLATFORM%/levels/rdr3/props/lev_des/mp006_holiday2019.ityp</filename>
+		<fileType>DLC_ITYP_REQUEST</fileType>
+		<overlay value="false" />
+		<disabled value="true" />
+		<persistent value="false"/>
+		<contents>CONTENTS_PROPS</contents>
+	</Item>
+	<Item>
+		<filename>dlc_mp006:/%PLATFORM%/packs/base/models/metaped_textures_c.rpf</filename>
+		<disabled value="true"/>
+		<persistent value="false"/>
+		<doPostLoad value="false" />
+		<overlay value="true"/>
+		<fileType>RPF_FILE</fileType>
+	</Item>
+	<Item>
+		<filename>dlc_mp006:/%PLATFORM%/packs/base/models/metapeds_c.rpf</filename>
+		<disabled value="true"/>
+		<persistent value="false"/>
+		<doPostLoad value="false" />
+		<overlay value="true"/>
+		<fileType>RPF_FILE</fileType>
+	</Item>
+	<Item>
+		<filename>dlc_mp006:/%PLATFORM%/textures/mp006_palettes.#td</filename>
+		<fileType>RESIDENT_TXD</fileType>
+		<overlay value="true"/>
+		<disabled value="true"/>
+		<persistent value="true"/>
+	</Item>
+	<Item>
+		<filename>dlc_mp006:/%PLATFORM%/packs/base/models/metaped_textures_m.rpf</filename>
+		<disabled value="true"/>
+		<persistent value="false"/>
+		<doPostLoad value="false" />
+		<overlay value="true"/>
+		<fileType>RPF_FILE</fileType>
+	</Item>
+	<Item>
+		<filename>dlc_mp006:/%PLATFORM%/packs/base/models/metapeds_m.rpf</filename>
+		<disabled value="true"/>
+		<persistent value="false"/>
+		<doPostLoad value="false" />
+		<overlay value="true"/>
+		<fileType>RPF_FILE</fileType>
+	</Item>
+	<Item>
+		<filename>dlc_mp006:/%PLATFORM%/levels/rdr3/cover_sp/coverregions_swaps.rpf</filename>
+		<fileType>RPF_FILE</fileType>
+		<overlay value="true" />
+		<disabled value="true" />
+		<persistent value="false"/>
+	</Item>
+	</dataFiles>
+	<contentChangeSets>
+		<Item>
+			<changeSetName>MP006_WEAPONS_EARLY</changeSetName>
+			<filesToInvalidate/>
+			<filesToDisable/>
+			<filesToEnable>
+				<Item>dlc_mp006:/%PLATFORM%/data/ai/quickSelectItems</Item>
+				<Item>dlc_mp006:/%PLATFORM%/data/ai/quickSelectSlots</Item>
+			</filesToEnable>
+		<executionConditions/>
+		</Item>
+		<Item>
+			<changeSetName>MP006_WEAPONS_RPF</changeSetName>
+			<filesToInvalidate/>
+			<filesToDisable/>
+			<filesToEnable>
+				<Item>dlc_mp006:/%PLATFORM%/packs/base/models/weapons.rpf</Item>
+			</filesToEnable>
+		<executionConditions/>
+		</Item>
+		<Item>
+			<changeSetName>MP006_WEAPONS_NON_RPF</changeSetName>
+			<filesToInvalidate/>
+			<filesToDisable/>
+			<filesToEnable>
+				<Item>dlc_mp006:/common/data/pickups</Item>
+				<Item>dlc_mp006:/%PLATFORM%/data/ai/weapon_revolver_navy</Item>
+				<Item>dlc_mp006:/%PLATFORM%/packs/base/data/weapontxdchain</Item>
+				<Item>dlc_mp006:/common/data/ai/weaponcomponents</Item>
+				<Item>dlc_mp006:/common/data/ai/weapon_revolver_navy_mp</Item>
+				<Item>dlc_mp006:/%PLATFORM%/data/ai/weapons_mp006_moonshiner</Item>
+				<Item>dlc_mp006:/common/data/weaponarchetypes</Item>
+				<Item>dlc_mp006:/common/packs/base/data/ai/weaponanimations</Item>
+			</filesToEnable>
+		<executionConditions/>
+		</Item>
+		<Item>
+			<changeSetName>MP006_MAP_DATA_SP</changeSetName>
+			<mapChangeSetData>
+				<Item>
+				  <associatedMap>MO_JIM_L11</associatedMap>
+				  <filesToInvalidate/>
+				  <filesToDisable/>
+				  <filesToEnable>
+					 <Item>dlc_mp006:/%PLATFORM%/levels/rdr3/cover_sp/coverregions_swaps.rpf</Item>
+				  </filesToEnable>
+				</Item>
+			</mapChangeSetData>
+			<filesToInvalidate/>
+			<filesToDisable/>
+			<filesToEnable/>
+			<txdToLoad />
+			<txdToUnload />
+			<residentResources />
+			<unregisterResources />
+		</Item>
+		<Item>
+			<changeSetName>MP006_ANIM</changeSetName>
+			<filesToInvalidate/>
+			<filesToDisable/>
+			<filesToEnable>
+       			<Item>dlc_mp006:/%PLATFORM%/anim/megadictionaries/clip_mega_mech_cover.rpf</Item>			
+				<Item>dlc_mp006:/%PLATFORM%/anim/motions/mech_weapons.rpf</Item>
+				<Item>dlc_mp006:/%PLATFORM%/anim/megadictionaries/clip_mega_mech_weapons_shortarms.rpf</Item>
+				<Item>dlc_mp006:/%PLATFORM%/anim/megadictionaries/clip_mega_mech_weapons_special.rpf</Item>
+			<Item>dlc_mp006:/%PLATFORM%/anim/megadictionaries/clip_mega_mech_weapons_dual.rpf</Item>
+				<Item>dlc_mp006:/%PLATFORM%/anim/ingame/clip_script_mp.rpf</Item>
+			</filesToEnable>
+		<executionConditions/>
+		</Item>
+	<Item>
+	<changeSetName>MP006_PROPS</changeSetName>
+		<filesToInvalidate/>
+		<filesToDisable/>
+		<filesToEnable>
+			<Item>dlc_mp006:/%PLATFORM%/levels/rdr3/props/lev_des/mp006_holiday2019.rpf</Item>
+			<Item>dlc_mp006:/%PLATFORM%/levels/rdr3/props/lev_des/mp006_holiday2019.ityp</Item>
+		</filesToEnable>
+		<executionConditions/>
+	</Item>
+		<Item>
+			<changeSetName>MP006_METAPED_RPF</changeSetName>
+				<filesToInvalidate/>
+				<filesToDisable/>
+				<filesToEnable>
+				<Item>dlc_mp006:/%PLATFORM%/packs/base/models/metaped_textures_c.rpf</Item>
+				<Item>dlc_mp006:/%PLATFORM%/packs/base/models/metaped_textures_m.rpf</Item>
+				<Item>dlc_mp006:/%PLATFORM%/packs/base/models/metapeds_c.rpf</Item>
+				<Item>dlc_mp006:/%PLATFORM%/packs/base/models/metapeds_m.rpf</Item>
+				<Item>dlc_mp006:/%PLATFORM%/textures/mp006_palettes.#td</Item>
+				</filesToEnable>
+		<executionConditions/>
+		</Item>
+	</contentChangeSets>
+	<patchFiles />
+</CDataFileMgr__ContentsOfDataFileXml>
