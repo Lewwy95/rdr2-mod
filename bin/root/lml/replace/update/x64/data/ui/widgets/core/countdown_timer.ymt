@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<UIPanel>
+  <Name>PAN_TopRowComposition</Name>
+  <UseLayoutEngine value="true"/>
+  <LayoutParams type="rage__LayoutParamInstanceAsset">
+    <params>
+      <horizontalAlignment>HALIGN_CENTER</horizontalAlignment>
+      <verticalAlignment>VALIGN_TOP</verticalAlignment>
+      <widthContentMode>CONTENT_MODE_AUTO</widthContentMode>
+      <heightContentMode>CONTENT_MODE_RAW</heightContentMode>
+      <height value="42"/>
+    </params>
+  </LayoutParams>
+  <Children>
+    <Item type="UIImage">
+      <Name>IMG_CompositionBackground</Name>
+      <UseLayoutEngine value="true"/>
+      <LayoutParams type="rage__LayoutParamInstanceAsset">
+        <params>
+          <horizontalAlignment>HALIGN_STRETCH</horizontalAlignment>
+          <verticalAlignment>VALIGN_STRETCH</verticalAlignment>
+          <widthContentMode>CONTENT_MODE_AUTO</widthContentMode>
+          <heightContentMode>CONTENT_MODE_AUTO</heightContentMode>
+        </params>
+      </LayoutParams>
+      <SpecializedLayoutParams>
+        <Item type="rage__SpecializedParamInstanceAsset">
+          <params type="rage__fwuiStretchParams">
+            <Stretch>FILL</Stretch>
+          </params>
+        </Item>
+      </SpecializedLayoutParams>
+      <TextureDictionary>scoretimer_textures</TextureDictionary>
+      <Texture>SCORETIMER_BG_1B</Texture>
+      <Color>COLOR_BLACK</Color>
+      <Alpha value="70"/>
+    </Item>
+    <Item type="UIText">
+      <Name>TXT_Timer</Name>
+      <Style>HUD_SCORE</Style>
+      <RawText>12:34</RawText>
+      <UseLayoutEngine value="true"/>
+      <LayoutParams type="rage__LayoutParamInstanceAsset">
+        <params>
+          <horizontalAlignment>HALIGN_CENTER</horizontalAlignment>
+          <verticalAlignment>VALIGN_CENTER</verticalAlignment>
+          <widthContentMode>CONTENT_MODE_AUTO</widthContentMode>
+          <heightContentMode>CONTENT_MODE_AUTO</heightContentMode>
+        </params>
+      </LayoutParams>
+      <MemberBindings>
+        <Item>
+          <MemberName>RawText</MemberName>
+          <Setup>
+            <Path>timerString</Path>
+            <PathType>PATH_RELATIVE</PathType>
+          </Setup>
+        </Item>
+        <Item>
+          <MemberName>Color</MemberName>
+          <Setup>
+            <Path>isTimerLow</Path>
+            <PathType>PATH_RELATIVE</PathType>
+          </Setup>
+          <Converter type="rage__fwuiBoolHashValueConversion">
+            <OnTrue>COLOR_RED</OnTrue>
+            <OnFalse>COLOR_WHITE</OnFalse>
+          </Converter>
+        </Item>
+      </MemberBindings>
+    </Item>
+  </Children>
+</UIPanel>
